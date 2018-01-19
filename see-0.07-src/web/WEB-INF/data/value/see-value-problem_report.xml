@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataValues>   
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時43分32秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>被否定</status>
+		<configuration_code>PR-SEE-000015</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年6月18日 下午05時40分19秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project> 
+		<severity>非常高</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時42分56秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>PR-SEE-000014</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年6月17日 下午03時22分29秒</commit_time>
+		<title>在選擇介面中，點擊選擇按鈕無效</title>
+		<priority>低</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>這是修改程式後的結果。從腳本上看沒有錯誤。將腳本中select函數改名後，就對了。:r:t-r:t:也許不能使用select作爲javascript腳本函數名。但是以前的版本爲什麽可以？這是一個存疑。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時43分04秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<comment>原因：方法返回的參數錯誤。</comment>
+		<configuration_code>PR-SEE-000013</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年6月17日 下午03時20分36秒</commit_time>
+		<title>在選擇介面中，點擊資料行，彈出空視窗</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>高</severity>
+		<description>在選擇介面中，點擊資料行，彈出空視窗。:r:t-r:t:本意是要與點擊顯示按鈕一樣的效果，即彈出顯示資料的視窗。:r:t-r:t::r:t-r:t:</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時43分51秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>提交</status>
+		<configuration_code>PR-SEE-000012</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年6月17日 上午11時34分17秒</commit_time>
+		<title>在刪除、選擇介面中點擊顯示按鈕後，再點擊當前頁面其他按鈕會反應錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>高</severity>
+		<description>在刪除、選擇介面中點擊顯示按鈕後，再點擊當前頁面其他按鈕會反應錯誤！:r:t-r:t:與PR-SEE-000007的原因一樣。需要恢復原來的參數值。:r:t-r:t:</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年6月17日 上午11時30分25秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已關閉</status>
+		<comment>原因是許可權管理裏用錯了方法，應該用系統語言來解釋許可權表，而0.01版中是用介面語言來解釋了！:r:t-r:t:0.02版已改正。</comment>
+		<configuration_code>PR-SEE-000011</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年6月17日 上午11時30分25秒</commit_time>
+		<title>hash型資料顯示不正確</title>
+		<priority>低</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>hash型資料顯示不正確。:r:t-r:t:原因：程式中用錯變數。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時43分24秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>延遲</status>
+		<comment>原因是許可權管理裏用錯了方法，應該用系統語言來解釋許可權表，而0.01版中是用介面語言來解釋了！:r:t-r:t:0.02版已改正。</comment>
+		<configuration_code>PR-SEE-000010</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年6月11日 下午05時11分25秒</commit_time>
+		<title>非超級管理員，切換介面語言後，不能正常訪問功能了</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>非常高</severity>
+		<description>非超級管理員，切換介面語言後，不能正常訪問功能了</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年6月1日 上午10時02分06秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已關閉</status>
+		<configuration_code>PR-SEE-000009</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年6月1日 上午10時02分06秒</commit_time>
+		<title>調試語句造成速度很慢</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>高</severity>
+		<description>資料xml解析中居然在最頻繁的character中忘了注釋掉調試資訊的累積！這會消耗掉多少速度！！:r:t-r:t:現在20000條資料的讀取/寫入速度不超過1秒。:r:t-r:t:速度與資料量多少幾乎沒有關係。:r:t-r:t:但如果排序，則資料量對速度的影響是非線性的。5000條約8秒（CPU爲1.8G)</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時44分13秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>PR-SEE-000008</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年5月31日 下午03時54分44秒</commit_time>
+		<title>普通用戶可以刪除或修改超級管理員的顯示設置</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>高</severity>
+		<description>普通用戶可以刪除或修改超級管理員的顯示設置。這是不允許的！</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時46分18秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>提交</status>
+		<comment>原因：導出按鈕在新視窗裏顯示頁面，但它首先改變了當前頁面的參數值，因此要讓本頁面仍然正常工作，就需要恢復原來的參數值。這個問題在所有以post方式打開新頁面的腳本中都應注意處理。</comment>
+		<configuration_code>PR-SEE-000007</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年5月28日 下午03時24分16秒</commit_time>
+		<title>點擊導出按鈕後，再點擊當前頁面其他按鈕會反應錯誤！</title>
+		<priority>非常低</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>高</severity>
+		<description>點擊導出按鈕後，再點擊當前頁面其他按鈕會反應錯誤！</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年5月31日 下午03時55分31秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已關閉</status>
+		<comment>原因是get方式傳進來的參數解碼不正確，目前不知如何處理這種情況。只能避免使用get方式。</comment>
+		<configuration_code>PR-SEE-000006</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年5月16日 上午11時39分51秒</commit_time>
+		<title>選擇資料的介面中，顯示按鈕處理結果不對</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>高</severity>
+		<description>選擇資料的介面中，顯示按鈕處理結果不對。:r:t-r:t:</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年5月14日 下午12時22分06秒</last_changed_time>
+		<reporter>yuchao1981</reporter>
+		<object>代碼</object>
+		<status>已關閉</status>
+		<comment>根據測試結果發現，寫xml幾乎不花時間，大量資料寫入時連1秒都不用。:r:t-r:t:時間主要消耗在讀xml上了，因爲程式在讀xml時有很多判斷、分析，同時還要構造複雜資料結構。:r:t-r:t::r:t-r:t:對於添加操作,確實可以append。如果是修改和刪除，就只能覆蓋了。:r:t-r:t:添加時，還要判斷關鍵字是否與已有資料重復，因此還不能直接append，而還要全部讀入。:r:t-r:t::r:t-r:t:程式中，對於添加後寫xml，用的是覆蓋，而沒有用append，是因爲要重用代碼的緣故，作者沒有爲append專門寫代碼。（不知這算不算懶？）:r:t-r:t::r:t-r:t:還有一個麻煩就是：xml格式要求嚴格，不可能直接添加資料記錄的，因爲最後一行怎麽辦？</comment>
+		<configuration_code>PR-SEE-000005</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>建議</type>
+		<commit_time>2004年5月13日 下午07時24分58秒</commit_time>
+		<title>回寫到xml文件時是否可以採用append分式呢？</title>
+		<priority>非常低</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>有一個小建議就是在資料回寫到xml文件時是否可以採用append分式呢？我覺得你採用是覆蓋方式？</description>
+		<commit_person>瑪瑞</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年5月11日 下午08時09分09秒</last_changed_time>
+		<reporter>Michael Thorpe</reporter>
+		<object>文檔</object>
+		<status>已評審</status>
+		<comment>是的，我可憐的英語！:r:t-r:t:作者將努力使下一版的情況好些。她正在努力學習英語，雖然她已經學了那麽多年。</comment>
+		<configuration_code>PR-SEE-000004</configuration_code>
+		<last_changed_person>瑪瑞</last_changed_person>
+		<type>增強</type>
+		<commit_time>2004年5月11日 下午08時09分09秒</commit_time>
+		<title>《使用手冊》的'安裝配置'2.2節中，應設置JAVA_HOME爲j2sdk的安裝目錄</title>
+		<priority>中等</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>中等</severity>
+		<description>英文手冊翻譯得不好。</description>
+		<commit_person>瑪瑞</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時45分11秒</last_changed_time>
+		<reporter>tonypn</reporter>
+		<object>代碼</object>
+		<status>已關閉</status>
+		<comment>是的，也許應該在jbuilder的SEE專案中設置一些參數，使SEE能夠直接運行。:r:t-r:t:作者沒有在jbuilder中運行過SEE，所以以前沒有注意這個問題。:r:t-r:t:下一版將改正。:r:t-r:t:感謝tonypn！:r:t-r:t:目前已可以直接在jbuilder7中運行SEE。但是運行情況並不好！還是用ant和tomcat調試比較合理。</comment>
+		<configuration_code>PR-SEE-000003</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>增強</type>
+		<commit_time>2004年5月11日 下午07時53分38秒</commit_time>
+		<title>《使用手冊》的'安裝配置'2.2節中，應設置JAVA_HOME爲j2sdk的安裝目錄</title>
+		<priority>中等</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>非常低</severity>
+		<description>源碼在jbuilder7下不能直接運行!</description>
+		<commit_person>瑪瑞</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時45分23秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已關閉</status>
+		<comment>下一版需要立即改正！:r:t-r:t:file類型一般作爲“附件”存在。比較重要</comment>
+		<configuration_code>PR-SEE-000002</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年5月10日 下午07時24分58秒</commit_time>
+		<title>文件類型的欄位不能正確取值</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>中等</severity>
+		<description>對於file類型的欄位，目前沒有專門處理。即使上傳了也沒有正確保存文件內容，而是保存了文件路徑！</description>
+		<commit_person>瑪瑞</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時46分30秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>文檔</object>
+		<status>已評審</status>
+		<comment>下一版需要立即改正！</comment>
+		<configuration_code>PR-SEE-000001</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年5月10日 下午07時22分58秒</commit_time>
+		<title>《使用手冊》的'安裝配置'2.2節中，應設置JAVA_HOME爲j2sdk的安裝目錄</title>
+		<priority>高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>非常高</severity>
+		<description>在《使用手冊》的'安裝配置'2.2節中，應設置JAVA_HOME爲j2sdk的安裝目錄，而不是它的bin子目錄。:r:t-r:t:不熟悉java的用戶可能因此安裝失敗！</description>
+		<commit_person>瑪瑞</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月1日 下午04時58分54秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已關閉</status>
+		<configuration_code>PR-SEE-000016</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月1日 下午04時58分54秒</commit_time>
+		<title>所有用戶都可以配置任何資訊結構！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>非常高</severity>
+		<description>在0.02版中，任何用戶在地址欄裏直接輸入配置資訊結構的地址，就可以修改任何資訊結構！:r:t-r:t:原因是：資訊結構管理頁面沒有檢查許可權！</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時47分56秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>PR-SEE-000015sd</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時47分56秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>中等</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時48分07秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>PR-SEE-000015dfd</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時48分07秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>中等</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時48分16秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>延遲</status>
+		<configuration_code>PR-SEE-000015dfdf</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時48分16秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>非常低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時48分33秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已關閉</status>
+		<configuration_code>PR-SEE-000015ddf</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時48分33秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>高</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時48分33秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已關閉</status>
+		<configuration_code>PR-SEE-000015ddfsds</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時48分33秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時49分00秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已測試</status>
+		<configuration_code>PR-SEE-000015sdsdsd</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時49分00秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時49分34秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已關閉</status>
+		<configuration_code>PR-SEE-000015dfdfd</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時49分34秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時49分34秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已關閉</status>
+		<configuration_code>PR-SEE-000015dfdfdssssss</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時49分34秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時49分34秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已關閉</status>
+		<configuration_code>PR-SEE-000015dfdfdssssssff</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時49分34秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>非常低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時49分34秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已測試</status>
+		<configuration_code>PR-SEE-000015dfdfds12</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時49分34秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>中等</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時49分34秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已測試</status>
+		<configuration_code>PR-SEE-0000152222</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時49分34秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時49分34秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已測試</status>
+		<configuration_code>PR-SEE-00001eee</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時49分34秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時49分34秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已測試</status>
+		<configuration_code>PR-SEE-00001eeegg</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時49分34秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時51分24秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>PR-SEE-000015hh</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時51分24秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>中等</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時51分24秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>PR-SEE-000015hhhhh</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時51分24秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>中等</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時51分24秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>PR-SEE-000015hhhhhfgfg</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時51分24秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>中等</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時51分24秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>PR-SEE-000015hhhhhtfgfg</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時51分24秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>中等</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時51分24秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>PR-SEE-00001e5hhhhhtfgfg</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時51分24秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>中等</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時51分24秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>PR-SwEE-00001e5hhhhhtfgfg</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時51分24秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時51分24秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>PR-SwwEE-00001e5hhhhhtfgfg</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時51分24秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>非常高</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時51分24秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>PR-w</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時51分24秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>非常高</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時51分24秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>PR-www</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時51分24秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時51分24秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>PR-wwwww</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時51分24秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時51分24秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>rrr</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時51分24秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>非常低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時51分24秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>已修正</status>
+		<configuration_code>rrrwe</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時51分24秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>非常低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時52分53秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>提交</status>
+		<configuration_code>fgfg</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時52分53秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>中等</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時52分53秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>提交</status>
+		<configuration_code>fgfgss</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時52分53秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時52分53秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>提交</status>
+		<configuration_code>fgfgsssss</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時52分53秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時52分53秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>提交</status>
+		<configuration_code>fgfgssssssdsd</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時52分53秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時52分53秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>提交</status>
+		<configuration_code>fgfgssssssdsdsss</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時52分53秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>非常低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時52分53秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>被否定</status>
+		<configuration_code>sss</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時52分53秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>非常低</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+	<Record>
+		<last_changed_time>2004年7月9日 下午03時52分53秒</last_changed_time>
+		<reporter>瑪瑞:-::-:</reporter>
+		<object>代碼</object>
+		<status>被否定</status>
+		<configuration_code>ssssds</configuration_code>
+		<last_changed_person>超級管理員</last_changed_person>
+		<type>錯誤</type>
+		<commit_time>2004年7月9日 下午03時52分53秒</commit_time>
+		<title>特定類型的欄位若設爲非空或關鍵字，則會有頁面腳本錯誤！</title>
+		<priority>非常高</priority>
+		<project>軟體工程環境SEE</project>
+		<severity>中等</severity>
+		<description>程式中有一個大bug：對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！:r:t-r:t:
+原因是：沒有把它們當成選擇項來檢查。</description>
+		<commit_person>超級管理員</commit_person>
+		<assigned_to>瑪瑞</assigned_to>
+	</Record>
+</DataValues>

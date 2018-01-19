@@ -1,0 +1,109 @@
+/* SEE style sheet */
+
+BODY    {   background-color: #FFFFFF;
+            font-size: 10pt;
+            font-family: helvetica, simsun, simkai, arial, times ,sans-serif
+        }
+
+.data  {
+        font-size: 10pt;
+        align: center;
+        color: #000000
+        background-color: #FFFFFF
+        }
+
+.bar  {
+        background-color: #EEEEEE;
+        font-size: 9pt;
+        color: black
+        }
+
+.whitebar  {
+        background-color: #FFFFFF;
+        font-size: 9pt;
+        color: black
+        }
+
+.tableheader  {
+        background-color: #DDDDDD;
+        align: center;
+        color: black
+    }
+
+.tabledata  {
+        background-color: #EEEEEE;
+        align: left;
+    }
+.tableline  {
+        background-color: #EEEEEE;
+    }
+.tabletotal  {
+        background-color: #eeffee;
+    }
+
+.datakey   {
+                font-weight: bold;
+                color: red
+            }
+.notnull   {
+                font-weight: bold;
+                color: blue
+            }
+.dataname   {
+            }
+
+.title     {
+                font-weight: bold;
+                font-size: 14pt;
+                color: black
+            }
+.footer     {
+                color: black
+            }
+
+.alert     {
+                color: red
+            }
+
+.serious     {
+                font-weight: bold;
+                color: black
+            }
+            
+.outresult     {
+                font-weight: bold;
+                color: green
+            }
+
+.info     {
+        font-size: 9pt;
+        color: black
+            }
+.small_info     {
+        font-size: 8pt;
+        color: black;
+            }
+
+.tabbar     {
+        font-size: 9pt;
+        background-color: #A9E969
+            }
+
+.tabmain     {
+        font-size: 9pt;
+        background-color: #FFE7E7
+            }
+
+.tabbar_grey     {
+        font-size: 9pt;
+        background-color: #C2CE99
+            }
+
+.tabmain_grey     {
+        font-size: 9pt;
+        background-color: #DDDDDD
+            }
+.setdata  {
+        font-size: 10pt;
+    }
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataValues>
+	<Record>
+		<member>噜噜:-::-:</member>
+		<id>人事管理员</id>
+	</Record>
+	<Record>
+		<member>*</member>
+		<id>一般用户</id>
+	</Record>
+	<Record>
+		<member>访客:-::-:</member>
+		<id>访客</id>
+	</Record>
+	<Record>
+		<member>玛瑞:-::-:</member>
+		<id>审计管理员</id>
+	</Record>
+</DataValues>

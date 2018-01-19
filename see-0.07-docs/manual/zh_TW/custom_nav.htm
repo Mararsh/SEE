@@ -1,0 +1,111 @@
+<!-- 軟體工程環境	 版本 0.07/2004-12	 瑪瑞 -->
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=gb2312">
+<TITLE> 軟體工程環境 - 使用指南 - 定制</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="../style/style_default.css"> 
+</HEAD>
+
+<BODY class=info>
+<SCRIPT>
+parent.guideright.location="custom.htm#1";
+</SCRIPT>
+
+<P class=title align=center title="">使用指南-定制</P>   
+
+<HR>
+
+<BR><A target=guideright href="custom.htm#1">1 介面方案的描述</A>
+<BR><A target=guideright href="custom.htm#2">2 添加/修改一個介面功能按鈕</A>
+<BR><A target=guideright href="custom.htm#3">3 刪除一個介面功能按鈕</A>
+<BR><A target=guideright href="custom.htm#4">4 添加一個資訊結構</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#4.1">4.1 添加介面功能按鈕</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#4.2">4.2 資訊的配置頁面</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#4.3">4.3 資訊欄位的配置頁面</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#4.4">4.4 定制的翻譯</A>
+<BR><A target=guideright href="custom.htm#5">5 預定義的資訊欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.1">5.1 自動賦值欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.2">5.2 文本欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.3">5.3 日期欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.4">5.4 時間欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.5">5.5 單選鈕欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.6">5.6 單選列表字段</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.7">5.7 單選下拉清單欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.8">5.8 多選框欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.9">5.9 多選列表字段</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.10">5.10 多選下拉清單欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.11">5.11 創建的日期欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.12">5.12 創建的時間欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.13">5.13 創建的用戶欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.14">5.14 當前日期欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.15">5.15 當前時間欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.16">5.16 當前用戶欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.17">5.17 引用-多選欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.18">5.18 引用-單選欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.19">5.19 語言欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.20">5.20 網路位址欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.21">5.21 聯接欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.22">5.22 文件欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.23">5.23 口令欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.24">5.24 介面風格欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.25">5.25 介面方案欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.26">5.26 資料顯示風格欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.27">5.27 資料審計類型欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.28">5.28 文本段落欄位</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#5.29">5.29 數值欄位</A>
+<BR><A target=guideright href="custom.htm#6">6 修改一個資訊結構</A>
+<BR><A target=guideright href="custom.htm#7">7 刪除一個資訊結構</A>
+<BR><A target=guideright href="custom.htm#xinxi">8 SEE的缺省資訊結構</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xitong">8.1 系統管理</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xitong-chushipeizhi">8.1.1 初始配置</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xitong-jiemianfangan">8.1.2 介面方案</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xitong-xitongjuese">8.1.3 系統角色</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xitong-xitongjuesequanxian">8.1.4 系統角色許可權</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xitong-shujujuese">8.1.5 資料角色</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xitong-shujujuesequanxian">8.1.6 資料角色許可權</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xitong-yonghu">8.1.7 用戶</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xitong-shujuyonghuquanxian">8.1.8 資料用戶許可權</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xitong-shujushenji">8.1.9 資料審計</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.1.10">8.1.10 語言翻譯</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.1.11">8.1.11 上傳管理</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.1.12">8.1.12 速度測試</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.1.13">8.1.13 顯示設置</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.1.14">8.1.14 條件設置</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.1.15">8.1.15 統計設置</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xiangmu">8.2 專案管理</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xiangmu-xiangmudengji">8.2.1 專案登記</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xiangmu-xiangmujieduan">8.2.2 專案階段</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xiangmu-xiangmurenwu">8.2.3 專案任務</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xiangmu-daimadengji">8.2.4 代碼登記</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xiangmu-daimapingshen">8.2.5 代碼評審</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xiangmu-wendangdengji">8.2.6 文檔登記</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xiangmu-wendangpingshen">8.2.7 文檔評審</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xiangmu-gongzuozhoubao">8.2.8 工作周報</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xiangmu-gongzuorizhi">8.2.9 工作日志</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-xiangmu-fengxianfenxi">8.2.10 風險分析</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.2.11">8.2.11 專案角色</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.2.12">8.2.12 資料獲取</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.2.13">8.2.13 偏差處理</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.2.14">8.2.14 檢查項</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.2.15">8.2.15 檢查結果</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.2.16">8.2.16 不合格項</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-ruanjian">8.3 軟體實現</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-ruanjian-ruanjianxuqiu">8.3.1 軟體需求</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-ruanjian-ceshixuqiu">8.3.2 測試需求</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-ruanjian-ceshiguocheng">8.3.3 測試過程</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-ruanjian-gengdongshenqing">8.3.4 更動申請</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-ruanjian-ceshijieguo">8.3.5 測試結果</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-ruanjian-wentibaogao">8.3.6 問題報告</A>
+<BR>&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-changyong">8.4 常用功能</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#xinxi-changyong-huiyijiyao">8.4.1 會議紀要</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.4.2">8.4.2 共用資源</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.4.3">8.4.3 通知</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A target=guideright href="custom.htm#8.4.4">8.4.4 個人消息</A>
+
+</BODY>
+
+</HTML>

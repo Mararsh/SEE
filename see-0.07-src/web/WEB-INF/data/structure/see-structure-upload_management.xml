@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSet>
+  <type>table</type>
+  <keyCanModify>no</keyCanModify>
+  <defaultSort>file</defaultSort>
+  <defaultOrder>ascending</defaultOrder>
+  <keys>id</keys>
+  <showItems>file:-:size</showItems>
+  <operation>add:-:remove:-:modify:-:query:-:statistic:-:audit:-:select</operation>
+  <items>
+    <DataItem>
+      <identify>id</identify>
+      <type>auto</type>
+      <valueTranslated>no</valueTranslated>
+      <editControllerType>text</editControllerType>
+    </DataItem>
+    <DataItem>
+      <identify>file</identify>
+      <type>string</type>
+      <valueTranslated>no</valueTranslated>
+      <valueConstraintType>file</valueConstraintType>
+      <editControllerType>text</editControllerType>
+    </DataItem>
+    <DataItem>
+      <identify>size</identify>
+      <type>string</type>
+      <valueTranslated>no</valueTranslated>
+      <editControllerType>hidden</editControllerType>
+    </DataItem>
+  </items>
+</DataSet>

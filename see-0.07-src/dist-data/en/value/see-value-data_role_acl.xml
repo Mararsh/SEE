@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataValues>
+	<Record>
+		<operation>Import:-:Remove:-:Batch Modify</operation>
+		<data_role>data manager</data_role>
+		<data>Code Register:-:Problem Report:-:Software Requirement:-:Share Resource:-:Change Request:-:Working Log:-:Deviation Handling:-:Testing Procedure:-:Weekly Report:-:Inform:-:Code Review:-:Data Collection:-:Project Stages:-:Risk Analysis:-:Testing Result:-:Testing Requirement:-:Project Tasks:-:Project:-:Ineligible Items:-:Check Result:-:Check Item:-:Document Register:-:Meeting Summary:-:Project Roles:-:Document Review</data>
+		<title>Data Manager:i:c-i:c:s Privilege</title>
+	</Record>
+	<Record>
+		<operation>Add:-:Insert:-:Copy:-:Modify:-:Query:-:Statistic:-:Select</operation>
+		<data_role>general member</data_role>
+		<description>All data modification will be audited. So do not worry about the free privileges.</description>
+		<data>Code Register:-:Problem Report:-:Software Requirement:-:Share Resource:-:Change Request:-:Working Log:-:Deviation Handling:-:Testing Procedure:-:Weekly Report:-:Inform:-:Code Review:-:Data Collection:-:Project Stages:-:Risk Analysis:-:Testing Result:-:Testing Requirement:-:Project Tasks:-:Project:-:Ineligible Items:-:Check Result:-:Check Item:-:Document Register:-:Meeting Summary:-:Project Roles:-:Document Review</data>
+		<title>General User Deal with Data</title>
+	</Record>
+</DataValues>

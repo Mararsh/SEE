@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataValues>
+	<Record>
+		<operation>Add:-:Insert:-:Copy:-:Import:-:Remove:-:Modify:-:Batch Modify:-:Query:-:Statistic:-:Audit:-:Select</operation>
+		<system_role>personnel manager:-::-:</system_role>
+		<data>Data Role Acl:-:User:-:Data Role:-:Data User Acl</data>
+		<title>Personel Manager:i:c-i:c:s Privilege</title>
+	</Record>
+	<Record>
+		<operation>Modify</operation>
+		<system_role>general user</system_role>
+		<data>User</data>
+		<title>General User Modify Self</title>
+		<condition>id:v:h-v:h:_self</condition>
+	</Record>
+	<Record>
+		<operation>Audit</operation>
+		<system_role>general user</system_role>
+		<data>Code Register:-:Problem Report:-:Software Requirement:-:Share Resource:-:Change Request:-:Working Log:-:Deviation Handling:-:Testing Procedure:-:Weekly Report:-:Inform:-:Code Review:-:Data Collection:-:Project Stages:-:Risk Analysis:-:Testing Result:-:Testing Requirement:-:Project Tasks:-:Project:-:Ineligible Items:-:Check Result:-:Check Item:-:Document Register:-:Meeting Summary:-:Project Roles:-:Document Review</data>
+		<title>General User Audit Data</title>
+	</Record>
+	<Record>
+		<operation>Import:-:Remove:-:Query:-:Statistic:-:Audit:-:Select</operation>
+		<system_role>audit manager</system_role>
+		<data>Data Audit</data>
+		<title>Audit Manager:i:c-i:c:s Privileges</title>
+	</Record>
+	<Record>
+		<operation>Query:-:Statistic:-:Select</operation>
+		<system_role>general user</system_role>
+		<data>Data Audit</data>
+		<title>General User Query Audit Data</title>
+	</Record>
+	<Record>
+		<operation>Query:-:Select</operation>
+		<system_role>general user</system_role>
+		<data>Data Role Acl:-:User:-:Data Role:-:Data User Acl</data>
+		<title>General User Visit ACL Data</title>
+	</Record>
+	<Record>
+		<operation>Query</operation>
+		<system_role>general user</system_role>
+		<data>Personal Message</data>
+		<title>General User Query the PM</title>
+		<condition>sender:v:h-v:h:_self:m:s-m:s:receiver:v:h-v:h::c:i:d-c:i:d:_self</condition>
+	</Record>
+	<Record>
+		<operation>Remove</operation>
+		<system_role>general user</system_role>
+		<data>Personal Message</data>
+		<title>General User Remove the PM</title>
+		<condition>receiver:v:h-v:h::c:i:d-c:i:d:_self</condition>
+	</Record>
+	<Record>
+		<operation>Add</operation>
+		<system_role>general user</system_role>
+		<data>Personal Message</data>
+		<title>General User Add the PM</title>
+	</Record>
+</DataValues>

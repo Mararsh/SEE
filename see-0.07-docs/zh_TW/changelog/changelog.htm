@@ -1,0 +1,416 @@
+<!-- 軟體工程環境	 版本 0.07/2004-12	 瑪瑞 -->
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=gb2312">
+<TITLE> 軟體工程環境 - 手冊 - 更新記錄</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="../../manual/style/style_default.css"> 
+</HEAD>
+
+<BODY class=info>
+
+<P class=title align=center title="">更新記錄</P>   
+
+<HR>
+
+<BR><A href="#0.07">版本0.07的特點</A>   
+<BR>&nbsp&nbsp<A href="#0.07-add">新增的功能</A>
+<BR>&nbsp&nbsp<A href="#0.07-enhance">增強的功能</A>
+<BR>&nbsp&nbsp<A href="#0.07-solve">解決的問題</A>
+<BR>&nbsp&nbsp<A href="#0.07-data">資料的變化</A>
+<BR><A href="#0.06">版本0.06的特點</A>   
+<BR>&nbsp&nbsp<A href="#0.06-add">新增的功能</A>
+<BR>&nbsp&nbsp<A href="#0.06-enhance">增強的功能</A>
+<BR>&nbsp&nbsp<A href="#0.06-solve">解決的問題</A>
+<BR>&nbsp&nbsp<A href="#0.06-data">資料的變化</A>
+<BR><A href="#0.05">版本0.05的特點</A>   
+<BR>&nbsp&nbsp<A href="#0.05-add">新增的功能</A>
+<BR>&nbsp&nbsp<A href="#0.05-enhance">增強的功能</A>
+<BR>&nbsp&nbsp<A href="#0.05-solve">解決的問題</A>
+<BR>&nbsp&nbsp<A href="#0.05-data">資料的變化</A>
+<BR><A href="#0.04">版本0.04的特點</A>   
+<BR>&nbsp&nbsp<A href="#0.04-enhance">增強的功能</A>
+<BR>&nbsp&nbsp<A href="#0.04-solve">解決的問題</A>
+<BR>&nbsp&nbsp<A href="#0.04-unsolve">未解決的問題</A>
+<BR>&nbsp&nbsp<A href="#0.04-data">資料的變化</A>
+<BR><A href="#0.03">版本0.03的特點</A>   
+<BR>&nbsp&nbsp<A href="#0.03-add">新加的功能</A>
+<BR>&nbsp&nbsp<A href="#0.03-solve">解決的問題</A>
+<BR>&nbsp&nbsp<A href="#0.03-data">資料的變化</A>
+<BR><A href="#0.02">版本0.02的特點</A>   
+<BR>&nbsp&nbsp<A href="#0.02-speed">速度</A>
+<BR>&nbsp&nbsp<A href="#0.02-add">新加的功能</A>
+<BR>&nbsp&nbsp<A href="#0.02-strengthen">增強的功能</A>
+<BR>&nbsp&nbsp<A href="#0.02-solve">解決的問題</A>
+<BR>&nbsp&nbsp<A href="#0.02-data">資料的變化</A>
+<BR><A href="#0.01">版本0.01的特點</A>   
+
+<A name="0"><BR><BR><HR>
+<H4><FONT color=green>在版本1.0之前，用戶最好不要實際運用SEE。SEE的設計和實現都不穩定。</FONT>
+</H4><HR>
+
+<A name="0.07"><H3>版本0.07的特點</H3>   
+<P>&nbsp&nbsp 發佈時間：2004年12月27日
+<BR>&nbsp&nbsp 標題：幸福止於欲望。
+<BR>&nbsp&nbsp 獻給：老婆婆自己。感謝自己今年的努力~ 新年快樂！
+
+<A name="0.07-add"><H4>0.07-新增的功能</H4> 
+&nbsp&nbsp 這一版新增的功能有：  
+<P><LI>調整資料介面，準備接入資料庫。
+<BR>&nbsp&nbsp 這一版還未實現接入資料庫。
+<P><LI>設計實現新的介面風格"美麗的花"。
+<BR>&nbsp&nbsp 這些花都是老婆婆今年在公園裏拍到的。
+<BR>&nbsp&nbsp 老婆婆很喜歡這個叼花的小蜜蜂。這是老婆婆設計的第一個卡通形象。它將在你保存錯誤資料時出現。 ；） <IMG src=../../manual/image/error.gif>
+<BR>&nbsp&nbsp 一個新介面風格就對應113*3張圖片！
+<P><LI>實現"個人消息"功能。
+<BR>&nbsp&nbsp 用戶只能查詢自己發送和發給自己的消息、只能刪除發給自己的消息。
+<BR>&nbsp&nbsp 用戶讀過一條發給自己的消息後，系統自動標記其爲"已讀"。
+<BR>&nbsp&nbsp 介面上提示新收到的消息個數。
+    
+<A name="0.07-enhance"><H4>0.07-增強的功能</H4> 
+&nbsp&nbsp 這一版增強的功能有：  
+<P><LI>加強許可權管理的實現。
+<BR>&nbsp&nbsp 對於"全部刪除"和"全部修改"，都是滿足於"基本條件"的情況下執行，即用戶只能全部刪除或者全部修改自己可以訪問的資料。
+<BR>&nbsp&nbsp 只有有import許可權的用戶在導出資料時才可見password欄位，其他情況均不可見。
+<BR>&nbsp&nbsp 所有權限表重大修改！關鍵字改爲"標題"。這樣更有利於定義多個條件。
+<BR>&nbsp&nbsp 實現許可權表中"條件"的判斷。現在可是設置成任何合法的SEE條件。
+<P><LI>顯示圖片的縮略圖。
+<BR>&nbsp&nbsp 在顯示資料時，對於文件類型的欄位值，若是圖片（jpg/jpeg/gif/png），則顯示其縮略圖。
+<P><LI>使資料比較時與語言相關，這樣各種語言的資料排序結果才正確。
+<BR>&nbsp&nbsp 這個問題早就發現：中文排序結果沒有按照拼音順序。
+    
+<A name="0.07-solve"><H4>0.07-解決的問題</H4> 
+&nbsp&nbsp 這一版解決的問題有：<Font color=blue>（如此多的致命的、愚蠢的錯誤，作者爲此沮喪了好一陣子~~~）</FONT>
+<P><LI>一般用戶不能訪問"用戶"表，因此很多資料都不能填寫！！
+<BR>&nbsp&nbsp 這是一個致命的錯誤！這就意味著以前的所有版本都無法實際使用！
+<BR>&nbsp&nbsp 現在許可權管理表重新定義了。
+<P><LI>新用戶加入時，若不設置密碼，則系統自己加上了密碼！這樣新用戶就無法登陸！
+<BR>&nbsp&nbsp 這又是一個致命的錯誤！
+<P><LI>在上一版（0.06）中，英文版的系統許可權表居然是簡體中文的！
+<BR>&nbsp&nbsp 這樣，英文版更是無法使用~~~
+<BR>&nbsp&nbsp 這還是一個致命的錯誤！
+<P><LI>偏差處理裏的"風險項"定義中引用"風險分析"表名錯了。
+<BR>&nbsp&nbsp 這就造成點擊"選擇"按鈕時彈出了錯誤資訊。
+<P><LI>"口令"欄位可以通過查詢和導出看到。
+<BR>&nbsp&nbsp 雖然是加密後的亂碼，但也會造成隱患！
+<BR>&nbsp&nbsp 現在是：只有有import許可權的用戶在導出資料時才可見password欄位，其他情況均不可見。
+<P><LI>當關鍵字資料中包含引號時，頁面會有錯誤，功能按鈕（如修改、刪除）無法使用！
+<BR>&nbsp&nbsp 這是因爲引號在頁面資料引用中造成錯誤。
+<P><LI>介面語言變化時，審計記錄的語言也變化了！
+<BR>&nbsp&nbsp 這是不允許的。資料的語言是在安裝時已確定，不應隨介面語言變化！這個bug是因爲用錯了翻譯方法。
+
+<A name="0.07-data"><H4>0.07-資料的變化</H4> 
+<P>&nbsp&nbsp <Font color=green>以下內容只對需要保留舊版本資料的用戶有用。</FONT>  
+<P>&nbsp&nbsp 這一版資料的變化有：  
+<P><LI>添加"個人消息"。
+<P><LI>所有權限表重大修改！關鍵字改爲"標題"。
+<P><LI>給"不合格項"添加欄位"優先順序"。
+<P><LI>給"用戶"添加欄位"職務"。
+<P>&nbsp&nbsp 所有資訊結構的定義請參見"定制"一章。
+
+<P><HR>
+
+<A name="0.06"><H3>版本0.06的特點</H3>   
+<P>&nbsp&nbsp 發佈時間：2004年11月22日
+<BR>&nbsp&nbsp 標題：上善如水。至樂無樂。
+<BR>&nbsp&nbsp 獻給：嚕嚕。這只貓貓真是讓我笑死了，不過它的毛讓老婆婆吃夠苦頭了~ 
+
+<A name="0.06-add"><H4>0.06-新增的功能</H4> 
+&nbsp&nbsp 這一版新增的功能有：  
+<P><LI>實現批量修改功能。
+<BR>&nbsp&nbsp 用戶可以同時修改多個或者所有資料的某些欄位值。
+<BR>&nbsp&nbsp 矩陣欄位可以被批量修改。（爲了這句話，程式的複雜性增加了不少！）    
+<BR>&nbsp&nbsp 在缺省許可權模型中，只有超級管理員和資料管理員可以執行批量修改操作。
+<P><LI>定義"預定義"資料。
+<BR>&nbsp&nbsp 使得任何用戶（包括超級管理員）都不能修改它們的定義。因此介面上將沒有它們的"配置"按鈕。
+<BR>&nbsp&nbsp 同時重新定義了"系統資料"（只能由超級管理員修改的資料值）和"超級資料"（只能由超級管理員授權修改的資料值）。
+<BR>&nbsp&nbsp 這三類資料的清單請參見《使用指南》的"管理"一章。
+<P><LI>添加欄位屬性："單位"。
+<BR>&nbsp&nbsp 用戶可以定義資料欄位的單位名稱，這樣輸入或者顯示資料時，欄位名同時顯示該欄位的單位。
+<BR>&nbsp&nbsp 這個屬性對數位（整型/浮點）有意義。
+<P><LI>超級管理員可以直接增刪改所有的"顯示設置"、"條件設置"、"統計設置"。
+<BR>&nbsp&nbsp 介面上有專門的按鈕。
+    
+<A name="0.06-enhance"><H4>0.06-增強的功能</H4> 
+&nbsp&nbsp 這一版增強的功能有：  
+<P><LI>解決頁面參數遺留問題。
+<BR>&nbsp&nbsp 避免前面頁面參數對目前操作的影響。
+<P><LI>調整資料處理介面。
+<BR>&nbsp&nbsp 在選擇控制項旁添加"置空"按鈕。
+<BR>&nbsp&nbsp 所有介面中的主要操作按鈕均放在頁面下方中間。
+<P><LI>修改xml資料"修改"方法，使之適應更廣泛的應用模式。
+<BR>&nbsp&nbsp 使得代碼最大限度得到重用。
+<P><LI>完善審計記錄生成代碼。
+<BR>&nbsp&nbsp 使得刪除多個資料和批量修改資料時只産生一條審計紀錄，同時使得矩陣資料增刪改的審計資訊更加合理。
+    
+<A name="0.06-solve"><H4>0.06-解決的問題</H4> 
+&nbsp&nbsp 這一版解決的問題有：  
+<P><LI>頁面參數遺留問題。
+<BR>&nbsp&nbsp 當在其他頁面（如刪除頁面中）點擊顯示按鈕後，接著點擊操作功能表裏的查詢按鈕，顯示剛才選擇的資料，而不是整個資料列表。
+
+<A name="0.06-data"><H4>0.06-資料的變化</H4> 
+<P>&nbsp&nbsp <Font color=green>以下內容只對需要保留舊版本資料的用戶有用。</FONT>  
+<P>&nbsp&nbsp 這一版資料的變化比較大，有：  
+<P><LI>添加"資料獲取"、"檢查單"（"檢查項"、"檢查結果"、"不合格項"）、"專案角色"、"偏差處理"。
+<P><LI>調整介面功能表。當前的介面功能表定義請參考《使用指南》。
+<P><LI>"專案"和"軟體"功能表下的多數資訊結構中都添加了一些次要欄位。都不會造成舊資料丟失。
+<P>&nbsp&nbsp 所有資訊結構的定義請參見"定制"一章。
+
+<P><HR>
+<A name="0.05"><H3>版本0.05的特點</H3>   
+<P>&nbsp&nbsp 發佈時間：2004年9月27日
+<BR>&nbsp&nbsp 標題：女人是什麽？面容、身體、愛情、妻子、還是母親？不，她首先是一個人，而且只是一個人。
+<BR>&nbsp&nbsp 獻給：所有女人。直到今天，人類文明史還只是男人的文明史。作者爲自己不是生活在100年前而慶倖，但是爲不能生活在100年後而遺憾。 
+
+<A name="0.05-add"><H4>0.05-新增的功能</H4> 
+&nbsp&nbsp 這一版新增的功能有：  
+<P><LI>支援矩陣表。
+<BR>&nbsp&nbsp 當一個資訊結構包含多個交叉的屬性時，使用矩陣表是最好的選擇。
+<P><LI>添加新的統計類型：趨勢圖。
+<BR>&nbsp&nbsp 當資訊結構包含時間欄位（時間/日期）和數位欄位（整型/浮點）時，就有可能構成資料在時間軸上的變化趨勢。
+<P><LI>添加統計條件設置功能。
+<BR>&nbsp&nbsp 用戶可以先設置查詢條件、再統計過濾後資料。
+<P><LI>添加統計設置保存功能。
+<BR>&nbsp&nbsp 現在用戶可以保存、修改、刪除統計的參數設置結果，以快速獲得統計資料。
+    
+<A name="0.05-enhance"><H4>0.05-增強的功能</H4> 
+&nbsp&nbsp 這一版增強的功能有：  
+<P><LI>查詢條件的設置。
+<BR>&nbsp&nbsp 現在允許對同一欄位設置多個"而且"關係，即允許"5 < x < 10"這樣的查詢條件了。
+<P><LI>資訊結構配置功能的合法性檢查能力和自動處理能力。
+<BR>&nbsp&nbsp 當修改了資訊結構的定義後，功能功能表條自動刷新。這樣使用戶修改了"操作"後能立即看到效果。
+<BR>&nbsp&nbsp 對資訊欄位添加一個屬性：編輯寬度。這樣可以控制輸入域的寬度。
+<BR>&nbsp&nbsp 禁止用戶添加重名的欄位，並且檢查欄位名的合法性（由於使用了xml，所以需要遵循xml命名要求）
+<P><LI>對數字型資料（整型/浮點）的輸入提供非法字元檢查。
+<P><LI>修改xml讀取程式，使之佔用更少的空間。
+<BR>&nbsp&nbsp 現在唯讀取頁面需要的資料欄位。
+    
+<A name="0.05-solve"><H4>0.05-解決的問題</H4> 
+&nbsp&nbsp 這一版解決的問題有：  
+<P><LI>linux輸出圖片上的漢字爲空框。
+<BR>&nbsp&nbsp 這是系統配置問題，請參見《安裝配置》文檔。
+<P><LI>當資料最大統計個數超過270時，柱狀圖中高度都是0!
+<BR>&nbsp&nbsp 這是因爲浮點運算的所有算值都是整型而丟失了精度。
+<P><LI>用戶資料中的空格有可能被過濾掉！
+<BR>&nbsp&nbsp 當讀取xml資料時，若系統恰好在中間空格處分段，則空格可能就被濾掉了。對於時間資料，就會造成排序/統計錯誤！現在改變xml解析方法，避免過濾資料中間的空格。
+<P><LI>當"按資料"顯示審計記錄時，返回空頁面！
+<BR>&nbsp&nbsp 這是因爲源碼調整變數時替換錯了。這個錯誤在版本0.03、0.04中都有。
+
+<A name="0.05-data"><H4>0.05-資料的變化</H4> 
+<P>&nbsp&nbsp <Font color=green>以下內容只對需要保留舊版本資料的用戶有用。</FONT>  
+<P>&nbsp&nbsp 這一版資料的變化比較大，有：  
+<P><LI>添加"風險分析"。
+<P><LI>調整介面功能表，區分"專案計劃"（包括專案登記、專案階段、專案任務、風險分析）和"專案跟蹤"（包括工作周報、工作日志）。
+<P><LI>以下資訊結構均變爲矩陣表："專案登記"（原來的"專案跟蹤"）、"專案階段"、"專案任務"、"工作周報"、"工作日志"。
+<BR>&nbsp&nbsp 其中原先的"計劃工作量"、"實際工作量"、"計劃規模"、"實際規模"等欄位都變爲矩陣資料，因此這些欄位相關的舊資料肯定會丟失。
+<BR>&nbsp&nbsp 它們的定義中還刪除或添加了一些其他欄位。由於變化都較大，這裏不給變化說明。如果用戶已産生資料，則需要仔細對比新舊定義的不同。
+<P><LI>"代碼評審"和"文檔評審"的關鍵字都變爲"配置編號"，而"時間"變爲非空項，同時添加"文檔"/"代碼"欄位。因此這兩個資訊的舊資料將變得全部無效。
+<P><LI>以下資訊結構均變爲矩陣表："軟體需求"、"測試需求"、"測試過程"、"更動申請"、"問題報告"
+<BR>&nbsp&nbsp 這樣這些資料每一個狀態的最後修改值都得以直觀展現。
+<BR>&nbsp&nbsp 這個變化不會造成舊資料丟失。
+<P><LI>"問題報告"和"更動申請"都添加了"影響分析"欄位。
+<P><LI>"問題報告"的"嚴重性"欄位由"security"變爲"severity"（作者正在背單詞，於是發現了這個不妥。）。如果用戶不在舊資料中批量替換這個單詞，則這個欄位的舊資料將丟失。
+<P><LI>其他資訊也添加了一些次要欄位，都不會造成舊資料丟失。
+
+<P><HR>
+<A name="0.04"><H3>版本0.04的特點</H3>   
+<P>&nbsp&nbsp 發佈時間：2004年7月26日
+<BR>&nbsp&nbsp 標題：學而時習之，不亦樂乎 
+<BR>&nbsp&nbsp 獻給：Spice Girls，她們使老婆婆的心歌唱、跳舞、大笑、哭泣、思考、回憶。 
+
+<A name="0.04-enhance"><H4>0.04-增強的功能</H4> 
+&nbsp&nbsp 這一版增強的功能有：  
+<P><LI>速度測試。
+<BR>&nbsp&nbsp 現在超級管理員可以隨時測試SEE的運行速度，可以選擇添加測試資料的個數和排序的資料類型。介面上有了專門的按鈕，測試資料被寫入專門的文件，而不象前幾個版本那樣寫入"會議記要"裏。
+<BR>&nbsp&nbsp 每個資料處理頁面的右下角都會顯示當前頁面的回應速度。
+<P><LI>統計。
+<BR>&nbsp&nbsp 使統計結果自然成爲統計報告，在新窗口中彈出。
+<BR>&nbsp&nbsp 修改比率柱狀圖最大刻度的計算方法，使之更合理。
+<BR>&nbsp&nbsp 在安裝文檔中給出linux平臺上生成圖片的說明。簡單地說，你需要在未啓動X的linux上配置系統環境變數"CATALINA_OPTS=-Djava.awt.headless=true"，否則用戶很可能看不到統計圖片。
+<P><LI>增加浮點資料類型。
+    
+<A name="0.04-solve"><H4>0.04-解決的問題</H4> 
+&nbsp&nbsp 這一版解決的問題有：  
+<P><LI>遠端存取時，導出的資料結果、統計圖片和上傳資源都不能訪問！這就是這一版的發版原因。
+<P><LI>使用mozilla訪問，點擊表頭排序不生效。
+<P><LI>取消點擊資料行以直接執行操作的功能。一些瀏覽器（如mozilla）不支援，同時對於包含連接型或文件型的資料，這個功能會引起頁面處理錯誤。
+
+<A name="0.04-unsolve"><H4>0.04-未解決的問題</H4> 
+&nbsp&nbsp 這一版未解決的問題有：  
+<P><LI>win平臺上Mozilla的後退按鈕不生效。history.back()應是html基本語法。使用Mozilla自己的後退按鈕也不生效。不知何故。
+<P><LI>linux平臺生成的圖片上漢字顯示爲空白方塊。
+<BR>&nbsp&nbsp 這不是程式問題，而是系統環境中Font的配置問題。作者花費了大量時間查閱和實驗，不能解決這個問題。:(
+<BR>&nbsp&nbsp 按照資料的介紹，作者配置了"/usr/share/fonts/zh_CN/TrueType/font.dir"，"jre/lib/fonts/font.dir"，"jre/lib/font.properties.*"，複製了字體文件"gbsn00lp.ttf"，設置了環境變數"JAVA_FONTS"，"LANG"，"LC"，"LC_ALL"。但是仍然無效。
+<BR>&nbsp&nbsp 作者安裝的是中文版的redhat8，在字元終端中可以用vi正確看到漢字。
+<BR>&nbsp&nbsp 沒有資料介紹如何讓servlet在未啓動X的linux上在圖片中正確寫入漢字，只有swing漢字的處理。
+<BR>&nbsp&nbsp 作者的眼睛很累了，所以這一版裏她放棄了這個問題的解決。讀者知道怎麽解決嗎？
+
+<A name="0.04-data"><H4>0.04-資料的變化</H4> 
+&nbsp&nbsp 這一版資料的變化有：  
+<P><LI>添加"速度測試"，包含所有資料類型，以便測試不同資料類型的排序速度。
+<P><LI>暫存檔案目錄"tmp"和上傳目錄"upload"的位置移至應用根目錄下了。
+<P><LI>如果用戶的資料中包含了"文件"類型，現在就需要批量替換：將這些資料中的上傳文件的路徑都去掉，只留檔案名。  
+
+<P><HR>
+<A name="0.03"><H3>版本0.03的特點</H3>   
+<P>&nbsp&nbsp 發佈時間：2004年7月12日
+<BR>&nbsp&nbsp 標題：一葉一世界，一蟻一乾坤
+<BR>&nbsp&nbsp 獻給：老婆婆的父母，他們前幾天剛寄來一包好吃的。 
+
+<A name="0.03-add"><H4>0.03-新加的功能</H4> 
+&nbsp&nbsp 這一版新加的功能有：  
+<P><LI>通用的資訊查詢設置功能。
+<BR>&nbsp&nbsp 用戶可以設置多個"而且"的條件關係，然後用"或者"的條件關係將它們連起來。條件運算元有：等於、不等於、大於、小於、開始于、結束於、包含、不包含。系統依據資料類型來比較資料。
+<P><LI>通用的資訊統計分析功能。
+<BR>&nbsp&nbsp 目前實現計數和交叉計數兩種類型。用戶可以任意設置計數條件，系統自動生成統計報表（累計個數/百分率）和對比圖形（圓形圖/直條圖） 。
+<P><LI>登錄審計。
+<BR>&nbsp&nbsp 現在用戶的登錄行爲也可以被審計。
+    
+<A name="0.03-solve"><H4>0.03-解決的問題</H4> 
+&nbsp&nbsp 這一版解決的問題有：  
+<P><LI>任何用戶在地址欄裏直接輸入配置資訊結構的地址，就可以修改任何資訊結構!
+<P><LI>對於介面風格、介面方案、資料顯示風格、資料審計類型欄位，若設爲非空或關鍵字，則會有頁面腳本錯誤！
+<P><LI>在選擇介面中，點擊資料行，彈出空視窗。
+<P><LI>在刪除、選擇介面中點擊顯示按鈕後，再點擊當前頁面其他按鈕會反應錯誤！
+<P><LI>hash型資料顯示不正確。
+
+<A name="0.03-data"><H4>0.03-資料的變化</H4> 
+&nbsp&nbsp <FONT color=green>這一節只對已經用舊版本SEE産生有用資料的用戶有用。</FONT>
+<P>&nbsp&nbsp 這一版中資料的變化如下：  
+<P><LI>資訊結構"專案"、"專案階段"和"專案任務"的關鍵字變爲"配置編號"了。
+<BR>&nbsp&nbsp 如果用戶在舊版中産生了這些資料或者引用了"專案"資料（如問題報告、工作日志、軟體需求等），事情就麻煩了！
+<BR>&nbsp&nbsp 關鍵字的變化將導致這三個資訊的資料全部丟失！（引用它們的資料不會丟失）解決的辦法是：要麽保持你的舊定義不變、要麽批量替換舊資料中的關鍵字。
+<BR>&nbsp&nbsp 抱歉！不過，作者不知道是否有人會有遇到這樣的麻煩，因爲也許還沒有人實際使用SEE吧。如果不幸不是這樣的話，請email給作者，她也許可以提供幫助。
+<P><LI>資料分隔符號有了變化。
+<BR>&nbsp&nbsp 但是這些變化不會影響0.02版舊資料的使用，即是相容的。
+<P><LI>所有資訊結構定義文件都變化了。分隔符號有了變化。同時添加一個屬性：類型，添加了一個新操作：統計。
+<BR>&nbsp&nbsp 但是這些變化不會影響0.02版舊定義的使用，即是相容的。
+<BR>&nbsp&nbsp 如果你的舊結構定義中沒有加入統計操作，不要忘了加入。
+<P><LI>"系統角色許可權"和"資料用戶許可權"變化了。
+<BR>&nbsp&nbsp 因爲增加了一種新操作"統計"，所以相應的許可權賦值中加入了統計，否則除了超級管理員，沒有人能執行統計操作。
+<BR>&nbsp&nbsp 如果你已定義了自己的許可權模型，只需對相關的用戶或角色增加"統計"操作的授權即可。
+
+<P><HR>
+<A name="0.02"><H3>版本0.02的特點</H3>   
+<P>&nbsp&nbsp 發佈時間：2004年6月9日
+<BR>&nbsp&nbsp 標題：我們需要的很少，但是想要的太多。這是自然界的遊戲之一 
+<BR>&nbsp&nbsp 獻給：所有正在或者曾經遭受饑餓與戰爭苦難的人們。 
+
+<A name="0.02-speed"><H4>0.02-速度</H4> 
+&nbsp&nbsp 首先，這一版消除了0.01版的"速度問題"。
+<BR>&nbsp&nbsp 在0.01版中，當資料量增加時，xml讀取速度會非線性增長。當資料超過2000個時，回應速度急劇下降。
+<BR>&nbsp&nbsp 這實際源於一個bug：xml解析程式中的一個調試語句沒有被注釋掉。這個語句會將所有讀取到資料連接成一個字串！這是一個大量消耗cpu和記憶體的操作。
+<BR>&nbsp&nbsp 在本版中，注釋掉這個語句後，測試的結果表明：xml讀取寫入速度幾乎與資料量無關，當資料達到30000以上時，讀取寫入的耗時才一直處於1秒以上。  
+<P>&nbsp&nbsp 但是，當對資料排序時，資料量會對速度有大的影響。測試表明：4000條資料排序需要4秒，5000條資料則需9秒。
+<BR>&nbsp&nbsp 也許將來需要對SEE的排序演算法好好設計一下。
+
+<A name="0.02-add"><H4>0.02-新加的功能</H4> 
+&nbsp&nbsp 這一版新加的功能有：  
+<P><LI>登錄Cookie
+<BR>&nbsp&nbsp 用戶登錄時可以讓系統"記住我"，以免每次訪問都要輸入用戶名和口令。
+<BR>&nbsp&nbsp 用戶可以選擇cookie的有效時間：一年、一個月、一天或者一小時。
+<BR>&nbsp&nbsp 因此系統中區分"退出"和"關閉"，即用戶使用"關閉"按鈕來結束本次訪問，而用登錄介面的"退出"按鈕來使當前cookie失效。
+<P><LI>口令加密
+<BR>&nbsp&nbsp 現在口令類型的資料值會被自動DES加密後、轉換成16進制字串、保存在資料檔案中。
+<P><LI>用戶語言翻譯
+<BR>&nbsp&nbsp 現在用戶可以直接使用SEE來添加自己的語言文字翻譯。即時生效。
+<BR>&nbsp&nbsp 這個功能對添加或修改資訊結構的用戶應該有用。
+<P><LI>資料導入
+<BR>&nbsp&nbsp 用戶可以上傳一個格式正確的xml文件來導入資料。
+<BR>&nbsp&nbsp 在缺省的許可權模型中，只有資料管理員和超級管理員可以導入資料。
+<P><LI>添加2個資訊結構
+<BR>&nbsp&nbsp 說明：SEE的前幾個版本都將重點實現功能框架，而不是設計資訊結構。
+<BR>&nbsp&nbsp 新添的資訊結構是："共用資源"和"通知"。用戶可以共用資源地址，或者上傳共用文件。
+<P><LI>上傳管理
+<BR>&nbsp&nbsp 超級管理員在初始配置裏設置單個文件的上傳限額和上傳空間的總和。任何上傳超過這兩個限制，則自動被拒絕。
+<BR>&nbsp&nbsp 超級管理員可以查看、刪除、修改所有已上傳文件。
+<P><LI>新加"連接"資料約束類型
+   
+<A name="0.02-strengthen"><H4>0.02-增強的功能</H4> 
+&nbsp&nbsp 這一版增強的功能有：  
+<P><LI>導出功能，可以設置導出文件的編碼集。
+<BR>&nbsp&nbsp 0.01版導出的資料都是UTF-8的，查看和修改不方便。
+<BR>&nbsp&nbsp 現在用戶可以選擇導出文件的編碼集，這樣有利於將資料導入其他工具。
+<P><LI>資訊結構定義
+<BR>&nbsp&nbsp 現在可以設置缺省排序，這樣用戶打開資料列表時，就已按某個欄位排序。
+<BR>&nbsp&nbsp 設置關鍵字、顯示項、非空項時，所有資料項目名被自動列出，以供用戶選擇，而不必輸入。
+<BR>&nbsp&nbsp 可以設置資訊的操作類型。例如，對於"資料審計"，可以設置對它不能進行添加、修改操作。這樣可以避免對特殊資訊的不合理操作。 
+<P><LI>調整分隔符號，避免與實際資料衝突。
+<BR>&nbsp&nbsp 專用分隔符號應該避免出現在實際資料中，同時不能與系統特殊處理字元有重合。
+<BR>&nbsp&nbsp 這一版的分隔符號與0.01版的完全不同。如果有人用0.01版産生了資料，則將無法直接處理，需要批量替換。
+<BR>&nbsp&nbsp SEE中專用字串的定義參見《使用指南》，與0.01版的對照參見《安裝配置》。
+<P><LI>調整系統管理的介面層次
+<BR>&nbsp&nbsp 現在出現第三層功能表。例如，所有權限定義表都作爲一個第二層功能表的子項。這樣，功能層次更合理了。
+<P><LI>遍查代碼，將可以使用StringBuffer來提高速度的地方都替換了。
+    
+<A name="0.02-solve"><H4>0.02-解決的問題</H4> 
+&nbsp&nbsp 這一版解決的問題有：  
+<P><LI>《使用手冊》的'安裝配置'2.2節中，應設置JAVA_HOME爲j2sdk的安裝目錄
+<BR>&nbsp&nbsp 在0.01版中描述成設置爲j2sdk的bin子目錄。不熟悉java的用戶可能因此安裝失敗！
+<P><LI>使源碼可以直接在jbuilder7中運行
+<BR>&nbsp&nbsp 似乎運行情況並不如意。作者建議還是直接用ant和tomcat調試吧。
+<P><LI>實現file類型的欄位
+<BR>&nbsp&nbsp 對於file類型的欄位，0.01沒有專門處理。即使上傳了也沒有正確保存文件內容，而是保存了文件路徑！
+<P><LI>選擇資料的介面中，顯示按鈕處理結果不對。
+<BR>&nbsp&nbsp 原因是get方式傳進來的參數解碼不正確。
+<P><LI>點擊導出按鈕後，再點擊當前頁面其他按鈕會反應錯誤！
+<BR>&nbsp&nbsp 原因：導出按鈕在新視窗裏顯示頁面，但它首先改變了當前頁面的參數值，因此要讓本頁面仍然正常工作，就需要恢復原來的參數值。這個問題在所有以post方式打開新頁面的腳本中都應注意處理。
+<P><LI>普通用戶可以刪除或修改超級管理員的顯示設置。這是不允許的！
+<P><LI>對於非超級管理員，當介面切換到其他語言時，所有功能都不能用了！
+<BR>&nbsp&nbsp 原因：程式中用錯了方法，判斷時用的是session語言，而應該是應用語言。
+
+<A name="0.02-data"><H4>0.02-資料的變化</H4> 
+&nbsp&nbsp 這一版中資料的變化如下：  
+<LI>所有資訊結構定義文件都變化了！分隔符號有了變化。同時添加一個屬性：操作。
+<BR>&nbsp&nbsp 0.01版中沒有"操作"屬性，因此如果直接使用0.01版的資訊結構定義文件，則用戶只能執行"配置"操作。如果需要使用0.01版中的舊文件，解決辦法是：在配置介面中選擇操作列表、保存、然後刷新頁面。
+<P><LI>添加2個資訊結構："共用資源"和"通知"。
+<P><LI>在"軟體需求"和"更動請求"中加入"附件"欄位。
+
+<P><HR>
+<A name="0.01"><H3>版本0.01的特點</H3>   
+<P>&nbsp&nbsp 發佈時間：2004年5月7日
+<BR>&nbsp&nbsp 標題：生活就是參與、品嘗和分享
+<BR>&nbsp&nbsp 獻給：老婆婆自己吧，慶祝胖了3公斤。:) 
+
+<P><LI>免費。
+<BR>&nbsp&nbsp SEE自身免費，其運行環境均有免費的選擇。免費指源代碼可得。
+<P><LI>輕量的B/S模式。
+<BR>&nbsp&nbsp 用戶端只需通用的瀏覽器，伺服器端只需servlet運行環境，SEE自身不到5M（包含文檔和圖片）。
+<P><LI>資料相容。
+<BR>&nbsp&nbsp SEE中所有資料均是XML文件。而XML正是資料相容的産物。
+<P><LI>介面國際化和資料國際化。
+<BR>&nbsp&nbsp 目前支援簡體中文、英文、繁體中文。
+<BR>&nbsp&nbsp 用戶可以隨時切換到不同的語言介面。 
+<BR>&nbsp&nbsp 不同語言的安裝本版包含本地化的初始賬號和初始資料。在使用時，預製資料自動保存爲本地語言。 
+<P><LI>確定SEE的許可權管理機制。
+<BR>&nbsp&nbsp 設置超級管理員，區分系統角色和資料角色，可以分層定義系統角色、資料角色和用戶的許可權。（這種分層許可權管理機制，參見使用指南的詳細說明）
+<BR>&nbsp&nbsp 安裝後，系統中即有缺省的許可權資料。缺省的許可權模型基於這樣的思路：最大限度地開放專案資訊的管理能力，使專案資訊對專案組成員完全透明。在功能上，每個成員都可以任意添加/修改/查詢/審計專案的多數資料（刪除許可權只開放給資料管理員這個系統角色）。不必擔心有人"搗亂"，因爲所有操作行爲、資料內容和執行結果都可以被系統自動記錄。擁有充分的資訊，任何人都可以監督任何人（超級管理員不可見，她/他是系統的構建者）。
+<BR>&nbsp&nbsp 當然，如果用戶需要採用其他許可權模型，完全可以刪除缺省資料、自己定義。
+<P><LI>實現用戶配置功能。
+<BR>&nbsp&nbsp 超級管理員可以配置整個系統的參數，其她/他用戶可以設置即時生效的一些參數（介面語言、頁面大小、資料顯示風格、缺省專案等）。用戶的個人資訊中，還可以設置每次登錄都會生效的參數。
+<P><LI>實現通用的資訊結構定義功能。
+<BR>&nbsp&nbsp 用戶可以隨時修改任何資訊結構定義，即時生效。用戶可以定義整個資訊結構的屬性（關鍵字組/關鍵字是否可修改/非空項/無效項/顯示項/缺省顔色等）和各個資料欄位的屬性（資料類型/大小/缺省值/值約束/編輯控制項類型等），系統根據資訊的定義來自動提供資訊的所有處理功能。這是SEE的核心。SEE的絕大多數資料和功能也是這樣實現的。即：定義系統與使用系統一樣，是通過運行SEE來實施的。
+<P><LI>實現通用的資訊處理基本操作。
+<BR>&nbsp&nbsp 即：添加、複製、插入、修改、刪除。
+<P><LI>實現資料導出功能。
+<BR>&nbsp&nbsp 用戶可以選擇導出所有或者當前頁面的資料，同時可以選擇導出的格式：xml、txt或html。這樣用戶可以利用其他工具來做更細緻的資料分析。同時利用顯示設置功能，用戶可以得到漂亮的查詢報告。
+<P><LI>實現系統的資料審計功能。
+<BR>&nbsp&nbsp 用戶的資料操作可以被系統自動記錄下來，包含：誰、何時、何地、什麽資料、原來的欄位值、新的欄位值、操作結果等。這樣，資訊的資料變化可以被完整地跟蹤下來。超級管理員可以設置需要審計的操作類型；用戶可以按資料或者按時間來查看審計記錄。這是專案監督的手段，也是資料恢復的一個途徑。
+<P><LI>實現通用的資訊顯示設置功能。
+<BR>&nbsp&nbsp 用戶可以任意設置資訊顯示的欄位、排序、顔色、風格，並且可以保存、修改和刪除這種顯示設置。
+<P><LI>設計軟體專案常用的資訊結構。
+<BR>&nbsp&nbsp 包括：專案跟蹤（進度/規模/成本）、軟體需求、軟體配置項登記、軟體評審、測試資訊、更動申請、問題報告、會議記要等。
+
+
+<BR><BR>
+<P align=right><A href="https://sourceforge.net/projects/chong2see/" target=_blank>
+https://sourceforge.net/projects/chong2see/</A></P>
+<HR>
+<H4 class=footer align=center>軟體工程環境	 版本 0.07/2004-12
+</H4>
+</BODY>
+
+</HTML>

@@ -1,0 +1,180 @@
+<!-- Software Engineering Environment	 Version 0.07/2004-12	 Mara Ren -->
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=iso-8859-1">
+<TITLE> Software Engineering Environment - Maunal - Installation</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="../../manual/style/style_default.css"> 
+</HEAD>
+
+<BODY class=info>
+
+<P class=title align=center title="">Installation</P>   
+<HR>
+
+<A href="#1">1 The Running Environment of SEE</A>   
+<BR><A href="#2">2 Establishing the Running Environment of SEE</A>
+<BR>&nbsp&nbsp<A href="#2.1">2.1 Download</A>
+<BR>&nbsp&nbsp<A href="#2.2">2.2 On the Win Platform</A>
+<BR>&nbsp&nbsp<A href="#2.3">2.3 On the Unix/Linux Platform</A>
+<BR>&nbsp&nbsp<A href="#2.4">2.4 Using Tomcat Services</A>
+<BR>&nbsp&nbsp<A href="#2.5">2.5 Managing Tomcat Services</A>
+<BR><A href="#3">3 Before Install SEE</A>
+<BR><A href="#4">4 Installing SEE</A>
+<BR><A href="#5">5 After Install SEE</A>
+<BR><A href="#6">6 Visiting SEE</A>
+<BR><A href="#7">7 Running Several SEE Simultaneously</A>
+<BR><A href="#8">8 The Speed of SEE</A>
+<BR><A href="#9">9 The Author's Worry</A>
+
+<A name="1"><H3>1 The Running Environment of SEE</H3>
+&nbsp&nbsp The running environment of SEE is any server which supports the "Servlet 2.3 Specification" and is based on jdk which is later than version 1.4.1.
+<P>&nbsp&nbsp User can select the following free platform:
+<LI>Jdk. The version is at least over the 1.4.1 .
+<LI>Tomcat. The version is at least over 4.0 .
+<P>&nbsp&nbsp That is, SEE runs in any environment which supports Servlet 2.3 (The author merely verified in the Win and Linux's environment). It does not use any special technique and needs no auxiliary program.
+<P>&nbsp&nbsp SEE needs no special demand for hardware.
+<BR>&nbsp&nbsp Surely of course, CPU speed and the memory capacity bear upon SEE's reponcing speed.
+<BR>&nbsp&nbsp Installation of entire things in SEE, including all manuals and pictures, needs the hard disk no more than 10M. 
+<P>&nbsp&nbsp To use functions of SEE, you need:
+<LI>Be able to visit the address of the server on which SEE is installed
+<LI>Any web-browser which supports javscript 1.0, cookie 1.0, and css 1.0
+<LI>The ideal display resolution to show interfaces of SEE is: 1024 * 768. 
+
+<A name="2"><H3>2 Establishing the Running Environment of SEE</H3>
+&nbsp&nbsp <FONT color=green>If the user has already have the servlet environment, such as some commercial or free J2EE platform, you can skip this section. </FONT>
+<BR>&nbsp&nbsp <FONT color=red>But notice that user should check the release of jdk and the release of servlet in your platform.</FONT>
+
+<A name="2.1"><H4>2.1 Download</H4>       
+&nbsp&nbsp User can download the latest j2sdk in the following address:
+<BR>&nbsp&nbsp <A href="http://java.sun.com/" target=_blank>http://java.sun.com/</A></P>
+&nbsp&nbsp User can download the latest tomcat in the following address:
+<BR>&nbsp&nbsp <A href="http://jakarta.apache.org/site/binindex.cgi" target=_blank>http://jakarta.apache.org/site/binindex.cgi</A></P>
+<P>&nbsp&nbsp If it is not convenient to download them from the above addresses, you can use google to search much many addresses which provide their downloading.
+<P>&nbsp&nbsp The author suggests tomcat 5.0.25. Its speed and management method becomes more better.
+
+<A name="2.2"><H4>2.2 On the Win Platform</H4>       
+&nbsp&nbsp Install and config j2sdk:
+<LI>Download the installation packet of j2sdk(or jdk, or j2se) for win platform. You may get a zip packet. 
+<LI>Extract the installation packet, then run the exe file to install.
+<LI>Set the environment variable "JAVA_HOME" as the directory of j2sdk. (Here the author does not introduce the way to set an environment variable.)
+<P>&nbsp&nbsp Install and config tomcat:
+<LI>Download the installation packet of tomcat for win platform. You may get a zip packet. 
+<LI>Extract the installation packet, then run the exe file to install. It can find the j2sdk itself.
+<P>&nbsp&nbsp After the installation, tomcat will provide one shortcut key in the start menu, which is used to manage the tomcat services.
+<BR>&nbsp&nbsp If you can not find this icon, please enter the bin sub-directory of tomcat to execute the bat file of startup and shutdown.
+
+<A name="2.3"><H4>2.3 On the Unix/Linux Platform</H4>       
+<P>&nbsp&nbsp Do the following with the root account.
+<P>&nbsp&nbsp Install and config j2sdk:
+<LI>Download the installation packet of j2sdk(or jdk, or j2se) for Linux platform. The author suggests you download the rpm packet.
+<LI>Assume the user has downloaded the packet "j2sdk-1_4_1_07-linux-i586-rpm.bin", you can input the following in the command line:
+<BR>&nbsp&nbsp ./j2sdk-1_4_1_07-linux-i586-rpm.bin
+<BR>When it shows the license, you should answer "yes". Then it will produce the rpm packet "j2sdk-1_4_1_07-fcs-linux-i586.rpm" for you.
+<LI>To install this rpm packet, you can input the following in the command line:
+<BR>&nbsp&nbsp rpm -ihv j2sdk-1_4_1_07-fcs-linux-i586.rpm
+<BR>Files will be installed under the directory "/usr/java".
+<LI>Set the environment variable "JAVA_HOME". You can input the following in the command line: 
+<BR>&nbsp&nbsp JAVA_HOME=/usr/java/j2sdk1.4.1_07
+<BR>&nbsp&nbsp export JAVA_HOME
+<P>&nbsp&nbsp Install and config tomcat:
+<LI>Download the installation packet of tomcat for Linux platform.
+<LI>Assume the user has downloaded the packet "jakarta-tomcat-5.0.18.tar.gz", you can enter the directory which tomcat will be installed, and input the following in the command line:
+<BR>&nbsp&nbsp tar zvfz jakarta-tomcat-5.0.18.tar.gz
+<BR>Files will be extracted under the sub-directory "jakarta-tomcat-5.0.18".
+<LI>Enter the bin sub-directory of this directory, and execute "./startup.sh" to start tomcat and execute "./shutdown.sh" to stop tomcat. 
+<P>&nbsp&nbsp <Font color=green>If your linux does not start X server, you should execute the following commands to ensure it can produce pictures of SEE correctly</Font>:
+<BR>&nbsp&nbsp "Tomcat Dicrectory"/bin/shutdown.sh (To stop tomcat)
+<BR>&nbsp&nbsp CATALINA_OPTS="-Djava.awt.headless=true"
+<BR>&nbsp&nbsp export CATALINA_OPTS
+<BR>&nbsp&nbsp "Tomcat Dicrectory"/bin/startup.sh (To start tomcat)
+<BR>&nbsp&nbsp If want to set this parameter automatically at each reboot, please add the two commands which set CATALINA_OPTS into the file "/etc/profile".
+<P>&nbsp&nbsp <Font color=green>If the Chinese are shown as some blank diamonds in your SEE pictures from linux, please try the following</Font>:
+<LI>Check the Chinese fonts on your linux.
+<BR>&nbsp&nbsp For example, in the Simplified Chinese release of redhat 8, open the file "/usr/share/fonts/zh_CN/TrueType/font.dir" and look at the fonts's definition.
+<BR>&nbsp&nbsp If there is "-misc-ZYSong18030-medium-r-normal--0-%d-0-0-c-0-iso10646-1", you can use the file in the SEE packet directly. Or else you have to replace the font definition in the file provided by SEE.
+<LI>Check the java fonts.
+<BR>&nbsp&nbsp Under the sub-directory "jre/lib" of jdk directory, look up all the file names which begin with "font.properties.zh". If you will, please remove all of them.
+<LI>Config the java fonts.
+<BR>&nbsp&nbsp Copy the file "font.properties.zh" in SEE package to your "jre/lib" under the jdk directory.
+<LI><B>Use "su -" to enter the root account.</B>
+<LI>Set the system parameters. Input the following commands (Or write them into "/etc/profile"):
+<BR>JAVA_FONTS="/usr/share/fonts/zh_CN/TrueType/"
+<BR>export JAVA_FONTS
+<BR>JAVA_HOME="/usr/java/j2sdk1.4.1_07"  (Modify as your jdk directory)
+<BR>export JAVA_HOME
+<BR>LANG=zh_CN
+<BR>LC_ALL=zh_CN.GB18030
+<LI>restart tomcat
+<BR>&nbsp&nbsp <Font color=green>18030 supports Traditional Chinese as well.</FONT>
+
+<A name="2.4"><H4>2.4 Using Tomcat Services</H4>       
+&nbsp&nbsp After the installation steps, you can open a web-browser and enter the following in the address: (Assuming your tomcat is installed on your computer)
+<BR>&nbsp&nbsp http://localhost:8080
+<BR>&nbsp&nbsp If you see that famous cat, your tomcat is ready.
+
+<A name="2.5"><H4>2.5 Managing Tomcat Services</H4>       
+&nbsp&nbsp Managing tomcat services includes: listing all applications' status, starting an application, stopping an application and reload an application.
+<BR>&nbsp&nbsp The manual included in tomcat will tell you everything clearly.
+<BR>&nbsp&nbsp User can also find some introduction written by the author in "Source Code Explanation" of SEE.
+
+<A name="3"><H3>3 Before Install SEE</H3>
+<P>&nbsp&nbsp <FONT color=green>If you do not ever install SEE ago, skip this section.</FONT>
+<P>&nbsp&nbsp If some old release of SEE being installed, you need uninstall it. <FONT color=green>You can also <A href=#7>run several different releases of SEE at the same time.</A></FONT>
+<BR>&nbsp&nbsp But <FONT color=red>before you uninstall SEE, you should backup your data! (Unless you need not them any more)</FONT>
+<P>&nbsp&nbsp All data of SEE are saved under the directory "see\WEB-INF\data", including all definitions of information structures (structure sub-directory), data records (value sub-directory), upload files (upload sub-directory)
+<BR>&nbsp&nbsp Backup data in SEE is just to copy the directory "see\WEB-INF\data" or its part to other place, so that you can copy them back after install some new release of SEE.
+<P>&nbsp&nbsp User can use the management functions of tomcat to uninstall SEE. If you are interested in the management about tomcat, you can refer to the "Source Code Explanation".
+<BR>&nbsp&nbsp If lazy to learn, you can do as following:
+<LI>Stop the services of tomcat
+<LI>Remove the see sub-directory  and the file see.war (If you have not remove this file) under the "webapps/" of tomcat.
+<LI>start the services of tomcat
+
+<A name="4"><H3>4 Installing SEE</H3>
+&nbsp&nbsp To install SEE is just to deploy a servlet application:
+<LI>Download the binary packet of SEE and extract it. You will get a file named "see.war". 
+<LI>Copy this war file under the deploy directory for servlet applications. (To tomcat, the deploy directory is its sub-directory "webapps/".)
+<LI>Tomcat will do the following automatically: find SEE packet, extract SEE packet, and start SEE.
+<LI>After Tomcat creates the see directory for you, you can remove the file "see.war".
+
+<A name="5"><H3>5 After Install SEE</H3>
+<P>&nbsp&nbsp <FONT color=green>If you do not ever install SEE ago, or you need not the data in installed SEE any more, skip this section.</FONT>
+<P>&nbsp&nbsp If you need use the old data in the new installed SEE, you should copy them back after the installation.
+<BR>&nbsp&nbsp But when you recover the data, please think of the following things:
+<LI>If you ever modified some default information structure, please compare files to find whether this structure is updated in the new release or not. All of the definition of information structures are given in "Use Guide". All changes of data are given in "Change Log". Add old content to the new release, or add content of new release to the old file. It is up to you to select. The author suggests user to modify the xml file directly. 
+<LI>If you ever added some information structures or adjusted the interface theme, please DO NOT cover the interface theme file with your old file! Because the new interface theme is updated certainly and includes the new function buttons. In this case, you had better add your content into the new interface theme.
+
+<A name="6"><H3>6 Visiting SEE</H3>
+&nbsp&nbsp Open a web-browser and enter the following in the address: (Assuming your tomcat is installed on your computer.)
+<BR>&nbsp&nbsp http://localhost:8080/see
+<BR>&nbsp&nbsp You should see the login interface of SEE.
+<P>&nbsp&nbsp If SEE is installed on another computer which your computer can visit, please input:
+<BR>&nbsp&nbsp http://"the IP or domain name of the computer on which SEE is installed":8080/see
+<P>&nbsp&nbsp To learn how to use SEE functions, please refer to "Use Guide".
+
+<A name="7"><H3>7 Running Several SEE Simultaneously</H3>
+<P>&nbsp&nbsp If you want to run several SEE at the same time, for example, make the old release running while the new release running, or you want to custom SEE into several applications of different domains and make them running at the same time, you will be satisfied with easily.
+<P>&nbsp&nbsp After you get the packet "see.war", rename it and install it, then SEE will run in your new name.
+<BR>&nbsp&nbsp For example, you rename "see.war" to "mysee.war". After you install it, you can visit it with the name "mysee". That is you visit it by enter the following address in a web-browser:
+<BR>&nbsp&nbsp http://"the IP or domain name of the computer on which SEE is installed":8080/mysee
+<P>&nbsp&nbsp You can rename the same SEE packet into several different packets to install. And then custom them into different applications.
+<BR>&nbsp&nbsp You can also rename different releases or releases in different languages to run them simultaneously.
+
+<A name="8"><H3>8 The Author's Worry</H3>
+&nbsp&nbsp The author compiled the war packet of SEE on the Simplified Chinese platform, and did not set the encoding parameter. Because the author does not think it necessary. 
+<BR>&nbsp&nbsp Nevertheless, the author is worried about the following: Will some wrong be happened on users' English or Traditional Chinese platforms?
+<P>&nbsp&nbsp The author tried SEE on English environment of redhat8, and found no error.
+<BR>&nbsp&nbsp If some user would find such wrong, please tell the author as quickly as possible! Thanks a lot! 
+
+<BR><BR>
+<P align=right><A href="https://sourceforge.net/projects/chong2see/" target=_blank>
+https://sourceforge.net/projects/chong2see/</A></P>
+<HR>
+<H5 class=footer align=center>Software Engineering Environment	 Version 0.07/2004-12
+</H5>
+</BODY>
+
+</HTML>

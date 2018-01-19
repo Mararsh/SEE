@@ -1,0 +1,430 @@
+<!-- Software Engineering Environment	 Version 0.07/2004-12	 Mara Ren -->
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=iso-8859-1">
+<TITLE> Software Engineering Environment - Maunal - Change Log</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="../../manual/style/style_default.css"> 
+</HEAD>
+
+<BODY class=info>
+
+<P class=title align=center title="">Change Log</P>   
+
+<HR>
+<BR><A href="#0.07">Features in Release 0.07</A>   
+<BR>&nbsp&nbsp<A href="#0.07-add">Added Functions</A>
+<BR>&nbsp&nbsp<A href="#0.07-enhance">Enhanced Functions</A>
+<BR>&nbsp&nbsp<A href="#0.07-solve">Solved Problems</A>
+<BR>&nbsp&nbsp<A href="#0.07-data">Changes of Data</A>
+<BR><A href="#0.06">Features in Release 0.06</A>   
+<BR>&nbsp&nbsp<A href="#0.06-add">Added Functions</A>
+<BR>&nbsp&nbsp<A href="#0.06-enhance">Enhanced Functions</A>
+<BR>&nbsp&nbsp<A href="#0.06-solve">Solved Problems</A>
+<BR>&nbsp&nbsp<A href="#0.06-data">Changes of Data</A>
+<BR><A href="#0.05">Features in Release 0.05</A>   
+<BR>&nbsp&nbsp<A href="#0.05-add">Added Functions</A>
+<BR>&nbsp&nbsp<A href="#0.05-enhance">Enhanced Functions</A>
+<BR>&nbsp&nbsp<A href="#0.05-solve">Solved Problems</A>
+<BR>&nbsp&nbsp<A href="#0.05-data">Changes of Data</A>
+<BR><A href="#0.04">Features in Release 0.04</A>   
+<BR>&nbsp&nbsp<A href="#0.04-enhance">Enhanced Functions</A>
+<BR>&nbsp&nbsp<A href="#0.04-solve">Solved Problems</A>
+<BR>&nbsp&nbsp<A href="#0.04-unsolve">Unsolved Problems</A>
+<BR>&nbsp&nbsp<A href="#0.04-data">Changes of Data</A>
+<BR><A href="#0.03">Features in Release 0.03</A>   
+<BR>&nbsp&nbsp<A href="#0.03-add">New Functions</A>
+<BR>&nbsp&nbsp<A href="#0.03-solve">Solved Problems</A>
+<BR>&nbsp&nbsp<A href="#0.03-data">Changes of Data</A>
+<BR><A href="#0.02">Features in Release 0.02</A>   
+<BR>&nbsp&nbsp<A href="#0.02-speed">The Speed</A>
+<BR>&nbsp&nbsp<A href="#0.02-add">New Functions</A>
+<BR>&nbsp&nbsp<A href="#0.02-strengthen">Enhanced Functions</A>
+<BR>&nbsp&nbsp<A href="#0.02-solve">Solved Problems</A>
+<BR>&nbsp&nbsp<A href="#0.02-data">Changes of Data</A>
+<BR><A href="#0.01">Features in Release 0.01</A>   
+
+<A name="0"><BR><BR><HR>
+<H4><FONT color=green>User had better not use SEE actually in your application before release 1.0. The design and implementation of SEE are all not steady.</FONT>
+</H4><HR>
+
+<A name="0.07"><H3>Features in Release 0.07</H3>   
+<P>&nbsp&nbsp Release Date: December 27, 2004</a>
+<BR>&nbsp&nbsp Title: Greed stops happiness.
+<BR>&nbsp&nbsp Dedicated to: the author herself. Thanks for her hard working in this year. Happy New Year!
+
+<A name="0.07-add"><H5>0.07-Added Functions</H5> 
+&nbsp&nbsp The added functions in this release are following:  
+<P><LI>The data interface to prepare supporting databases.
+<BR>&nbsp&nbsp The databases are not supported in this release.
+<P><LI>A new interface style "Beautiful Flowers".
+<BR>&nbsp&nbsp These flowers are photoed in parks in this year by the author.
+<BR>&nbsp&nbsp The author likes the honeybee who holds a flower in its mouth very much. It is the first cartoon figure by the author. It will appear when you save wrong data. :) <IMG src=../../manual/image/error.gif>
+<BR>&nbsp&nbsp A new interface style means 113*3 pictures!
+<P><LI>The function of "Personal Message".
+<BR>&nbsp&nbsp User can only query the messages sent by and sent to herself/himself. And user can only remove the messages sent to herself/himself.
+<BR>&nbsp&nbsp After a user read a message sent to her/him, SEE will mark it as "have_read" automatically.
+<BR>&nbsp&nbsp The number of new arrived messages will be shown in the interface.
+
+<A name="0.07-enhance"><H5>0.07-Enhanced Functions</H5> 
+&nbsp&nbsp The enhanced functions in this release are following:  
+<P><LI>The data privileges' management
+<BR>&nbsp&nbsp When user "Remove All" or "Modify All", the "base conditions" will be checked at first. That is user can only do what she/he can do.
+<BR>&nbsp&nbsp The Password fields' values can not be visited, except when the user, who owns the "Import" privilege to current data, exports the data.
+<BR>&nbsp&nbsp All the data structures of ACL tables are changed! Their keywords become the "Title". This will permit user define better ACL.
+<BR>&nbsp&nbsp And the "condition" in the ACL tables are implemented completely. Now any "SEE conditions" is valid.
+<P><LI>Snapshot for image file
+<BR>&nbsp&nbsp When list the data, a snapshot will be shown for the image file's type, which may end with jpg/jpeg/gif/png.
+<P><LI>Data sorting concerned with langauges.
+<BR>&nbsp&nbsp Thus when sorting data in Chinese, the result is Chinese result.
+
+<A name="0.07-solve"><H5>0.07-Solved Problems</H5> 
+&nbsp&nbsp Solved problems in this release are following:  <Font color=blue>(So many fatal and stupid bugs make the author sad for a long time~~)</FONT>
+<P><LI>General users can not visit the "User" table! Then they can not fill in many data!
+<BR>&nbsp&nbsp This is a fatal bug! This means all former releases can not be used actually!
+<BR>&nbsp&nbsp Now all ACL tables are redesigned.
+<P><LI>When a new user is added without password, SEE will add some password itself! Then this new user can never login!
+<BR>&nbsp&nbsp This is another fatal bug!
+<P><LI>In the last English release, which is 0.06, the ACL data are in Chinese!
+<BR>&nbsp&nbsp So the English users can not use SEE at all~~
+<BR>&nbsp&nbsp This is still a fatal bug!
+<P><LI>The "Risk Items" in the table "Deviation Handling" is wrong defined.
+<BR>&nbsp&nbsp This will cause an error information when user clicks the "Select" button.
+<P><LI>The values of Password fields can be visited when query or export.
+<BR>&nbsp&nbsp Although the values are meaningless encoded codes, they are still security thread.
+<P><LI>When some quota marks in the key values, pages will report errors and the function buttons, such as Modify and Remove, can not act!
+<BR>&nbsp&nbsp This is because quota is also an element of web page.
+<P><LI>When the interface language changes, the language in audit records changes too!
+<BR>&nbsp&nbsp This is not permitted. Language of all data is determined when SEE is installed and can not change with interface!
+
+<A name="0.07-data"><H5>0.07-Changes of Data</H5> 
+<P>&nbsp&nbsp <Font color=green>The following is only useful for the user who wants to keep the old data produced by old releases.</FONT>  
+<P>&nbsp&nbsp Changes of data in this release are following:  
+<P><LI>"Personal Message" is added.
+<P><LI>All ACL tables are changed! Their keywords are changed as "Title".
+<P><LI>A new field "Priority" is added in the table "Ineligible Items".
+<P><LI>A new field "job_title" is added in the table "User".
+<P>&nbsp&nbsp The definition of all information structures can be found in the chapter "Custom".</a>
+
+<P><HR>
+
+<A name="0.06"><H3>Features in Release 0.06</H3>   
+<P>&nbsp&nbsp Release Date: November 22, 2004</a>
+<BR>&nbsp&nbsp Title: The pure kindness is like water. The top happiness is without happiness. 
+<BR>&nbsp&nbsp Dedicated to: Lu Lu. It always makes the author laughing, although its hair always makes her mad.
+
+<A name="0.06-add"><H5>0.06-Added Functions</H5> 
+&nbsp&nbsp The added functions in this release are following:  
+<P><LI>Adding the funtion of batch modification
+<BR>&nbsp&nbsp User can modify some fields's values in multiple data or all data at the same time.
+<BR>&nbsp&nbsp The matrix fileds can be modifed in the batch way. (Much complexity has arisen due to this sentense! )  
+<BR>&nbsp&nbsp In the default privilege model, only the super manager and data managers can execute batch modificaition.
+<P><LI>Defining the Pre-defined Data
+<BR>&nbsp&nbsp All users, incluing the super manager, can not modify their definition. Thus there are no "Config" buttons for these data.
+<BR>&nbsp&nbsp At the same time, the System Data, which can be modified only by the super manager, and the Super Data, which can be granted only by the super manager, are re-defined.
+<BR>&nbsp&nbsp The list of the three types data can be referred in the chapter "Manage" of the Use Guide.
+<P><LI>Adding new field's attribute: Unit
+<BR>&nbsp&nbsp User can define the unit name of a data field. Thereby when show or input the data, the unit name of the data will be shown beside the field's name.
+<BR>&nbsp&nbsp This attribute is useful to the data in number type, such as integer and float.
+<P><LI>The super manager can add, remove and modify all of "Condition Setup", "Show Setup" and "Statistic Setup" directly.
+<BR>&nbsp&nbsp There are special buttons in the interface for these data.
+
+<A name="0.06-enhance"><H5>0.06-Enhanced Functions</H5> 
+&nbsp&nbsp The enhanced functions in this release are following:  
+<P><LI>Resolving the problem of parameters effect from previous page.
+<BR>&nbsp&nbsp Avoiding the effect from previous page to current page.
+<P><LI>rearranging the data operation interface.
+<BR>&nbsp&nbsp Add the "Set Null" button beside the Select controller.
+<BR>&nbsp&nbsp All main operating buttons are put in the middle of the page bottom.
+<P><LI>Reforming the Modify method in XML handling codes to make them used in wilder place.
+<BR>&nbsp&nbsp These codes get reuse in best degree.
+<P><LI>Improving the audit record generation codes.
+<BR>&nbsp&nbsp When remove multiple data or do batch modification, only one audit record will be added. And the audit content about matrix data is more reasonable now.
+
+<A name="0.06-solve"><H5>0.06-Solved Problems</H5> 
+&nbsp&nbsp Solved problems in this release are following:  
+<P><LI>Parameters effect from previous page.
+<BR>&nbsp&nbsp After click Show button from other page, such as remove page, when click the Query button in the data operation menu, the data selected in previous page will be shown, but not the expected data list.
+
+<A name="0.06-data"><H5>0.06-Changes of Data</H5> 
+<P>&nbsp&nbsp <Font color=green>The following is only useful for the user who wants to keep the old data produced by old releases.</FONT>  
+<P>&nbsp&nbsp Changes of data in this release are following:  
+<P><LI>Adding "Data Collection", "Check List" ("Check Item", "Check Result", "Ineligible Item"), "Project Role" and "Deviation Handling".
+<P><LI>Adjusting interface menu. Current interface definition can be found in Use Guide.
+<P><LI>Some minor fields are added in many information structures under the Project and Software menu items. They will not make data loss.
+<P>&nbsp&nbsp The definition of all information structures can be found in the chapter "Custom".</a>
+
+<P><HR>
+
+<A name="0.05"><H3>Features in Release 0.05</H3>   
+<P>&nbsp&nbsp Release Date: September 27, 2004</a>
+<BR>&nbsp&nbsp Title: What is a woman? Face, body, love, wife, or mother? No, she is a person first. And she is only a person. 
+<BR>&nbsp&nbsp Dedicated to: all women. Till today, the human's civilization history is just the men's civilization history. The author feels lucky for not living in 100 years ago, but meanwhile she feels unlucky for not living in 100 years later. 
+
+<A name="0.05-add"><H5>0.05-Added Functions</H5> 
+&nbsp&nbsp The added functions in this release are following:  
+<P><LI>Supporting Matrix Tables.
+<BR>&nbsp&nbsp When an information has many cross attributes, the matrix type is the best choice.
+<P><LI>New statistic type: Trend Chart.
+<BR>&nbsp&nbsp When an information has some date/time fields and some integer/float fields, the trend charts will show the number changes in time axis.
+<P><LI>Supporting condition setup for statistic.
+<BR>&nbsp&nbsp User can set the conditions for filtering data and then get statistic result based that.
+<P><LI>Supporting the statistic conditions management.
+<BR>&nbsp&nbsp User can save, modify, and remove the parameters of statistic. And then uses the saved setup to get the statistic result directly.</a>
+
+<A name="0.05-enhance"><H5>0.05-Enhanced Functions</H5> 
+&nbsp&nbsp The enhanced functions in this release are following:  
+<P><LI>Stronger setup for filtering data
+<BR>&nbsp&nbsp Now user can set more than one conditions to the same field in the "And" relationship. So the conditions like "5 < x < 10" are permitted.
+<P><LI>Invalid checking and automatic dealing for the information structure configuration.
+<BR>&nbsp&nbsp After user modifies the structure definition, the function menu of data will be refreshed automatically. Thus the result of the modification to "Operation" will be shown at once.
+<BR>&nbsp&nbsp A new attribute "Edit Width" is added for the information field definition so that user can control the width of the input controller.
+<BR>&nbsp&nbsp Prohibit user to add a new field with the same name of an exist field. And the invalid characters in field's name will be checked.
+<P><LI>Invalid checking for inputting the data in integer type or float type.
+<P><LI>Less space needed for xml parsing.</a>
+
+<A name="0.05-solve"><H5>0.05-Solved Problems</H5> 
+&nbsp&nbsp Solved problems in this release are following:  
+<P><LI>The Chinese texts in the pictures produced on the Linux platform are shown as some blank diamonds.
+<BR>&nbsp&nbsp This can be solved by setting system running parameters. Please refer to the document "Installation".
+<P><LI>When the maximum count total of data is over 270, the height of all histograms is 0!
+<BR>&nbsp&nbsp This is because the float precise is lost when all operators are in integer type.
+<P><LI>The blanks among user's data may be filtered!
+<BR>&nbsp&nbsp When parsing xml data, if the program breaks data just inside the blanks, the blanks will be filtered. To the data in date or time type, wrong results will be given when user does the sorting or statistic operation with these data! Now the program is modified to avoid such thing.
+<P><LI>When show the audit records "by data", it returns a empty result!
+<BR>&nbsp&nbsp This is because a variable is replaced wrong when adjusted the program. This bug appeared in release 0.03 and 0.04.</a>
+
+<A name="0.05-data"><H5>0.05-Changes of Data</H5> 
+<P>&nbsp&nbsp <Font color=green>The following is only useful for the user who wants to keep the old data produced by old releases.</FONT>  
+<P>&nbsp&nbsp Changes of data in this release are following:  
+<P><LI>"Risk Analysis" is added.
+<P><LI>The function menu is adjusted to distinguish "project planning", which includes Project Register, Project Stages, Project Tasks, and Risk Analysis, and "Project Tracking", which includes Weekly Report and Working Log.
+<P><LI>The following information structures are all changed into Matrix Table: Project Register, Project Stages, Project Tasks, Weekly Report and Working Log.
+<BR>&nbsp&nbsp The old fields, such as Planned Effort, Actual Effort, Planned Size, Actual Size, are changed to the matrix fields. So all old data about these fields will be lost unfortunately.
+<BR>&nbsp&nbsp Some other fields in these structures are removed or added. The changes are so many that no more explanation will be given here. If user wants to keep the old data, please look over the difference carefully.
+<P><LI>The keys for Code Review and Document Review are all changed as "Configuration Code". The "Time" field is only Not Null now. And an new field "Code"/"Document" is added. So all data of the two information will be invalid.
+<P><LI>The following information structures are all changed into Matrix Table: Software requirement, Testing Requirement, Testing Procedure, Change Request, and Problem Report.
+<BR>&nbsp&nbsp The last modification of each status in these data will be shown now.
+<BR>&nbsp&nbsp This change will not cause data loss.
+<P><LI>The field "Effect Analysis" is added in Problem Report and Change Request.
+<P><LI>The field "security" is changed as "severity" in Problem Report. (The author is reciting English words, then found this error.) If user does not replace this word in your old data, all values of this field will be lost.
+<P><LI>Some other fields are added into some other information structures. But no data loss will appear because of this.
+
+<P><HR>
+
+<A name="0.04"><H3>Features in Release 0.04</H3>   
+<P>&nbsp&nbsp Release Date: July 26, 2004</a>
+<BR>&nbsp&nbsp Title: Learning and practising is always a happy thing. 
+<BR>&nbsp&nbsp Dedicated to: Spice Girls. They make the granny's heart singing, dancing, laughing, crying, thinking and remembering. 
+
+<A name="0.04-enhance"><H4>0.04-Enhanced Functions</H4> 
+&nbsp&nbsp The enhanced functions in this release are following:  
+<P><LI>Speed testing
+<BR>&nbsp&nbsp The super manager can test the speed of SEE ant any time now. The number of added data and the data type of sorting can be selected. There is a special button for this function in the interface of SEE. Testing data are written into a special file, but not the "Meeting Summary" like the former releases.
+<BR>&nbsp&nbsp The response speed will be shown in the right-bottom corner of each data page.
+<P><LI>Statistic
+<BR>&nbsp&nbsp The statistic result is the report directly in a popped window now.
+<BR>&nbsp&nbsp The calculation method of the maximal graduation for the rate-histogram is modified and better.
+<BR>&nbsp&nbsp Some introduction about how to make Linux produce the image when it does not start X server is added into the document of "Installation". In short word, you need config the system environment parameter "CATALINA_OPTS=-Djava.awt.headless=true" on the
+Linux platform without X started. Or else no image can be produced under Tomcat.
+<P><LI>The new data type: float</a>
+
+<A name="0.04-solve"><H4>0.04-Solved Problems</H4> 
+&nbsp&nbsp Solved problems in this release are following:  
+<P><LI>When visit SEE from remote IP, the exported results, statistic pictures, and uploaded files are all not able to be accessed! This is why this release comes.
+<P><LI>When visit with Mozilla, clicking the table header to sort is not effective.
+<P><LI>The function of clicking data line to execute operation directly is canceled. Some web-browser, such as Mozilla, do not support this function. And this function will cause some errors to the data which include link type or file type.</a>
+
+<A name="0.04-unsolve"><H4>0.04-Unsolved Problems</H5> 
+&nbsp&nbsp Unsolved problems in this release are following:  
+</h4>
+<P><LI>The "back" button does not make effect when use the Mozilla on windows platform. "history.back()" is a basical sentence of html. The back button of Mozilla itself also does not work. So the author does not know the resolution. She tried "history.go(-1)", and was disappointed. 
+<P><LI>The Chinese texts in the pictures produced on the Linux platform are shown as some blank diamonds.
+<BR>&nbsp&nbsp This is not a problem about program, but a trouble about the Font configuration in the system environment. The author spent so much time on looking up network and experiment, but she fails. :(
+<BR>&nbsp&nbsp According to the network resources, the author configs "/usr/share/fonts/zh_CN/TrueType/font.dir", "jre/lib/fonts/font.dir", "jre/lib/font.properties.*", and copys the font file "gbsn00lp.ttf", and sets the system parameters "JAVA_FONTS", "LANG", "LC", "LC_ALL". Only the wrong result.
+<BR>&nbsp&nbsp The platform is Chinese release of Redhat 8. The author can see the right
+Chinese in the text console with vi.
+<BR>&nbsp&nbsp No article is about how to make servlets write right Chinese into pictures on the
+Linux without X server started, but only articles about Chinese in swing.
+<BR>&nbsp&nbsp The author's eyes are so tired that she gives up this problem in this release. Anyone knows the answer?</a>
+
+<A name="0.04-data"><H4>0.04-Changes of Data</H4> 
+&nbsp&nbsp Changes of data in this release are following:  
+<P><LI>"speed testing" is added. It includes all kind of data types for testing the sort speed with different data types.
+<P><LI>The temporary directory "tmp" and the upload directory "upload" are moved up to the root of the application.
+<P><LI>If user's data include the "file" type, you have to replace them in batch way as the following: remove the paths in all uploaded file names and save only the bare file names.  
+
+
+<P><HR>
+
+<A name="0.03"><H3>Features in Release 0.03</H3>   
+<P>&nbsp&nbsp Release Date: July 12, 2004</a>
+<BR>&nbsp&nbsp Title: A piece of leaf making a world, while an ant creating an universe  
+<BR>&nbsp&nbsp Dedicated to: the author's parents. They sent her a package of delicious food several days ago. :) 
+
+<A name="0.03-add"><H4>0.03-New Functions</H4> 
+&nbsp&nbsp The new functions in this release are following:  
+<P><LI>The general query.
+<BR>&nbsp&nbsp User can setup several conditions of "and" relationship and connect them with "or" relationship. The operators for query conditions are "equal to", "not equal to", "greater than", "less than", "begin with", "end with", "include", and "not include". SEE will compare data according to their types.
+<P><LI>The general statistics.
+<BR>&nbsp&nbsp There are two types of statistic methods now, which are "count" and "cross count". User can set any item to count, and SEE will produce the counting
+report (total/percent) and the comparing charts (histogram/pie) automatically.
+<P><LI>Login audit
+<BR>&nbsp&nbsp When user login, SEE will record the action.</a>
+
+<A name="0.03-Solve"><H4>0.03-Solved Problems</H4> 
+&nbsp&nbsp Solved problems in this release are following:  
+<P><LI>Any user can modify any structure definition by entering the URL directly!
+<P><LI>If set the item with some special types as not-null or keys in structure definition, the page script will report error!
+<P><LI>In the selection page, when click the data line, a blank window will be popped.
+<P><LI>In the removing or selection page, after click the Show button, clicking other buttons in the page will act error!
+<P><LI>The show text of hash is not right.</a>
+
+<A name="0.03-data"><H4>0.03-Changes of Data</H4> 
+&nbsp&nbsp <FONT color=green>This section is for the users who have produced some useful data with the old release of SEE. </FONT>
+<P>&nbsp&nbsp The changes of data in this release are following:  
+<P><LI>The keys of "project" ,"project stage" and "project task" are all changed as "configuration code".
+<BR>&nbsp&nbsp If user produced some data of these information or refer them in other data, such as "problem report", "working log", and "software requirement", things is the worst!
+<BR>&nbsp&nbsp The change of keys will cause the loss of all data in the three
+information! (The data referring them will not loss) The solvable method is that you keep your old definitions or replace the keys in the old data in batch way. 
+<BR>&nbsp&nbsp Sorry for this! But the author does not know whether someone will meet this trouble or not. Maybe nobody has used SEE
+actually. If you meet this trouble, please email to the author, she will give the help. 
+<P><LI>The splitters in data are changed. 
+<BR>&nbsp&nbsp But the modification will not make troubles to the old data in release 0.02. They are compatible.
+<P><LI>All definition files of information structures are changed. The splitters are changed. A new attribute "type" and a new operation "statistic" are added.
+<BR>&nbsp&nbsp But these modification will not make troubles to the old definitions in release 0.02. They are compatible. 
+<BR>&nbsp&nbsp If your old structure definitions have not the operation "statistic",
+do not forget add it to them.
+<P><LI>The "System Role ACL" and "Data Role ACL" are changed.
+<BR>&nbsp&nbsp Because the new operation "statistic" is added, it should be granted to some roles. Or else nobody can execute statistic except for the super manager.
+<BR>&nbsp&nbsp If you have your defined privilege model, you need only grant the operation "statistic" to some users or roles in your model.
+
+<P><HR>
+
+<A name="0.02"><H3>Features in Release 0.02</H3>   
+<P>&nbsp&nbsp Release Date: June 9, 2004</a>
+<BR>&nbsp&nbsp Title: We need a little, but want too much. This is one of the nature's game. 
+<BR>&nbsp&nbsp Dedicated to: those suffering or ever suffered starvation and wars. Sad. 
+
+<A name="0.02-speed"><H4>0.02-The Speed</H4> 
+&nbsp&nbsp This release solves the "speed problem" in release 0.01.
+<BR>&nbsp&nbsp In release 0.01, when data increasing, the reading and writing speed of xml files descends quickly. When there are 2000 records, the speed becomes very slow.
+<BR>&nbsp&nbsp This rises from a stupid bug. A debug statement in xml parser was not removed, and it added all data into one string! Such
+operation consumes a lot of CPU resource and memory.
+<BR>&nbsp&nbsp In this release, after removing this statement, the testing result shows that the reading and writing speed is not concerned to the quantity of data. Only when data reaches 30000, more than 1 second is needed.  
+<P>&nbsp&nbsp But when sorting data, the quantity of data will truly effect speed. Testing shows that 4 seconds are needed for 4000 records, and 9 seconds are needed for 5000 records.
+<BR>&nbsp&nbsp Perhaps the sorting algorithm of SEE should be designed carefully in the future.</a>
+
+<A name="0.02-add"><H4>0.02-New Functions</H4> 
+&nbsp&nbsp The new functions in this release are following:  
+<P><LI>The login Cookie
+<BR>&nbsp&nbsp User can make SEE "remember me" when login. This helps to avoid input id and password for each visit.
+<BR>&nbsp&nbsp User can choose the durative time of the login cookie, such as one year, one month, one day or one hour.
+<BR>&nbsp&nbsp Thus SEE distinguishes "logout" and "close". User uses the "Close" button to finish current visit, and use the "Logout" button in the login interface to make current cookie disabled.
+<P><LI>The encrypted password
+<BR>&nbsp&nbsp Now passwords are encrypted by DES, translated into hexadecimal codes, and saved in xml file.
+<P><LI>Language translation by user.
+<BR>&nbsp&nbsp Now user can add text translations with SEE directly. The translations will work at once.
+<BR>&nbsp&nbsp This function is useful for the users who add or modify the information structures.
+<P><LI>Import data
+<BR>&nbsp&nbsp User can upload a xml file in correct format to import data.
+<BR>&nbsp&nbsp In the default privilege model, only the data manager and the superseer can import data.
+<P><LI>Two new information structures
+<BR>&nbsp&nbsp The new information structures are "Share Resource" and "Inform". User can share resource addresses, or upload files to share.
+<P><LI>Upload management
+<BR>&nbsp&nbsp Super manager (superseer) can set the limit size of one upload file and the total space for all upload files. To any upload file over these two limits, SEE will refuse it automatically.
+<BR>&nbsp&nbsp Super manager can query, remove, or modify any uploaded file. 
+<P><LI>The new data constraint type "Link"</a>
+
+<A name="0.02-strengthen"><H4>0.02-Enhanced Functions</H4> 
+&nbsp&nbsp The enhanced functions in this release are following:  
+<P><LI>Export function with charset setting.
+<BR>&nbsp&nbsp In release 0.01, any export file is in UTF-8. This may cause inconvenience when looking and modifying it.
+<BR>&nbsp&nbsp Now user can choose a charset for the export file. This will provide advantage when importing data to others' tools.
+<P><LI>The definition of information structures.
+<BR>&nbsp&nbsp Now user can set the default sorting for each information. Thus when listing data, they will be sorted automatically.
+<BR>&nbsp&nbsp For setting Keys, Show-Items, or Not-Null-Items, SEE will list all items automatically to make user select. User need not input again.
+<BR>&nbsp&nbsp User can also set the operations of an information. For example, "Data Audit" should not be do "add" and "modify". This helps to avoid invalid operations to some special information.  
+<P><LI>Modified splitters.
+<BR>&nbsp&nbsp The special splitters of SEE should not appear in actual data and should not fit the special characters of its running platform.
+<BR>&nbsp&nbsp The splitters in this release are entirely different with the release 0.01. If someone uses release 0.01 to produce some actual data, they may not work and need
+translation.
+<BR>&nbsp&nbsp The definition of special strings in SEE is in "Use Guide" and the difference from release 0.01 is in "Installation".
+<P><LI>Adjusted interface levels of system management
+<BR>&nbsp&nbsp Now the third level menus appear. For example, all acl tables are the sub-menus of a second level menu. This will make the functions' structure more clear.
+<P><LI>Throughout codes to replace StringBuffer to improve speed.</a>
+
+<A name="0.02-Solve"><H4>0.02-Solved Problems</H4> 
+&nbsp&nbsp Solved problems in this release are following:  
+<P><LI>JAVA_HOME should be set to the installation directory of j2sdk.
+<BR>&nbsp&nbsp In section 2.2 of "installation" of release 0.01, it is described as j2sdk's bin sub-directory. If a user does not know about java, she/he may fail to install tomcat because of this guide!
+<P><LI>Make the source code running on jbuilder7 directly
+<BR>&nbsp&nbsp But it seems not good. The author suggests using ant and tomcat to debug SEE.
+<P><LI>Make the "file" type working
+<BR>&nbsp&nbsp There is no special deal for the 'file' type in release 0.01. When user uploads a file, SEE saves its path but not its content! 
+<P><LI>When select data, Show button works wrong for Chinese
+<BR>&nbsp&nbsp This is raised by wrong decoding to the parameters of the GET method. 
+<P><LI>After click the Export button, other buttons will do wrong
+<BR>&nbsp&nbsp The bug is that export action will modify some parameters in the current page. These parameters should be recovered after open the export page. 
+<P><LI>Any user can remove the super manager's show-setups. This is not allowed!
+<P><LI>If user is not the super manager, after switch to another language, no function works.
+<BR>&nbsp&nbsp This bug rises from using a wrong translation method.</a> 
+
+<A name="0.02-data"><H4>0.02-Changes of Data</H4> 
+&nbsp&nbsp The changes of data in this release are following:
+<LI>All definition files of information structures are changed! The splitters are changed. And a new attribute "operation" is added.
+<BR>&nbsp&nbsp There is no attribute "operation" in release 0.01. So if use the files in release 0.01 directly, user may be only able to execute "Config" operation. If you want to use the old files in release 0.01, you should do the following: select operations in config interface, save it and refresh the window.
+<P><LI>Two new information structure are added. They are "Share Resource" and "Inform".
+<P><LI>The "attachment" field is added into "Software Requirement" and "Change Request".
+
+<P><HR>
+<A name="0.01"><H3>Features in Release 0.01</H3>   
+<P>&nbsp&nbsp Release Date: May 7, 2004
+<BR>&nbsp&nbsp Title: Life is Participating, Tasting, and Sharing 
+<BR>&nbsp&nbsp Dedicated to: the granny herself, congratulating her increased 3kg weight. :) 
+
+<P><LI>Free
+<BR>&nbsp&nbsp SEE itself is free, and any part of its running environment has some free selections. Free means source codes.
+<P><LI>Light-weighted B/S model
+<BR>&nbsp&nbsp The client is just a general web-browser, the server is just a servlet environment, and SEE itself is not over 5M, including documents and pictures.
+<P><LI>Compatible data
+<BR>&nbsp&nbsp All data in SEE is in XML files. XML is just for compatibility.
+<P><LI>Cross-platform
+<BR>&nbsp&nbsp At present, many free or commercial J2EE products can be found in many OS.
+<P><LI>Internationalization of interface and data
+<BR>&nbsp&nbsp SEE supports Simplified Chinese, Traditional Chinese, and English now.
+<BR>&nbsp&nbsp User can switch to interfaces in different language at any time. 
+<BR>&nbsp&nbsp In different language releases, there are different initial accounts and initial data in local language. When use SEE, all pre-defined data will be translated into local language automatically.
+<P><LI>The mechanism of privilege management for SEE.
+<BR>&nbsp&nbsp Set the super manager, distinguish the system roles and the data roles, and define the acl of system roles, data roles, and users in different levels.
+<BR>&nbsp&nbsp After installation, there are default data for privilege management in SEE. The default privilege model is based on the following thought: opening the management of the project information at the most wide degree, and making the project information entirely transparent to all project members. In functions, each member is able to add/modify/query/audit the most information of the
+    project. (The removing privilege is only assigned to the data manager) Do not worry about someone's making trouble, because all of operations, data content and executing result will be record by the system automatically. Owning enough information, anyone is able to monitor
+    anyone. (The super manager is invisible, she/he is the creator.)
+<P><LI>The function of user configuration.
+<BR>&nbsp&nbsp The super manager can config the parameters for the whole system. And other users can set some parameters, such as interface language, page size, data style, and default project, which will go into effect immediately. In user's private information, user can set some parameters which will go into effect after she/he logins.
+<P><LI>Implemented the general function of defining an information structure.
+<BR>&nbsp&nbsp User is able to modify any information structure at any time and changes will go into effect immediately. User can define the attributes of the entire information structure, such as Keys, If Keys Can Be Modified, Not-null Items, Invalid Items, Show Items, Default Color etc. User can also define attributes for each information field, such as Data Type, Size, Default Value, Data Constraint, Edit Controller Type etc. System will provide all functions for information manufacturing according to its definition description automatically. This is the core of SEE. And Most of data and functions in SEE are implemented in such way. That is, user defines information by running SEE, as well as dealing data.
+<P><LI>The general basically operations for information.
+<BR>&nbsp&nbsp That is, adding, copying, inserting, modifying, and removing.
+<P><LI>The function of exporting data.
+<BR>&nbsp&nbsp User can export either the whole data or the data in current page, and at the same time select the export format: xml, txt or html. Using the result, user is able to use other tools to
+    analyze data in more detail. And using the function of show-setup, user can get beautiful query report.
+<P><LI>The function of data audit.
+<BR>&nbsp&nbsp User's operations on data will be record by the system automatically. The audit data includes: Who, When, Where, What Data, the Old Values, the New Values, and the Operation Result etc. In such way, the changes of data are able to be tracked entirely. The super manager can set which operations will be audited. User can query audit records either by data list or by recording time. This is a way for project monitor, and is also a path to recover data.
+<P><LI>The general function of setting show parameters.
+<BR>&nbsp&nbsp User can set parameters for showing data, such as Items, Sort Item, Color, Style. These setting can be saved, modified, and removed.
+<P><LI>Some common information structures for a software project.
+<BR>&nbsp&nbsp Include: Project Tracking (Time/Size/Cost), Software Requirement, Software Configuration Items' Register, Software Review, Testing Information, Change Request, Problem Report, Meeting Summary etc.
+
+<BR><BR>
+<P align=right><A href="https://sourceforge.net/projects/chong2see/" target=_blank>
+https://sourceforge.net/projects/chong2see/</A></P>
+<HR>
+<H5 class=footer align=center>Software Engineering Environment	 Version 0.07/2004-12
+</H5>
+</BODY>
+
+</HTML>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataValues>
+	<Record>
+		<default_interface_theme>theme_default</default_interface_theme>
+		<default_upload_total>100000</default_upload_total>
+		<default_page_size>20</default_page_size>
+		<data_audit_types>配置:-:添加:-:插入:-:复制:-:导入:-:删除:-:修改:-:批量修改:-:登录</data_audit_types>
+		<default_upload_size>1000</default_upload_size>
+		<default_interface_style>style_default</default_interface_style>
+		<default_user>访客</default_user>
+		<id>init</id>
+	</Record>
+</DataValues>

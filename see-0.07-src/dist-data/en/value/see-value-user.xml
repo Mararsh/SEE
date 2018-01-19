@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataValues>
+	<Record>
+		<datalist_style>Table</datalist_style>
+		<page_size>20</page_size>
+		<interface_style>style_default</interface_style>
+		<description>Donot set the passwd. This account will be used when the user does not login or after the user logouts.:r:t-r:t:Assume this is a potential kind user and she/he can use very limited functions.</description>
+		<birthday>May 13, 2004</birthday>
+		<sex>Female</sex>
+		<interface_theme>theme_default</interface_theme>
+		<id>guest</id>
+	</Record>
+	<Record>
+		<id>LuLu</id>
+		<default_project>see</default_project>
+		<interface_theme>theme_default</interface_theme>
+		<sex>Male</sex>
+		<email>lulu@chong2.com</email>
+		<datalist_style>Table</datalist_style>
+		<description>Our personnel manager, the author's second cat. He is a lively varlet.</description>
+		<birthday>July 30, 2003</birthday>
+		<interface_style>style_default</interface_style>
+	</Record>
+	<Record>
+		<id>Mara</id>
+		<default_project>see</default_project>
+		<interface_theme>theme_default</interface_theme>
+		<nickname>The granny</nickname>
+		<page_size>20</page_size>
+		<sex>Female</sex>
+		<email>mara@chong2.com</email>
+		<datalist_style>Table</datalist_style>
+		<description>She is me, the author herself, acting as the audit manager.:r:t-r:t:Who will take place of me?</description>
+		<birthday>May 9, 1999</birthday>
+		<interface_style>style_flowers</interface_style>
+	</Record>
+	<Record>
+		<id>MeiMei</id>
+		<interface_theme>theme_default</interface_theme>
+		<sex>Male</sex>
+		<page_size>20</page_size>
+		<email>meimei@chong2.com</email>
+		<datalist_style>Table</datalist_style>
+		<description>Our data manager, the author's first cat. He is a lively poppet.</description>
+		<birthday>April 11, 2004</birthday>
+		<interface_style>style_default</interface_style>
+	</Record>
+	<Record>
+		<id>Chong</id>
+		<last_changed_time>December 24, 2004 11:03:10 AM CST</last_changed_time>
+		<default_project>P-SEE</default_project>
+		<interface_theme>theme_default</interface_theme>
+		<sex>Female</sex>
+		<page_size>20</page_size>
+		<email>@</email>
+		<datalist_style>Table</datalist_style>
+		<register_time>December 24, 2004 11:03:10 AM CST</register_time>
+		<description>General User</description>
+		<interface_style>style_flowers</interface_style>
+	</Record>
+</DataValues>

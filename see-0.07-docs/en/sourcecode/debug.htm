@@ -1,0 +1,143 @@
+<!-- Software Engineering Environment	 Version 0.07/2004-12	 Mara Ren -->
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=iso-8859-1">
+<TITLE> Software Engineering Environment - Source Code - Debug</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="../../manual/style/style_default.css"> 
+</HEAD>
+
+<BODY class=info>
+
+<P class=title align=center title="">Source Code - Debug</P>   
+
+<HR>
+<A href="#0">0 Debug Tools</A>   
+<BR><A href="#1">1 Edit with Jbuider 7</A>
+<BR><A href="#2">2 Debug with Tomcat</A>
+<BR>&nbsp&nbsp<A href="#2.1">2.1 Adding Manager's Account for Tomcat</A>
+<BR>&nbsp&nbsp<A href="#2.2">2.2 Managing Applications</A>
+<BR><A href="#3">3 Build with Ant</A>
+<BR>&nbsp&nbsp<A href="#3.1">3.1 What is Ant</A>
+<BR>&nbsp&nbsp<A href="#3.2">3.2 Download Ant</A>
+<BR>&nbsp&nbsp<A href="#3.3">3.3 Install Ant</A>
+<BR>&nbsp&nbsp<A href="#3.4">3.4 Run Ant</A>
+<BR><A href="#4">4 Make Tomcat and Ant Working for SEE</A>
+<BR>&nbsp&nbsp<A href="#4.1">4.1 Link Tomcat and Ant</A>
+<BR>&nbsp&nbsp<A href="#4.2">4.2 Modify Ant Script</A>
+<BR>&nbsp&nbsp<A href="#4.3">4.3 Build and Manage SEE with Ant</A>
+
+<P>
+<A name="0"><H3>0 Debug Tools</H3>   
+<P>&nbsp&nbsp The debug tools of SEE are:
+<LI>Edit: Jbuider7
+<LI>Build: jakarta-ant-1.4.1
+<LI>Debug: j2sdk1.4.1 + Tomcat5.0
+<P>&nbsp&nbsp Their documents and network resources can help users learning step by step.
+<P>&nbsp&nbsp The author does not learn them well and she is learning them while using them. That's enough. The following are some experience from the author.
+
+<A name="1"><H3>1 Edit with Jbuider 7</H3>   
+<P>&nbsp&nbsp The author does not use most of the functions and features in Jbuider7. She gets its advantages as following:
+<BR><LI>Guide and prompt for inputting source codes.
+<LI>Immediate indication to any error in  syntax and semantics.
+<LI>Clear showing for frame of program and system.
+<LI>Automatic functions in right-key menu, including  "optimize import", "add try-catch", "search definition", "search references", "method rename and replace", "format".
+<LI>Automatic replacement after rename class or move class.
+<LI>Completely good functions for edit.
+<LI>Automatic information of the project.
+<LI>Automatic template of javadoc comment and immediate check of syntax errors in javadoc.
+<LI>In-build compile and build.
+<LI>Very friendly documents.
+<P>&nbsp&nbsp These features make programming and debug to become an amazing game.
+<P>&nbsp&nbsp <Font color=green>If you want to edit or debug SEE in Jbuider7, do not forget set its jdk as your release over than 1.4.1. Or else you will see a lot of error information.</Font>
+
+<A name="2"><H3>2 Debug with Tomcat</H3>   
+<P>&nbsp&nbsp Although Jbuider7 has in-build compile and build, which are implemented by ant and tomcat in low version, the author uses ant and tomcat directly. Because she want to deal and watch the program result in more convenient and intuitive way.
+<P>&nbsp&nbsp you can refer to the "Installation" document of SEE  to know the download, installation, configuration of tomcat.
+
+<A name="2.1"><H4>2.1 Adding Manager's Account for Tomcat</H4>   
+<P>&nbsp&nbsp When install Tomcat5, it will prompt to input its manager's account.
+<BR>&nbsp&nbsp To tomcat4, user has to modify the file "conf/tomcat-user.xml" under the tomcat directory and add the following line:
+<BR>&nbsp&nbsp   user username="Your-Name" password="Your-Password" roles="admin,manager"
+
+<A name="2.2"><H4>2.2 Managing Applications</H4>   
+<P>&nbsp&nbsp After install and start tomcat, open a web-browser and input the following command in address to manage the applications installed in tomcat: (It will ask you for the manager's account at first)
+<P><LI>List the status of all applications installed:
+<BR>&nbsp&nbsp http://localhost:8080/manager/list
+<P><LI>Install an application: (manual dynamic installation)
+<BR>&nbsp&nbsp http://localhost:8080/manager/install?path=/see&war=file:"g:/myjava/see"
+<P><LI>Start an application:
+<BR>&nbsp&nbsp http://localhost:8080/manager/start?path=/see
+<P><LI>Stop an application:
+<BR>&nbsp&nbsp http://localhost:8080/manager/stop?path=/see
+<P><LI>Reload an application: (This is the most frequent command when debug)
+<BR>&nbsp&nbsp http://localhost:8080/manager/reload?path=/see
+<P>&nbsp&nbsp <FONT color=green>To tomcat5, you need not do these! You need only use ant to execute all operations.</FONT>
+
+<A name="3"><H3>3 Build with Ant</H3>   
+<P>&nbsp&nbsp If reader does not know about ant, and you do not want to learn it now, you need only install it. The "buld.xml" in SEE will do the rest for you.
+
+<A name="3.1"><H4>3.1 What is Ant</H4>   
+<P>&nbsp&nbsp Ant is the most popular build tool in java world.
+<BR>&nbsp&nbsp If you ever use makefile in unix world, you may understand the words "Ant is the cross-platform makefile". It prides itself better than makefile.
+
+<A name="3.2"><H4>3.2 Download Ant</H4>   
+<P>&nbsp&nbsp The homepage of ant is <A href="http://jakarta.apache.org/ant/index.html" target=_blank>http://jakarta.apache.org/ant/index.html</A>
+<BR>&nbsp&nbsp Suggest the release more than 1.4.1.
+
+<A name="3.3"><H4>3.3 Install Ant</H4>   
+<LI>Extract the zip packet (win platform) or tar packet (unix/linux platform) to a directory, which is called "Ant directory".
+<LI>Add the bin sub-directory of ant to the system path.
+
+<A name="3.4"><H4>3.4 Run Ant</H4>   
+<P>&nbsp&nbsp Open a terminal window, cd into any directory including the file "build.xml" and run ant, ant will execute the scripts in this file automatically.
+
+<A name="4"><H3>4 Make Tomcat and Ant Working for SEE</H3>   
+
+<A name="4.1"><H4>4.1 Link Tomcat and Ant</H4>   
+<P>&nbsp&nbsp In order to make ant working with tomcat, you should copy the file "server\lib\catalina-ant.jar" under tomcat directory to the sub-directory "lib" under the ant directory.
+
+<A name="4.2"><H4>4.2 Modify Ant Script</H4>   
+<P>&nbsp&nbsp After extract the source code packet of SEE, you should modify the ant script at first.
+<BR>&nbsp&nbsp The ant scripts for tomcat5 and tomcat4 are different. The author suggests tomcat5. The following are for tomcat5.
+<P>&nbsp&nbsp There are two files as the ant script files for tomcat5. They are under the root directory of source codes of SEE. They are "build.xml" and "build.properties".
+<BR>&nbsp&nbsp To tomcat5, user need not modify the file "build.xml". All parameters about user's computer are defined in the file "build.properties", they are:
+<I>
+<BR>app.path=/see
+<BR>catalina.home=E:/installed/Tomcat 5.0 <FONT color=green> (Modify this to your path of tomcat5)</FONT>
+<BR>manager.username=name of manager's account for tomcat<FONT color=green> (Modify this!)</FONT>
+<BR>manager.password=password of manager's account for tomcat<FONT color=green> (Modify this!)</FONT>
+</I>
+
+<A name="4.3"><H4>4.3 Build and Manage SEE with Ant</H4>   
+<P>&nbsp&nbsp Open a terminal window, cd into the source code directory of SEE, files "build.xml" and "build.properties" are there. Then input the following commands, you can execute all of build commands of ant and management commands of tomcat:
+<LI>"ant list", show the status of all applications installed in current Tomcat.
+<LI>"ant install", install SEE to Tomcat at the first time. This is a dynamic installation and does not copy any files to Tomcat.
+<LI>"ant start", start SEE.
+<LI>"ant stop", stop SEE.
+<LI>"ant compile", compile SEE.
+<LI>"ant", compile SEE at first, and then reload (stop and start) SEE. It is same as "ant reload" because the default task is reload. All latest modification in source codes will go into effect. 
+<LI>"ant remove", uninstall SEE from Tomcat and does not remove any files of SEE.
+<LI>"ant dist", generate the distribution packet of SEE and javadoc will be produced at the same time.
+<LI>"ant javadoc", generate javadoc.
+<LI>"ant clean", remove all directories and files produced by "reload" and "dist".
+<P>&nbsp&nbsp <FONT color=green>Please notice what ant returns to you. If it says some error happened, do not worry.  Look carefully what it points out.</FONT>
+<BR>&nbsp&nbsp Maybe you forget to install SEE at first, or you forget to start SEE, or you forget start tomcat at all.
+<P>&nbsp&nbsp Ant will create the directory "dist" and "build".
+<BR>&nbsp&nbsp The directory "dist" is used to save the distribution packet (see.war) and javadoc generated by "ant dist".
+<BR>&nbsp&nbsp The directory "build" is used to save the application produced by "ant compile".
+<P>&nbsp&nbsp When you run SEE, all data generated are saved under the application directory, but not the source code directory. Please notice this.
+<BR>&nbsp&nbsp If debug with ant, you should copy your useful data files and structure files before enter "ant clean".
+
+<BR><BR>
+<P align=right><A href="https://sourceforge.net/projects/chong2see/" target=_blank>
+https://sourceforge.net/projects/chong2see/</A></P>
+<HR>
+<H5 class=footer align=center>Software Engineering Environment	 Version 0.07/2004-12
+</H5>
+</BODY>
+
+</HTML>

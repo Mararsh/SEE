@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataValues>
+	<Record>
+		<id>超级管理员</id>
+		<last_changed_time>2004年11月18日 上午11时58分42秒</last_changed_time>
+		<default_project>P-SEE</default_project>
+		<interface_theme>theme_default</interface_theme>
+		<page_size>20</page_size>
+		<sex>女</sex>
+		<email>mara@chong2.com</email>
+		<datalist_style>表格</datalist_style>
+		<description>可以使用任何功能。:r:t-r:t:最重要的两个任务是：指定系统角色及其权限；根据需要重新定义信息结构。:r:t-r:t:第一次使用本系统时，一次不要忘记添加她的口令！</description>
+		<birthday>2004年1月1日</birthday>
+		<interface_style>style_flowers</interface_style>
+	</Record>
+</DataValues>

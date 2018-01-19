@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSet>
+  <type>table</type>
+  <keyCanModify>no</keyCanModify>
+  <defaultOrder>ascending</defaultOrder>
+  <keys>id</keys>
+  <operation>add:-:insert:-:copy:-:import:-:remove:-:modify:-:batch_modify:-:query:-:statistic:-:audit:-:select</operation>
+  <items>
+    <DataItem>
+      <identify>id</identify>
+      <type>string</type>
+      <valueTranslated>no</valueTranslated>
+      <editControllerType>text</editControllerType>
+    </DataItem>
+    <DataItem>
+      <identify>member</identify>
+      <type>string</type>
+      <valueTranslated>no</valueTranslated>
+      <valueConstraintType>ref_multi</valueConstraintType>
+      <valueConstraint>user</valueConstraint>
+      <editControllerType>text</editControllerType>
+    </DataItem>
+    <DataItem>
+      <identify>description</identify>
+      <type>string</type>
+      <size>0</size>
+      <valueTranslated>no</valueTranslated>
+      <editControllerType>textarea</editControllerType>
+    </DataItem>
+  </items>
+</DataSet>

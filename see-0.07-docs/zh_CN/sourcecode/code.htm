@@ -1,0 +1,238 @@
+<!-- 软件工程环境	 版本 0.07/2004-12	 玛瑞 -->
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=gb2312">
+<TITLE> 软件工程环境 - 源码说明 - 代码</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="../../manual/style/style_default.css"> 
+</HEAD>
+
+<BODY class=info>
+
+<P class=title align=center title="">源码说明 - 代码</P>   
+
+<HR>
+<A href="#1">1 SEE的源码结构</A>   
+<BR><A href="#2">2 java类清单</A>   
+<BR><A href="#3">3 初始数据清单</A>   
+<BR><A href="#4">4 图片命名方式</A>   
+<BR>&nbsp&nbsp<A href="#4.1">4.1 图片的路径</A>
+<BR>&nbsp&nbsp<A href="#4.2">4.2 按钮的图片名</A>
+<BR>&nbsp&nbsp<A href="#4.3">4.3 界面功能的图片名</A>
+<BR><A href="#5">5 不同语言的版本</A>   
+<BR>&nbsp&nbsp<A href="#5.1">5.1 为什么需要？</A>
+<BR>&nbsp&nbsp<A href="#5.2">5.2 怎样编译？</A>
+<BR><A href="#6">6 翻译语言</A>   
+<BR><A href="#7">7 编制图片</A>   
+<BR><A href="#8">8 添加界面风格</A>   
+<BR><A href="#9">9 为什么不用jsp?</A>   
+
+<P>
+
+<A name="1"><H3>1 SEE的源码结构</H3>   
+&nbsp&nbsp 按照规范的要求，Servlet应用的源码结构与实际发布的可执行程序结构有所对应。
+<BR>&nbsp&nbsp 以下是SEE的源码结构，包括标准的目录结构，也包括SEE自己的目录。
+<TABLE class=data width=100%>
+<TR class=tableheader><TH width=30%>目录/文件</TH><TH>作用</TH></TR>
+<TR class=tableline><TD>build.properties</TD><TD>build.xml引用并且需要修改的本机参数(Tomcat5)</TD></TR>
+<TR class=tableline><TD>build.xml</TD><TD>ant构建应用程序的脚本(Tomcat5)</TD></TR>
+<TR class=tableline><TD>see.jpx</TD><TD>Jbuilder项目描述文件</TD></TR>
+<TR class=tableline><TD>build-tomcat4\build.xml</TD><TD>ant构建应用程序的脚本(Tomcat4)</TD></TR>
+<TR class=tableline><TD>build-tomcat5\build.properties</TD><TD>build.xml引用并且需要修改的本机参数(Tomcat5)</TD></TR>
+<TR class=tableline><TD>build-tomcat5\build.xml</TD><TD>ant构建应用程序的脚本(Tomcat5)</TD></TR>
+<TR class=tableline><TD>dist-data\en\</TD><TD>构建英文版发布包时需要替换的web.xml和初始数据文件</TD></TR>
+<TR class=tableline><TD>dist-data\zh_CN\</TD><TD>构建简体中文版发布包时需要替换的web.xml和初始数据文件</TD></TR>
+<TR class=tableline><TD>dist-data\zh_TW\</TD><TD>构建繁体中文版发布包时需要替换的web.xml和初始数据文件</TD></TR>
+<TR class=tableline><TD>docs\</TD><TD>ant发布javadoc时需要的临时目录，Jbuilder也会使用它</TD></TR>
+<TR class=tableline><TD>src\</TD><TD>java类。等同于可执行应用结构中的“根目录\WEB-INF\classes\"目录</TD></TR>
+<TR class=tableline><TD>web\</TD><TD>等同于可执行应用结构中的根目录，除了WEB-INF\，其它内容是可公共访问资源。</TD></TR>
+<TR class=tableline><TD>web\image\</TD><TD>图片</TD></TR>
+<TR class=tableline><TD>web\manual\</TD><TD>使用指南</TD></TR>
+<TR class=tableline><TD>web\style\</TD><TD>页面风格文件</TD></TR>
+<TR class=tableline><TD>web\tmp\</TD><TD>存放SEE的临时文件</TD></TR>
+<TR class=tableline><TD>web\upload\</TD><TD>存放SEE的上传文件</TD></TR>
+<TR class=tableline><TD>web\WEB-INF\</TD><TD>对应于可执行应用结构中的“根目录\WEB-INF\”目录，但不包括“根目录\WEB-INF\classes\"目录。
+<BR>在可执行应用结构中，“根目录\WEB-INF\”用来存放class、库文件以及其它不允许用户直接访问的东东。</TD></TR>
+<TR class=tableline><TD>web\WEB-INF\web.xml</TD><TD>应用发布描述文件,等同于可执行应用结构中的“根目录\WEB-INF\web.xml”文件</TD></TR>
+<TR class=tableline><TD>web\WEB-INF\data\structure\</TD><TD>SEE中所有的信息结构定义文件</TD></TR>
+<TR class=tableline><TD>web\WEB-INF\data\value\</TD><TD>SEE中所有的数据记录文件</TD></TR>
+</TABLE>
+<P>&nbsp&nbsp 所谓“等同于”指：源码被编译发布成可执行应用后，相应文件的对等位置。
+<P>&nbsp&nbsp Jbuilder还会创建bak目录和classes目录。
+<BR>&nbsp&nbsp ant还会创建build目录和dist目录。
+
+<A name="2"><H3>2 java类清单</H3>   
+<TABLE class=data width=100%>
+<TR class=tableheader><TH>目录</TH><TH>文件</TH><TH>作用</TH></TR>
+<TR class=tableline><TD>src\chong2\see</TD><TD>Res_en.java</TD><TD>英语翻译列表</TD></TR>
+<TR class=tableline><TD>src\chong2\see</TD><TD>Res_zh_CN.java</TD><TD>简体中文翻译列表</TD></TR>
+<TR class=tableline><TD>src\chong2\see</TD><TD>Res_zh_TW.java</TD><TD>繁体中文翻译列表</TD></TR>
+<TR class=tableline><TD>src\chong2\see\data</TD><TD>DataReader.java</TD><TD>数据读取基础类</TD></TR>
+<TR class=tableline><TD>src\chong2\see\data</TD><TD>DataReaderGetor.java</TD><TD>数据读取“工厂”</TD></TR>
+<TR class=tableline><TD>src\chong2\see\data\base</TD><TD>Constants.java</TD><TD>常量和缺省值</TD></TR>
+<TR class=tableline><TD>src\chong2\see\data\base</TD><TD>DataStructure.java</TD><TD>信息结构定义的定义</TD></TR>
+<TR class=tableline><TD>src\chong2\see\data\base</TD><TD>Language.java</TD><TD>语言的定义与处理</TD></TR>
+<TR class=tableline><TD>src\chong2\see\database</TD><TD>DatabaseReader.java</TD><TD>数据库读取（未实现）</TD></TR>
+<TR class=tableline><TD>src\chong2\see\servlet\common</TD><TD>DataManager.java</TD><TD>通用信息处理页面</TD></TR>
+<TR class=tableline><TD>src\chong2\see\servlet\common</TD><TD>HttpServletType1.java</TD><TD>页面基类，预处理上传</TD></TR>
+<TR class=tableline><TD>src\chong2\see\servlet\common</TD><TD>InfoPage.java</TD><TD>信息显示页面</TD></TR>
+<TR class=tableline><TD>src\chong2\see\servlet\filter</TD><TD>ApplicationInitFilter.java</TD><TD>应用初始化过滤器</TD></TR>
+<TR class=tableline><TD>src\chong2\see\servlet\filter</TD><TD>CharsetFilter.java</TD><TD>语言过滤器</TD></TR>
+<TR class=tableline><TD>src\chong2\see\servlet\frame</TD><TD>frame_default.java</TD><TD>框架页面</TD></TR>
+<TR class=tableline><TD>src\chong2\see\servlet\frame</TD><TD>Index.java</TD><TD>起始页面，速度测试</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>AclTools.java</TD><TD>处理权限的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>AuditTools.java</TD><TD>处理审计的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>CommonTools.java</TD><TD>通用的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>CookieTools.java</TD><TD>处理Cookie的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>DatabaseTools.java</TD><TD>数据库处理的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>DataManagerTools.java</TD><TD>处理数据的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>DataStructureTools.java</TD><TD>处理信息结构的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>ExportTools.java</TD><TD>处理导出的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>ImageTools.java</TD><TD>处理图形的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>ImportTools.java</TD><TD>处理导入的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>LanguageTools.java</TD><TD>处理语言的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>MatrixTools.java</TD><TD>处理矩阵数据的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>OutputController.java</TD><TD>显示页面控件的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>OutputListTools.java</TD><TD>显示数据列表的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>OutputRecordTools.java</TD><TD>显示数据记录的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>PageTools.java</TD><TD>处理页面的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>QueryTools.java</TD><TD>处理查询的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>SelectTools.java</TD><TD>处理选择的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>ServletTools.java</TD><TD>Servlet通用的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>ShowSetupTools.java</TD><TD>处理显示设置的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>StatisticTools.java</TD><TD>处理统计的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>UploadTools.java</TD><TD>处理上传的静态方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\xml</TD><TD>DataStructureXmlParser.java</TD><TD>信息结构解析器</TD></TR>
+<TR class=tableline><TD>src\chong2\see\xml</TD><TD>DataStructureXmlWriter.java</TD><TD>信息结构写入器</TD></TR>
+<TR class=tableline><TD>src\chong2\see\xml</TD><TD>DataXmlReader.java</TD><TD>数据记录解析器</TD></TR>
+<TR class=tableline><TD>src\chong2\see\xml</TD><TD>DataXmlWriter.java</TD><TD>数据记录写入器</TD></TR>
+</TABLE>
+<P>&nbsp&nbsp 共计：42个类，833KB。其中有4个可访问的servlet。
+
+<A name="3"><H3>3 初始数据清单</H3>   
+<P>&nbsp&nbsp SEE的信息结构定义文件均在web\WEB-INF\data\structure目录下，并且文件命名规则如下：
+<P align=center>see-structure-信息结构名.xml</P>	
+<P>&nbsp&nbsp 信息结构名只能是英文，不要包含空格，最好只包含：字母、数字、“-”、“_”
+<P>&nbsp&nbsp SEE的数据记录文件均在web\WEB-INF\data\value目录下，并且文件命名规则如下：
+<P align=center>see-value-信息结构名.xml</P>	
+<TABLE class=data width=100%>
+<TR class=tableheader><TH>信息结构定义文件</TH><TH>初始数据文件</TH><TH>作用</TH></TR>
+<TR class=tableline><TD>see-structure-change_request.xml</TD><TD></TD><TD>更动请求</TD></TR>
+<TR class=tableline><TD>see-structure-check_item.xml</TD><TD></TD><TD>检查项</TD></TR>
+<TR class=tableline><TD>see-structure-check_result.xml</TD><TD></TD><TD>检查结果</TD></TR>
+<TR class=tableline><TD>see-structure-code_register.xml</TD><TD></TD><TD>代码登记</TD></TR>
+<TR class=tableline><TD>see-structure-code_review.xml</TD><TD></TD><TD>代码评审</TD></TR>
+<TR class=tableline><TD>see-structure-data_audit.xml</TD><TD></TD><TD>数据审计</TD></TR>
+<TR class=tableline><TD>see-structure-data_collection.xml</TD><TD></TD><TD>数据采集</TD></TR>
+<TR class=tableline><TD>see-structure-data_role.xml</TD><TD>see-value-data_role.xml</TD><TD>数据角色</TD></TR>
+<TR class=tableline><TD>see-structure-data_role_acl.xml</TD><TD>see-value-data_role_acl.xml</TD><TD>数据角色权限</TD></TR>
+<TR class=tableline><TD>see-structure-data_user_acl.xml</TD><TD></TD><TD>数据用户权限</TD></TR>
+<TR class=tableline><TD>see-structure-deviation_handling.xml</TD><TD></TD><TD>偏差处理</TD></TR>
+<TR class=tableline><TD>see-structure-document_register.xml</TD><TD></TD><TD>文档登记</TD></TR>
+<TR class=tableline><TD>see-structure-document_review.xml</TD><TD></TD><TD>文档评审</TD></TR>
+<TR class=tableline><TD>see-structure-ineligible_item.xml</TD><TD></TD><TD>不合格项</TD></TR>
+<TR class=tableline><TD>see-structure-inform.xml</TD><TD></TD><TD>通知</TD></TR>
+<TR class=tableline><TD>see-structure-init_config.xml</TD><TD>see-value-init_config.xml</TD><TD>初始配置</TD></TR>
+<TR class=tableline><TD>see-structure-interface_theme.xml</TD><TD>see-value-interface_theme.xml</TD><TD>界面方案</TD></TR>
+<TR class=tableline><TD>see-structure-language.xml</TD><TD>see-value-en.xml<BR>see-value-zh_CN.xml<BR>see-value-zh_TW.xml</TD><TD>用户语言翻译</TD></TR>
+<TR class=tableline><TD>see-structure-meeting_summary.xml</TD><TD></TD><TD>会议记要</TD></TR>
+<TR class=tableline><TD>see-structure-personal_message.xml</TD><TD>see-value-personal_message.xml</TD><TD>个人消息</TD></TR>
+<TR class=tableline><TD>see-structure-problem_report.xml</TD><TD>see-value-problem_report.xml</TD><TD>问题报告</TD></TR>
+<TR class=tableline><TD>see-structure-project.xml</TD><TD></TD><TD>项目</TD></TR>
+<TR class=tableline><TD>see-structure-project_role.xml</TD><TD></TD><TD>项目角色</TD></TR>
+<TR class=tableline><TD>see-structure-project_stage.xml</TD><TD></TD><TD>项目阶段</TD></TR>
+<TR class=tableline><TD>see-structure-project_task.xml</TD><TD></TD><TD>项目任务</TD></TR>
+<TR class=tableline><TD>see-structure-query_setup.xml</TD><TD></TD><TD>查询设置</TD></TR>
+<TR class=tableline><TD>see-structure-risk_analysis.xml</TD><TD></TD><TD>风险分析</TD></TR>
+<TR class=tableline><TD>see-structure-see_speed_testing.xml</TD><TD></TD><TD>速度测试</TD></TR>
+<TR class=tableline><TD>see-structure-share_resource.xml</TD><TD></TD><TD>共享资源</TD></TR>
+<TR class=tableline><TD>see-structure-show_setup.xml</TD><TD>see-value-show_setup.xml</TD><TD>显示设置</TD></TR>
+<TR class=tableline><TD>see-structure-software_requirement.xml</TD><TD></TD><TD>软件需求</TD></TR>
+<TR class=tableline><TD>see-structure-statistic_setup.xml</TD><TD>see-value-statistic_setup.xml</TD><TD>统计设置</TD></TR>
+<TR class=tableline><TD>see-structure-system_role.xml</TD><TD>see-value-system_role.xml</TD><TD>系统角色</TD></TR>
+<TR class=tableline><TD>see-structure-system_role_acl.xml</TD><TD>see-value-system_role_acl.xml</TD><TD>系统角色权限</TD></TR>
+<TR class=tableline><TD>see-structure-testing_procedure.xml</TD><TD></TD><TD>测试过程</TD></TR>
+<TR class=tableline><TD>see-structure-testing_requirement.xml</TD><TD></TD><TD>测试需求</TD></TR>
+<TR class=tableline><TD>see-structure-testing_result.xml</TD><TD></TD><TD>测试结果</TD></TR>
+<TR class=tableline><TD>see-structure-upload_management.xml</TD><TD></TD><TD>上传管理</TD></TR>
+<TR class=tableline><TD>see-structure-user.xml</TD><TD>see-value-superseer.xml<BR>see-value-user.xml</TD><TD>用户</TD></TR>
+<TR class=tableline><TD>see-structure-weekly_report.xml</TD><TD>see-value-weekly_report.xml<BR>see-value-weekly_report_matrix.xml</TD><TD>工作周报</TD></TR>
+<TR class=tableline><TD>see-structure-working_log.xml</TD><TD></TD><TD>工作日志</TD></TR>
+</TABLE>
+<P>&nbsp&nbsp 共计：41个信息结构，174KB；14个初始数据文件，140KB。
+
+<A name="4"><H3>4 图片命名方式</H3>   
+
+<A name="4.1"><H4>4.1 图片的路径</H4>   
+<P>&nbsp&nbsp SEE中图片的路径为：“web\image\” + 当前界面风格名 + “\” + 当前界面语言名 + “\”
+
+<A name="4.2"><H4>4.2 按钮的图片名</H4>   
+<P>&nbsp&nbsp SEE中按钮的图片名为：按钮名 + “.jpg”
+<BR>&nbsp&nbsp 例如一个“添加”按钮的简体中文图片可能就是：“web\image\style_default\zh_CN\add.jpg”
+
+<A name="4.3"><H4>4.3 界面功能的图片名</H4>   
+<P>&nbsp&nbsp 在SEE中：
+<LI>第一层功能，即窗口顶部的图片，图片名为：功能名 + “_top.jpg”
+<BR>例如顶部“系统管理”功能的简体中文图片可能就是：“web\image\style_default\zh_CN\system_management_top.jpg”
+<P><LI>第二层功能，即窗口左部的图片，图片名为：功能名 + “_left.jpg”
+<BR>例如左部“工作日志”功能的简体中文图片可能就是：“web\image\style_default\zh_CN\working_log_left.jpg”
+<P><LI>第三层功能，即窗口中部顶端的图片，图片名为：功能名 + “_stop.jpg”
+<BR>例如中部“系统角色权限”功能的简体中文图片可能就是：“web\image\style_default\zh_CN\system_role_acl_stop.jpg”
+<P><LI>窗口底部的常用功能的图片，图片名为：功能名 + “_bottom.jpg”
+<BR>例如底部“工作日志”功能的简体中文图片可能就是：“web\image\style_default\zh_CN\working_log_bottom.jpg”
+
+<BR><A name="5"><H3>5 不同语言的版本</H3>  
+ 
+<A name="5.1"><H4>5.1 为什么需要？</H4>   
+&nbsp&nbsp 在源码目录下有一个“dist-data”子目录，它包含en、zh_CN、zh_TW三个子目录。
+<BR>&nbsp&nbsp 这三个子目录就对应三种语言的初始数据。
+<BR>&nbsp&nbsp 不同语言用的源码是一样的，信息结构的定义（see\WEB-INF\data\structure\*.xml）也是一样的，但是初始数据（see\WEB-INF\data\value\*.xml）是不一样的！ 
+<BR>&nbsp&nbsp 为什么要用不一样的初始数据呢？很清楚，你可能要求一个英语用户输入“超级管理员”这样的汉字帐号吗？作者追求的是尽可能彻底的本地化数据。不仅显示给用户的应该是汉字，而且保存的数据也应是汉字，这样才有利于实际应用。
+<BR>&nbsp&nbsp 这不是编码的问题，因为SEE中所有数据都是UTF-8，英语用户照样可以看到汉字。用户甚至可以各种语言混合输入，只要你有相应的输入法。
+<P>&nbsp&nbsp 不同语言版本对应的缺省帐号肯定是不一样的，这一点最终用户也得注意。
+<P>&nbsp&nbsp 不同语言版本只意味着初始数据不同，用户使用时仍然可以切换到不同语言的界面。 
+
+<BR><A name="5.2"><H4>5.2 怎样编译？</H4>   
+&nbsp&nbsp 与语言相关的文件是：
+<LI>see\WEB-INF\web.xml。请将dist-data目录中相应语言子目录下的web.xml覆盖它。
+<LI>see\WEB-INF\data\value\*.xml。请将dist-data目录中相应语言子目录下的value\*.xml覆盖它们。
+<P>&nbsp&nbsp 覆盖了一种语言特有的初始文件以后，请重新装载SEE（ant reload），重新打开一个浏览器访问SEE（避免原来的session变量仍然生效）。
+<P>&nbsp&nbsp 运行时改变应用语言（不是界面语言），有可能造成执行错误，此时需要重启tomcat。
+   
+<BR><A name="6"><H3>6 翻译语言</H3>  
+&nbsp&nbsp SEE界面上的文字，对应的语言分别在"see\src\chong2\see\"下的"en.java"、"zh_CN.java"、"zh_TW.java"中定义。
+<P>&nbsp&nbsp 简体中文到繁体中文的翻译，是用win-word2000直接实现的。
+<BR>&nbsp&nbsp 中文到英文的翻译，是作者用自己很烂的水品手工实现的，过程是如此boring！结果是如此bad！以至于Michael Thorpe告诉我“some of your writing on the web page is a bit confusing to an English
+speaking person.” ，作者感谢她/他的帮助！作者试用了一些翻译软件，结果更烂。
+<P>&nbsp&nbsp 用户也可以利用SEE功能直接添加自己的语言翻译。
+  
+<A name="7"><H3>7 编制图片</H3>   
+&nbsp&nbsp 目前SEE中的图片都是用Ulead PhotoImpact 5处理的，缺省界面方案上的小图片都是选自它的图片库。
+<BR>&nbsp&nbsp 古香古色的标志图片和“美丽的花”界面则都是老婆婆自己的设计，好得意哩。点击左上角的虫二标识，你可以得到巨大的原图（这个页面上也有），那是南越王的龙凤玉佩，很美的造型，是吧？
+<P>&nbsp&nbsp 图片的处理文件在下载页可以得到。
+
+<A name="8"><H3>8 添加界面风格</H3>   
+<P>&nbsp&nbsp 目前SEE中只有一种界面风格，用户可以自己添加界面风格。
+<P>&nbsp&nbsp 一种界面风格包含如下文件：（假设风格名为orchid）
+<LI>在web\style\目录下添加“orchid.css”，定义页面的文字的大小、颜色、字符集等
+<LI>在web\image\目录下，添加目录“orchid\”，在这个目录下对每种语言建立一个子目录，分别存放这种风格对应各种语言的图片集。（目录结构类似于style_default）
+<P>&nbsp&nbsp SEE会自动发现新的界面风格，并提供给用户选择。
+
+<A name="9"><H3>9 为什么不用jsp?</H3>   
+<LI>Jsp是页面包含代码，而servlet是代码包含页面。Jsp的出现是为了有利于团队开发。作者更习惯书写代码。
+<LI>实际在运行时，所有的jsp将被自动转换为servlet。这种转换是作者不希望的，因为转换过程自动加入了增加麻烦的代码。
+<P>&nbsp&nbsp 
+
+
+<BR><BR>
+<P align=right><A href="https://sourceforge.net/projects/chong2see/" target=_blank>
+https://sourceforge.net/projects/chong2see/</A></P>
+<HR>
+<H5 class=footer align=center>软件工程环境	 版本 0.07/2004-12
+</H5>
+</BODY>
+
+</HTML>

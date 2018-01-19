@@ -1,0 +1,238 @@
+<!-- 軟體工程環境	 版本 0.07/2004-12	 瑪瑞 -->
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=gb2312">
+<TITLE> 軟體工程環境 - 源碼說明 - 代碼</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="../../manual/style/style_default.css"> 
+</HEAD>
+
+<BODY class=info>
+
+<P class=title align=center title="">源碼說明 - 代碼</P>   
+
+<HR>
+<A href="#1">1 SEE的源碼結構</A>   
+<BR><A href="#2">2 java類清單</A>   
+<BR><A href="#3">3 初始資料清單</A>   
+<BR><A href="#4">4 圖片命名方式</A>   
+<BR>&nbsp&nbsp<A href="#4.1">4.1 圖片的路徑</A>
+<BR>&nbsp&nbsp<A href="#4.2">4.2 按鈕的圖片名</A>
+<BR>&nbsp&nbsp<A href="#4.3">4.3 介面功能的圖片名</A>
+<BR><A href="#5">5 不同語言的版本</A>   
+<BR>&nbsp&nbsp<A href="#5.1">5.1 爲什麽需要？</A>
+<BR>&nbsp&nbsp<A href="#5.2">5.2 怎樣編譯？</A>
+<BR><A href="#6">6 翻譯語言</A>   
+<BR><A href="#7">7 編制圖片</A>   
+<BR><A href="#8">8 添加介面風格</A>   
+<BR><A href="#9">9 爲什麽不用jsp?</A>   
+
+<P>
+
+<A name="1"><H3>1 SEE的源碼結構</H3>   
+&nbsp&nbsp 按照規範的要求，Servlet應用的源碼結構與實際發佈的可執行程式結構有所對應。
+<BR>&nbsp&nbsp 以下是SEE的源碼結構，包括標準的目錄結構，也包括SEE自己的目錄。
+<TABLE class=data width=100%>
+<TR class=tableheader><TH width=30%>目錄/文件</TH><TH>作用</TH></TR>
+<TR class=tableline><TD>build.properties</TD><TD>build.xml引用並且需要修改的本機參數(Tomcat5)</TD></TR>
+<TR class=tableline><TD>build.xml</TD><TD>ant構建應用程式的腳本(Tomcat5)</TD></TR>
+<TR class=tableline><TD>see.jpx</TD><TD>Jbuilder專案描述文件</TD></TR>
+<TR class=tableline><TD>build-tomcat4\build.xml</TD><TD>ant構建應用程式的腳本(Tomcat4)</TD></TR>
+<TR class=tableline><TD>build-tomcat5\build.properties</TD><TD>build.xml引用並且需要修改的本機參數(Tomcat5)</TD></TR>
+<TR class=tableline><TD>build-tomcat5\build.xml</TD><TD>ant構建應用程式的腳本(Tomcat5)</TD></TR>
+<TR class=tableline><TD>dist-data\en\</TD><TD>構建英文版發佈包時需要替換的web.xml和初始資料檔案</TD></TR>
+<TR class=tableline><TD>dist-data\zh_CN\</TD><TD>構建簡體中文版發佈包時需要替換的web.xml和初始資料檔案</TD></TR>
+<TR class=tableline><TD>dist-data\zh_TW\</TD><TD>構建繁體中文版發佈包時需要替換的web.xml和初始資料檔案</TD></TR>
+<TR class=tableline><TD>docs\</TD><TD>ant發佈javadoc時需要的臨時目錄，Jbuilder也會使用它</TD></TR>
+<TR class=tableline><TD>src\</TD><TD>java類。等同于可執行應用結構中的"根目錄\WEB-INF\classes\"目錄</TD></TR>
+<TR class=tableline><TD>web\</TD><TD>等同于可執行應用結構中的根目錄，除了WEB-INF\，其他內容是可公共訪問資源。</TD></TR>
+<TR class=tableline><TD>web\image\</TD><TD>圖片</TD></TR>
+<TR class=tableline><TD>web\manual\</TD><TD>使用指南</TD></TR>
+<TR class=tableline><TD>web\style\</TD><TD>頁面風格文件</TD></TR>
+<TR class=tableline><TD>web\tmp\</TD><TD>存放SEE的暫存檔案</TD></TR>
+<TR class=tableline><TD>web\upload\</TD><TD>存放SEE的上傳文件</TD></TR>
+<TR class=tableline><TD>web\WEB-INF\</TD><TD>對應于可執行應用結構中的"根目錄\WEB-INF\"目錄，但不包括"根目錄\WEB-INF\classes\"目錄。
+<BR>在可執行應用結構中，"根目錄\WEB-INF\"用來存放class、庫文件以及其他不允許用戶直接訪問的東東。</TD></TR>
+<TR class=tableline><TD>web\WEB-INF\web.xml</TD><TD>應用發佈描述文件,等同于可執行應用結構中的"根目錄\WEB-INF\web.xml"文件</TD></TR>
+<TR class=tableline><TD>web\WEB-INF\data\structure\</TD><TD>SEE中所有的資訊結構定義文件</TD></TR>
+<TR class=tableline><TD>web\WEB-INF\data\value\</TD><TD>SEE中所有的資料記錄文件</TD></TR>
+</TABLE>
+<P>&nbsp&nbsp 所謂"等同於"指：源碼被編譯發佈成可執行應用後，相應文件的對等位置。
+<P>&nbsp&nbsp Jbuilder還會創建bak目錄和classes目錄。
+<BR>&nbsp&nbsp ant還會創建build目錄和dist目錄。
+
+<A name="2"><H3>2 java類清單</H3>   
+<TABLE class=data width=100%>
+<TR class=tableheader><TH>目錄</TH><TH>文件</TH><TH>作用</TH></TR>
+<TR class=tableline><TD>src\chong2\see</TD><TD>Res_en.java</TD><TD>英語翻譯列表</TD></TR>
+<TR class=tableline><TD>src\chong2\see</TD><TD>Res_zh_CN.java</TD><TD>簡體中文翻譯列表</TD></TR>
+<TR class=tableline><TD>src\chong2\see</TD><TD>Res_zh_TW.java</TD><TD>繁體中文翻譯列表</TD></TR>
+<TR class=tableline><TD>src\chong2\see\data</TD><TD>DataReader.java</TD><TD>資料讀取基礎類</TD></TR>
+<TR class=tableline><TD>src\chong2\see\data</TD><TD>DataReaderGetor.java</TD><TD>資料讀取"工廠"</TD></TR>
+<TR class=tableline><TD>src\chong2\see\data\base</TD><TD>Constants.java</TD><TD>常量和缺省值</TD></TR>
+<TR class=tableline><TD>src\chong2\see\data\base</TD><TD>DataStructure.java</TD><TD>資訊結構定義的定義</TD></TR>
+<TR class=tableline><TD>src\chong2\see\data\base</TD><TD>Language.java</TD><TD>語言的定義與處理</TD></TR>
+<TR class=tableline><TD>src\chong2\see\database</TD><TD>DatabaseReader.java</TD><TD>資料庫讀取（未實現）</TD></TR>
+<TR class=tableline><TD>src\chong2\see\servlet\common</TD><TD>DataManager.java</TD><TD>通用資訊處理頁面</TD></TR>
+<TR class=tableline><TD>src\chong2\see\servlet\common</TD><TD>HttpServletType1.java</TD><TD>頁面基類，預處理上傳</TD></TR>
+<TR class=tableline><TD>src\chong2\see\servlet\common</TD><TD>InfoPage.java</TD><TD>資訊顯示頁面</TD></TR>
+<TR class=tableline><TD>src\chong2\see\servlet\filter</TD><TD>ApplicationInitFilter.java</TD><TD>應用初始化篩檢程式</TD></TR>
+<TR class=tableline><TD>src\chong2\see\servlet\filter</TD><TD>CharsetFilter.java</TD><TD>語言篩檢程式</TD></TR>
+<TR class=tableline><TD>src\chong2\see\servlet\frame</TD><TD>frame_default.java</TD><TD>框架頁面</TD></TR>
+<TR class=tableline><TD>src\chong2\see\servlet\frame</TD><TD>Index.java</TD><TD>起始頁面，速度測試</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>AclTools.java</TD><TD>處理許可權的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>AuditTools.java</TD><TD>處理審計的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>CommonTools.java</TD><TD>通用的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>CookieTools.java</TD><TD>處理Cookie的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>DatabaseTools.java</TD><TD>資料庫處理的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>DataManagerTools.java</TD><TD>處理資料的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>DataStructureTools.java</TD><TD>處理資訊結構的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>ExportTools.java</TD><TD>處理導出的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>ImageTools.java</TD><TD>處理圖形的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>ImportTools.java</TD><TD>處理導入的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>LanguageTools.java</TD><TD>處理語言的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>MatrixTools.java</TD><TD>處理矩陣資料的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>OutputController.java</TD><TD>顯示頁面控制項的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>OutputListTools.java</TD><TD>顯示資料列表的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>OutputRecordTools.java</TD><TD>顯示資料記錄的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>PageTools.java</TD><TD>處理頁面的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>QueryTools.java</TD><TD>處理查詢的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>SelectTools.java</TD><TD>處理選擇的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>ServletTools.java</TD><TD>Servlet通用的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>ShowSetupTools.java</TD><TD>處理顯示設置的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>StatisticTools.java</TD><TD>處理統計的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\utils</TD><TD>UploadTools.java</TD><TD>處理上傳的靜態方法集</TD></TR>
+<TR class=tableline><TD>src\chong2\see\xml</TD><TD>DataStructureXmlParser.java</TD><TD>資訊結構解析器</TD></TR>
+<TR class=tableline><TD>src\chong2\see\xml</TD><TD>DataStructureXmlWriter.java</TD><TD>資訊結構寫入器</TD></TR>
+<TR class=tableline><TD>src\chong2\see\xml</TD><TD>DataXmlReader.java</TD><TD>資料記錄解析器</TD></TR>
+<TR class=tableline><TD>src\chong2\see\xml</TD><TD>DataXmlWriter.java</TD><TD>資料記錄寫入器</TD></TR>
+</TABLE>
+<P>&nbsp&nbsp 共計：42個類，833KB。其中有4個可訪問的servlet。
+
+<A name="3"><H3>3 初始資料清單</H3>   
+<P>&nbsp&nbsp SEE的資訊結構定義文件均在web\WEB-INF\data\structure目錄下，並且文件命名規則如下：
+<P align=center>see-structure-資訊結構名.xml</P>	
+<P>&nbsp&nbsp 資訊結構名只能是英文，不要包含空格，最好只包含：字母、數位、"-"、"_"
+<P>&nbsp&nbsp SEE的資料記錄文件均在web\WEB-INF\data\value目錄下，並且文件命名規則如下：
+<P align=center>see-value-資訊結構名.xml</P>	
+<TABLE class=data width=100%>
+<TR class=tableheader><TH>資訊結構定義文件</TH><TH>初始資料檔案</TH><TH>作用</TH></TR>
+<TR class=tableline><TD>see-structure-change_request.xml</TD><TD></TD><TD>更動請求</TD></TR>
+<TR class=tableline><TD>see-structure-check_item.xml</TD><TD></TD><TD>檢查項</TD></TR>
+<TR class=tableline><TD>see-structure-check_result.xml</TD><TD></TD><TD>檢查結果</TD></TR>
+<TR class=tableline><TD>see-structure-code_register.xml</TD><TD></TD><TD>代碼登記</TD></TR>
+<TR class=tableline><TD>see-structure-code_review.xml</TD><TD></TD><TD>代碼評審</TD></TR>
+<TR class=tableline><TD>see-structure-data_audit.xml</TD><TD></TD><TD>資料審計</TD></TR>
+<TR class=tableline><TD>see-structure-data_collection.xml</TD><TD></TD><TD>資料獲取</TD></TR>
+<TR class=tableline><TD>see-structure-data_role.xml</TD><TD>see-value-data_role.xml</TD><TD>資料角色</TD></TR>
+<TR class=tableline><TD>see-structure-data_role_acl.xml</TD><TD>see-value-data_role_acl.xml</TD><TD>資料角色許可權</TD></TR>
+<TR class=tableline><TD>see-structure-data_user_acl.xml</TD><TD></TD><TD>資料用戶許可權</TD></TR>
+<TR class=tableline><TD>see-structure-deviation_handling.xml</TD><TD></TD><TD>偏差處理</TD></TR>
+<TR class=tableline><TD>see-structure-document_register.xml</TD><TD></TD><TD>文檔登記</TD></TR>
+<TR class=tableline><TD>see-structure-document_review.xml</TD><TD></TD><TD>文檔評審</TD></TR>
+<TR class=tableline><TD>see-structure-ineligible_item.xml</TD><TD></TD><TD>不合格項</TD></TR>
+<TR class=tableline><TD>see-structure-inform.xml</TD><TD></TD><TD>通知</TD></TR>
+<TR class=tableline><TD>see-structure-init_config.xml</TD><TD>see-value-init_config.xml</TD><TD>初始配置</TD></TR>
+<TR class=tableline><TD>see-structure-interface_theme.xml</TD><TD>see-value-interface_theme.xml</TD><TD>介面方案</TD></TR>
+<TR class=tableline><TD>see-structure-language.xml</TD><TD>see-value-en.xml<BR>see-value-zh_CN.xml<BR>see-value-zh_TW.xml</TD><TD>用戶語言翻譯</TD></TR>
+<TR class=tableline><TD>see-structure-meeting_summary.xml</TD><TD></TD><TD>會議記要</TD></TR>
+<TR class=tableline><TD>see-structure-personal_message.xml</TD><TD>see-value-personal_message.xml</TD><TD>個人消息</TD></TR>
+<TR class=tableline><TD>see-structure-problem_report.xml</TD><TD>see-value-problem_report.xml</TD><TD>問題報告</TD></TR>
+<TR class=tableline><TD>see-structure-project.xml</TD><TD></TD><TD>專案</TD></TR>
+<TR class=tableline><TD>see-structure-project_role.xml</TD><TD></TD><TD>專案角色</TD></TR>
+<TR class=tableline><TD>see-structure-project_stage.xml</TD><TD></TD><TD>專案階段</TD></TR>
+<TR class=tableline><TD>see-structure-project_task.xml</TD><TD></TD><TD>專案任務</TD></TR>
+<TR class=tableline><TD>see-structure-query_setup.xml</TD><TD></TD><TD>查詢設置</TD></TR>
+<TR class=tableline><TD>see-structure-risk_analysis.xml</TD><TD></TD><TD>風險分析</TD></TR>
+<TR class=tableline><TD>see-structure-see_speed_testing.xml</TD><TD></TD><TD>速度測試</TD></TR>
+<TR class=tableline><TD>see-structure-share_resource.xml</TD><TD></TD><TD>共用資源</TD></TR>
+<TR class=tableline><TD>see-structure-show_setup.xml</TD><TD>see-value-show_setup.xml</TD><TD>顯示設置</TD></TR>
+<TR class=tableline><TD>see-structure-software_requirement.xml</TD><TD></TD><TD>軟體需求</TD></TR>
+<TR class=tableline><TD>see-structure-statistic_setup.xml</TD><TD>see-value-statistic_setup.xml</TD><TD>統計設置</TD></TR>
+<TR class=tableline><TD>see-structure-system_role.xml</TD><TD>see-value-system_role.xml</TD><TD>系統角色</TD></TR>
+<TR class=tableline><TD>see-structure-system_role_acl.xml</TD><TD>see-value-system_role_acl.xml</TD><TD>系統角色許可權</TD></TR>
+<TR class=tableline><TD>see-structure-testing_procedure.xml</TD><TD></TD><TD>測試過程</TD></TR>
+<TR class=tableline><TD>see-structure-testing_requirement.xml</TD><TD></TD><TD>測試需求</TD></TR>
+<TR class=tableline><TD>see-structure-testing_result.xml</TD><TD></TD><TD>測試結果</TD></TR>
+<TR class=tableline><TD>see-structure-upload_management.xml</TD><TD></TD><TD>上傳管理</TD></TR>
+<TR class=tableline><TD>see-structure-user.xml</TD><TD>see-value-superseer.xml<BR>see-value-user.xml</TD><TD>用戶</TD></TR>
+<TR class=tableline><TD>see-structure-weekly_report.xml</TD><TD>see-value-weekly_report.xml<BR>see-value-weekly_report_matrix.xml</TD><TD>工作周報</TD></TR>
+<TR class=tableline><TD>see-structure-working_log.xml</TD><TD></TD><TD>工作日志</TD></TR>
+</TABLE>
+<P>&nbsp&nbsp 共計：41個資訊結構，174KB；14個初始資料檔案，140KB。
+
+<A name="4"><H3>4 圖片命名方式</H3>   
+
+<A name="4.1"><H4>4.1 圖片的路徑</H4>   
+<P>&nbsp&nbsp SEE中圖片的路徑爲："web\image\" + 當前介面風格名 + "\" + 當前介面語言名 + "\"
+
+<A name="4.2"><H4>4.2 按鈕的圖片名</H4>   
+<P>&nbsp&nbsp SEE中按鈕的圖片名爲：按鈕名 + ".jpg"
+<BR>&nbsp&nbsp 例如一個"添加"按鈕的簡體中文圖片可能就是："web\image\style_default\zh_CN\add.jpg"
+
+<A name="4.3"><H4>4.3 介面功能的圖片名</H4>   
+<P>&nbsp&nbsp 在SEE中：
+<LI>第一層功能，即視窗頂部的圖片，圖片名爲：功能名 + "_top.jpg"
+<BR>例如頂部"系統管理"功能的簡體中文圖片可能就是："web\image\style_default\zh_CN\system_management_top.jpg"
+<P><LI>第二層功能，即視窗左部的圖片，圖片名爲：功能名 + "_left.jpg"
+<BR>例如左部"工作日志"功能的簡體中文圖片可能就是："web\image\style_default\zh_CN\working_log_left.jpg"
+<P><LI>第三層功能，即視窗中部頂端的圖片，圖片名爲：功能名 + "_stop.jpg"
+<BR>例如中部"系統角色許可權"功能的簡體中文圖片可能就是："web\image\style_default\zh_CN\system_role_acl_stop.jpg"
+<P><LI>視窗底部的常用功能的圖片，圖片名爲：功能名 + "_bottom.jpg"
+<BR>例如底部"工作日志"功能的簡體中文圖片可能就是："web\image\style_default\zh_CN\working_log_bottom.jpg"
+
+<BR><A name="5"><H3>5 不同語言的版本</H3>  
+ 
+<A name="5.1"><H4>5.1 爲什麽需要？</H4>   
+&nbsp&nbsp 在源碼目錄下有一個"dist-data"子目錄，它包含en、zh_CN、zh_TW三個子目錄。
+<BR>&nbsp&nbsp 這三個子目錄就對應三種語言的初始資料。
+<BR>&nbsp&nbsp 不同語言用的源碼是一樣的，資訊結構的定義（see\WEB-INF\data\structure\*.xml）也是一樣的，但是初始資料（see\WEB-INF\data\value\*.xml）是不一樣的！ 
+<BR>&nbsp&nbsp 爲什麽要用不一樣的初始資料呢？很清楚，你可能要求一個英語用戶輸入"超級管理員"這樣的漢字帳號嗎？作者追求的是盡可能徹底的本地化資料。不僅顯示給用戶的應該是漢字，而且保存的資料也應是漢字，這樣才有利於實際應用。
+<BR>&nbsp&nbsp 這不是編碼的問題，因爲SEE中所有資料都是UTF-8，英語用戶照樣可以看到漢字。用戶甚至可以各種語言混合輸入，只要你有相應的輸入法。
+<P>&nbsp&nbsp 不同語言版本對應的缺省帳號肯定是不一樣的，這一點最終用戶也得注意。
+<P>&nbsp&nbsp 不同語言版本只意味著初始資料不同，用戶使用時仍然可以切換到不同語言的介面。 
+
+<BR><A name="5.2"><H4>5.2 怎樣編譯？</H4>   
+&nbsp&nbsp 與語言相關的文件是：
+<LI>see\WEB-INF\web.xml。請將dist-data目錄中相應語言子目錄下的web.xml覆蓋它。
+<LI>see\WEB-INF\data\value\*.xml。請將dist-data目錄中相應語言子目錄下的value\*.xml覆蓋它們。
+<P>&nbsp&nbsp 覆蓋了一種語言特有的初始文件以後，請重新裝載SEE（ant reload），重新打開一個瀏覽器訪問SEE（避免原來的session變數仍然生效）。
+<P>&nbsp&nbsp 運行時改變應用語言（不是介面語言），有可能造成執行錯誤，此時需要重啓tomcat。
+   
+<BR><A name="6"><H3>6 翻譯語言</H3>  
+&nbsp&nbsp SEE介面上的文字，對應的語言分別在"see\src\chong2\see\"下的"en.java"、"zh_CN.java"、"zh_TW.java"中定義。
+<P>&nbsp&nbsp 簡體中文到繁體中文的翻譯，是用win-word2000直接實現的。
+<BR>&nbsp&nbsp 中文到英文的翻譯，是作者用自己很爛的水品手工實現的，過程是如此boring！結果是如此bad！以至於Michael Thorpe告訴我"some of your writing on the web page is a bit confusing to an English
+speaking person." ，作者感謝她/他的幫助！作者試用了一些翻譯軟體，結果更爛。
+<P>&nbsp&nbsp 用戶也可以利用SEE功能直接添加自己的語言翻譯。
+  
+<A name="7"><H3>7 編制圖片</H3>   
+&nbsp&nbsp 目前SEE中的圖片都是用Ulead PhotoImpact 5處理的，缺省介面方案上的小圖片都是選自它的圖片庫。
+<BR>&nbsp&nbsp 古香古色的標誌圖片和"美麗的花"介面則都是老婆婆自己的設計，好得意哩。點擊左上角的蟲二標識，你可以得到巨大的原圖（這個頁面上也有），那是南越王的龍鳳玉佩，很美的造型，是吧？
+<P>&nbsp&nbsp 圖片的處理文件在下載頁可以得到。
+
+<A name="8"><H3>8 添加介面風格</H3>   
+<P>&nbsp&nbsp 目前SEE中只有一種介面風格，用戶可以自己添加介面風格。
+<P>&nbsp&nbsp 一種介面風格包含如下文件：（假設風格名爲orchid）
+<LI>在web\style\目錄下添加"orchid.css"，定義頁面的文字的大小、顔色、字元集等
+<LI>在web\image\目錄下，添加目錄"orchid\"，在這個目錄下對每種語言建立一個子目錄，分別存放這種風格對應各種語言的圖片集。（目錄結構類似於style_default）
+<P>&nbsp&nbsp SEE會自動發現新的介面風格，並提供給用戶選擇。
+
+<A name="9"><H3>9 爲什麽不用jsp?</H3>   
+<LI>Jsp是頁面包含代碼，而servlet是代碼包含頁面。Jsp的出現是爲了有利於團隊開發。作者更習慣書寫代碼。
+<LI>實際在運行時，所有的jsp將被自動轉換爲servlet。這種轉換是作者不希望的，因爲轉換過程自動加入了增加麻煩的代碼。
+<P>&nbsp&nbsp 
+
+
+<BR><BR>
+<P align=right><A href="https://sourceforge.net/projects/chong2see/" target=_blank>
+https://sourceforge.net/projects/chong2see/</A></P>
+<HR>
+<H5 class=footer align=center>軟體工程環境	 版本 0.07/2004-12
+</H5>
+</BODY>
+
+</HTML>

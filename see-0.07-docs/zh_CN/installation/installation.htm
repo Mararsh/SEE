@@ -1,0 +1,180 @@
+<!-- 软件工程环境	 版本 0.07/2004-12	 玛瑞 -->
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=gb2312">
+<TITLE> 软件工程环境 - 手册 - 安装配置</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="../../manual/style/style_default.css"> 
+</HEAD>
+
+<BODY class=info>
+
+<P class=title align=center title="">安装配置</P>   
+<HR>
+
+<A href="#1">1 SEE的运行环境</A>   
+<BR><A href="#2">2 建立SEE的运行环境</A>
+<BR>&nbsp&nbsp<A href="#2.1">2.1 下载</A>
+<BR>&nbsp&nbsp<A href="#2.2">2.2 在win平台上</A>
+<BR>&nbsp&nbsp<A href="#2.3">2.3 在unix/linux平台上</A>
+<BR>&nbsp&nbsp<A href="#2.4">2.4 使用tomcat服务</A>
+<BR>&nbsp&nbsp<A href="#2.5">2.5 管理tomcat服务</A>
+<BR><A href="#3">3 安装SEE之前</A>
+<BR><A href="#4">4 安装SEE</A>
+<BR><A href="#5">5 安装SEE之后</A>
+<BR><A href="#6">6 访问SEE</A>
+<BR><A href="#7">7 同时运行多个SEE</A>
+<BR><A href="#8">8 作者的担心</A>
+
+<A name="1"><H3>1 SEE的运行环境</H3>
+&nbsp&nbsp SEE的运行环境要求为：支持《Servlet 2.3规格说明》的环境（jdk版本至少1.4.1以上）。
+<BR>&nbsp&nbsp 即:SEE运行在任何支持servlet 2.3+jdk1.4.1的环境下（作者只验证了win和linux环境），没用采用任何特定的实现技术，也不需要任何辅助程序。
+<P>&nbsp&nbsp 用户可以选择如下免费平台： 
+<LI>jdk。版本至少1.4.1以上。
+<LI>tomcat。版本至少4.0以上。
+<P>&nbsp&nbsp 对于硬件，SEE也没有特定要求。
+<BR>&nbsp&nbsp 当然，机器的CPU速度和内存容量越好，越有利于SEE快速响应。
+<BR>&nbsp&nbsp 完整安装的SEE（包含所有手册和所有图片）本身占用的硬盘空间不会超过10M。
+<P>&nbsp&nbsp 使用SEE功能需要：
+<LI>能访问到安装SEE的服务器地址
+<LI>任何支持javscript 1.0、cookie 1.0、和css 1.0的浏览器
+<LI>显示SEE界面的理想显示分辨率为：1024 * 768。   
+
+<A name="2"><H3>2 建立SEE的运行环境</H3>
+&nbsp&nbsp <FONT color=green>如果用户已有servlet环境（例如一些商业或免费的J2EE平台），可以跳过这一节的说明。</FONT>
+<BR>&nbsp&nbsp <FONT color=red>不过用户需要检查平台的jdk版本和sevlet版本。</FONT>
+
+<A name="2.1"><H4>2.1 下载</H4>       
+&nbsp&nbsp 用户可以在以下sun网址上找到较新版本的j2sdk下载：
+<BR>&nbsp&nbsp <A href="http://java.sun.com/" target=_blank>http://java.sun.com/</A></P>
+<P>&nbsp&nbsp 用户可以在以下网址上找到较新版本的tomcat下载：
+<BR>&nbsp&nbsp <A href="http://jakarta.apache.org/site/binindex.cgi" target=_blank>http://jakarta.apache.org/site/binindex.cgi</A></P>
+<P>&nbsp&nbsp 如果在上面的网址下载不方便的话，使用google很容易搜索到它们的大量下载地址。
+<P>&nbsp&nbsp 作者建议用户下载tomcat5.0.25，它的速度和管理方式都有了很好的改进。
+
+<A name="2.2"><H4>2.2 在win平台上</H4>       
+&nbsp&nbsp 安装配置j2sdk：
+<LI>下载的win平台上的j2sdk（或jdk、或j2se）。一般是zip包。
+<LI>解开安装包，直接运行exe安装文件。
+<LI>设置环境变量JAVA_HOME为：j2sdk的安装目录。（这里就不说明如何设置win的环境变量了）              
+<P>&nbsp&nbsp 安装配置tomcat：
+<LI>下载的win平台上的tomcat。一般是zip包。
+<LI>解开安装包，直接运行exe安装文件。它自己可以找到j2sdk的安装目录。
+<P>&nbsp&nbsp 对于最新的tomcat5.0.25，安装完毕后，它会桌面右下角提供一个管理图标，用来配置/监视/启动/终止tomcat的服务。
+<BR>&nbsp&nbsp 较旧的版本也为用户提供了启动/终止的快捷图标。如果找不着，则可直接进入tomcat的bin目录执行startup和shutdown的bat文件。
+
+<A name="2.3"><H4>2.3 在unix/linux平台上</H4>       
+<P>&nbsp&nbsp 以root账号实施以下步骤。
+<P>&nbsp&nbsp 安装配置j2sdk：
+<LI>下载的linux平台上的j2sdk（或jdk、或j2se）。建议下载rpm包。
+<LI>假设用户下载的是j2sdk-1_4_1_07-linux-i586-rpm.bin，则在命令行上输入：
+<BR>&nbsp&nbsp ./j2sdk-1_4_1_07-linux-i586-rpm.bin
+<BR>在显示版权信息之后，回答“yes”，它自动产生rpm文件：j2sdk-1_4_1_07-fcs-linux-i586.rpm
+<LI>安装这个rpm包。在命令行上输入：
+<BR>&nbsp&nbsp rpm -ihv j2sdk-1_4_1_07-fcs-linux-i586.rpm
+<BR>文件将被自动安装在/usr/java目录下。
+<LI>设置JAVA_HOME环境变量。在命令行上输入：
+<BR>&nbsp&nbsp JAVA_HOME=/usr/java/j2sdk1.4.1_07
+<BR>&nbsp&nbsp export JAVA_HOME
+<P>&nbsp&nbsp 安装配置tomcat：
+<LI>下载的linux平台上的tomcat。
+<LI>假设用户下载的是jakarta-tomcat-5.0.18.tar.gz，则进入要安装的目录，在命令行上输入：
+<BR>&nbsp&nbsp tar zvfz jakarta-tomcat-5.0.18.tar.gz
+<BR>文件被解开到子目录jakarta-tomcat-5.0.18目录下。
+<LI>进入该目录的子目录bin下，执行“startup.sh”以启动tomcat服务，执行“shutdown.sh”以终止tomcat服务
+<P>&nbsp&nbsp <Font color=green>如果你的linux没有启动X窗口，为了保证SEE的图片能够正确生成，请在执行以下命令</Font>：
+<BR>tomcat目录/bin/shutdown.sh（终止tomcat服务）
+<BR>CATALINA_OPTS="-Djava.awt.headless=true"
+<BR>export CATALINA_OPTS
+<BR>tomcat目录/bin/startup.sh（启动tomcat服务）
+<BR>&nbsp&nbsp 如果想要每次启动机器时自动设置这个参数，请将设置CATALINA_OPTS的这两句加入到文件/etc/profile中。
+<P>&nbsp&nbsp <Font color=green>如果你的linux返回的SEE图片上，汉字都显示为空白方框时，请试着这样</Font>：
+<LI>检查你的linux中文字体的安装情况。
+<BR>&nbsp&nbsp 例如，在redhat8简体中文版上，打开文件“/usr/share/fonts/zh_CN/TrueType/font.dir"，查看其中的字体定义。
+<BR>&nbsp&nbsp 如果看到“-misc-ZYSong18030-medium-r-normal--0-%d-0-0-c-0-iso10646-1”，则可以直接使用SEE安装包里提供的配置文件。否则需要替换。
+<LI>检查你的java字体配置情况。
+<BR>&nbsp&nbsp 在jdk安装目录下，查看目录“jre/lib”中所有以“font.properties.zh”开头的文件名，如果你愿意，请把它们都删除。
+<LI>配置java字体。
+<BR>&nbsp&nbsp 把安装包里的文件“font.properties.zh”，复制到你的jdk安装目录下子目录“jre/lib”中。
+<LI><B>使用“su -”来使用root账号。</B>
+<LI>设置系统参数。输入以下命令（或者写入/etc/profile）：
+<BR>JAVA_FONTS="/usr/share/fonts/zh_CN/TrueType/"
+<BR>export JAVA_FONTS
+<BR>JAVA_HOME="/usr/java/j2sdk1.4.1_07" （改为你的jdk安装目录）
+<BR>export JAVA_HOME
+<BR>LANG=zh_CN
+<BR>LC_ALL=zh_CN.GB18030
+<LI>重起tomcat
+<BR>&nbsp&nbsp <Font color=green>18030支持繁体中文。</FONT>
+
+<A name="2.4"><H4>2.4 使用tomcat服务</H4>       
+&nbsp&nbsp 完成安装配置步骤后，打开一个浏览器，在地址栏上输入：
+<BR>&nbsp&nbsp http://localhost:8080
+<BR>&nbsp&nbsp 如果你能看到那只著名的猫，你的tomcat就安装成功了。 
+
+<A name="2.5"><H4>2.5 管理tomcat服务</H4>       
+&nbsp&nbsp 管理tomcat服务包括：查看所有应用运行情况、启动一个应用、终止一个应用、重新载入一个应用。
+<BR>&nbsp&nbsp 对此，Tomcat自身的手册写得很明白。
+<BR>&nbsp&nbsp 用户可以在《源码说明》里找到作者对tomcat管理功能的简要介绍。
+
+<A name="3"><H3>3 安装SEE之前</H3>
+<P>&nbsp&nbsp <FONT color=green>如果你是首次安装SEE，则可跳过这一节。</FONT>
+<P>&nbsp&nbsp 如果已安装了旧版本的SEE，首先要卸载它。<FONT color=green>你也可以<A href=#7>同时运行不同版本的SEE</A></FONT>。
+<BR>&nbsp&nbsp 而<FONT color=red>在卸载SEE之前，应该备份你的数据！（除非你不需要）</FONT>
+<P>&nbsp&nbsp SEE的数据都保存在目录“see\WEB-INF\data”下，包括信息结构的定义（structure子目录）、数据记录（value子目录）、已上传文件（upload子目录）。
+<BR>&nbsp&nbsp 备份SEE数据就是把目录see\WEB-INF\data复制到别处，以供重新安装SEE后复制回来。
+<P>&nbsp&nbsp 用户可以利用tomcat的管理功能来卸载SEE。若有兴趣了解tomcat管理功能，用户可以参考《源码说明》。
+<BR>&nbsp&nbsp 如果懒得学习，可以这样：
+<LI>终止tomcat服务
+<LI>删除tomcat的webapps/下的see目录和原来的see.war（如果你还没有删除）
+<LI>启动tomcat服务
+
+<A name="4"><H3>4 安装SEE</H3>
+<P>&nbsp&nbsp 安装SEE，就是发布servlet应用：
+<LI>下载SEE可执行包，解开，得到一个"see.war"文件。
+<LI>确认Tomcat已启动。
+<LI>将此"see.war"包复制到servlet应用发布目录下（对于tomcat，就是它的webapps/子目录下）。
+<LI>Tomcat会自动：发现see包、将see包解开、启动see。
+<LI>Tomcat为你自动建立see目录后，这个see包就可以删除了。
+
+<A name="5"><H3>5 安装SEE之后</H3>
+<P>&nbsp&nbsp <FONT color=green>如果你是首次安装SEE，或者不需要原来的数据，则可跳过这一节。</FONT>
+<P>&nbsp&nbsp 如果你需要在新安装的SEE中使用原来的数据，则需要把安装前已备份的数据复制回来。
+<BR>&nbsp&nbsp 将原来数据复制回来的时候，需要考虑以下问题：
+<LI>如果你修改了某个缺省的信息结构，则复制回来之前对比一下：在新版中，这个信息结构是否也更新了。所有的信息结构定义在《使用指南》中给出。数据的变化在《更新记录》中给出。是在新版基础上添加原来的内容，还是在原来文件的基础上添加新版的内容，就得由用户选择了。作者建议用户直接修改信息结构的xml文件，这样更直观。 
+<LI>如果你添加了信息结构、或者调整了界面方案，一定不要直接用你原来的界面方案数据文件直接覆盖新版。因为新版的界面方案肯定有变化，包含了新的功能按钮。这时最好在新的界面方案上加上你的修改内容。
+
+<A name="6"><H3>6 访问SEE</H3>
+&nbsp&nbsp 打开一个浏览器，在地址栏上输入：（假设tomcat安装在你的机器上）
+<BR>&nbsp&nbsp http://localhost:8080/see
+<BR>&nbsp&nbsp 你应该看到SEE的登录界面。   
+<P>&nbsp&nbsp 如果SEE安装在你的机器能访问到的另一台机器上，就输入：
+<BR>&nbsp&nbsp http://安装SEE的机器IP地址或域名:8080/see
+<P>&nbsp&nbsp 如何具体使用SEE的功能，请参见《使用指南》。 
+
+<A name="7"><H3>7 同时运行多个SEE</H3>
+<P>&nbsp&nbsp 如果你想同时运行多个SEE，例如新版本和旧版本同时运行，或者你想将SEE定制成不同领域的应用来同时运行，或者不同语言的SEE同时运行，这种要求很容易实现。
+<P>&nbsp&nbsp 你获得see.war包后，将它重新命名，安装后，则SEE就以新名字来运行。
+<BR>&nbsp&nbsp 例如，你将"see.war"改名为"mysee.war"，安装后，你就可以以“mysee”来访问它了，即在浏览器上输入的地址是：
+<BR>&nbsp&nbsp http://安装SEE的机器IP地址或域名:8080/mysee
+<P>&nbsp&nbsp 你可以将同一个see包命名为不同的安装包，来分别定制为自己的应用。
+<BR>&nbsp&nbsp 也可以将不同版本或不同语言的see包重新命名来同时运行。
+
+<A name="8"><H3>8 作者的担心</H3>
+&nbsp&nbsp 作者是在简体中文平台上编译war包的，没有特意设定编译的编码。因为作者目前认为没有必要。
+<BR>&nbsp&nbsp 而作者还是担心：在用户真正的英文平台或是繁体中文平台上，会不会由于这个问题出现错误？
+<P>&nbsp&nbsp 作者在redhat8的英文环境下，试装了SEE，没有错误。
+<BR>&nbsp&nbsp 如果用户发现出现这个问题，请尽快告诉作者！非常感谢！
+
+<BR><BR>
+<P align=right><A href="https://sourceforge.net/projects/chong2see/" target=_blank>
+https://sourceforge.net/projects/chong2see/</A></P>
+<HR>
+<H5 class=footer align=center>软件工程环境	 版本 0.07/2004-12
+</H5>
+</BODY>
+
+</HTML>

@@ -1,0 +1,298 @@
+<!-- Software Engineering Environment	 Version 0.07/2004-12	 Mara Ren -->
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=iso-8859-1">
+<TITLE> Software Engineering Environment - Use Guide - Overview</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="../style/style_default.css"> 
+</HEAD>
+
+<BODY class=info>
+
+<P class=title align=center title="">Use Guide - Overview</P>   
+
+<HR>
+<A href="#0">0 What is SEE?</A>   
+<BR><A href="#seejianjie">1 Introduction of SEE</A>   
+<BR><A href="#seebanquan">2 License of SEE</A>
+<BR><A href="#seebanben">3 Release of SEE</A>
+<BR>&nbsp&nbsp<A href="#seebanben-zuixin">3.1 The Newest Release of SEE</A>
+<BR>&nbsp&nbsp<A href="#seebanben-tedian">3.2 What's New</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A href="#3.2.1">3.2.1 Added Functions</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A href="#3.2.2">3.2.2 Enhanced Functions</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A href="#3.2.3">3.2.3 Solved Problems</A>
+<BR>&nbsp&nbsp&nbsp&nbsp<A href="#3.2.4">3.2.4 Changes of Data</A>
+<BR>&nbsp&nbsp<A href="#seebanben-jiangyao">3.3 Features in the Future</A>
+<BR>&nbsp&nbsp<A href="#3.4">3.4 Features in the last Release</A>
+<BR><A  href="#seeganxinqu">4 Who Will Be Interested in SEE</A>
+<BR><A  href="#seebuzuo">5 What Does SEE Not to Do</A>
+<BR><A  href="#seezuozhe">6 The Author</A>
+<BR><A  href="#seexiazai">7 Download, Online Documents and News</A>
+<BR><A  href="#seeqiecuo">8 Argumentation, Encouragement, Participation, Imbursement and Criticism</A>
+<BR><A  href="#seelianxi">9 Contact</A>
+
+<A name="0"><H3>0 What is SEE?</H3>
+&nbsp&nbsp  Software Engineering Environment (SEE) is frame for manufacturing information. It is implemented in sevlet and xml, and is used by the web-browser.
+<P>&nbsp&nbsp The following are several example interfaces of SEE: 
+<P><A href="image/login.jpg"  target=_blank>Login<IMG src="image/login.jpg"  height=50 border=0></A>
+<A href="image/system.jpg"  target=_blank>System Management<IMG src="image/system.jpg"  height=50 border=0></A>
+<BR><A href="image/project.jpg"  target=_blank>Project Management<IMG src="image/project.jpg"  height=50 border=0></A>
+<A href="image/software.jpg"  target=_blank>Software Implementation<IMG src="image/software.jpg"  height=50 border=0></A>
+<BR><A href="image/common.jpg"  target=_blank>Common Functions<IMG src="image/common.jpg"  height=50 border=0></A>
+<A href="image/crosscount-piecross.jpg"  target=_blank>Cross Pie Chart<IMG src="image/crosscount-piecross.jpg"  height=50 border=0></A>
+<BR><A href="image/crosscount-histogramcross.jpg"  target=_blank>Cross Histogram<IMG src="image/crosscount-histogramcross.jpg"  height=50 border=0></A>
+<A href="image/crosscount-histogramrate.jpg"  target=_blank>Rate Histogram<IMG src="image/crosscount-histogramrate.jpg"  height=50 border=0></A>
+<A href="image/trend.jpg"  target=_blank>Trend Chart<IMG src="image/trend.jpg"  height=50 border=0></A>
+<BR><A href="image/pm.jpg"  target=_blank>Personal Message<IMG src="image/pm.jpg"  height=50 border=0></A>
+<A href="image/error.jpg"  target=_blank>Error<IMG src="image/error.jpg"  height=50 border=0></A>
+<A href="image/flower.jpg"  target=_blank>The "Flower" Interface<IMG src="image/flower.jpg"  height=50 border=0></A>
+<P>&nbsp&nbsp After installation, user can login with the super account "superseer" to try all functions. Its password is null.
+<BR>&nbsp&nbsp There are some example data in "Weekly Report" and "Problm Report" for user to try the function of automatic creating for the statistic charts.
+
+<A name="seejianjie"><H3>1 Introduction of SEE</H3>
+<P >
+&nbsp&nbsp Software Engineering Environment (SEE) attempts to provide the information manufacturing platform for software development.
+<BR>&nbsp&nbsp SEE is a free project, that is the author will provide all of its source code at the same time.
+<BR>&nbsp&nbsp It runs in any servlet environment (The author merely verified in the Win and
+Linux&nbsp; environment), not using any special technique and needs no auxiliary program.
+<BR>&nbsp&nbsp All of its data are saved in XML files, and need not database. (The future release will support the option of saving data, so that the user can select some free database, such as mysql, or commercial database to improve SEE speed.)
+<BR>&nbsp&nbsp This means that the user can run SEE without any money. (Tomcat is a free servlet environment.)
+<BR>&nbsp&nbsp User uses all SEE functions with the web-browser. So information sharing is very convenient.
+<BR>&nbsp&nbsp SEE supports Simplified Chinese, Traditional Chinese, and English now.( It will support any language if someone will translate.) User can switch to interfaces in different language at any time when SEE is running. And user can add language translations which will work at once.
+<BR>&nbsp&nbsp The main body of SEE is a frame for information manufacturing. All information included in it can be
+costumed dynamically and all changes will get into effect immediately. This means that the user can modify or add her/his own information structure as will at any time.
+<BR>&nbsp&nbsp SEE provides various predefined selections for information attributes, which correspond various predefined information manufacturing patterns. <FONT color=green>The user can focus on the information description when
+costuming information definition, and the system will implement the functions automatically. This is the core of SEE. Most functions of SEE are in this model.</FONT>
+<BR>&nbsp&nbsp The default information definition of SEE is the result that the author understands what is the Software Engineering.   
+<BR>&nbsp&nbsp Although the target of SEE is helping for software development, actually, user can use it to design any type information, such as book
+registering, personnel lists, and financial reports etc.
+<BR>&nbsp&nbsp The speed of SEE is not bad. Reading and writing 20000 records needs no more than 1 second. At present, the sorting speed is 9 seconds for 5000 records. (The testing platform is 1.8G CPU and 256M memory)
+
+<BR></a><A name="seebanquan"><H3>2 License of SEE</H3>  
+&nbsp&nbsp At present, SEE uses <FONT color=green>GNU GENERAL PUBLIC LICENSE (GPL)</FONT> as its license.
+<BR>&nbsp&nbsp The author encourages most people making use of the codes of SEE.
+<BR>&nbsp&nbsp The reason of stressing the license of SEE is the following:
+<P align=center><B><FONT color=green>Hope most people sharing the author's work, preventing from someone who would occupy SEE to limit others to use SEE.</FONT></B></P>
+<BR>&nbsp&nbsp </a> <A href="../license.txt" target=_blank>GNU GENERAL PUBLIC
+LICENSE (GPL)</A>
+<BR>&nbsp&nbsp <A href="http://www.gnu.org/" target=_blank>GNU Address</A>
+
+<BR><A name="seebanben"><H3>3 Release of SEE</H3>   
+
+<A name="seebanben-zuixin"><H4>3.1 The Newest Release of SEE</H4>   
+&nbsp&nbsp This is release 0.07. It is the seventh public release of SEE. This release comes because of some fatal bugs.
+<P>&nbsp&nbsp The changes of all releases are record in the "Change Log".
+<P>&nbsp&nbsp The incipient releases of SEE will have functions implementation as their emphasis, but not information structures.
+<P>&nbsp&nbsp <FONT color=green>User had better not use SEE actually in your application before release 1.0. The design and implementation of SEE are all not steady.</FONT>
+
+<A name="seebanben-tedian"><H4>3.2 What's New</H4>   
+
+<A name="3.2.1"><H5>3.2.1  Added Functions</H5> 
+&nbsp&nbsp The added functions in this release are following:  
+<P><LI>The data interface to prepare supporting databases.
+<BR>&nbsp&nbsp The databases are not supported in this release.
+<P><LI>A new interface style "Beautiful Flowers".
+<BR>&nbsp&nbsp These flowers are photoed in parks in this year by the author.
+<BR>&nbsp&nbsp The author likes the honeybee who holds a flower in its mouth very much. It is the first cartoon figure by the author. It will appear when you save wrong data. :) <IMG src=../image/error.gif>
+<BR>&nbsp&nbsp A new interface style means 113*3 pictures!
+<P><LI>The function of "Personal Message".
+<BR>&nbsp&nbsp User can only query the messages sent by and sent to herself/himself. And user can only remove the messages sent to herself/himself.
+<BR>&nbsp&nbsp After a user read a message sent to her/him, SEE will mark it as "have_read" automatically.
+<BR>&nbsp&nbsp The number of new arrived messages will be shown in the interface.
+
+<A name="3.2.2"><H5>3.2.2  Enhanced Functions</H5> 
+&nbsp&nbsp The enhanced functions in this release are following:  
+<P><LI>The data privileges' management
+<BR>&nbsp&nbsp When user "Remove All" or "Modify All", the "base conditions" will be checked at first. That is user can only do what she/he can do.
+<BR>&nbsp&nbsp The Password fields' values can not be visited, except when the user, who owns the "Import" privilege to current data, exports the data.
+<BR>&nbsp&nbsp All the data structures of ACL tables are changed! Their keywords become the "Title". This will permit user define better ACL.
+<BR>&nbsp&nbsp And the "condition" in the ACL tables are implemented completely. Now any "SEE conditions" is valid.
+<P><LI>Snapshot for image file
+<BR>&nbsp&nbsp When list the data, a snapshot will be shown for the image file's type, which may end with jpg/jpeg/gif/png.
+<P><LI>Data sorting concerned with langauges.
+<BR>&nbsp&nbsp Thus when sorting data in Chinese, the result is Chinese result.
+
+<A name="3.2.3"><H5>3.2.3 Solved Problems</H5> 
+&nbsp&nbsp Solved problems in this release are following:  <Font color=blue>(So many fatal and stupid bugs make the author sad for a long time~~)</FONT>
+<P><LI>General users can not visit the "User" table! Then they can not fill in many data!
+<BR>&nbsp&nbsp This is a fatal bug! This means all former releases can not be used actually!
+<BR>&nbsp&nbsp Now all ACL tables are redesigned.
+<P><LI>When a new user is added without password, SEE will add some password itself! Then this new user can never login!
+<BR>&nbsp&nbsp This is another fatal bug!
+<P><LI>In the last English release, which is 0.06, the ACL data are in Chinese!
+<BR>&nbsp&nbsp So the English users can not use SEE at all~~
+<BR>&nbsp&nbsp This is still a fatal bug!
+<P><LI>The "Risk Items" in the table "Deviation Handling" is wrong defined.
+<BR>&nbsp&nbsp This will cause an error information when user clicks the "Select" button.
+<P><LI>The values of Password fields can be visited when query or export.
+<BR>&nbsp&nbsp Although the values are meaningless encoded codes, they are still security thread.
+<P><LI>When some quota marks in the key values, pages will report errors and the function buttons, such as Modify and Remove, can not act!
+<BR>&nbsp&nbsp This is because quota is also an element of web page.
+<P><LI>When the interface language changes, the language in audit records changes too!
+<BR>&nbsp&nbsp This is not permitted. Language of all data is determined when SEE is installed and can not change with interface!
+
+<A name="3.2.4"><H5>3.2.4 Changes of Data</H5> 
+<P>&nbsp&nbsp <Font color=green>The following is only useful for the user who wants to keep the old data produced by old releases.</FONT>  
+<P>&nbsp&nbsp Changes of data in this release are following:  
+<P><LI>"Personal Message" is added.
+<P><LI>All ACL tables are changed! Their keywords are changed as "Title".
+<P><LI>A new field "Priority" is added in the table "Ineligible Items".
+<P><LI>A new field "job_title" is added in the table "User".
+<P>&nbsp&nbsp The definition of all information structures can be found in the chapter "Custom".</a>
+
+<A name="seebanben-jiangyao"><H4>3.3 Features in the Future</H4>   
+<P><LI>Supporting the definition of calculating field.
+<BR>&nbsp&nbsp A calculating field is not the raw data, and user can not input or modify its value. Its value will be calculated from other data according to some predefined formula. The calculating fields are used in statistics usually.
+<P><LI>Providing more selections of interface style.
+<BR>&nbsp&nbsp Now there is only one default interface style. Adding an interface style is "Green". That is, you only need to copy the css file and
+corresponding pictures to a certain dictionary, then the system will find them itself. Thus the interface styles can be provided to user separately.
+<P><LI>Implementing the selection of saving data.
+<BR>&nbsp&nbsp Now all data are saved in XML files. In the future releases, user will be allowed to select to save data in any type database supported by jdbc, and the connecting parameters can be set when the system is installed.
+<P><LI>Implementing the general function of working flow management.
+<BR>&nbsp&nbsp According to the requirement and frame of SEE itself, an useful working flow mechanism may be designed. If it is compatible with the international standard, that is
+best. (So difficult!)
+<P><LI>Implementing functions of network communication.
+<BR>&nbsp&nbsp Providing SEE's mail management, message passing, and forum. (So mass effort!)
+<P><LI>Designing most of information structures for the software project management.
+<BR>&nbsp&nbsp According to 12207, cmm, and national standards, information structures
+will be designed. In these models, there are much many information requests in reduplicate or similar
+way (And in ISO reduplicate requests are also there.). SEE will define only a set of information structures, and user can switch to different
+views (interface themes) to enter one of these models. (So difficult!)
+<P><LI>Implementing the general function of generating documents automatically.
+<BR>&nbsp&nbsp The system will generate documents from current data according to the document templates. The system will provide the document templates corresponding to 12207, cmm, and national standards, and at the same time user can define document templates
+herself/himself. (So difficult!)
+<P>&nbsp&nbsp The above features will be implemented by the author step by step. Maybe they will be modified or removed. Maybe some more
+requirements will be aroused.</a>
+
+
+<A name="3.4"><H4>3.4 Features in the last Release</H4>   
+<P>&nbsp&nbsp Till the last release, the features in SEE are following:
+<P><LI>Free
+<BR>&nbsp&nbsp SEE itself is free, and any part of its running environment has some free selections. Free means source codes.
+<P><LI>Light-weighted B/S model
+<BR>&nbsp&nbsp The client is just a general web-browser, the server is just a servlet environment, and SEE itself is about 6M, including documents and pictures which are about 5.2M.
+<P><LI>Compatible data
+<BR>&nbsp&nbsp All data in SEE is in XML files. XML is just for compatibility.
+<P><LI>Cross-platform
+<BR>&nbsp&nbsp At present, many free or commercial J2EE products can be found in many OS.
+<P><LI>Speed for actual application
+<BR>&nbsp&nbsp The testing result shows that the reading and writing speed is almost not concerned to the quantity of data. Only when data reaches 30000, more than 1 second is needed.
+<BR>&nbsp&nbsp There is a special button in the interface for testing the speed of data dealing in SEE. And the
+response speed of each page will be shown at the right-bottom of the page.
+<P><LI>Internationalization of interface and data
+<BR>&nbsp&nbsp SEE supports Simplified Chinese, Traditional Chinese, and English now.
+<BR>&nbsp&nbsp User can switch to interfaces in different language at any time. 
+<BR>&nbsp&nbsp In different language releases, there are different initial accounts and initial data in local language. When use SEE, all pre-defined data will be translated into local language automatically.
+<P><LI>Language translation by user.
+<BR>&nbsp&nbsp Now user can add text translations with SEE directly. The translations will work at once.
+<BR>&nbsp&nbsp This function is useful for the users who add or modify the information structures.
+<P><LI>The mechanism of privilege management for SEE.
+<BR>&nbsp&nbsp Set the super manager, distinguish the system roles and the data roles, and define the acl of system roles, data roles, and users in different levels.
+<BR>&nbsp&nbsp After installation, there are default data for privilege management in SEE. The default privilege model is based on the following thought: opening the management of the project information at the most wide degree, and making the project information entirely transparent to all project members. In functions, each member is able to add/modify/query/audit the most information of the
+project. (The removing privilege is only assigned to the data manager) Do not worry about someone's making trouble, because all of operations, data content and executing result will be record by the system automatically. Owning enough information, anyone is able to monitor
+anyone. (The super manager is invisible, she/he is the creator.)
+<P><LI>The function of user configuration.
+<BR>&nbsp&nbsp The super manager can config the parameters for the whole system. And other users can set some parameters, such as interface language, page size, data style, and default project, which will go into effect immediately. In user's private information, user can set some parameters which will go into effect after she/he logins.
+<P><LI>The general function of defining an information structure.
+<BR>&nbsp&nbsp User is able to modify any information structure at any time and changes will go into effect immediately. User can define the attributes of the entire information structure, such as Keys, If Keys Can Be Modified, Not-null Items, Invalid Items, Show Items, Default Color etc. User can also define attributes for each information field, such as Data Type, Size, Edit Width, Unit, Default Value, Data Constraint, Edit Controller Type etc. System will provide all functions for information manufacturing according to its definition description automatically. This is the core of SEE. And Most of data and functions in SEE are implemented in such way. That is, user defines information by running SEE, as well as dealing data.
+<P><LI>The general basically operations for information.
+<BR>&nbsp&nbsp They are adding, copying, inserting, modifying, and removing.
+<P><LI>Supporting Matrix Tables.
+<BR>&nbsp&nbsp When an information has many cross attributes, the matrix type is the best choice.
+<P><LI>The funtion of batch modification
+<BR>&nbsp&nbsp User can modify some fields's values in multiple data or all data at the same time.
+<BR>&nbsp&nbsp The matrix fileds can be modifed in the batch way. (Much complexity has arisen due to this sentense! )  
+<BR>&nbsp&nbsp In the default privilege model, only the super manager and data managers can execute batch modificaition.
+<P><LI>The general function of setting show parameters.
+<BR>&nbsp&nbsp User can set parameters for showing data, such as Items, Sort Item, Color, Style. These setting can be saved, modified, and removed.
+<P><LI>The general function of query.
+<BR>&nbsp&nbsp User can setup several conditions of "and" relationship and connect them with "or" relationship. The operators for query conditions are "equal to", "not equal to", "greater than", "less than", "begin with", "end with", "include", and "not include". SEE will compare data according to their types.
+<BR>&nbsp&nbsp Query setup can be saved, modified and removed.
+<P><LI>The general function of statistics.
+<BR>&nbsp&nbsp There are three types of statistic methods now, which are "Count", "Cross Count", and "Trend Chart". User can set any parameters to do statistic, and SEE will produce the counting
+report (total/percent), the comparing charts (histogram/pie), and the trend
+chart (time/number) automatically.
+<BR>&nbsp&nbsp User can set the conditions for filtering data and then get statistic
+result based that.
+<BR>&nbsp&nbsp Statistics setup can be saved, modified and removed.
+<P><LI>The function of exporting data.
+<BR>&nbsp&nbsp User can export either the whole data or the data in current page, and at the same time select the export format: xml, txt or html. Using the result, user is able to use other tools to
+analyze data in more detail. And using the function of show-setup, user can get beautiful query report.
+<BR>&nbsp&nbsp Now user can choose a charset for the export file. This will provide advantage when importing data to others' tools. 
+<P><LI>The function of importing data.
+<BR>&nbsp&nbsp User can upload a xml file in correct format to import data.
+<BR>&nbsp&nbsp In the default privilege model, only the data manager and the superseer can import data.
+<P><LI>The function of audit.
+<BR>&nbsp&nbsp User's operations on data will be record by the system automatically. The audit data includes: Who, When, Where, What Data, the Old Values, the New Values, and the Operation Result etc. In such way, the changes of data are able to be tracked entirely. The super manager can set which operations will be audited. User can query audit records either by data list or by recording time. This is a way for project monitor, and is also a path to recover data.
+<BR>&nbsp&nbsp When user login, SEE will record the action.
+<P><LI>Some common information structures for a software project.
+<BR>&nbsp&nbsp Include: Project Tracking (Time/Size/Cost), Software Requirement, Software Configuration Items' Register, Software Review, Testing Information, Change Request, Problem Report, Meeting Summary etc.
+<P><LI>The basically functions of a web application.
+<BR>&nbsp&nbsp Include login cookie, encrypted password, upload management, and so on. 
+
+<BR></a><A name="seeganxinqu"><H3>4 Who Will Be Interested in SEE</H3> 
+&nbsp&nbsp The reader may be interested in SEE because of the following reasons:
+<P><LI>You take part in a software project, and the project team needs to manufacture and share: Problem Report, Testing Result, Change Request, Meeting Summary, Document Register, Weekly Report, and Working Log etc. Perhaps SEE meets your needs. And if you want to modify the default definition, you need not modify the source code, but run SEE to config.
+<P><LI>Your organization needs a tool to manufacture and share some kind of information. Running SEE and Adding a new information structure, maybe in five minutes, your idea will come true.
+<P><LI>You want to refer to an off-the-peg information manufacturing system. Perhaps you may get some help from the use model, design, and implementation of SEE.
+<P><LI>You hope watch an off-the-peg servlet application. Perhaps SEE is an example.
+<P><LI>You need learn the information requests in various software engineering models, such as CMM, 12207, and national standards in intuitive way. Perhaps the future SEE may give its consecration.
+
+<BR></a><A name="seebuzuo"><H3>5 What Does SEE Not to Do</H3> 
+<P>&nbsp&nbsp SEE will never be a coverall platform for software engineering.
+<BR>&nbsp&nbsp For example, to configuration management, perhaps using the free CVS or some commercial tool is more effective. At most, SEE may provide the interface to import, export,
+analyze, or query the information.
+<BR>&nbsp&nbsp Another example, to project planning and data analysis, using the handy off-the-peg tools, such as Win-Project and Win-Excel, is more effective. At most, SEE may provide the convenience of registering the results of planning and analysis for sharing information among the project team in an easy way.
+
+<BR></a><A name="seezuozhe"><H3>6 The Author</H3> 
+&nbsp&nbsp The author is Mara, a Chinese granny. She likes cats, tomatoes, Spice Girls and cartoons. 
+<BR>&nbsp&nbsp This release of SEE is dedicated to the author herself. Thanks for her hard working in this year. Happy New Year!
+
+<BR></a><A name="seexiazai"><H3>7 Download, Online Documents and News</H3> 
+&nbsp&nbsp Anyone can download the source code, documents, and binary codes of all releases of SEE from the following address:
+<BR>&nbsp&nbsp </a> <A href="https://sourceforge.net/projects/chong2see/" target=_blank>https://sourceforge.net/projects/chong2see/</A>
+<P>&nbsp&nbsp The following will be found in the above page for the current release:
+<TABLE class=data width=100%>
+<TR class=tableheader><TH>Package Name</TH><TH>Content</TH><TH>Function</TH></TR>
+<TR class=tableline><TD>see-Relase Number-src.zip</TD><TD>Source codes</TD><TD></TD></TR>
+<TR class=tableline><TD>see-Relase Number-docs.zip</TD><TD>Documents</TD><TD>"Installation"<BR>"Use Guide"<BR>"Source Code Explanation"<BR>"Change Log"</TD></TR>
+<TR class=tableline><TD>see-Relase Number-zh_CN.zip</TD><TD>see.war<BR>license.txt<BR>installation.htm<BR>changelog.htm<BR>font.properties.zh</TD><TD>Install package for Simplified Chinese<BR>License<BR>Install information for Simplified Chinese<BR>Change log for Simplified Chinese<BR>linux cnfiguration file for Chinese</TD></TR>
+<TR class=tableline><TD>see-Relase Number-zh_TW.zip</TD><TD>see.war<BR>license.txt<BR>installation.htm<BR>changelog.htm<BR>font.properties.zh</TD><TD>Install package for Traditional Chinese<BR>License<BR>Install information for Traditional Chinese<BR>Change log for Traditional Chinese<BR>linux cnfiguration file for Chinese</TD></TR>
+<TR class=tableline><TD>see-Relase Number-en.zip</TD><TD>see.war<BR>license.txt<BR>installation.htm<BR>changelog.htm<BR>font.properties.zh</TD><TD>Install package for English<BR>License<BR>Install information for English<BR>Change log for English<BR>linux cnfiguration file for Chinese</TD></TR>
+<TR class=tableline><TD>see-Relase Number-pix.zip</TD><TD></TD><TD>Picture handling files</TD></TR>
+</TABLE>
+
+<P>&nbsp&nbsp User can also find news, take part in discussion, commit requests, or report bugs in the above address.
+
+<P>&nbsp&nbsp Anyone can find the online documents of SEE in the following address:
+<BR>&nbsp&nbsp <A href="http://chong2see.sourceforge.net" target=_blank>http://chong2see.sourceforge.net</A>
+
+<P>&nbsp&nbsp Chinese readers can find the working log of SEE in the following address:
+<BR>&nbsp&nbsp <A href="http://www.chong2.com/wu/see/wu_seelog.htm" target=_blank>http://www.chong2.com/wu/see/wu_seelog.htm</A>
+
+<P>&nbsp&nbsp The document you are reading is the "Use Guide". It is a part of the program.
+
+<BR><A name="seeqiecuo"><H3>8 Argumentation, Encouragement, Participation, Donation and Criticism</H3>
+&nbsp&nbsp The argumentation about the design and implementation of SEE is welcome. And the problem reports are most welcome.
+<BR>&nbsp&nbsp The author has peacockery too. She likes praise. So if you have some good words, tell her directly. Perhaps your words will encourage her to continue the hardworking consecration. The granny is very satisfied with some of her ideas and design.
+<BR>&nbsp&nbsp At present, the author thinks that the solo experiment has the highest effect and the best result. So she does not invite others into SEE. 
+<BR>&nbsp&nbsp If someone want to provide donation, the author will be very glad. "I am poor.", when the author read this sentence from Sherlock Holmes, she smiled.
+<BR>&nbsp&nbsp To criticism, haha, the author is an earthling and she will clash. Is there anything to be
+criticized? (At most, you may laugh at the author and say that her level is lower than someone.)
+
+<BR></a><A name="seelianxi"><H3>9 Contact</H3> 
+&nbsp&nbsp The author's E-mail is following:
+<BR>&nbsp&nbsp </a> <A href="mailto:mara@chong2.com">mara@chong2.com</A>
+
+<BR><BR>
+<P align=right><A href="https://sourceforge.net/projects/chong2see/" target=_blank>
+https://sourceforge.net/projects/chong2see/</A></P>
+<HR>
+<H5 class=footer align=center>Software Engineering Environment	 Version 0.07/2004-12
+</H5>
+</BODY>
+
+</HTML>

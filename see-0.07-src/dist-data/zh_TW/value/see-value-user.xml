@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataValues>
+	<Record>
+		<datalist_style>表格</datalist_style>
+		<page_size>20</page_size>
+		<interface_style>style_default</interface_style>
+		<description>一般不要設置口令。用戶未登錄或退出時，用的是這個賬號。:r:t-r:t:假設是一個善意的潛在用戶，可以使用有限的功能。</description>
+		<birthday>2004年5月13日</birthday>
+		<sex>女</sex>
+		<interface_theme>theme_default</interface_theme>
+		<id>訪客</id>
+	</Record>
+	<Record>
+		<id>嚕嚕</id>
+		<last_changed_time>2004年12月22日 上午11時34分52秒</last_changed_time>
+		<interface_theme>theme_default</interface_theme>
+		<page_size>20</page_size>
+		<sex>男</sex>
+		<email>lulu@chong2.com</email>
+		<datalist_style>表格</datalist_style>
+		<description>我們的人事管理員。老婆婆的第二個貓貓，是個小無賴。</description>
+		<birthday>2003年7月30日</birthday>
+		<interface_style>style_default</interface_style>
+	</Record>
+	<Record>
+		<id>瑪瑞</id>
+		<interface_theme>theme_default</interface_theme>
+		<nickname>老婆婆</nickname>
+		<page_size>20</page_size>
+		<sex>女</sex>
+		<email>mara@chong2.com</email>
+		<datalist_style>表格</datalist_style>
+		<description>是這個系統的作者...我呀。:r:t-r:t:就跑個龍套，當“審計管理員”吧。:r:t-r:t:誰接替我呢?</description>
+		<birthday>1999年3月9日</birthday>
+		<interface_style>style_flowers</interface_style>
+	</Record>
+	<Record>
+		<id>美美</id>
+		<interface_theme>theme_default</interface_theme>
+		<sex>男</sex>
+		<page_size>20</page_size>
+		<email>meimei@chong2.com</email>
+		<datalist_style>表格</datalist_style>
+		<description>我們的資料管理員。老婆婆的第一個貓貓，是個乖乖的孩子。</description>
+		<birthday>1999年4月11日</birthday>
+		<interface_style>style_default</interface_style>
+	</Record>
+	<Record>
+		<id>蟲蟲</id>
+		<last_changed_time>2004年12月22日 下午08時42分28秒</last_changed_time>
+		<default_project>P-SEE</default_project>
+		<interface_theme>theme_default</interface_theme>
+		<sex>女</sex>
+		<page_size>20</page_size>
+		<email>@</email>
+		<datalist_style>表格</datalist_style>
+		<register_time>2004年12月22日 下午08時40分50秒</register_time>
+		<description>一般用戶</description>
+		<interface_style>style_flowers</interface_style>
+	</Record>
+</DataValues>

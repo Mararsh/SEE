@@ -1,0 +1,53 @@
+<!-- Software Engineering Environment	 Version 0.01/2004-5	 Mara Ren -->
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=iso-8859-1">
+<TITLE> Software Engineering Environment</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="../manual/style/style_default.css"> 
+</HEAD>
+
+<BODY class=info>
+
+<P class=title align=center title="">The Explanation of Source Code</P>   
+
+<HR>         
+
+<BR><A name="seeyuyan"><H3>1 Releases in Different Languages</H3>  
+ 
+<BR><A name="seeyuyan-weishenme"><H4>1.1 Why Need?</H4>   
+&nbsp&nbsp The developer maybe has found that there is a directory "data" in the src packet. It includes three sub-directories: en, zh_CN, and zh_TW.
+<BR>&nbsp&nbsp The three directories correspond to the init data of the three languages.
+<BR>&nbsp&nbsp Different languages use the same source code and the same information structure definitions(see\WEB-INF\data\structure\*.xml), but they use different init data(see\WEB-INF\data\value\*.xml)! 
+<BR>&nbsp&nbsp Why need the different init data? It is clearly that you ought not ask an English user to input the "super manager" in Chinese text. The author attempts to make the localization entire. The local text should be saved as well as be shown. This is important to the actual application.
+<BR>&nbsp&nbsp This is not a problem about encoding. Because all data in SEE are saved and shown in UTF-8, an English user can see Chinese text too. User can even input different languages in mixed way, if only you have the input ways.
+<P>&nbsp&nbsp The default accounts are different in releases of different languages. The end user should notice this.
+<P>&nbsp&nbsp The releases of different languages only means the different init data, and user can switch to interfaces of different languages in any release. 
+
+<BR><A name="seeyuyan-zenme"><H4>1.2 How to Compile?</H4>   
+&nbsp&nbsp The files corresponding to the languages are:
+<LI>see\WEB-INF\web.xml. Please cover it by the web.xml of the sub-directory corresponding to the language under the "data" directory.
+<LI>see\WEB-INF\data\value\*.xml. Please cover them by the value\*.xml of the sub-directory corresponding to the language under the "data" directory.
+<P>&nbsp&nbsp After covering the special files for a language, please reload SEE(ant reload), and open a new web-browser to visit SEE to avoid using the saved session parameters.
+<P>&nbsp&nbsp Changing application languages(not interface languages) while running may cause error, in that case you need restart Tomcat.
+   
+<BR><A name="seefanyi"><H3>2 Translating Languages</H3>  
+&nbsp&nbsp The texts in the interface of SEE correspond to the files under the directory "see\src\chong2\see\", they are "en.java", "zh_CN.java", and "zh_TW.java".
+<P>&nbsp&nbsp To translate the Simplified-Chinese into the Traditional-Chinese, the author uses win-word2000 directly.
+<BR>&nbsp&nbsp To translate Chinese to English, the author has to do it by herself. The process is so boring and the result is so bad! Michael Thorpe told me that "some of your writing on the web page is a bit confusing to an English speaking person.", the author thanks for the help! The author tried some translation software, but the results were worse.
+  
+<BR><A name="seetupian"><H3>3 Making Pictures</H3>  
+&nbsp&nbsp At present, all pictures of SEE are manufactured by the Ulead PhotoImpact 5, and all little pictures used for interfce functions are selected from its library.
+<BR>&nbsp&nbsp The traditional pictures are designed by the granny herself. She is so pride of this. Please click the chong2 sign in the left-top conner of pages(This page also), and you will get a huge picture which is an old jade carving with a dragon and a phoenix. It is splendid, isn't it?
+<P>&nbsp&nbsp Files of pictures can be got from the download page.
+
+<BR><BR><BR>
+<HR>
+<H5 class=footer align=center>Software Engineering Environment</H5>
+
+</body>
+
+</html>

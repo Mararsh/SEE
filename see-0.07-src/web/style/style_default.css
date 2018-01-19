@@ -1,0 +1,106 @@
+/* SEE style sheet */
+
+BODY    {   background-color: #FFFFFF;
+            font-size: 10pt;
+            font-family: helvetica, simsun, simkai, arial, times ,sans-serif
+        }
+
+.data  {
+        font-size: 10pt;
+        align: center;
+        color: #000000
+        background-color: #FFFFFF
+        }
+
+.bar  {
+        background-color: #BBCCFF;
+        font-size: 9pt;
+        color: #223366
+        }
+
+.whitebar  {
+        background-color: #FFFFFF;
+        font-size: 9pt;
+        color: #223366
+        }
+
+.tableheader  {
+        background-color: #BBCCFF;
+        align: center;
+        color: #223366
+    }
+
+.tabledata  {
+        background-color: #eeeeee;
+        align: left;
+    }
+.tableline  {
+        background-color: #eeeeee;
+    }
+.tabletotal  {
+        background-color: #eeffee;
+    }
+
+.datakey   {
+                font-weight: bold;
+                color: red
+            }
+.notnull   {
+                font-weight: bold;
+                color: blue
+            }
+.dataname   {
+            }
+
+.title     {
+                font-weight: bold;
+                font-size: 14pt;
+                color: black
+            }
+
+.alert     {
+                color: red
+            }
+
+.serious     {
+                font-weight: bold;
+                color: #223366
+            }
+            
+.outresult     {
+                font-weight: bold;
+                color: green
+            }
+
+.info     {
+        font-size: 9pt;
+        color: #223366
+            }
+.small_info     {
+        font-size: 8pt;
+        color: #223366;
+            }
+
+.tabbar     {
+        font-size: 9pt;
+        background-color: #A9E969
+            }
+
+.tabmain     {
+        font-size: 9pt;
+        background-color: #FFE7E7
+            }
+
+.tabbar_grey     {
+        font-size: 9pt;
+        background-color: #C2CE99
+            }
+
+.tabmain_grey     {
+        font-size: 9pt;
+        background-color: #DDDDDD
+            }
+.setdata  {
+        font-size: 10pt;
+    }
+

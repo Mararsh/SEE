@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataValues>
+	<Record>
+		<id>superseer</id>
+		<last_changed_time>December 24, 2004 3:50:48 PM CST</last_changed_time>
+		<default_project>P-SEE</default_project>
+		<interface_theme>theme_default</interface_theme>
+		<sex>Female</sex>
+		<email>mara@chong2.com</email>
+		<datalist_style>Table</datalist_style>
+		<birthday>May 2, 2004</birthday>
+		<interface_style>style_flowers</interface_style>
+	</Record>
+</DataValues>

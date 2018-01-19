@@ -1,0 +1,262 @@
+<!-- Software Engineering Environment	 Version 0.07/2004-12	 Mara Ren -->
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=iso-8859-1">
+<TITLE> Software Engineering Environment - Use Guide - Manage</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="../style/style_default.css"> 
+</HEAD>
+
+<BODY class=info>
+
+<P class=title align=center title="">Use Guide - Manage</P>   
+
+<HR>
+<BR><A href="#1">1 The Mechanism of Privilege Management for SEE</A>
+<BR>&nbsp&nbsp<A href="#1.1">1.1 Super Manager</A>
+<BR>&nbsp&nbsp<A href="#1.2">1.2 User</A>
+<BR>&nbsp&nbsp<A href="#1.3">1.3 System Roles and Data Roles</A>
+<BR>&nbsp&nbsp<A href="#1.4">1.4 The Default Privilege Model of SEE</A>
+<BR>&nbsp&nbsp<A href="#1.5">1.5 The Default Accounts of SEE</A>
+<BR>&nbsp&nbsp<A href="#1.6">1.6 Special Data in SEE</A>
+<BR><A href="#2">2 Configing the Parameters of the Entire System</A>
+<BR><A href="#3">3 Data Audit in SEE</A>
+<BR>&nbsp&nbsp<A href="#3.1">3.1 What to Be Audited?</A>
+<BR>&nbsp&nbsp<A href="#3.2">3.2 How to Audit?</A>
+<BR>&nbsp&nbsp<A href="#3.3">3.3 Maintaining the Audit Data</A>
+<BR><A href="#4">4 Data Importing in SEE</A>
+<BR><A href="#5">5 Speed Testing of SEE</A>
+
+<BR><A name="1"><H3>1 The Mechanism of Privilege Management for SEE</H3>                
+
+<A name="1.1"><H4>1.1 Super Manager</H4>    
+&nbsp&nbsp The super manager is the creator of the system and can use all functions.
+<P>&nbsp&nbsp The super manager is a special user as following:
+<LI>Her/his private information is self-governed against other users'. It is saved in a different file.
+<LI>Her/his show-setups and query-setups will be shared by all users.
+<LI>Her/his audit information can not be seen by other users.
+<LI>Once her/his private information is damaged, the system will recover it into a default status.
+<P>&nbsp&nbsp After the user download and install SEE, you should login with the super manager's account, which is "superseer" and the password is null, at first, and do the following:
+<LI>Set the parameters in "Init Config". Please refer to <A href="#2">"Init Config"</A>.
+<LI>According to your requirement, modify or add the "System Role" and "System Role Acl". 
+<LI>According to your requirement, modify or add the information structures. For example, to "Problem Report", If the selection values of the field "Status" are not fit for your requirement, you should modify them before you begin to use it formally. The super manager can grant this work to some system role.
+<LI><FONT color=green>Please modify the password of "superseer"</FONT>. Don't forget!
+
+<A name="1.2"><H4>1.2 User</H4>  
+&nbsp&nbsp Any accessing person is a "user" of SEE. Even if the person does not login, the system will use the default account of guest to provide functions to her/him.  
+<P>&nbsp&nbsp User can only use the allowed functions. The privileges of a user is determined by the following model:
+<BR>&nbsp&nbsp&nbsp&nbsp 1) If the user belongs to a system role, she/he will own the privileges of this system role defined in the table "System Role ACL" automatically. 
+<BR>&nbsp&nbsp&nbsp&nbsp 2) If the user belongs to a data role, she/he will own the privileges of this data role defined in the table "Data Role ACL" automatically. 
+<BR>&nbsp&nbsp&nbsp&nbsp 3) User's privileges can be complemented in the table "Data User ACL" directly. 
+<P>&nbsp&nbsp <FONT color=green>The privilege strategy used in SEE is that "Only defined, is permitted"</FONT>.
+<P>&nbsp&nbsp Except for the buttons in the top and bottom, user can only see the function buttons which she/he is allowed to use. Even if a user invalidly access a page by some other way, the system will refuse to serve. Because the system will judge user's privilege before it shows every page.     
+
+<A name="1.3"><H4>1.3 System Roles and Data Roles</H4>      
+&nbsp&nbsp The differences between the system roles and the data roles are:
+<LI>The system roles are defined and granted by the super manager, while the data roles are defined by the users who have the privilege to maintain the table "Data Roles" and granted by the users who have the privilege to maintain the table "Data Role ACL". 
+<LI>To system roles, all information structures can be granted. To data roles, the following are not able to be granted: "System role", "System Role ACL", "Data Role", "Data Role ACL", "User", "Data User ACL", "Data Audit". These special information can not be granted to the data roles.
+<LI>To system roles, all operations can be granted. To data roles, the following are not able to be granted: "Config" and "Audit". These important operations can not be granted to the data roles.
+<P>&nbsp&nbsp A system role and a data role can have a same name, because the system will find the roles in different tables.
+<P>&nbsp&nbsp In these privilege tables, the selection values of the field "data" are produced by the system automatically. So after user adds or removes some information structure, the selection will change correctly.
+<BR>&nbsp&nbsp In these privilege tables, user can define the "condition". Now this feature is not better, but it is enough for the current default privilege model.
+<P>&nbsp&nbsp In the default privilege model in SEE, there is a "personnel manager". This system role is designed especially to maintain the data roles.
+
+<A name="1.4"><H4>1.4 The Default Privilege Model of SEE</H4>    
+&nbsp&nbsp After you install SEE, there are default privilege data in the system.
+<P>&nbsp&nbsp The default privilege model is based on the following idea: open the management of the project information as widely as possible,  and make these information transparent completely to all members in the team.
+<BR>&nbsp&nbsp In functions, each member is able to add, modify, query, audit the most information of the project. (The removing privilege is only assigned to the data manager) Do not worry about someone's making trouble, because all of operations, data content and executing result will be record by the system automatically. 
+<BR>&nbsp&nbsp Owning enough information, anyone is able to monitor anyone. (The super manager is invisible)
+<P>&nbsp&nbsp In more details, the default privilege model in SEE is:
+<LI>The super manager defines the following three system roles:
+<BR>&nbsp&nbsp "personnel manager" responds for  assigning the privileges of maintaining the project information. She/he can maintain these tables: "Data Role", "Data Role ACL", "User", "Data User ACL".
+<BR>&nbsp&nbsp "audit manager" responds for maintaining the audit records.
+<BR>&nbsp&nbsp "general user" can modify her/his private information and query audit records about the project data. All users are belong to the "general user", except for the "guest".
+<LI>The personnel manager defines the following two data roles:
+<BR>&nbsp&nbsp "data manager" can batch modify, remove and import the project data.
+<BR>&nbsp&nbsp "general member" can execute the following operations to project data: "add", "insert", "copy", "modify", "query", "select". All users are belong to the "general member", except for the "guest".
+<P>&nbsp&nbsp So all users will have the following privileges: modify private information, query audit records about project data, execute the operations of "add", "insert", "copy", "modify", "query" and "select" to project data, except for the "guest".
+<P>&nbsp&nbsp If user want to use another privilege model. you can remove the default privilege data and define them to fit your requirement.
+
+<A name="1.5"><H4>1.5 The Default Accounts of SEE</H4>    
+&nbsp&nbsp After user install SEE, there are some default accounts as following. Their passwords are all null. Suggest user to try them.
+<LI>"superseer", who is just the super manager and can use all functions.
+<LI>"Mara", who belongs to the "audit manager", "general user" and "general member". She is just the granny herself. :)
+<LI>"LuLu", who belongs to the "personnel manager" , "general user" and "general member". He is the granny's second cat, a lively varlet.
+<LI>"MeiMei", who belongs to "data manager", "general user" and "general member". He is the granny's first cat, a lively poppet. 
+<LI>"Chong", who belongs to "general member".  
+<LI>"guest", who is assumed as a potential kind user and can use very limited functions. Before user login or after user logout, this account is used.
+
+<A name="1.6"><H4>1.6 Special Data in SEE</H4>    
+&nbsp&nbsp There are three types of special data in SEE:
+<LI>The "Pre-defined Data", whose structure definition can not be modified by any user, including the spuer manager. So the "Config" button will never appear in the interface.
+<BR>&nbsp&nbsp They are "Init Config", "Interface Theme", "System Role", "Data Role", "System Role Acl", "Data Role Acl", "Data User Acl", "User", "Data Audit", "Show Setup", "Condition Setup", "Statsitic Setup", "Upload Manage", "Speed Testing", "Translation", "Personal Message".
+<LI>The "System Data", whose values can be modified only by the super manager. Their names will never appear in the tables of "System Role Acl", "Data Role Acl" and "Data User Acl".
+<BR>&nbsp&nbsp They are "Super User", "System Role", "System Role Acl", "Interface Theme", "Init Config", "Show Setup", "Condition Setup", "Statsitic Setup", "Speed Testing".
+<LI>The "Super Data", whose values can be modified and granted only by the super manager. Their names will never appear in the tables of "Data Role Acl" and "Data User Acl".
+<BR>&nbsp&nbsp They are "User", "Data Role", "Data User Acl", "Data User Acl", "Upload Manage", "Translation", "Data Audit".
+
+<A name="2"><H3>2 Configing the Parameters of the Entire System</H3>    
+&nbsp&nbsp The super manager can custom the running parameters of the entire system.
+<BR>&nbsp&nbsp The method is that click the button "System" in the top of the interface and select the button "Init Config" in the left of the interface. The right page is just the management page for init configuration as the following:
+<P class=title align=center title="">Init Config - Modify</P>
+<HR>
+	<TABLE align=center class=data>
+		<TR title="Identify" class=tableline>
+			<TD class=datakey  align=right >Identify : </TD><TD align=left >
+			init
+			<INPUT type=hidden name=input_id value="init" >
+		</TD></TR>
+		<TR title="Default User" class=tableline>
+			<TD  align=right >Default User : </TD><TD align=left >
+			<INPUT type=text name="input_default_user" value="guest"  size=60>
+		</TD></TR>
+		<TR title="Default Interface Style" class=tableline>
+			<TD  align=right >Default Interface Style : </TD><TD align=left >
+			<INPUT type=radio name=input_default_interface_style value="style_default"  checked>Default Style
+		</TD></TR>
+		<TR title="Default Interface Theme" class=tableline>
+			<TD  align=right >Default Interface Theme : </TD><TD align=left >
+			<INPUT type=radio name=input_default_interface_theme value="theme_default"  checked>Default Theme
+		</TD></TR>
+		<TR title="Default Page Size" class=tableline>
+			<TD  align=right >Default Page Size : </TD><TD align=left >
+			<INPUT type=text name="input_default_page_size" value="5"  size=60>
+		</TD></TR>
+		<TR title="Data Audit Types" class=tableline>
+			<TD  align=right >Data Audit Types : </TD><TD align=left >
+			<INPUT type=checkbox name=input_data_audit_types value="Config"  checked>Config
+			<INPUT type=checkbox name=input_data_audit_types value="Add"  checked>Add
+			<INPUT type=checkbox name=input_data_audit_types value="Insert"  checked>Insert
+			<INPUT type=checkbox name=input_data_audit_types value="Copy"  checked>Copy
+			<INPUT type=checkbox name=input_data_audit_types value="Import"  checked>Import
+			<INPUT type=checkbox name=input_data_audit_types value="Remove"  checked>Remove
+			<INPUT type=checkbox name=input_data_audit_types value="Modify"  checked>Modify
+			<INPUT type=checkbox name=input_data_audit_types value="Batch Modify"  checked>Batch Modify
+			<INPUT type=checkbox name=input_data_audit_types value="Query" >Query
+			<INPUT type=checkbox name=input_data_audit_types value="Audit" >Audit
+			<INPUT type=checkbox name=input_data_audit_types value="List Data" >List Data
+			<INPUT type=checkbox name=input_data_audit_types value="Show Record" >Show Record
+			<INPUT type=checkbox name=input_data_audit_types value="Export" >Export
+			<INPUT type=checkbox name=input_data_audit_types value="Login"  checked>Login
+		</TD></TR>
+		<TR title="Default Upload File Size(KB)" class=tableline>
+			<TD  align=right >Default Upload File Size(KB) : </TD><TD align=left >
+			<INPUT type=text name="input_default_upload_size" value="1000"  size=60>
+		</TD></TR>
+		<TR title="Default Upload Total(KB)" class=tableline>
+			<TD  align=right >Default Upload Total(KB) : </TD><TD align=left >
+			<INPUT type=text name="input_default_upload_total" value="100000"  size=60>
+		</TD></TR>
+	</TABLE><BR>
+<HR>
+<P>&nbsp&nbsp Although called "Init Config", they can be modified at any time and will go into effect immediately.  
+
+<BR><A name="3"><H3>3 Data Audit in SEE</H3>       
+ 
+<A name="3.1"><H4>3.1 What to Be Audited?</H4>    
+&nbsp&nbsp The super manager can custom what will be audited at any time and this will go into effect immediately.
+<P>&nbsp&nbsp Refer to the <A href="#2">Configing the Parameters of the Entire System</A>.
+<P>&nbsp&nbsp Suggestion: only audit the operations which will modify the value of information structure or its data, such as "Config", "Add", "Insert", "Copy", "Remove", and "Modify". 
+
+<A name="3.2"><H4>3.2 How to Audit?</H4>    
+&nbsp&nbsp After the super manager defines what to be audited, the system will record all things about the defined operations automatically.
+<BR>&nbsp&nbsp Every audit record includes "Id" (Produced automatically.), "Data", "Operation", "Keys", "Old Values", "New Values", "Who", "When", "Where", "Result".
+<BR>&nbsp&nbsp To "Add", the system records all not-null values of the new data.
+<BR>&nbsp&nbsp To "Modify", the system records the old values and new values of the modified fields.
+<BR>&nbsp&nbsp These information are enough for tracking data modification and recovering data.
+                                                           
+<A name="3.3"><H4>3.3 Maintaining the Audit Data</H4>    
+&nbsp&nbsp The super manager can grant some role or user to maintain the audit records.
+<BR>&nbsp&nbsp The granted user can add, remove, modify, query the audit data. The method is that click the "System" button in the top of the interface, and select the button "Data Audit" in the left of the interface. The right page is the management page for audit records.
+<P>&nbsp&nbsp But the author does not suggest to manufacture audit data manually. They are the objective results record by the system automatically.
+<P>&nbsp&nbsp The audit data should be exported and removed in time.
+
+<BR><A name="4"><H3>4 Data Importing in SEE</H3>    
+<P>&nbsp&nbsp In the top of any information's page, click the button "Import", the system will show the following page:
+<P class=title align=center title="">Problem Report - Import</P>
+<HR>
+<P class=info>Please select a XML file which is in correct format and right structure, or data can not be able to be imported.</P>
+<TABLE  class=data >
+<TR class=tableline><TD>
+File : 
+<INPUT type=file name=input_importfile  size=60>
+<BR><FONT class=info>File size can not over 1000KB.</FONT>
+</TD></TR>
+<TR class=tableline><TD>
+To the data with the same keys, override them : 
+			<INPUT type=radio name=input_importoverride value="yes"  checked>Yes
+			<INPUT type=radio name=input_importoverride value="no" >No
+</TD></TR>
+</TD></TR>
+</TABLE ><BR>
+<HR>
+<P>&nbsp&nbsp When the current information is a matrix table, there will be an additional selection in the above page:
+	 <TABLE  class=data >
+		<TR class=tableline><TD>
+			<INPUT type=radio name=input_importdata value="main_data"  checked>Main Data
+			<INPUT type=radio name=input_importdata value="matrix_data" >Matrix Data
+		</TD></TR>
+	 </TABLE><BR>
+<P>&nbsp&nbsp After import, system will return the following page:
+<P class=title align=center title="">Problem Report - Import</P>
+<HR>
+	<P align=center>Successful</P>
+	<TABLE class=data cellPadding=2 align=center>
+		<TR>
+		<TD align=right>Valid : </TD>		<TD align=left>5</TD>		</TR>
+		<TR>
+		<TD align=right>Add : </TD>		<TD align=left>4</TD>		</TR>
+		<TR>
+		<TD align=right>Override : </TD>		<TD align=left>1</TD>		</TR>
+	 </TABLE>
+<HR>
+<P>&nbsp&nbsp Notice: Import will only add one audit record about itself, and data added or modified in this operation are all not tracked! So the privilege of importing should be limited strictly.
+
+<BR><A name="5"><H3>5 Speed Testing of SEE</H3>    
+<P>&nbsp&nbsp The super manager can test the speed of SEE at any time.
+<BR>&nbsp&nbsp The method is that click the button "System" in the top of the interface and select the button "Speed Testing" in the left of the interface. The right page is just the management page for speed testing as the following: 
+<P class=title align=center title="">Speed Testing</P>
+<HR>
+	<TABLE align=center class=data >
+		<TR class=tableline>
+			<TD align=right>Add</TD><TD>
+			<INPUT type=radio name=input_add value="1000" >1000
+			<INPUT type=radio name=input_add value="500" >500
+			<INPUT type=radio name=input_add value="200" >200
+			<INPUT type=radio name=input_add value="100"  checked>100
+			<INPUT type=radio name=input_add value="50" >50
+</TD></TR>
+		<TR class=tableline>
+			<TD align=right>Sort</TD><TD>
+			<INPUT type=radio name=input_sort value="char" >Char
+			<INPUT type=radio name=input_sort value="string" >String
+			<INPUT type=radio name=input_sort value="int" >Integer
+			<INPUT type=radio name=input_sort value="float" >Float
+			<INPUT type=radio name=input_sort value="date" >Date
+			<INPUT type=radio name=input_sort value="time" >Time
+			<INPUT type=radio name=input_sort value="auto" >Automatic
+			<INPUT type=radio name=input_sort value=  >Null</TD></TR></TABLE>
+<P align=center>
+		<INPUT type=image src="image/add.jpg" alt="Add"  >			
+		<INPUT type=image src="image/remove_all.jpg" alt="Remove All"  >			
+</P>
+<P align=center class=outresult>
+Total Count : 0 &nbsp&nbsp&nbsp&nbsp Response Speed : 10 &nbsp Milliseconds
+</P>
+<P align=center class=info>This testing is only for the time-consuming about reading, sorting, and writing with XML files. When using functions of SEE, more time will be consumed for constructing page elements.</P>
+<HR>
+<P>&nbsp&nbsp The super manager can add, remove, modify, query, statistic the testing data, just like to any other data.
+<P>&nbsp&nbsp The response speed will be shown in the right-bottom corner of each data page. 
+
+<BR><BR>
+<P align=right><A href="https://sourceforge.net/projects/chong2see/" target=_blank>
+https://sourceforge.net/projects/chong2see/</A></P>
+<HR>
+<H5 class=footer align=center>Software Engineering Environment	 Version 0.07/2004-12
+</H5>
+</BODY>
+
+</HTML>

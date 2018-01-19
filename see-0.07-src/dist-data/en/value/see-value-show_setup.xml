@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataValues>
+	<Record>
+		<order>descending</order>
+		<color>name:v:h-v:h:type:v:h-v:h:Advice:v:h-v:h:FFDD99:v:h-v:h:User Feedback:v:h-v:h:FFFF99:v:h-v:h:Not Implemented:v:h-v:h:DDDDFF:v:h-v:h:Enhancement:v:h-v:h:DDFFFF:v:h-v:h:Bug:v:h-v:h:FFDDDD:v:h-v:h:others:v:h-v:h:EEEEEE</color>
+		<items>project:-:title:-:status:-:type:-:object:-:priority:-:assigned_to:-:last_changed_time:-:</items>
+		<user>superseer</user>
+		<sort>status</sort>
+		<style>Table</style>
+		<data>problem_report</data>
+		<title>By type</title>
+	</Record>
+	<Record>
+		<order>descending</order>
+		<color>name:v:h-v:h:object:v:h-v:h:Design:v:h-v:h:DDFFFF:v:h-v:h:Requirement:v:h-v:h:DDDDFF:v:h-v:h:Document:v:h-v:h:FFDDFF:v:h-v:h:Code:v:h-v:h:FFDDDD:v:h-v:h:Testing:v:h-v:h:DDFFDD:v:h-v:h:Database:v:h-v:h:FFDD99:v:h-v:h:Data:v:h-v:h:FFFF99:v:h-v:h:others:v:h-v:h:EEEEEE</color>
+		<items>project:-:title:-:status:-:type:-:object:-:priority:-:assigned_to:-:last_changed_time:-:</items>
+		<user>superseer</user>
+		<sort>status</sort>
+		<style>Table</style>
+		<data>problem_report</data>
+		<title>By object</title>
+	</Record>
+	<Record>
+		<order>descending</order>
+		<color>name:h:p-h:p:essentiality:h:p-h:p:High:h:p-h:p:FFDDDD:h:p-h:p:Medium:h:p-h:p:FFDD99:h:p-h:p:Low:h:p-h:p:DDDDFF:h:p-h:p:others:h:p-h:p:EEEEEE</color>
+		<items>project:-:title:-:type:-:essentiality:-:level:-:status:-:last_changed_time:-:</items>
+		<user>superseer</user>
+		<sort>type</sort>
+		<style>Table</style>
+		<data>testing_requirement</data>
+		<title>By essentiality</title>
+	</Record>
+	<Record>
+		<order>descending</order>
+		<color>name:h:p-h:p:level:h:p-h:p:System:h:p-h:p:FFDDDD:h:p-h:p:Component:h:p-h:p:FFFF99:h:p-h:p:Unit:h:p-h:p:DDFFDD:h:p-h:p:others:h:p-h:p:EEEEEE</color>
+		<items>project:-:title:-:type:-:essentiality:-:level:-:status:-:last_changed_time:-:</items>
+		<user>superseer</user>
+		<sort>status</sort>
+		<style>Table</style>
+		<data>testing_requirement</data>
+		<title>By level</title>
+	</Record>
+	<Record>
+		<order>descending</order>
+		<color>name:h:p-h:p:essentiality:h:p-h:p:High:h:p-h:p:FFDDDD:h:p-h:p:Medium:h:p-h:p:FFDD99:h:p-h:p:Low:h:p-h:p:DDDDFF:h:p-h:p:others:h:p-h:p:EEEEEE</color>
+		<items>project:-:title:-:type:-:source:-:essentiality:-:status:-:last_changed_time:-:</items>
+		<user>superseer</user>
+		<sort>status</sort>
+		<style>Table</style>
+		<data>software_requirement</data>
+		<title>By essentiality</title>
+	</Record>
+	<Record>
+		<color>name:h:p-h:p:essentiality:h:p-h:p:High:h:p-h:p:FFDDDD:h:p-h:p:Medium:h:p-h:p:FFDD99:h:p-h:p:Low:h:p-h:p:DDDDFF:h:p-h:p:others:h:p-h:p:EEEEEE</color>
+		<items>project:-:title:-:type:-:essentiality:-:level:-:status:-:last_changed_time:-:</items>
+		<user>superseer</user>
+		<style>Table</style>
+		<data>testing_procedure</data>
+		<title>By essentiality</title>
+	</Record>
+	<Record>
+		<color>name:h:p-h:p:level:h:p-h:p:System:h:p-h:p:FFDDDD:h:p-h:p:Component:h:p-h:p:FFFF99:h:p-h:p:Unit:h:p-h:p:DDFFDD:h:p-h:p:others:h:p-h:p:EEEEEE</color>
+		<items>project:-:title:-:type:-:essentiality:-:level:-:status:-:last_changed_time:-:</items>
+		<user>superseer</user>
+		<style>Table</style>
+		<data>testing_procedure</data>
+		<title>By level</title>
+	</Record>
+</DataValues>

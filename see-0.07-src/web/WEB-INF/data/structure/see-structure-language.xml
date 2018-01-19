@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSet>
+  <type>table</type>
+  <keyCanModify>no</keyCanModify>
+  <defaultSort>name</defaultSort>
+  <defaultOrder>descending</defaultOrder>
+  <keys>name</keys>
+  <notNullItems>value</notNullItems>
+  <operation>add:-:insert:-:copy:-:import:-:remove:-:modify:-:batch_modify:-:query:-:statistic:-:audit:-:select</operation>
+  <items>
+    <DataItem>
+      <identify>name</identify>
+      <type>string</type>
+      <valueTranslated>no</valueTranslated>
+      <editControllerType>text</editControllerType>
+    </DataItem>
+    <DataItem>
+      <identify>value</identify>
+      <type>string</type>
+      <valueTranslated>no</valueTranslated>
+      <editControllerType>text</editControllerType>
+    </DataItem>
+  </items>
+</DataSet>

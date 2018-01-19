@@ -1,0 +1,143 @@
+<!-- 软件工程环境	 版本 0.07/2004-12	 玛瑞 -->
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=gb2312">
+<TITLE> 软件工程环境 - 源码说明 - 调试</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="../../manual/style/style_default.css"> 
+</HEAD>
+
+<BODY class=info>
+
+<P class=title align=center title="">源码说明 - 调试</P>   
+
+<HR>
+<A href="#0">0 调试环境</A>   
+<BR><A href="#1">1 利用Jbuider7编辑</A>
+<BR><A href="#2">2 利用Tomcat调试</A>
+<BR>&nbsp&nbsp<A href="#2.1">2.1 加管理员账号</A>
+<BR>&nbsp&nbsp<A href="#2.2">2.2 管理servlet应用</A>
+<BR><A href="#3">3 利用ant构建</A>
+<BR>&nbsp&nbsp<A href="#3.1">3.1 ant是什么</A>
+<BR>&nbsp&nbsp<A href="#3.2">3.2 下载ant</A>
+<BR>&nbsp&nbsp<A href="#3.3">3.3 安装ant</A>
+<BR>&nbsp&nbsp<A href="#3.4">3.4 运行ant</A>
+<BR><A href="#4">4 使tomcat和ant为SEE工作</A>
+<BR>&nbsp&nbsp<A href="#4.1">4.1 建立tomcat和ant的联系</A>
+<BR>&nbsp&nbsp<A href="#4.2">4.2 修改ant脚本</A>
+<BR>&nbsp&nbsp<A href="#4.3">4.3 利用ant构建和管理SEE</A>
+
+<P>
+<A name="0"><H3>0 调试环境</H3>   
+<P>&nbsp&nbsp SEE的调试环境是：
+<LI>编写：Jbuider7
+<LI>构建：jakarta-ant-1.4.1
+<LI>调试：j2sdk1.4.1 + Tomcat5.0
+<P>&nbsp&nbsp 它们的文档和网上资源都能帮助用户入门并且精通。
+<P>&nbsp&nbsp 作者并不精通这些软件，边学边用，倒也足够。以下是作者的一些使用经验。
+
+<A name="1"><H3>1 利用Jbuider7编辑</H3>   
+<P>&nbsp&nbsp 作者没有利用Jbuider7的大多数功能和特点，只是利用了它的以下好处：
+<BR><LI>对源码输入提供引导和提示。
+<LI>语法和语义错误立即显示。
+<LI>系统和程序框架一目了然。
+<LI>右键自动功能：优化import、添加try-catch、搜索定义、搜索引用、方法重命名替换、调整格式。
+<LI>重命名类和移动类后自动替换。
+<LI>完善的编辑功能。
+<LI>自动添加项目信息。
+<LI>自动产生javadoc模板，同时检查javadoc语法错误。
+<LI>内嵌的编译和构建。
+<LI>非常周到友好的帮助。
+<P>&nbsp&nbsp 这些功能使编程和调试成为一种让人着迷的游戏。
+<P>&nbsp&nbsp <Font color=green>若要在Jbuider7中编辑调试SEE，请不要忘了把它的jdk设置为你自己安装的1.4.1以上的版本，否则你会看到一大堆错误信息。</Font>
+
+<A name="2"><H3>2 利用Tomcat调试</H3>   
+<P>&nbsp&nbsp 尽管Jbuider7提供内嵌的编译和构建能力（它也是用了ant和tomcat，只是版本比较低），但是作者还是用ant和tomcat直接调试。这是因为作者希望更加灵活直观地处理和观察程序结果。
+<P>&nbsp&nbsp 如何下载、安装、配置tomcat，请参考《安装配置》文档。
+
+<A name="2.1"><H4>2.1 加Tomcat的管理员账号</H4>   
+<P>&nbsp&nbsp 在安装Tomcat5时，它会提示输入管理员账号。
+<BR>&nbsp&nbsp 对于tomcat4，用户得手工修改“conf/tomcat-user.xml”，加入以下行：
+<BR>&nbsp&nbsp   user username="你的账号名" password="你的账号口令" roles="admin,manager"
+
+<A name="2.2"><H4>2.2 管理servlet应用</H4>   
+<P>&nbsp&nbsp 安装并启动tomcat后，打开一个浏览器，输入以下管理命令：（它会要求你首先输入管理员账号）
+<LI>列出当前已安装的所有servlet应用的状态：
+<BR>&nbsp&nbsp http://localhost:8080/manager/list
+<LI>安装一个servlet应用：（手工动态安装）
+<BR>&nbsp&nbsp http://localhost:8080/manager/install?path=/see&war=file:"g:/myjava/see"
+<LI>启动一个servlet应用：
+<BR>&nbsp&nbsp http://localhost:8080/manager/start?path=/see
+<LI>终止一个servlet应用：
+<BR>&nbsp&nbsp http://localhost:8080/manager/stop?path=/see
+<LI>重装一个servlet应用：（在修改调试时这个管理命令最常用）
+<BR>&nbsp&nbsp http://localhost:8080/manager/reload?path=/see
+<P>&nbsp&nbsp <FONT color=green>对于tomcat5，不必这样麻烦！利用ant可以直接执行这些所有管理命令。</FONT>
+
+<A name="3"><H3>3 利用ant构建</H3>   
+<P>&nbsp&nbsp 如果读者不了解ant，目前也不想学习，只需安装ant就行了。SEE的buld.xml足以帮你对付其它事。
+
+<A name="3.1"><H4>3.1 ant是什么</H4>   
+<P>&nbsp&nbsp ant是java世界推崇的编译发布工具。
+<BR>&nbsp&nbsp 如果你用过unix世界的makefile，你就可以理解这句话：ant是跨平台的makefile。它自称更优于后者。
+
+<A name="3.2"><H4>3.2 下载ant</H4>   
+<P>&nbsp&nbsp ant主页：<A href="http://jakarta.apache.org/ant/index.html" target=_blank>http://jakarta.apache.org/ant/index.html</A>
+<BR>&nbsp&nbsp 建议下载1.4.1以上的版本。
+
+<A name="3.3"><H4>3.3 安装ant</H4>   
+<LI>解开zip包（win平台）或tar包（unix/linux平台）到一个目录，这个目录就叫ant目录
+<LI>将ant的bin子目录添加到系统path中。
+
+<A name="3.4"><H4>3.4 运行ant</H4>   
+<P>&nbsp&nbsp 打开一个终端窗口，在任何包含build.xml的目录下，运行ant，ant会自动执行此脚本中命令。
+
+<A name="4"><H3>4 使tomcat和ant为SEE工作</H3>   
+
+<A name="4.1"><H4>4.1 建立tomcat和ant的联系</H4>   
+<P>&nbsp&nbsp 为了让ant为tomcat服务，要将Tomcat目录下"server\lib\catalina-ant.jar"文件复制到ant目录“lib”下。
+
+<A name="4.2"><H4>4.2 修改ant脚本</H4>   
+<P>&nbsp&nbsp 解开SEE的源码包，首先应修改ant脚本。
+<BR>&nbsp&nbsp 在tomcat5和tomcat4环境下，ant脚本的处理是不一样的。作者建议读者使用tomcat5。以下的介绍针对tomcat5。
+<P>&nbsp&nbsp 在SEE源码包的根目录下有2个文件"build.xml"和"build.properties"，它们就是tomcat5的ant脚本。
+<BR>&nbsp&nbsp 对于tomcat5, 用户不必修改"build.xml"，与用户调试机器有关的参数都在"build.properties"中定义:
+<I>
+<BR>app.path=/see
+<BR>catalina.home=E:/installed/Tomcat 5.0 <FONT color=green>（修改这里！改成你机器上安装tomcat5的路径）</FONT>
+<BR>manager.username=管理员账号名 <FONT color=green>（修改这里！）</FONT>
+<BR>manager.password=管理员账号密码 <FONT color=green>（修改这里！）</FONT>
+</I>
+
+<A name="4.3"><H4>4.3 利用ant构建和管理SEE</H4>   
+<P>&nbsp&nbsp 打开一个命令窗口，进入到see源码目录下，文件"build.xml"和"build.properties"应该在那里，输入以下命令，可以执行ant构建命令和tomcat管理命令：
+<LI>"ant list", 显示当前Tomcat上已安装所有应用的状态列表。
+<LI>"ant install", 首次安装SEE到Tomcat。这是动态安装，不会复制任何文件到Tomcat目录下。
+<LI>"ant start", 启动SEE。
+<LI>"ant stop", 终止SEE。
+<LI>"ant compile", 编译SEE。
+<LI>"ant"（由于缺省任务是“reload”，所以即是"ant reload"），首先编译，然后自动重新装载SEE。此时SEE的最新修改可以在使用界面上立即反映出来。 
+<LI>"ant remove"，将SEE从Tomcat中卸载。不会删除任何源文件。
+<LI>"ant dist"，生成SEE的发布包，javadoc将被同时生成。
+<LI>"ant javadoc"，单独生成javadoc。
+<LI>"ant clean"，清除reload和dist生成的目录和文件。
+<P>&nbsp&nbsp <FONT color=green>请注意ant返回的信息，如果它显示错误，也不必烦恼。仔细看清它要求什么。</FONT>
+<BR>&nbsp&nbsp 你可能忘了首先应该安装SEE，或者忘了启动SEE，或者根本忘了启动Tomcat。
+<P>&nbsp&nbsp ant会创建dist和build目录。
+<BR>&nbsp&nbsp 目录dist存放的是ant dist生成的发布包和javadoc。
+<BR>&nbsp&nbsp 目录build存放的是ant compile生成的应用。
+<P>&nbsp&nbsp 你运行SEE，生成的数据是存放发布目录下的，而不是源码目录下，这一点需要注意。
+<BR>&nbsp&nbsp 如果用ant调试，在ant clean之前应该将build中有用的数据先保存出来。
+
+<BR><BR>
+<P align=right><A href="https://sourceforge.net/projects/chong2see/" target=_blank>
+https://sourceforge.net/projects/chong2see/</A></P>
+<HR>
+<H4 class=footer align=center>软件工程环境	 版本 0.07/2004-12
+</H4>
+</BODY>
+
+</HTML>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSet>
+  <type>table</type>
+  <keyCanModify>yes</keyCanModify>
+  <defaultOrder>ascending</defaultOrder>
+  <keys>theme:-:name</keys>
+  <showItems>theme:-:name</showItems>
+  <operation>add:-:insert:-:copy:-:import:-:remove:-:modify:-:batch_modify:-:query:-:statistic:-:audit:-:select</operation>
+  <items>
+    <DataItem>
+      <identify>theme</identify>
+      <displayName>theme</displayName>
+      <type>string</type>
+      <size>16</size>
+      <defaultValue>theme_default</defaultValue>
+      <valueTranslated>no</valueTranslated>
+      <valueConstraintType>solo</valueConstraintType>
+      <valueConstraint>theme_default</valueConstraint>
+      <editControllerType>radio</editControllerType>
+    </DataItem>
+    <DataItem>
+      <identify>name</identify>
+      <type>string</type>
+      <editControllerType>text</editControllerType>
+    </DataItem>
+    <DataItem>
+      <identify>child</identify>
+      <type>string</type>
+      <editControllerType>text</editControllerType>
+    </DataItem>
+    <DataItem>
+      <identify>link</identify>
+      <type>string</type>
+    </DataItem>
+  </items>
+</DataSet>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataValues>
+	<Record>
+		<member>LuLu:-::-:</member>
+		<id>personnel manager</id>
+	</Record>
+	<Record>
+		<member>*</member>
+		<id>general user</id>
+	</Record>
+	<Record>
+		<member>guest:-::-:</member>
+		<id>guest</id>
+	</Record>
+	<Record>
+		<member>Mara:-::-:</member>
+		<id>audit manager</id>
+	</Record>
+</DataValues>

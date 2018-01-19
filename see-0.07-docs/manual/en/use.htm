@@ -1,0 +1,1657 @@
+<!-- Software Engineering Environment	 Version 0.07/2004-12	 Mara Ren -->
+
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=iso-8859-1">
+<TITLE> Software Engineering Environment - Use Guide - Use</TITLE>
+<LINK rel="stylesheet" type="text/css"  href="../style/style_default.css"> 
+</HEAD>
+
+<BODY class=info>
+
+<P class=title align=center title="">Use Guide - Use</P>   
+
+<HR>
+<A href="#1">1 The Interface of SEE</A>   
+<BR>&nbsp&nbsp<A href="#1.1">1.1 General Description</A>
+<BR>&nbsp&nbsp<A href="#1.2">1.2 Inputting Data</A>
+<BR>&nbsp&nbsp<A href="#1.3">1.3 Listing Data</A>
+<BR>&nbsp&nbsp<A href="#1.4">1.4 Interface Setup</A>
+<BR>&nbsp&nbsp<A href="#1.5">1.5 Interface Theme</A>
+<BR><A href="#2">2 Information Manufacturing in SEE</A>
+<BR>&nbsp&nbsp<A href="#2.1">2.1 The Data Constraints in SEE</A>
+<BR>&nbsp&nbsp<A href="#2.2">2.2 The Special Strings in SEE</A>
+<BR>&nbsp&nbsp<A href="#2.3">2.3 Adding Data</A>
+<BR>&nbsp&nbsp<A href="#2.4">2.4 Inserting Data</A>
+<BR>&nbsp&nbsp<A href="#2.5">2.5 Modifying Data</A>
+<BR>&nbsp&nbsp<A href="#2.6">2.6 Copying Data</A>
+<BR>&nbsp&nbsp<A href="#2.7">2.7 Importing Data</A>
+<BR>&nbsp&nbsp<A href="#2.8">2.8 Removing Data</A>
+<BR>&nbsp&nbsp<A href="#2.9">2.9 Querying Data</A>
+<BR>&nbsp&nbsp<A href="#2.10">2.10 Statistic</A>
+<BR>&nbsp&nbsp<A href="#2.11">2.11 Batch Modification</A>
+<BR><A href="#3">3 Data Audit in SEE</A>
+<BR>&nbsp&nbsp<A href="#3.1">3.1 Querying the Audit Data</A>
+<BR>&nbsp&nbsp<A href="#3.2">3.2 Showing Audit Records by Data List</A>
+<BR>&nbsp&nbsp<A href="#3.3">3.3 Showing Audit Records by Time</A>
+<BR><A href="#4">4 Data Exporting in SEE</A>
+<BR><A href="#5">5 Show-setup in SEE</A>
+<BR><A href="#6">6 Condition Setup in SEE</A>
+<BR><A href="#7">7 Statistic in SEE</A>
+<BR>&nbsp&nbsp<A href="#7.1">7.1 Count</A>
+<BR>&nbsp&nbsp<A href="#7.2">7.2 Cross Count</A>
+<BR>&nbsp&nbsp<A href="#7.3">7.3 Trend</A>
+<BR>&nbsp&nbsp<A href="#7.4">7.4 Condition Setup for Statistic</A>
+<BR>&nbsp&nbsp<A href="#7.5">7.5 Saving the Statistic Setup</A>
+<BR><A href="#8">8 Personal Message</A>
+
+<A name="1"><H3>1 The Interface of SEE</H3>                     
+
+<A name="1.1"><H4>1.1 General Description</H4> 
+<P align=center><IMG src=image/interface.jpg>
+<P>&nbsp&nbsp SEE is a web application, so you can use the window's functions in the web-browser, such as Forward, Backward, Print, Save As, Open the Link in A New Window, Copy Text, and Paste Text etc. These things are not introduced here.
+<BR>&nbsp&nbsp To use functions of SEE, your web-browser need:
+<LI>Supports javscript 1.0, cookie 1.0, and css 1.0
+<LI>The ideal display resolution to show interfaces of SEE is: 1024 * 768 
+<P>&nbsp&nbsp The following are the general functions in the SEE interfaces:
+<LI>Resting your mouse on a field name, you may get some description about the field (If there is the definition in its structure.)
+<LI>Moving your mouse to a link, a button, or a picture, the icon usually becomes a hand, which indicates this is a click-resource. But to the pictures and underlined texts without this character, please try to click them too.
+<LI>In the status bar of the web-browser, some values will be shown: current user, current project, current information-operation, the information description (If defined.)
+
+<A name="1.2"><H4>1.2 Inputting Data</H4> 
+&nbsp&nbsp When you add or modify data:
+<LI>The red fields are members of key group. They should be unique and can not be same to an existent record. The page script will judge this automatically.
+<LI>The blue fields can not be null. The page script will judge this automatically.
+<LI>To copy data, you should modify at least one red field to save it as a new valid record and not to cover the original data. The page script will judge this automatically.
+<LI>To time or date field, you'd better click the beside button "Format" to get the valid format. If the values are not in valid format of time or date, you may not get reasonable result when you sort, query, or statistic them.
+
+<A name="1.3"><H4>1.3 Listing Data</H4> 
+&nbsp&nbsp When you execute inserting, copying, modifying, removing, querying, auditing, the system will list all records for you at first. In these pages:
+<LI>If you click a field name in the table head, records will be sorted according to this field. Clicking again will give you the sort result in reverse direction. If there is a ">" or "<" beside a field name, this indicates that data are sorted by this field now.
+<LI>At the bottom of the data list, there is a page-area, which shows the total size of the data and current numbers of the data. In this area, user also can set the page size (This set will continue in effect), move to the last page, move to the next page, or jump to a special page.
+<LI>At the bottom of the data list, there is a show-setup area, which shows the current values of the data style, showing items, sort item and sort direction. When clicking the button "Show Setup", user will enter the show-setup interface to set these parameters. Please refer to <A href="#5">Show-setup in SEE</A>.
+<LI>At the bottom of the data list, there is a query-setup area, which shows the current query conditions. When clicking the button "Query Setup", user will enter the query-setup interface to set query conditions. Please refer to <A href="#6">Query-setup in SEE</A>.
+<LI>At the top of the data list, there may be a color bar.
+<P>&nbsp&nbsp Tip 1: By sorting and querying, you can find your data records conveniently.
+<BR>&nbsp&nbsp Tip 2: Before do any operation which will changes data, if you sort them at first, the data will be saved in the current sorting order. 
+
+<A name="1.4"><H4>1.4 Interface Setup</H4>   
+&nbsp&nbsp User can click the button "Setup" at the bottom of the interface at any time to set the following parameters, which will go into effect immediately and keep in effect in current login: 
+<P class=title align=center title="">Setup</P>
+<HR>
+<TABLE align=center class=data>
+	<TR class=tableline><TD align=right>Interface Style : </TD>
+<TD align=left>
+			<INPUT type=radio name=input_interface_style value="style_default" >Default Style
+			<INPUT type=radio name=input_interface_style value="style_flowers"  checked>Beautiful Flowers
+</TD>
+	<TR class=tableline><TD align=right>Interface Theme : </TD>
+<TD align=left>
+			<INPUT type=radio name=input_interface_theme value="theme_default"  checked>Default Theme
+</TD>
+	<TR class=tableline><TD align=right>Data List Style : </TD>
+<TD align=left>
+			<INPUT type=radio name=input_datalist_style value="Table"  checked>Table
+			<INPUT type=radio name=input_datalist_style value="Form" >Form
+</TD>
+	<TR class=tableline><TD align=right>Page Size : </TD>
+<TD align=left><INPUT name=input_page_size value=8 ></TD>
+	<TR class=tableline><TD align=right>Default Project : </TD>
+<TD align=left>
+			<INPUT type=hidden name=input_default_project value="P-SEE" >
+			<INPUT name=input_default_project_show value="P-SEE" readonly  size=60>
+		<INPUT type=image  src="image/select.jpg" alt="Select"  >
+
+		<INPUT type=image src="image/default.jpg" alt="Default"  >
+</TD>
+</TABLE>
+</FORM>
+	<FORM name=formtable method=post onSubmit='return false;'>
+	<INPUT type=hidden name=language value="">
+<P align=center>
+		<INPUT type=image src="../image/en.jpg" alt="English"  >			
+		<INPUT type=image src="../image/zh_CN.jpg" alt="Simplified Chinese"  >			
+		<INPUT type=image src="../image/zh_TW.jpg" alt="Traditional Chinese"  >			
+<BR><FONT class=info>System is installed in English. So it has init accounts and init data in English.<BR>Language selection is for showing interface in different languages.</FONT></P>
+	</FORM>
+</P>
+<HR>
+<P>&nbsp&nbsp They are:
+<LI>Interface Style. It is the design of the pictures and text attributes, such as size, color, font, for the entire system. There are two sets now. User can design and add some by yourself. Its adding is "Green", that is you need only copy files to the special directory. Please refer to the "Source Code Explanation".
+<LI>Interface Theme. It is how to show the function buttons in the interface in different levels. There is only default one. User can modify and add by yourself. The super manager can click the button "System" on the top of the interface, then select the "Interface Theme" at the left page to manage it. Modifying will go into effect immediately.
+<LI>Data List Style. There are two styles now. They are "Table Style" and "Form Style". The "Table Style" refers to that each line will show one record and each column  will show one field. The "Form Style" refers to that records are shown one after another and each line will show a field.
+<LI>Page Size. It is the total number of the records shown in every page.
+<LI>Default Project. It is the default value when you input a field that refers to the "Project". It has little use now.
+<LI>The switch buttons for languages. There are two encodings in SEE. One of them is for data saving and the other is for interface. All data are saved in UTF-8 in SEE now, while user can switch interface into different languages at any time.
+
+<P>&nbsp&nbsp The above parameters can be set in the user's private information too. Two ways have the following differences: the parameters in user's private information will be used at user's every login while parameters in the function "Setup" will be used only at current login, And the modifying in the former will go into effect at user's next login while the modifying in the latter will go into effect immediately.
+
+<A name="1.5"><H4>1.5 Interface Theme</H4> 
+&nbsp&nbsp It is how to show the function buttons in the interface in different levels:
+<LI>The functions of the first level are shown in the top of the interface. 
+<LI>The functions of the second level are shown in the left of the interface.
+<LI>The funcitons of the third level are shown on the top of the middle page. 
+<P>&nbsp&nbsp The following is the default interface theme:
+<TABLE class=data align=center width=80%>
+<TR class=tableline><TD></TD><TD></TD><TD></TD></TR>
+<TR class=tableheader><TH>The first level (Top)</TH><TH>The second level (Left)</TH><TH>The third level (Middle top)</TH></TR>
+<TR class=tableline><TD>System</TD><TD></TD><TD></TD></TR> 
+<TR class=tableline><TD></TD><TD>Init Config</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Interface Theme</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>User</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Role Definition</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>System Role</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Data Role</TD></TR>
+<TR class=tableline><TD></TD><TD>Data Privilege</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>System Role Acl</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Data Role Acl</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Data User Acl</TD></TR>
+<TR class=tableline><TD></TD><TD>Public Data</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Data Audit</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Show Setup</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Condition Setup</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Statsitic Setup</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Upload Manage</TD></TR>
+<TR class=tableline><TD></TD><TD>Translation</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Simlified Chinese</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Traditional Chinese</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>English</TD></TR>
+<TR class=tableline><TD></TD><TD>Speed Testing</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Login</TD><TD></TD></TR>
+<TR class=tableline><TD>Project</TD><TD></TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Project Planning</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Project Register</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Project Stage</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Project Task</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Project Role</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Risk Analysis</TD></TR>
+<TR class=tableline><TD></TD><TD>Project Tracking</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Weekly Report</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Working Log</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Data Collection</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Deviation Handling</TD></TR>
+<TR class=tableline><TD></TD><TD>Check List</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Check Item</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Check Result</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Ineligible Item</TD></TR>
+<TR class=tableline><TD></TD><TD>Configuration</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Code Register</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Document Register</TD></TR>
+<TR class=tableline><TD></TD><TD>Review</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Code Review</TD></TR>
+<TR class=tableline><TD></TD><TD></TD><TD>Document Review</TD></TR>
+<TR class=tableline><TD>Software</TD><TD></TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Software Requirement</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Testing Requirement</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Testing Procedure</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Change Request</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Testing Result</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Problem Report </TD><TD></TD></TR>
+<TR class=tableline><TD>Common</TD><TD></TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Personal Message</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Meeting Summary</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Contact Way</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Share Resource</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Information</TD><TD></TD></TR>
+<TR class=tableline><TD></TD><TD>Manual</TD><TD></TD></TR>
+</TABLE>
+
+<P>&nbsp&nbsp In the middle of interface, pages linked to the function buttons of all levels will be opened. This area is used mainly to show the pages for manufacturing information. On the top of the information manufacturing pages, there is a bar including operation buttons.
+
+<P>&nbsp&nbsp In the bottom of the interface, there are some function buttons used usually. They are: user's private information, interface setup, meeting summary, contact way, problem report, working log, login, use guide, logout, contact to the author.
+
+<P>&nbsp&nbsp Now only the default theme is provided. User can modify or add some by yourself. Please refer to the <A href="#dingzhi">"Customing SEE"</A>. 
+
+<P>&nbsp&nbsp Except for the buttons in the top and bottom, user can only see the function buttons which she/he is allowed to use.
+
+<BR><A name="2"><H3>2 Information Manufacturing in SEE</H3>    
+&nbsp&nbsp By selecting the three levels' function menus, user can visit the manufacturing page for some particular information. In the top of the page, there is the following data menu:
+<P align=center><IMG src="image/datamenu.jpg">
+
+<A name="2.1"><H4>2.1 The Data Constraints in SEE</H4>    
+&nbsp&nbsp "The Data Constraints" is that the user's data should not include some special chars or strings, which will be filtered automatically.
+<P>&nbsp&nbsp At present, there is not any data constraint.
+
+<A name="2.2"><H4>2.2 The Special Strings in SEE</H4>    
+&nbsp&nbsp The special strings are used in SEE to manufacture data.
+<BR>&nbsp&nbsp <FONT color=red>User had better not use special strings of SEE in your data.</FONT>
+<P>&nbsp&nbsp At present, all special strings in SEE are listed as following:
+<TABLE class=data align=center width=80%>
+<TR class=tableheader><TH>Special String</TH><TH>Usage</TH></TR>
+<TR class=tableline><TD>-99999999</TD><TD>Null for integer</TD></TR>
+<TR class=tableline><TD>:c:e:q-c:e:q:</TD><TD>"Equal To" in condition</TD></TR>
+<TR class=tableline><TD>:c:n:e-c:n:e:</TD><TD>"Not Equal To" in condition</TD></TR>
+<TR class=tableline><TD>:c:g:t-c:g:t:</TD><TD>"Greater Than" in condition</TD></TR>
+<TR class=tableline><TD>:c:l:s-c:l:s:</TD><TD>"Less Than" in condition</TD></TR>
+<TR class=tableline><TD>:c:s:t-c:s:t:</TD><TD>"Start With" in condition</TD></TR>
+<TR class=tableline><TD>:c:e:d-c:e:d:</TD><TD>"End With" in condition</TD></TR>
+<TR class=tableline><TD>:c:i:d-c:i:d:</TD><TD>"Include" in condition</TD></TR>
+<TR class=tableline><TD>:c:n:i-c:n:i:</TD><TD>"Not Include" in condition</TD></TR>
+<TR class=tableline><TD>:m:s-m:s:</TD><TD>Splitter for several data</TD></TR>
+<TR class=tableline><TD>:c:i:s-c:i:s:</TD><TD>Splitter in condition</TD></TR>
+<TR class=tableline><TD>:c:a:d-c:a:d:</TD><TD>"And" in condition</TD></TR>
+<TR class=tableline><TD>:a:a:d-a:a:d:</TD><TD>Splitter for statistic</TD></TR>
+<TR class=tableline><TD>SEE-count-total</TD><TD>"Total" in statistic. Do not use this as field name.</TD></TR>
+<TR class=tableline><TD>SEE-count-other</TD><TD>"Others" in statistic. Do not use this as field name.</TD></TR>
+<TR class=tableline><TD>SEE-count-null</TD><TD>"Null" in statistic. Do not use this as field name.</TD></TR>
+<TR class=tableline><TD>see_password_null</TD><TD>"Null" for password. Do not use this as password value.</TD></TR>
+<TR class=tableline><TD>see_password_not_modify</TD><TD>"Not Modified" for password. Donot use this as password value.</TD></TR>
+<TR class=tableline><TD>:-:</TD><TD>Splitter for several values</TD></TR>
+<TR class=tableline><TD>.h.p-h.p.</TD><TD>Splitter for name-value of hash</TD></TR>
+<TR class=tableline><TD>:s:m-s:m:</TD><TD>Unknown splitter</TD></TR>
+<TR class=tableline><TD>:g:t-g:t:</TD><TD>">" in data will be saved as this string. When show data, ">" is showed.</TD></TR>
+<TR class=tableline><TD>:l:s-l:s:</TD><TD>"<" in data will be saved as this string. When show data, "<" is showed.</TD></TR>
+<TR class=tableline><TD>:v:h-v:h:</TD><TD>Splitter for value</TD></TR>
+<TR class=tableline><TD>:a:d-a:d:</TD><TD>"&" in data will be saved as this string. When show data, "&" is showed.</TD></TR>
+<TR class=tableline><TD>:r:t-r:t:</TD><TD>New line in data will be saved as this string. When show data, new line will be added.</TD></TR>
+<TR class=tableline><TD>_aaaa_</TD><TD>Splitter for the matrix field name. User should not use it in your field name.</TD></TR>
+<TR class=tableline><TD>SEE_matrix_value</TD><TD>Field name for matrix value. User should not use it as your field name.</TD></TR>
+<TR class=tableline><TD>a:m:s-a:m:s</TD><TD>Splitter for audit value</TD></TR>
+</TABLE>
+
+<A name="2.3"><H4>2.3 Adding Data</H4>    
+&nbsp&nbsp In the data management page, when click the "Add" page-tab, you will see the page for adding data.
+<BR>&nbsp&nbsp New data will always be added at the end of the current data list.
+<BR>&nbsp&nbsp Refer to <A href="#1.2">section 1.2</A> to see the notice.
+
+<A name="2.4"><H4>2.4 Inserting Data</H4>    
+&nbsp&nbsp In the data management page, when click the "Insert" page-tab, you will see the page for inserting data.
+<BR>&nbsp&nbsp New data will be added before the selected data line.
+<BR>&nbsp&nbsp Refer to <A href="#1.2">section 1.2</A> and <A href="#1.3">section 1.3</A> to see the notice.
+
+<A name="2.5"><H4>2.5 Modifying Data</H4>    
+&nbsp&nbsp In the data management page, when click the "Modify" page-tab, you will see the page for modifying data.
+<BR>&nbsp&nbsp Refer to <A href="#1.2">section 1.2</A> and <A href="#1.3">section 1.3</A> to see the notice.
+
+<A name="2.6"><H4>2.6 Copying Data</H4>    
+&nbsp&nbsp In the data management page, when click the "Copy" page-tab, you will see the page for copying data.
+<BR>&nbsp&nbsp The initial values of the new data are just the copy of the values of selected data line.
+<BR>&nbsp&nbsp Refer to <A href="#1.2">section 1.2</A> and <A href="#1.3">section 1.3</A> to see the notice.
+
+<A name="2.7"><H4>2.7 Importing Data</H4>    
+&nbsp&nbsp In the data management page, when click the "Import" page-tab, you will see the page for importing data.
+<BR>&nbsp&nbsp In the default privilege model, only the super manager and data managers can execute the importing.
+<BR>&nbsp&nbsp Refer to <A href="manage.htm#4">section 4 of the "Manage"</A>.
+
+<A name="2.8"><H4>2.8 Removing Data</H4>    
+&nbsp&nbsp In the data management page, when click the "Remove" page-tab, you will see the page for removing data.
+<BR>&nbsp&nbsp When click on one data line or click the Remove button before one data line, you can remove this line directly. User can also select several lines to remove.
+<BR>&nbsp&nbsp Below the data lines, the buttons "All in Page" and "All Not" are for selecting the data lines in the current page, and the button "Remove All" is for removing all of data lines, not only lines in the current page.
+<BR>&nbsp&nbsp In the default privilege model, only the super manager and data managers can execute the removing.
+<BR>&nbsp&nbsp Refer to <A href="#1.2">section 1.2</A> and <A href="#1.3">section 1.3</A> to see the notice.
+
+<A name="2.9"><H4>2.9 Querying Data</H4>    
+&nbsp&nbsp In the data management page, when click the "Query" page-tab, you will see the page for querying data.
+<BR>&nbsp&nbsp In fact, there is also the button "Query Setup" in other pages. The querying page only has the particular button "Export" compared to other pages. And only when there are some data lines, this button will be shown. Refer to <A href="#4">section 4</A> to see more about exporting.
+<BR>&nbsp&nbsp Refer to <A href="#1.2">section 1.2</A> and <A href="#1.3">section 1.3</A> to see the notice.
+<BR>&nbsp&nbsp Refer to <A href="#6">section 6</A> to see more about query-setup.
+<BR>&nbsp&nbsp When data is matrix table, there will be a selection in the top of the page for user to switch between main data and matrix data.
+
+<A name="2.10"><H4>2.10 Statistic</H4>    
+&nbsp&nbsp In the data management page, when click the "Statistic" page-tab, you will see the page for statistic.
+<BR>&nbsp&nbsp Now "Count", "Cross Count" and "Trend" types of statistic methods are provided.
+<BR>&nbsp&nbsp The produced pictures are in jpg format. They are temporary files and system will delete them after 5 minutes.
+<BR>&nbsp&nbsp Refer to <A href="#7">section 7</A> to see more about statistic.
+<BR>&nbsp&nbsp <Font color=green>The trend tab will be shown only when the information has some date/time field(s) as well as number (integer/float) field(s).</FONT>
+
+<A name="2.11"><H4>2.11 Batch Modification</H4>    
+&nbsp&nbsp In the data management page, when click the "Batch Modify" page-tab, you will see the page for batch modifying data.
+<BR>&nbsp&nbsp Two steps will be needed. The first step is selecting the data to be modified, and the second step is inputing the values to be updated.
+
+<P>&nbsp&nbsp The matrix fileds can be modifed in the batch way.
+<BR>&nbsp&nbsp Single keyword and password fileds can not be modified in the batch way.
+<BR>&nbsp&nbsp Below the data lines, the buttons "All in Page" and "All Not" are for selecting the data lines in the current page, and the button "Modify All" is for modifying all of data lines, not only lines in the current page.
+
+<P>&nbsp&nbsp In the default privilege model, only the super manager and data managers can execute the batch modifying.
+<BR>&nbsp&nbsp Refer to <A href="#1.2">section 1.2</A> and <A href="#1.3">section 1.3</A> to see the notice.
+
+<BR><A name="3"><H3>3 Data Audit in SEE</H3>       
+ 
+<A name="3.1"><H4>3.1 Querying the Audit Data</H4>    
+&nbsp&nbsp In the default privilege model, all of general users can query the audit records.
+<P>&nbsp&nbsp A general user can not access the management page of the audit data, but can visit the audit records of a certain information by clicking the button "Audit" on the top of the management page of the corresponding information. That is the audit querying is context-sensitive.
+<BR>&nbsp&nbsp For example, in the management page of the "Problem Report", click the button "Audit", then the system will list all audit records about the "Problem Report".
+<P>&nbsp&nbsp If the current user is not the super manager, any audit record about the super manager will be filtered automatically.
+<P>&nbsp&nbsp In the audit page, user can select to show audit records list "by data" or "by time".
+
+<A name="3.2"><H4>3.2 Showing Audit Records by Data List</H4>    
+&nbsp&nbsp "By data" to show audit record, is that the system lists information's data and user selects a data to show all audit records about this data. An example is following:
+<P class=title align=center title="">Problem Report - Audit</P>
+<HR>
+		 <INPUT type=radio name=myauditshow value=""  checked>By Data
+		 <INPUT type=radio name=myauditshow value=problem_report  >By Time
+	 <BR>
+	<TABLE class=whitebar><TR><TD>Status:</TD>
+<TD bgcolor=#FFFF99>Reviewed</TD>
+<TD bgcolor=#FFDD99>Fixed</TD>
+<TD bgcolor=#FFDDDD>Commit</TD>
+<TD bgcolor=#DDFFDD>Closed</TD>
+<TD bgcolor=#DDDDFF>Denied</TD>
+<TD bgcolor=#DDFFFF>Tested</TD>
+<TD bgcolor=#FFDDFF>Defer</TD>
+<TD bgcolor=#EEEEEE>Others</TD>
+	</TR></TABLE>
+	<TABLE class=data cellPadding=2 width=100%>
+		<TR class=tableheader ><TH>-</TH>
+			<TH title="Project" border=1 align=center ><U>Project</U></TH>
+			<TH title="Type" border=1 align=center ><U>Type</U></TH>
+			<TH title="Object" border=1 align=center ><U>Object</U></TH>
+			<TH title="Status" border=1 align=center ><U>Status</U></TH>
+			<TH title="Security" border=1 align=center ><U>Security</U></TH>
+			<TH title="Priority" border=1 align=center ><U>Priority</U></TH>
+			<TH title="Title" border=1 align=center ><U>Title</U></TH>
+			<TH title="Assigned to" border=1 align=center ><U>Assigned to</U></TH>
+			<TH title="Last Changed Time" border=1 align=center ><U>Last Changed Time</U></TH>
+		</TR>
+		<TR   bgcolor=#DDDDFF>
+			<TD align=center>
+		<IMG border=0 src="image/audit.jpg" alt="Audit"  ></TD>
+			<TD>-</TD>
+			<TD>Bug</TD>
+			<TD>Code</TD>
+			<TD>Denied</TD>
+			<TD>Medium</TD>
+			<TD>Medium</TD>
+			<TD>try</TD>
+			<TD>-</TD>
+			<TD>May 3, 2004 2:57:23 PM CST</TD>
+		</TR>
+		<TR   bgcolor=#FFDDDD>
+			<TD align=center>
+		<IMG border=0 src="image/audit.jpg" alt="Audit"  ></TD>
+			<TD>-</TD>
+			<TD>Bug</TD>
+			<TD>Code</TD>
+			<TD>Commit</TD>
+			<TD>Medium</TD>
+			<TD>Medium</TD>
+			<TD>lulu</TD>
+			<TD>-</TD>
+			<TD>May 3, 2004 2:57:46 PM CST</TD>
+		</TR>
+	</TABLE>
+	<BR><TABLE class=bar width=100%><TR>
+		<TD align=left>Total Count : 2&nbsp&nbsp&nbsp&nbsp&nbspCurrent Number : 1 - 2</TD>
+		<TD align=right>
+		Every Page : <INPUT name=input_page_size size=2 value=80 >
+		<IMG border=0 src="image/ok.jpg" alt="Ok"  >
+		Jump to Page : <INPUT name=mypage size=2 value=1 >
+		<IMG border=0 src="image/ok.jpg" alt="Ok"  >
+		<IMG border=0 src="image/all.jpg" alt="All"  >		</TD>
+	<TR></TABLE>
+	<BR><TABLE class=bar cellPadding=2 width=100%><TR>
+		<TD align=left>
+		<IMG border=0 src="image/show_setup.jpg" alt="Show Setup"  >		</TD>
+		<TD align=left>
+		<B>Style:</B>Table
+		</TD>
+		<TD align=left>
+		<B>Item:</B>[Project, Type, Object, Status, Security, Priority, Title, Assigned to, Last Changed Time]
+		</TD></TR>
+	</TABLE>
+<HR>
+<P>&nbsp&nbsp Click the button "Audit" beside a data line, you will get all audit records about this data:
+<P class=title align=center title="">Problem Report - Audit</P>
+<HR>
+<P class=info>The following is corresponding audit records:
+	<TABLE align=center class=data>
+		<TR title="Identify">
+			<TD class=datakey  align=right >Identify : </TD><TD align=left >
+			May 3, 2004 2:57:36 PM CST-superseer
+		<TR title="Data">
+			<TD  align=right >Data : </TD><TD align=left >
+			Problem Report
+		<TR title="Operation">
+			<TD  align=right >Operation : </TD><TD align=left >
+			Modify
+		<TR title="Keys">
+			<TD  align=right >Keys : </TD><TD align=left >
+			{Configuration Code=PR-s}
+		<TR title="Old Values">
+			<TD  align=right >Old Values : </TD><TD align=left >
+			{Status=Commit, Last Changed Time=May 3, 2004 2:56:22 PM CST}
+		<TR title="New Values">
+			<TD  align=right >New Values : </TD><TD align=left >
+			{Status=Denied, Last Changed Time=May 3, 2004 2:57:23 PM CST, Comment=r}
+		<TR title="Who">
+			<TD  align=right >Who : </TD><TD align=left >
+			superseer
+		<TR title="When">
+			<TD  align=right >When : </TD><TD align=left >
+			May 3, 2004 2:57:36 PM CST
+		<TR title="Where">
+			<TD  align=right >Where : </TD><TD align=left >
+			127.0.0.1
+		<TR title="Result">
+			<TD  align=right >Result : </TD><TD align=left >
+			Successful
+	</TABLE><BR>
+	<TABLE align=center class=data>
+		<TR title="Identify">
+			<TD class=datakey  align=right >Identify : </TD><TD align=left >
+			May 3, 2004 2:56:51 PM CST-superseer
+		<TR title="Data">
+			<TD  align=right >Data : </TD><TD align=left >
+			Problem Report
+		<TR title="Operation">
+			<TD  align=right >Operation : </TD><TD align=left >
+			Add
+		<TR title="Keys">
+			<TD  align=right >Keys : </TD><TD align=left >
+			{Configuration Code=PR-s}
+		<TR title="Old Values">
+			<TD  align=right >Old Values : </TD><TD align=left >
+			{Description=r, Commit Time=May 3, 2004 2:56:22 PM CST, Type=Bug, Reporter=superseer, Last Changed Time=May 3, 2004 2:56:22 PM CST, Configuration Code=PR-s, Priority=Medium, Security=Medium, Title=try, Object=Code, Status=Commit, Last Changed Person=superseer, Commit Person=superseer}
+		<TR title="New Values">
+			<TD  align=right >New Values : </TD><TD align=left >
+			
+		<TR title="Who">
+			<TD  align=right >Who : </TD><TD align=left >
+			superseer
+		<TR title="When">
+			<TD  align=right >When : </TD><TD align=left >
+			May 3, 2004 2:56:51 PM CST
+		<TR title="Where">
+			<TD  align=right >Where : </TD><TD align=left >
+			127.0.0.1
+		<TR title="Result">
+			<TD  align=right >Result : </TD><TD align=left >
+			Successful
+	</TABLE><BR>
+<HR>
+
+<A name="3.3"><H4>3.3 Showing Audit Records by Time</H4>    
+&nbsp&nbsp "By time" to show audit record, is that the sytem lists audit records according to time. An example is following:
+<P class=title align=center title="">Problem Report - Audit</P>
+<HR>
+		 <INPUT type=radio name=myauditshow value=""  >By Data
+		 <INPUT type=radio name=myauditshow value=problem_report  checked>By Time
+	 <BR>
+	<TABLE class=data cellPadding=2 width=100%>
+		<TR class=tableheader ><TH>-</TH>
+			<TH title="Data" border=1 align=center ><U>Data</U></TH>
+			<TH title="Operation" border=1 align=center ><U>Operation</U></TH>
+			<TH title="Who" border=1 align=center ><U>Who</U></TH>
+			<TH title="When" border=1 align=center ><U>When</U></TH>
+			<TH title="Where" border=1 align=center ><U>Where</U></TH>
+			<TH title="Result" border=1 align=center ><U>Result</U></TH>
+		</TR>
+		<TR  class=tabledata >
+			<TD align=center>
+		<IMG border=0 src="image/show.jpg" alt="Show"  ></TD>
+			<TD>Problem Report</TD>
+			<TD>Remove</TD>
+			<TD>superseer</TD>
+			<TD>May 3, 2004 3:07:12 PM CST</TD>
+			<TD>127.0.0.1</TD>
+			<TD>Successful</TD>
+		</TR>
+		<TR  class=tabledata >
+			<TD align=center>
+		<IMG border=0 src="image/show.jpg" alt="Show"  ></TD>
+			<TD>Problem Report</TD>
+			<TD>Add</TD>
+			<TD>superseer</TD>
+			<TD>May 3, 2004 2:57:57 PM CST</TD>
+			<TD>127.0.0.1</TD>
+			<TD>Successful</TD>
+		</TR>
+		<TR  class=tabledata >
+			<TD align=center>
+		<IMG border=0 src="image/show.jpg" alt="Show"  ></TD>
+			<TD>Problem Report</TD>
+			<TD>Modify</TD>
+			<TD>superseer</TD>
+			<TD>May 3, 2004 2:57:36 PM CST</TD>
+			<TD>127.0.0.1</TD>
+			<TD>Successful</TD>
+		</TR>
+		<TR  class=tabledata >
+			<TD align=center>
+		<IMG border=0 src="image/show.jpg" alt="Show"  ></TD>
+			<TD>Problem Report</TD>
+			<TD>Add</TD>
+			<TD>superseer</TD>
+			<TD>May 3, 2004 2:56:51 PM CST</TD>
+			<TD>127.0.0.1</TD>
+			<TD>Successful</TD>
+		</TR>
+	</TABLE>
+	<BR><TABLE class=bar width=100%><TR>
+		<TD align=left>Total Count : 4&nbsp&nbsp&nbsp&nbsp&nbspCurrent Number : 1 - 4</TD>
+		<TD align=right>
+		Every Page : <INPUT name=input_page_size size=2 value=80 >
+		<IMG border=0 src="image/ok.jpg" alt="Ok"  >
+		Jump to Page : <INPUT name=mypage size=2 value=1 >
+		<IMG border=0 src="image/ok.jpg" alt="Ok"  >
+		<IMG border=0 src="image/all.jpg" alt="All"  >		</TD>
+	<TR></TABLE>
+	<BR><TABLE class=bar cellPadding=2 width=100%><TR>
+		<TD align=left>
+		<IMG border=0 src="image/show_setup.jpg" alt="Show Setup"  >		</TD>
+		<TD align=left>
+		<B>Style:</B>Table
+		</TD>
+		<TD align=left>
+		<B>Item:</B>[Data, Operation, Who, When, Where, Result]
+		</TD></TR>
+	</TABLE>
+<HR>
+<P>&nbsp&nbsp Click the button "Show" beside a line, you will get all content of this audit record:
+<P class=title align=center title="">Problem Report - Audit</P>
+<HR>
+<P class=info>The following is corresponding audit records:
+	<TABLE align=center class=data>
+		<TR title="Identify">
+			<TD class=datakey  align=right >Identify : </TD><TD align=left >
+			May 3, 2004 2:57:36 PM CST-superseer
+		<TR title="Data">
+			<TD  align=right >Data : </TD><TD align=left >
+			Problem Report
+		<TR title="Operation">
+			<TD  align=right >Operation : </TD><TD align=left >
+			Modify
+		<TR title="Keys">
+			<TD  align=right >Keys : </TD><TD align=left >
+			{Configuration Code=PR-s}
+		<TR title="Old Values">
+			<TD  align=right >Old Values : </TD><TD align=left >
+			{Status=Commit, Last Changed Time=May 3, 2004 2:56:22 PM CST}
+		<TR title="New Values">
+			<TD  align=right >New Values : </TD><TD align=left >
+			{Status=Denied, Last Changed Time=May 3, 2004 2:57:23 PM CST, Comment=r}
+		<TR title="Who">
+			<TD  align=right >Who : </TD><TD align=left >
+			superseer
+		<TR title="When">
+			<TD  align=right >When : </TD><TD align=left >
+			May 3, 2004 2:57:36 PM CST
+		<TR title="Where">
+			<TD  align=right >Where : </TD><TD align=left >
+			127.0.0.1
+		<TR title="Result">
+			<TD  align=right >Result : </TD><TD align=left >
+			Successful
+	</TABLE><BR>
+<HR>
+
+<BR><A name="4"><H3>4 Data Exporting in SEE</H3>    
+<P>&nbsp&nbsp In the query page of any information, if current information has any record, a "Export" button will be in the top.
+<P>&nbsp&nbsp Click the button "Export", the system will pop the following window to let user set the parameters of exporting:
+<P class=title align=center title="">Problem Report - Export</P>
+<HR>
+<P class=info>The sorting of this exporting will use the same setup of the current page. If html format will be exported, the color and data-style of the current page will be also used.<BR>If want to store data, please select the All Items<BR>To html format, UTF-8 is always used and the setup of charset does not work.</P>
+<TABLE  border=1 class=data width=100%>
+<TR class=tableheader><TH colspan=2 align=center>Format</TH></TR>
+<TR class=tabledata>
+<TD align=left>
+			<INPUT type=radio name=input_myexportformat value="txt"  checked>txt
+			<INPUT type=radio name=input_myexportformat value="xml" >xml
+			<INPUT type=radio name=input_myexportformat value="html" >html
+</TD></TR>
+</TABLE><BR>
+<TABLE  border=1 class=data width=100%>
+<TR class=tableheader><TH colspan=2 align=center>Data</TH></TR>
+<TR class=tabledata>
+<TD align=left>
+			<INPUT type=radio name=input_myexportdata value="all"  checked>All
+			<INPUT type=radio name=input_myexportdata value="current" >Current
+</TD></TR>
+</TABLE><BR>
+<TABLE  border=1 class=data width=100%>
+<TR class=tableheader><TH colspan=2 align=center>Items</TH></TR>
+<TR class=tabledata>
+<TD align=left>
+			<INPUT type=radio name=input_myexportitem value="all" >All
+			<INPUT type=radio name=input_myexportitem value="current"  checked>Current
+</TD></TR>
+</TABLE><BR>
+<TABLE  border=1 class=data width=100%>
+<TR class=tableheader><TH colspan=2 align=center>Charset</TH></TR>
+<TR class=tabledata>
+<TD align=left>
+			<INPUT type=radio name=input_mycharset value="iso-8859-1"  checked>iso-8859-1
+			<INPUT type=radio name=input_mycharset value="gb2312" >gb2312
+			<INPUT type=radio name=input_mycharset value="big-5" >big-5
+			<INPUT type=radio name=input_mycharset value="UTF-8" >UTF-8
+</TD></TR>
+</TABLE><BR>
+<HR>
+<P>&nbsp&nbsp When txt or xml is selected, the following page will be shown:
+<P class=title align=center title="null">Problem Report - Export</P>
+<HR>
+This is a temporary file. System will delete it in 5 minutes. So please open or save it in time.<BR>
+<IMG border=0 src="image/open.jpg" alt="Open"  ><HR>
+<P>&nbsp&nbsp If the charset is not suitable, an error will happen. 
+<BR>&nbsp&nbsp Save as UTF-8 will always success. 
+
+<BR><A name="5"><H3>5 Show-setup in SEE</H3>
+&nbsp&nbsp In the data list page of any information, there is button "Show-Setup".
+<P>&nbsp&nbsp Click the button, the system will return the following page: (This example is about the "Problem Report".)
+<P class=title align=center title="">Problem Report - Show Setup</P>
+<HR>
+	 <P class=serious>Select or maintain the following saved show-setup:
+	 <INPUT type=radio name=mymaintenance value=yes  checked >Maintenance
+	 <INPUT type=radio name=mymaintenance value=no  >Use</P>
+	 <TABLE class=data cellPadding=2 width=100%>
+		 <TR class=tabledata >
+			 <TD  ><U>By type</U></A></TD>
+			 <TD  ><U>By object</U></A></TD>
+			 <TD  >&nbsp</TD>
+			 <TD  >&nbsp</TD>
+		 </TR>
+</TABLE>
+<BR><HR>
+	 <P class=serious>Set or add new show-setup directly</P>
+<TABLE class=whitebar width=100% border=0><TR>
+<TD align=left>Title:<INPUT name=mytitle>
+		<IMG border=0 src="image/add.jpg" alt="Add"  ></TD>
+<TD align=right>Current Show Setup:By object
+		<IMG border=0 src="image/modify.jpg" alt="Modify"  >
+		<IMG border=0 src="image/remove.jpg" alt="Remove"  ></TD>
+</TR></TABLE>
+<INPUT type=hidden name=myshowsetup value="By object" >
+<TABLE  border=1 class=bar width=100%>
+<TR class=tableheader><TH colspan=2 align=center>Show</TH></TR>
+<TR class=tabledata><TD align=right>Item</TD>
+<TD align=left>
+			<INPUT type=checkbox name=input_myitems value="configuration_code" >Configuration Code
+			<INPUT type=checkbox name=input_myitems value="project"  checked>Project
+			<INPUT type=checkbox name=input_myitems value="title"  checked>Title
+			<INPUT type=checkbox name=input_myitems value="status"  checked>Status
+			<INPUT type=checkbox name=input_myitems value="type"  checked>Type
+			<INPUT type=checkbox name=input_myitems value="object"  checked>Object
+			<INPUT type=checkbox name=input_myitems value="security"  checked>Security
+			<INPUT type=checkbox name=input_myitems value="priority"  checked>Priority
+			<INPUT type=checkbox name=input_myitems value="description" >Description
+			<INPUT type=checkbox name=input_myitems value="assigned_to"  checked>Assigned to
+			<INPUT type=checkbox name=input_myitems value="reporter" >Reporter
+			<INPUT type=checkbox name=input_myitems value="comment" >Comment
+			<INPUT type=checkbox name=input_myitems value="commit_person" >Commit Person
+			<INPUT type=checkbox name=input_myitems value="commit_time" >Commit Time
+			<INPUT type=checkbox name=input_myitems value="last_changed_person" >Last Changed Person
+			<INPUT type=checkbox name=input_myitems value="last_changed_time"  checked>Last Changed Time
+		<IMG border=0 src="image/all.jpg" alt="All"  >
+		<IMG border=0 src="image/all_not.jpg" alt="All Not"  >
+</TD></TR>
+</TABLE><BR>
+<TABLE  border=1 class=bar width=100%>
+<TR class=tableheader><TH colspan=2 align=center>Sort</TH></TR>
+<TR class=tabledata><TD align=right>Item</TD>
+<TD align=left>
+			<INPUT type=radio name=input_mysort value="configuration_code" >Configuration Code
+			<INPUT type=radio name=input_mysort value="project" >Project
+			<INPUT type=radio name=input_mysort value="title" >Title
+			<INPUT type=radio name=input_mysort value="status"  checked>Status
+			<INPUT type=radio name=input_mysort value="type" >Type
+			<INPUT type=radio name=input_mysort value="object" >Object
+			<INPUT type=radio name=input_mysort value="security" >Security
+			<INPUT type=radio name=input_mysort value="priority" >Priority
+			<INPUT type=radio name=input_mysort value="description" >Description
+			<INPUT type=radio name=input_mysort value="assigned_to" >Assigned to
+			<INPUT type=radio name=input_mysort value="reporter" >Reporter
+			<INPUT type=radio name=input_mysort value="comment" >Comment
+			<INPUT type=radio name=input_mysort value="commit_person" >Commit Person
+			<INPUT type=radio name=input_mysort value="commit_time" >Commit Time
+			<INPUT type=radio name=input_mysort value="last_changed_person" >Last Changed Person
+			<INPUT type=radio name=input_mysort value="last_changed_time" >Last Changed Time
+			<INPUT type=radio name=input_mysort value=  >Null</TD></TR>
+<TR class=tabledata><TD align=right>Order</TD>
+<TD align=left>
+			<INPUT type=radio name=input_myorder value="ascending" >Ascending
+			<INPUT type=radio name=input_myorder value="descending"  checked>Descending
+</TD></TR>
+</TABLE><BR>
+<TABLE  border=1 class=bar width=100%>
+<TR class=tableheader><TH colspan=2 align=center>Color</TH></TR>
+<TR class=tabledata><TD colspan=2>
+			<INPUT type=radio name=input_mycolorname value="configuration_code" >Configuration Code
+			<INPUT type=radio name=input_mycolorname value="project" >Project
+			<INPUT type=radio name=input_mycolorname value="title" >Title
+			<INPUT type=radio name=input_mycolorname value="status" >Status
+			<INPUT type=radio name=input_mycolorname value="type" >Type
+			<INPUT type=radio name=input_mycolorname value="object"  checked>Object
+			<INPUT type=radio name=input_mycolorname value="security" >Security
+			<INPUT type=radio name=input_mycolorname value="priority" >Priority
+			<INPUT type=radio name=input_mycolorname value="description" >Description
+			<INPUT type=radio name=input_mycolorname value="assigned_to" >Assigned to
+			<INPUT type=radio name=input_mycolorname value="reporter" >Reporter
+			<INPUT type=radio name=input_mycolorname value="comment" >Comment
+			<INPUT type=radio name=input_mycolorname value="commit_person" >Commit Person
+			<INPUT type=radio name=input_mycolorname value="commit_time" >Commit Time
+			<INPUT type=radio name=input_mycolorname value="last_changed_person" >Last Changed Person
+			<INPUT type=radio name=input_mycolorname value="last_changed_time" >Last Changed Time
+</TD></TR>
+<TR class=tableheader align=center><TD>Value</TD>
+<TD>Color</TD></TR>
+<TR class=tabledata><TD align=right width=30%><INPUT name=mycolorvalue0 value="Design"></TD>
+<TD align=left><INPUT name=mycolorvaluecolor0 value=DDFFFF></TD></TR>
+<TR class=tabledata><TD align=right width=30%><INPUT name=mycolorvalue1 value="Requirement"></TD>
+<TD align=left><INPUT name=mycolorvaluecolor1 value=DDDDFF></TD></TR>
+<TR class=tabledata><TD align=right width=30%><INPUT name=mycolorvalue2 value="Document"></TD>
+<TD align=left><INPUT name=mycolorvaluecolor2 value=FFDDFF></TD></TR>
+<TR class=tabledata><TD align=right width=30%><INPUT name=mycolorvalue3 value="Code"></TD>
+<TD align=left><INPUT name=mycolorvaluecolor3 value=FFDDDD></TD></TR>
+<TR class=tabledata><TD align=right width=30%><INPUT name=mycolorvalue4 value="Testing"></TD>
+<TD align=left><INPUT name=mycolorvaluecolor4 value=DDFFDD></TD></TR>
+<TR class=tabledata><TD align=right width=30%><INPUT name=mycolorvalue5 value="Database"></TD>
+<TD align=left><INPUT name=mycolorvaluecolor5 value=FFDD99></TD></TR>
+<TR class=tabledata><TD align=right width=30%><INPUT name=mycolorvalue6 value="Data"></TD>
+<TD align=left><INPUT name=mycolorvaluecolor6 value=FFFF99></TD></TR>
+<TR class=tabledata><TD align=right width=30%>
+Others</TD>
+<TD align=left><INPUT name=mycolorotherscolor value=EEEEEE></TD></TR>
+</TABLE><BR>
+<TABLE class=bar border=1 width=100%>
+<TR class=tableheader><TH>Data List Style</TH></TR>
+<TR class=tabledata><TD>
+			<INPUT type=radio name=input_mystyle value="Table"  checked>Table
+			<INPUT type=radio name=input_mystyle value="Form" >Form
+</TD></TR>
+</TABLE><BR>
+<P align=center>
+<TABLE>
+<TR><TD align=right >FFDDDD</TD>
+<TD align=left bgcolor=FFDDDD>&nbsp&nbsp&nbsp&nbsp</TD></TR>
+<TR><TD align=right >FFDD99</TD>
+<TD align=left bgcolor=FFDD99>&nbsp&nbsp&nbsp&nbsp</TD></TR>
+<TR><TD align=right >FFFF99</TD>
+<TD align=left bgcolor=FFFF99>&nbsp&nbsp&nbsp&nbsp</TD></TR>
+<TR><TD align=right >DDFFDD</TD>
+<TD align=left bgcolor=DDFFDD>&nbsp&nbsp&nbsp&nbsp</TD></TR>
+<TR><TD align=right >DDFFFF</TD>
+<TD align=left bgcolor=DDFFFF>&nbsp&nbsp&nbsp&nbsp</TD></TR>
+<TR><TD align=right >DDDDFF</TD>
+<TD align=left bgcolor=DDDDFF>&nbsp&nbsp&nbsp&nbsp</TD></TR>
+<TR><TD align=right >FFDDFF</TD>
+<TD align=left bgcolor=FFDDFF>&nbsp&nbsp&nbsp&nbsp</TD></TR>
+<TR><TD align=right >EEEEEE</TD>
+<TD align=left bgcolor=EEEEEE>&nbsp&nbsp&nbsp&nbsp</TD></TR>
+</TABLE>
+<HR>
+<P>&nbsp&nbsp In the above page:
+<LI>The titles of the show-setups saved by user and the super manager are listed.
+<LI>If "Maintain" is selected, when click a title, the page will be refreshed to let user modify or remove the corresponding show-setup.(As the above example)
+<LI>If "Use" is selected, when click a title, the original information manufacturing page will be returned with the effect of the corresponding show-setup.
+<LI>If user enter the title and click the button "Add", the current values of the parameters will be saved as the new show-setup. Its title will be shown in the top refreshed list.
+<LI>Only the super manager can modify or remove her/his show-setups. Others can only use them. 
+   
+<P>&nbsp&nbsp If user click the button "OK" at the bottom of the page, the system will return the original information manufacturing page with the effect of the current values of the parameters. User can use this method to set the show parameters temporarily without saving them.
+
+<BR><A name="6"><H3>6 Condition Setup in SEE</H3>
+&nbsp&nbsp In the data list page of any information, there is button "Condition".
+<P>&nbsp&nbsp Click the button, the system will return the following page: (This example is about the "Problem Report - Audit".)
+<P class=title align=center title="">Problem Report - Condition Setup</P>
+<HR>
+	 <P class=serious>Use or maintain one of the following saved query-setups:
+	 <INPUT type=radio name=mymaintenance value=yes  checked >Maintenance
+	 <INPUT type=radio name=mymaintenance value=no >Use</P>
+	 <TABLE class=data cellPadding=2 width=100%>
+		 <TR class=tabledata >
+			 <TD  ><U>cond1</U></TD>
+			 <TD  ><U>cond2</U></TD>
+			 <TD  >&nbsp</TD>
+			 <TD  >&nbsp</TD>
+		 </TR>
+</TABLE>
+<BR><HR>
+<INPUT type=hidden name=myquerysetup value="cond2" >
+	 <P class=serious>Set directly or maintain the query-setups</P>
+<TABLE class=whitebar width=100% border=0><TR>
+<TD align=left>Title:<INPUT name=mytitle>
+		<INPUT type=image  src="image/add.jpg" alt="Add"  ></TD>
+<TD align=right>Current Query Setup:cond2
+		<INPUT type=image src="image/modify.jpg" alt="Modify"  >
+				<INPUT type=image src="image/remove.jpg" alt="Remove"  ></TD>
+</TR></TABLE>
+<P class=info>Lines in the following tables have the relationship "And", and these tables have the relationship "Or".</P>
+	<TABLE align=center border=1 class=bar width=90%>
+		<TR class=tableheader>
+			<TH align=center>Item</TH>
+			<TH align=center>operator</TH>
+			<TH align=center>Value</TH>
+		</TR>
+		<TR class=tableline>
+			<TD>Status</TD>
+			<TD>Equal To</TD>
+			<TD>Fixed</TD>
+		</TR>
+		<TR class=tableline>
+			<TD>Last Changed Time</TD>
+			<TD>Less Than</TD>
+			<TD>July 8, 2004 7:41:39 PM CST</TD>
+		</TR>
+	</TABLE>
+	<P align=center>Or</P>
+	<TABLE align=center border=1 class=bar width=90%>
+		<TR class=tableheader>
+			<TH align=center>Item</TH>
+			<TH align=center>operator</TH>
+			<TH align=center>Value</TH>
+		</TR>
+		<TR class=tableline>
+			<TD>Status</TD>
+			<TD>Equal To</TD>
+			<TD>Tested</TD>
+		</TR>
+	</TABLE>
+<P align=center>
+		<INPUT type=image src="image/ok.jpg" alt="Ok"  >
+				<INPUT type=image src="image/or.jpg" alt="Or"  >
+						<INPUT type=image src="image/clear.jpg" alt="Clear"  >		
+						<INPUT type=image src="image/cancel.jpg" alt="Cancel"  ></P>
+<P class=info>The following are current base conditions. Whatever Your new conditions are, they will be checked at first.</P>
+	<TABLE align=center border=1 class=bar width=90%>
+		<TR class=tableheader>
+			<TH align=center>Item</TH>
+			<TH align=center>operator</TH>
+			<TH align=center>Value</TH>
+		</TR>
+		<TR class=tableline>
+			<TD>Data</TD>
+			<TD>Equal To</TD>
+			<TD>Problem Report</TD>
+		</TR>
+	</TABLE>
+<HR>
+<P>&nbsp&nbsp In the top of the page: (If there is no any query-setup saved , these information will not be shown)
+<LI>The titles of the query-setups saved by user and the super manager are listed.
+<LI>If "Maintain" is selected, when click a title, the page will be refreshed to let user modify or remove the corresponding query-setup.(As the above example)
+<LI>If "Use" is selected, when click a title, the original information manufacturing page will be returned with the effect of the corresponding query-setup.
+<LI>If user enter the title and click the button "Add", the current conditions will be saved as the new query-setup. Its title will be shown in the top refreshed list.
+<LI>Only the super manager can modify or remove her/his query-setups. Others can only use them. 
+<P>&nbsp&nbsp If there is no "base condition" in the original page, the information in the bottom of the page will not be shown.
+<P>&nbsp&nbsp In the above page, use can:
+<LI>Input "title" and click "Add" button to save the current query condition.
+<LI>Click "OK" button to make SEE show data lines according to the current query condition.
+<LI>Click "Or" button to make SEE pop out the query-setup window for adding new condition which has the relationship "Or" with the current condition.
+<LI>Click "Clear" button to remove the current condition.
+<LI>Click "Cancel" button to return back to original page.
+
+<P>&nbsp&nbsp When click "Or" button or "Setup" button, SEE will pop out a window for you to setup the new query condition: (This example is about the "Problem Report".)
+<P class=title align=center title="">Data Audit - Query Setup</P>
+<HR>
+<P class=info>The following conditions have the relationship "And".<BR>When use the operator "Greater Than" or "Less Than ", data will be compared according to their types, such as date, time, integer, and string.
+	<TABLE align=center border=1 class=bar>
+		<TR title="Configuration Code" class=tableheader>
+			<TH align=center colspan=2>Configuration Code</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_configuration_code_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_configuration_code_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_configuration_code_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_configuration_code_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_configuration_code_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_configuration_code_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_configuration_code_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_configuration_code_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=text name="input_configuration_code" size=60>
+		</TD></TR>
+		<TR title="Project" class=tableheader>
+			<TH align=center colspan=2>Project</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_project_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_project_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_project_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_project_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_project_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_project_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_project_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_project_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=hidden name=input_project>
+			<INPUT name=input_project_show value="" readonly  size=60>
+		<INPUT type=image src="image/select.jpg" alt="Select"  >
+		<INPUT type=image src="image/default.jpg" alt="Default"  >
+		</TD></TR>
+		<TR title="Title" class=tableheader>
+			<TH align=center colspan=2>Title</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_title_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_title_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_title_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_title_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_title_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_title_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_title_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_title_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=text name="input_title" size=60>
+		</TD></TR>
+		<TR title="Status" class=tableheader>
+			<TH align=center colspan=2>Status</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_status_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_status_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_status_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_status_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_status_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_status_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_status_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_status_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_status value="Commit" >Commit
+			<INPUT type=radio name=input_status value="Reviewed" >Reviewed
+			<INPUT type=radio name=input_status value="Fixed" >Fixed
+			<INPUT type=radio name=input_status value="Tested" >Tested
+			<INPUT type=radio name=input_status value="Closed" >Closed
+			<INPUT type=radio name=input_status value="Defer" >Defer
+			<INPUT type=radio name=input_status value="Denied" >Denied
+		</TD></TR>
+		<TR title="Type" class=tableheader>
+			<TH align=center colspan=2>Type</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_type_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_type_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_type_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_type_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_type_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_type_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_type_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_type_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_type value="Bug" >Bug
+			<INPUT type=radio name=input_type value="Advice" >Advice
+			<INPUT type=radio name=input_type value="User Feedback" >User Feedback
+			<INPUT type=radio name=input_type value="Enhancement" >Enhancement
+			<INPUT type=radio name=input_type value="Not Implemented" >Not Implemented
+		</TD></TR>
+		<TR title="Object" class=tableheader>
+			<TH align=center colspan=2>Object</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_object_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_object_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_object_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_object_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_object_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_object_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_object_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_object_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_object value="Code" >Code
+			<INPUT type=radio name=input_object value="Database" >Database
+			<INPUT type=radio name=input_object value="Data" >Data
+			<INPUT type=radio name=input_object value="Testing" >Testing
+			<INPUT type=radio name=input_object value="Design" >Design
+			<INPUT type=radio name=input_object value="Requirement" >Requirement
+			<INPUT type=radio name=input_object value="Document" >Document
+		</TD></TR>
+		<TR title="Security" class=tableheader>
+			<TH align=center colspan=2>Security</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_security_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_security_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_security_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_security_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_security_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_security_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_security_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_security_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_security value="Very Hign" >Very Hign
+			<INPUT type=radio name=input_security value="High" >High
+			<INPUT type=radio name=input_security value="Medium" >Medium
+			<INPUT type=radio name=input_security value="Low" >Low
+			<INPUT type=radio name=input_security value="Very Low" >Very Low
+		</TD></TR>
+		<TR title="Priority" class=tableheader>
+			<TH align=center colspan=2>Priority</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_priority_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_priority_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_priority_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_priority_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_priority_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_priority_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_priority_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_priority_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_priority value="Very Hign" >Very Hign
+			<INPUT type=radio name=input_priority value="High" >High
+			<INPUT type=radio name=input_priority value="Medium" >Medium
+			<INPUT type=radio name=input_priority value="Low" >Low
+			<INPUT type=radio name=input_priority value="Very Low" >Very Low
+		</TD></TR>
+		<TR title="Description" class=tableheader>
+			<TH align=center colspan=2>Description</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_description_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_description_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_description_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_description_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_description_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_description_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_description_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_description_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<TEXTAREA name=input_description cols=50 rows=20 ></TEXTAREA>
+		</TD></TR>
+		<TR title="Assigned to" class=tableheader>
+			<TH align=center colspan=2>Assigned to</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_assigned_to_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_assigned_to_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_assigned_to_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_assigned_to_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_assigned_to_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_assigned_to_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_assigned_to_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_assigned_to_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=hidden name=input_assigned_to>
+			<INPUT name=input_assigned_to_show value="" readonly  size=60>
+		<INPUT type=image src="image/select.jpg" alt="Select"  >
+		<INPUT type=image src="image/self.jpg" alt="Self"  >
+		</TD></TR>
+		<TR title="Reporter" class=tableheader>
+			<TH align=center colspan=2>Reporter</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_reporter_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_reporter_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_reporter_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_reporter_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_reporter_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_reporter_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_reporter_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_reporter_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=hidden name=input_reporter>
+			<TEXTAREA name=input_reporter_show cols=50 rows=4 size=60 readonly></TEXTAREA>
+		<INPUT type=image src="image/select.jpg" alt="Select"  >
+		<INPUT type=image src="image/self.jpg" alt="Self"  >
+		</TD></TR>
+		<TR title="Comment" class=tableheader>
+			<TH align=center colspan=2>Comment</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_comment_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_comment_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_comment_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_comment_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_comment_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_comment_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_comment_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_comment_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<TEXTAREA name=input_comment cols=50 rows=20 ></TEXTAREA>
+		</TD></TR>
+		<TR title="Attachment" class=tableheader>
+			<TH align=center colspan=2>Attachment</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_attachment_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_attachment_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_attachment_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_attachment_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_attachment_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_attachment_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_attachment_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_attachment_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=text name="input_attachment" size=60>
+		</TD></TR>
+		<TR title="Commit Person" class=tableheader>
+			<TH align=center colspan=2>Commit Person</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_commit_person_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_commit_person_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_commit_person_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_commit_person_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_commit_person_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_commit_person_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_commit_person_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_commit_person_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=text name="input_commit_person" size=60>
+		</TD></TR>
+		<TR title="Commit Time" class=tableheader>
+			<TH align=center colspan=2>Commit Time</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_commit_time_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_commit_time_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_commit_time_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_commit_time_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_commit_time_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_commit_time_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_commit_time_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_commit_time_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=text name="input_commit_time" size=60>
+		<INPUT type=image src="image/format.jpg" alt="Format"  >
+		</TD></TR>
+		<TR title="Last Changed Person" class=tableheader>
+			<TH align=center colspan=2>Last Changed Person</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_last_changed_person_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_last_changed_person_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_last_changed_person_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_last_changed_person_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_last_changed_person_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_last_changed_person_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_last_changed_person_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_last_changed_person_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=text name="input_last_changed_person" size=60>
+		</TD></TR>
+		<TR title="Last Changed Time" class=tableheader>
+			<TH align=center colspan=2>Last Changed Time</TH></TR>
+<TR class=tableline>
+			<TD align=right>operator : </TD>
+<TD align=left >
+			<INPUT type=radio name=input_last_changed_time_op value=":c:e:q-c:e:q:"  checked>Equal To
+			<INPUT type=radio name=input_last_changed_time_op value=":c:n:e-c:n:e:" >Not Equal To
+			<INPUT type=radio name=input_last_changed_time_op value=":c:g:t-c:g:t:" >Greater Than
+			<INPUT type=radio name=input_last_changed_time_op value=":c:l:s-c:l:s:" >Less Than
+			<INPUT type=radio name=input_last_changed_time_op value=":c:s:t-c:s:t:" >Start With
+			<INPUT type=radio name=input_last_changed_time_op value=":c:e:d-c:e:d:" >End With
+			<INPUT type=radio name=input_last_changed_time_op value=":c:i:d-c:i:d:" >Include
+			<INPUT type=radio name=input_last_changed_time_op value=":c:n:i-c:n:i:" >Not Include
+<TR class=tableline>
+			<TD align=right>Value : </TD>
+<TD align=left >
+			<INPUT type=text name="input_last_changed_time" size=60>
+		<INPUT type=image src="image/format.jpg" alt="Format"  >	
+		</TD></TR>
+	</TABLE><BR>
+<HR>
+<P>&nbsp&nbsp <FONT color=green>In SEE, any comparing or sorting is according to the data type.</FONT>
+<BR>&nbsp&nbsp For example, to "123" and "23", if compare them as string type, "23" is greater than "123", and if compare them as integer type, "123" is greater than "23".
+
+<BR><A name="7"><H3>7 Statistic in SEE</H3>
+
+<A name="7.1"><H4>7.1 Count</H4>    
+<P>&nbsp&nbsp "Count" is that gets numbers and rates of different values of the special data item:
+<LI>User can select any data item to make the counting.
+<LI>User can input special value list of the data item for make the counting. If the value of the data item is out of the value list which user defines. it will be counted as the "others".
+<LI>If user does not input the value list of the data item, SEE will count all values of this item automatically.
+<LI>Null values will also be counted.
+<LI>User can select the output chart types which are Pie Chart and Histogram (jpg files). The number of values in the charts is limited, but the larger counts will always shown.
+
+<P>&nbsp&nbsp The following is an example setup page of counting: (Counting all values of "Security" automatically)
+<P class=title align=center title="">Problem Report - Statistic</P>
+<HR>
+	 <TABLE border=0 cellpadding=0 cellspacing=0 class=whitebar><TR>
+		 <TD><IMG src="../image/tab2.jpg"></TD>
+		 <TD class=tabbar><A onClick=tabselect("count")><B>Count</B></A></TD>
+		 <TD><IMG src="../image/tab1.jpg"></TD>
+		 <TD><IMG src="../image/tab2_grey.jpg"></TD>
+		 <TD class=tabbar_grey><A onClick=tabselect("cross_count")><B>Cross Count</B></A></TD>
+		 <TD><IMG src="../image/tab1_grey.jpg"><TD>
+	 </TR></TABLE>
+<TABLE  border=1 class=bar width=100%>
+<TR class=tableheader><TH colspan=2 align=center>Count</TH></TR>
+<TR class=tabledata><TD align=right>Item</TD>
+<TD align=left>
+			<INPUT type=radio name=input_item value="configuration_code" >Configuration Code
+			<INPUT type=radio name=input_item value="project" >Project
+			<INPUT type=radio name=input_item value="title" >Title
+			<INPUT type=radio name=input_item value="status" >Status
+			<INPUT type=radio name=input_item value="type" >Type
+			<INPUT type=radio name=input_item value="object" >Object
+			<INPUT type=radio name=input_item value="security" checked>Security
+			<INPUT type=radio name=input_item value="priority" >Priority
+			<INPUT type=radio name=input_item value="description" >Description
+			<INPUT type=radio name=input_item value="assigned_to" >Assigned to
+			<INPUT type=radio name=input_item value="reporter" >Reporter
+			<INPUT type=radio name=input_item value="comment" >Comment
+			<INPUT type=radio name=input_item value="attachment" >Attachment
+			<INPUT type=radio name=input_item value="commit_person" >Commit Person
+			<INPUT type=radio name=input_item value="commit_time" >Commit Time
+			<INPUT type=radio name=input_item value="last_changed_person" >Last Changed Person
+			<INPUT type=radio name=input_item value="last_changed_time" >Last Changed Time
+</TD></TR>
+<TR class=tabledata><TD align=right>Value</TD>
+<TD align=left>
+			<INPUT type=text name="input_mycountvalue" size=60>
+<BR><FONT class=info>Input values which will be counted, split them by ":-:". If need system count all values automatically, donnot input anything.</FONT>
+</TD></TR>
+<TR class=tabledata><TD align=right>Image</TD>
+<TD align=left>
+			<INPUT type=checkbox name=input_image value="piechart"  checked>Pie Chart
+			<INPUT type=checkbox name=input_image value="histogram"  checked>Histogram
+</TD></TR>
+</TABLE><BR>
+<HR>
+<P>&nbsp&nbsp The following is the output which is produced automatically:
+<P><TABLE  border=1 class=bar  align=center width=80%>
+<TR class=tableheader >
+<TH> Security</TH>
+<TH>Count</TH>
+<TH>Rate</TH></TR>
+<TR class=tabledata>
+<TD align=center>Medium</TD>
+<TD align=right>22</TD>
+<TD align=right>28.57 %</TD></TR>
+<TR class=tabledata>
+<TD align=center>Very High</TD>
+<TD align=right>17</TD>
+<TD align=right>22.07 %</TD></TR>
+<TR class=tabledata>
+<TD align=center>Low</TD>
+<TD align=right>16</TD>
+<TD align=right>20.77 %</TD></TR>
+<TR class=tabledata>
+<TD align=center>High</TD>
+<TD align=right>12</TD>
+<TD align=right>15.58 %</TD></TR>
+<TR class=tabledata>
+<TD align=center>Very Low</TD>
+<TD align=right>10</TD>
+<TD align=right>12.98 %</TD></TR>
+<TR class=tabletotal>
+<TD align=center>Total Count</TD>
+<TD align=right>77</TD>
+<TD align=right>100 % </TD></TR>
+</TABLE><BR>
+<P align=center><IMG border=0 src="image\count-piechart.jpg"></P>
+<P align=center><IMG border=0 src="image\count-histogram.jpg"></P>
+
+<A name="7.2"><H4>7.2 Cross Count</H4>    
+<P>&nbsp&nbsp "Cross Count" is that gets numbers and rates of different values of two special data items:
+<LI>User can select any two data items to make the cross counting.
+<LI>User can input special value list of the two data items for make the cross counting. If the value of the data item is out of the value list which user defines. it will be counted as the "others".
+<LI>If user does not input the value list of the data item, SEE will count all values of this item automatically.
+<LI>Null values will also be counted.
+<LI>User can select the output chart types which are Cross Pie Chart, Cross Histogram, and Rate Histogram (jpg files). The number of values in the charts is limited, but the larger counts will always shown.
+<LI>User can select whether SEE shows data in the histograms or not.
+
+<P>&nbsp&nbsp The following is an example setup page of "Cross Count": (Cross counting all values of "Status" and "Security" automatically)
+<P class=title align=center title="">Problem Report - Statistic</P>
+<HR>
+	 <TABLE border=0 cellpadding=0 cellspacing=0 class=whitebar><TR>
+		 <TD><IMG src="../image/tab2_grey.jpg"></TD>
+		 <TD class=tabbar_grey><A onClick=tabselect("count")><B>Count</B></A></TD>
+		 <TD><IMG src="../image/tab1_grey.jpg"><TD>
+		 <TD><IMG src="../image/tab2.jpg"></TD>
+		 <TD class=tabbar><A onClick=tabselect("cross_count")><B>Cross Count</B></A></TD>
+		 <TD><IMG src="../image/tab1.jpg"></TD>
+	 </TR></TABLE>
+<TABLE  border=1 class=bar width=100%>
+<TR class=tableheader><TH colspan=2 align=center>Cross Count</TH></TR>
+<TR class=tabledata><TD align=right>Item</TD>
+<TD align=left>
+			<INPUT type=radio name=input_item value="configuration_code" >Configuration Code
+			<INPUT type=radio name=input_item value="project" >Project
+			<INPUT type=radio name=input_item value="title" >Title
+			<INPUT type=radio name=input_item value="status"  checked>Status
+			<INPUT type=radio name=input_item value="type" >Type
+			<INPUT type=radio name=input_item value="object" >Object
+			<INPUT type=radio name=input_item value="security" >Security
+			<INPUT type=radio name=input_item value="priority" >Priority
+			<INPUT type=radio name=input_item value="description" >Description
+			<INPUT type=radio name=input_item value="assigned_to" >Assigned to
+			<INPUT type=radio name=input_item value="reporter" >Reporter
+			<INPUT type=radio name=input_item value="comment" >Comment
+			<INPUT type=radio name=input_item value="attachment" >Attachment
+			<INPUT type=radio name=input_item value="commit_person" >Commit Person
+			<INPUT type=radio name=input_item value="commit_time" >Commit Time
+			<INPUT type=radio name=input_item value="last_changed_person" >Last Changed Person
+			<INPUT type=radio name=input_item value="last_changed_time" >Last Changed Time
+</TD></TR>
+<TR class=tabledata><TD align=right>Value</TD>
+<TD align=left>
+			<INPUT type=text name="input_mycountvalue" size=60>
+<BR><FONT class=info>Input values which will be counted, split them by ":-:". If need system count all values automatically, do not input anything.</FONT>
+</TD></TR>
+<TR class=tabledata><TD align=right>Cross Item</TD>
+<TD align=left>
+			<INPUT type=radio name=input_cross_item value="configuration_code" >Configuration Code
+			<INPUT type=radio name=input_cross_item value="project" >Project
+			<INPUT type=radio name=input_cross_item value="title" >Title
+			<INPUT type=radio name=input_cross_item value="status" >Status
+			<INPUT type=radio name=input_cross_item value="type" >Type
+			<INPUT type=radio name=input_cross_item value="object" >Object
+			<INPUT type=radio name=input_cross_item value="security"  checked>Security
+			<INPUT type=radio name=input_cross_item value="priority" >Priority
+			<INPUT type=radio name=input_cross_item value="description" >Description
+			<INPUT type=radio name=input_cross_item value="assigned_to" >Assigned to
+			<INPUT type=radio name=input_cross_item value="reporter" >Reporter
+			<INPUT type=radio name=input_cross_item value="comment" >Comment
+			<INPUT type=radio name=input_cross_item value="attachment" >Attachment
+			<INPUT type=radio name=input_cross_item value="commit_person" >Commit Person
+			<INPUT type=radio name=input_cross_item value="commit_time" >Commit Time
+			<INPUT type=radio name=input_cross_item value="last_changed_person" >Last Changed Person
+			<INPUT type=radio name=input_cross_item value="last_changed_time" >Last Changed Time
+</TD></TR>
+<TR class=tabledata><TD align=right>Value</TD>
+<TD align=left>
+			<INPUT type=text name="input_mycountvalue2" size=60>
+<BR><FONT class=info>Input values which will be counted, split them by ":-:". If need system count all values automatically, do not input anything.</FONT>
+</TD></TR>
+<TR class=tabledata><TD align=right>Image</TD>
+<TD align=left>
+			<INPUT type=checkbox name=input_image value="piecross"  checked>Cross Pie Chart
+			<INPUT type=checkbox name=input_image value="histogramcross"  checked>Cross Histogram
+			<INPUT type=checkbox name=input_image value="histogramrate"  checked>Rate Histogram
+<BR>Show Value : 
+			<INPUT type=radio name=input_show_value value="yes"  checked>Yes
+			<INPUT type=radio name=input_show_value value="no" >No
+</TD></TR>
+</TABLE><BR>
+<HR>
+<P>&nbsp&nbsp The following is the output which is produced automatically:
+<P><TABLE  border=1 class=bar  align=center width=80%>
+<TR class=tableheader >
+<TH> Security&nbsp\&nbspStatus</TH>
+<TH> Fixed</TH>
+<TH> Tested</TH>
+<TH> Commit</TH>
+<TH> Defer</TH>
+<TH> Reviewed</TH>
+<TH> Denied</TH>
+<TH class=tabletotal> Total Count</TH>
+<TH class=tabletotal> Rate</TH></TR>
+<TR class=tabledata align=right >
+<TH class=tableheader align=center> Low</TH>
+<TD>9</TD>
+<TD>2</TD>
+<TD>2</TD>
+<TD>1</TD>
+<TD>1</TD>
+<TD>1</TD>
+<TD class=tabletotal>16</TD>
+<TD class=tabletotal>20.77 % </TD>
+</TR>
+<TR class=tabledata align=right >
+<TH class=tableheader align=center> Medium</TH>
+<TD>8</TD>
+<TD>7</TD>
+<TD>4</TD>
+<TD>0</TD>
+<TD>2</TD>
+<TD>1</TD>
+<TD class=tabletotal>22</TD>
+<TD class=tabletotal>28.57 % </TD>
+</TR>
+<TR class=tabledata align=right >
+<TH class=tableheader align=center> Very Hign</TH>
+<TD>4</TD>
+<TD>2</TD>
+<TD>7</TD>
+<TD>1</TD>
+<TD>2</TD>
+<TD>1</TD>
+<TD class=tabletotal>17</TD>
+<TD class=tabletotal>22.07 % </TD>
+</TR>
+<TR class=tabledata align=right >
+<TH class=tableheader align=center> High</TH>
+<TD>2</TD>
+<TD>3</TD>
+<TD>4</TD>
+<TD>2</TD>
+<TD>1</TD>
+<TD>0</TD>
+<TD class=tabletotal>12</TD>
+<TD class=tabletotal>15.58 % </TD>
+</TR>
+<TR class=tabledata align=right >
+<TH class=tableheader align=center> Very Low</TH>
+<TD>2</TD>
+<TD>1</TD>
+<TD>3</TD>
+<TD>0</TD>
+<TD>2</TD>
+<TD>2</TD>
+<TD class=tabletotal>10</TD>
+<TD class=tabletotal>12.98 % </TD>
+</TR>
+<TR class=tabledata align=right >
+<TH class=tableheader align=center> Total Count</TH>
+<TD class=tabletotal>25</TD>
+<TD class=tabletotal>15</TD>
+<TD class=tabletotal>20</TD>
+<TD class=tabletotal>4</TD>
+<TD class=tabletotal>8</TD>
+<TD class=tabletotal>5</TD>
+<TD class=tabletotal>77</TD>
+<TD class=tabletotal>100.00 % </TD>
+</TR>
+<TR class=tabledata align=right >
+<TH class=tableheader align=center> Rate</TH>
+<TD class=tabletotal>32.46 % </TD>
+<TD class=tabletotal>19.48 % </TD>
+<TD class=tabletotal>25.97 % </TD>
+<TD class=tabletotal>5.19 % </TD>
+<TD class=tabletotal>10.38 % </TD>
+<TD class=tabletotal>6.49 % </TD>
+<TD class=tabletotal>100%</TD><TD>&nbsp</TD>
+</TR>
+</TABLE><BR>
+<P align=center><IMG border=0 src="image/crosscount-piecross.jpg"></P>
+<P align=center><IMG border=0 src="image/crosscount-histogramcross.jpg"></P>
+<P align=center><IMG border=0 src="image/crosscount-histogramrate.jpg"></P>
+
+<A name="7.3"><H4>7.3 Trend</H4>    
+<P>&nbsp&nbsp "Trend" is that one chart shows the data's changing with time's going.
+<BR>&nbsp&nbsp So the trend tab will be shown only when the information has some date/time field(s) as well as number (integer/float) field(s).
+<LI>User need select one date/time field.
+<LI>User can select several number fields.
+<LI>User can input the start time or end time. If not input, system will use the earliest/latest time inside the data.
+<P>&nbsp&nbsp The following is an example setup page of trend:
+<P class=title align=center title="">Weekly Report - Statistic</P>
+<HR>
+	 <TABLE border=0 cellpadding=0 cellspacing=0 class=whitebar><TR>
+		 <TD><IMG src="../image/tab2_grey.jpg"></TD>
+		 <TD class=tabbar_grey><B>Count</B></A></TD>
+		 <TD><IMG src="../image/tab1_grey.jpg"><TD>
+		 <TD><IMG src="../image/tab2_grey.jpg"></TD>
+		 <TD class=tabbar_grey><B>Cross Count</B></A></TD>
+		 <TD><IMG src="../image/tab1_grey.jpg"><TD>
+		 <TD><IMG src="../image/tab2.jpg"></TD>
+		 <TD class=tabbar><B>Trend</B></A></TD>
+		 <TD><IMG src="../image/tab1.jpg"></TD>
+	 </TR></TABLE>
+<TABLE  border=1 class=bar width=100%>
+<TR class=tableheader><TH colspan=2 align=center>Trend</TH></TR>
+<TR class=tabledata><TD align=right>Time</TD>
+<TD align=left>
+			<INPUT type=radio name=input_time value="commit_time" >Commit Time
+			<INPUT type=radio name=input_time value="last_changed_time" >Last Changed Time
+<BR>
+			<INPUT type=radio name=input_time value="plan_aaaa_start_date" >Plan-Start Date
+			<INPUT type=radio name=input_time value="plan_aaaa_end_date" >Plan-End Date
+			<INPUT type=radio name=input_time value="actual_aaaa_start_date"  checked>Actual-Start Date
+			<INPUT type=radio name=input_time value="actual_aaaa_end_date" >Actual-End Date
+</TD></TR>
+<TR class=tabledata><TD align=right>Value</TD>
+<TD align=left>
+<BR>
+			<INPUT type=checkbox name=input_value value="plan_aaaa_staff_number" >Plan-Staff Number
+			<INPUT type=checkbox name=input_value value="plan_aaaa_size" >Plan-Size
+			<INPUT type=checkbox name=input_value value="plan_aaaa_effort"  checked>Plan-Effort
+			<INPUT type=checkbox name=input_value value="plan_aaaa_cost"  checked>Plan-Cost
+			<INPUT type=checkbox name=input_value value="actual_aaaa_staff_number" >Actual-Staff Number
+			<INPUT type=checkbox name=input_value value="actual_aaaa_size" >Actual-Size
+			<INPUT type=checkbox name=input_value value="actual_aaaa_effort"  checked>Actual-Effort
+			<INPUT type=checkbox name=input_value value="actual_aaaa_cost"  checked>Actual-Cost
+</TD></TR>
+<TR class=tabledata><TD align=right>Start Time</TD>
+<TD align=left>
+			<INPUT type=text name="input_start_time" size=50>
+<BR>If want to use the earliest time, please do not input anything.
+</TD></TR>
+<TR class=tabledata><TD align=right>End Time</TD>
+<TD align=left>
+			<INPUT type=text name="input_end_time" size=50>
+<BR>If want to use the latest time, please do not input anything.
+</TD></TR>
+</TABLE><BR>
+<HR> 
+<P>&nbsp&nbsp The following is an example result page of Trend Chart:
+<P><TABLE  border=1 class=bar  align=center width=80%>
+<TR class=tableheader >
+<TH> "Actual-Start Date"</TH>
+<TH> "Plan-Effort"</TH>
+<TH> "Plan-Cost"</TH>
+<TH> "Actual-Effort"</TH>
+<TH> "Actual-Cost"</TH>
+<TR class=tabledata>
+<TD align=center>August 23, 2004</TD>
+<TD align=center>50</TD>
+<TD align=center>150</TD>
+<TD align=center>45</TD>
+<TD align=center>150</TD>
+</TR>
+<TR class=tabledata>
+<TD align=center>August 30, 2004</TD>
+<TD align=center>60</TD>
+<TD align=center>150</TD>
+<TD align=center>70</TD>
+<TD align=center>170</TD>
+</TR>
+<TR class=tabledata>
+<TD align=center>September 7, 2004</TD>
+<TD align=center>60</TD>
+<TD align=center>150</TD>
+<TD align=center>65</TD>
+<TD align=center>140</TD>
+</TR>
+<TR class=tabledata>
+<TD align=center>September 14, 2004</TD>
+<TD align=center>50</TD>
+<TD align=center>150</TD>
+<TD align=center>55</TD>
+<TD align=center>160</TD>
+</TR>
+<TR class=tabledata>
+<TD align=center>September 21, 2004</TD>
+<TD align=center>80</TD>
+<TD align=center>180</TD>
+<TD align=center>77</TD>
+<TD align=center>160</TD>
+</TR>
+<TR class=tabledata>
+<TD align=center>September 28, 2004</TD>
+<TD align=center>80</TD>
+<TD align=center>180</TD>
+<TD align=center>85</TD>
+<TD align=center>180</TD>
+</TR>
+<TR class=tabledata>
+<TD align=center>October 3, 2004</TD>
+<TD align=center>110</TD>
+<TD align=center>200</TD>
+<TD align=center>90</TD>
+<TD align=center>180</TD>
+</TR>
+<TR class=tabledata>
+<TD align=center>October 10, 2004</TD>
+<TD align=center>100</TD>
+<TD align=center>180</TD>
+<TD align=center>95</TD>
+<TD align=center>160</TD>
+</TR>
+<TR class=tabledata>
+<TD align=center>October 17, 2004</TD>
+<TD align=center>110</TD>
+<TD align=center>180</TD>
+<TD align=center>115</TD>
+<TD align=center>190</TD>
+</TR>
+<TR class=tabledata>
+<TD align=center>October 21, 2004</TD>
+<TD align=center>120</TD>
+<TD align=center>200</TD>
+<TD align=center>125</TD>
+<TD align=center>220</TD>
+</TR>
+<TR class=tabledata>
+<TD align=center>October 27, 2004</TD>
+<TD align=center>70</TD>
+<TD align=center>180</TD>
+<TD align=center>75</TD>
+<TD align=center>160</TD>
+</TR>
+</TABLE><BR>
+<P align=center><IMG border=0 src="image/trend.jpg"></P>
+
+<A name="7.4"><H4>7.4 Condition Setup for Statistic</H4>    
+<P>&nbsp&nbsp There is always a button "Condition" in the bottom of statistic pages. User can set the conditions to filter data and then make statsitic based on the filtered data.
+<BR>&nbsp&nbsp Refer to <A href="#6">section 6</A> to see how to setup conditions.
+
+<A name="7.5"><H4>7.5 Saving the Statistic Setup</H4>    
+<P>&nbsp&nbsp User can save the conditions and parameters of the current statistic, so that you can use them directly next time.
+<BR>&nbsp&nbsp Please refer to <A href="#5">Show-Setup</A> or <A href="#6">Condition Setup</A>. The setups of statistic can also be added, modified and removed.
+
+<BR><A name="8"><H3>8 Personal Message</H3>
+<P>&nbsp&nbsp The management rules of PM are the following:
+<LI>User can only query the messages sent by and sent to herself/himself. And user can only remove the messages sent to herself/himself.
+<LI>After a user read a message sent to her/him, SEE will mark it as "have_read" automatically.
+<LI>The number of new arrived messages will be shown in the interface.
+<LI>The content of PM will not be record in audit records.
+
+<BR><BR>
+<P align=right><A href="https://sourceforge.net/projects/chong2see/" target=_blank>
+https://sourceforge.net/projects/chong2see/</A></P>
+<HR>
+<H5 class=footer align=center>Software Engineering Environment	 Version 0.07/2004-12
+</H5>
+</BODY>
+
+</HTML>

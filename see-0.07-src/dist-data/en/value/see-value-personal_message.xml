@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataValues>
+	<Record>
+		<have_read>No</have_read>
+		<sender>Mara</sender>
+		<content>When you find bugs, please tell the author.</content>
+		<receiver>superseer</receiver>
+		<title>Hello! Welcome using SEE.</title>
+		<sent_time>December 24, 2004 7:52:37 PM CST</sent_time>
+		<id>December 24, 2004 7:52:37 PM CST-Mara</id>
+		<attachment>cool:h:p-h:p:cool.gif</attachment>
+	</Record>
+	<Record>
+		<have_read>No</have_read>
+		<sender>Mara</sender>
+		<content>When you find bugs, please tell the author.</content>
+		<receiver>Chong</receiver>
+		<title>Hello! Welcome using SEE.</title>
+		<sent_time>December 24, 2004 7:52:36 PM CST</sent_time>
+		<id>December 24, 2004 7:52:36 PM CST-Mara</id>
+		<attachment>cool:h:p-h:p:cool.gif</attachment>
+	</Record>
+	<Record>
+		<have_read>No</have_read>
+		<sender>Mara</sender>
+		<content>When you find bugs, please tell the author.</content>
+		<receiver>LuLu</receiver>
+		<title>Hello! Welcome using SEE.</title>
+		<sent_time>December 24, 2004 7:52:35 PM CST</sent_time>
+		<id>December 24, 2004 7:52:35 PM CST-Mara</id>
+		<attachment>cool:h:p-h:p:cool.gif</attachment>
+	</Record>
+	<Record>
+		<have_read>No</have_read>
+		<sender>Mara</sender>
+		<content>When you find bugs, please tell the author.</content>
+		<receiver>Mara</receiver>
+		<attachment>cool:h:p-h:p:cool.gif</attachment>
+		<title>Hello! Welcome using SEE.</title>
+		<sent_time>December 24, 2004 7:52:34 PM CST</sent_time>
+		<id>December 24, 2004 7:52:34 PM CST-Mara</id>
+	</Record>
+	<Record>
+		<have_read>No</have_read>
+		<sender>Mara</sender>
+		<content>When you find bugs, please tell the author.</content>
+		<receiver>MeiMei</receiver>
+		<title>Hello! Welcome using SEE.</title>
+		<sent_time>December 24, 2004 7:52:30 PM CST</sent_time>
+		<id>December 24, 2004 7:52:30 PM CST-Mara</id>
+		<attachment>cool:h:p-h:p:cool.gif</attachment>
+	</Record>
+</DataValues>
