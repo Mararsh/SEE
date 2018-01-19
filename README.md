@@ -4,9 +4,9 @@ Any data structures can be added and customized.
 
 The project was developed in 2004 and sited on https://sourceforge.net/projects/chong2see/.
 
-I wrote it to implement the idea that all data, including interface styles, can be customized, managed, and exchanged in pages online. Many things have changed and programmers have made their workings much smarter with their brilliant tools. Thanks for all shares on internet! Hope I could share more.
+I wrote it to implement the idea that all data, including interface styles, can be customized, managed, and exchanged in pages on-line. Many things have changed and programmers have made their workings much smarter with their brilliant tools. Thanks for all shares on Internet! Hope I could share more.
 
 Its last version is on GitHub now: https://github.com/Mararsh/SEE .
 
 And its documents: https://mararsh.github.io/SEE/docs. 
-For chinese readers, you have to set your browser's encoding as "Simplified Chinese" if the document pages are messed since they were wirtten with GB2312. 
+For Chinese readers, you have to set your browser's encoding as "Simplified Chinese" if the document pages are messed since they were written with GB2312. 
