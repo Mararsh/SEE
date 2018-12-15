@@ -1,230 +1,230 @@
-<!-- �������̻���	 �汾 0.07/2004-12	 ���� -->
+<!-- 软件工程环境	 版本 0.07/2004-12	 玛瑞 -->
 
 <HTML>
 
 <HEAD>
 <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
-<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=gb2312">
-<TITLE> �������̻��� - ʹ��ָ�� - ����</TITLE>
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=utf-8">
+<TITLE> 软件工程环境 - 使用指南 - 管理</TITLE>
 <LINK rel="stylesheet" type="text/css"  href="../style/style_default.css"> 
 </HEAD>
 
 <BODY class=info>
 
-<P class=title align=center title="">ʹ��ָ��-����</P>   
+<P class=title align=center title="">使用指南-管理</P>   
 
 <HR>
-<A href="#1">1 SEE��Ȩ�޹�������</A>
-<BR>&nbsp&nbsp<A href="#1.1">1.1 ��������Ա</A>
-<BR>&nbsp&nbsp<A href="#1.2">1.2 �û�</A>
-<BR>&nbsp&nbsp<A href="#1.3">1.3 ϵͳ��ɫ�����ݽ�ɫ</A>
-<BR>&nbsp&nbsp<A href="#1.4">1.4 SEEȱʡ��Ȩ��ģ��</A>
-<BR>&nbsp&nbsp<A href="#1.5">1.5 SEE��ȱʡ�˺�</A>
-<BR>&nbsp&nbsp<A href="#1.6">1.6 SEE����������</A>
-<BR><A href="#2">2 ��������ϵͳ�Ĳ���</A>
-<BR><A href="#3">3 SEE�����</A>
-<BR>&nbsp&nbsp<A href="#3.1">3.1 ���ʲô��</A>
-<BR>&nbsp&nbsp<A href="#3.2">3.2 ��ô��ƣ�</A>
-<BR>&nbsp&nbsp<A href="#3.3">3.3 ������ݵ�ά��</A>
-<BR><A href="#4">4 SEE�����ݵ���</A>
-<BR><A href="#5">5 SEE���ٶȲ���</A>
+<A href="#1">1 SEE的权限管理机制</A>
+<BR>&nbsp&nbsp<A href="#1.1">1.1 超级管理员</A>
+<BR>&nbsp&nbsp<A href="#1.2">1.2 用户</A>
+<BR>&nbsp&nbsp<A href="#1.3">1.3 系统角色和数据角色</A>
+<BR>&nbsp&nbsp<A href="#1.4">1.4 SEE缺省的权限模型</A>
+<BR>&nbsp&nbsp<A href="#1.5">1.5 SEE的缺省账号</A>
+<BR>&nbsp&nbsp<A href="#1.6">1.6 SEE的特殊数据</A>
+<BR><A href="#2">2 设置整个系统的参数</A>
+<BR><A href="#3">3 SEE的审计</A>
+<BR>&nbsp&nbsp<A href="#3.1">3.1 审计什么？</A>
+<BR>&nbsp&nbsp<A href="#3.2">3.2 怎么审计？</A>
+<BR>&nbsp&nbsp<A href="#3.3">3.3 审计数据的维护</A>
+<BR><A href="#4">4 SEE的数据导入</A>
+<BR><A href="#5">5 SEE的速度测试</A>
 
-<BR><A name="1"><H3>1 SEE��Ȩ�޹�������</H3>                
+<BR><A name="1"><H3>1 SEE的权限管理机制</H3>                
 
-<A name="1.1"><H4>1.1 ��������Ա</H4>    
-&nbsp&nbsp ��������Ա��ϵͳ�Ĺ����ߣ�����ʹ��ϵͳ�����й��ܡ�
-<P>&nbsp&nbsp ��������Ա�������ʹ���ߣ�
-<LI>��������Ա������Ϣ�Ĺ�������������/���û�������ڲ�ͬ���ļ���
-<LI>��������Ա����ʾ���úͲ�ѯ���ñ������û�������
-<LI>��������Ա�������Ϣ���ᱻ����/���û��鿴����
-<LI>����������Ա�ĸ�����Ϣ�ļ��������ƻ���ϵͳ���Զ��ָ����ʼ״̬��
-<P>&nbsp&nbsp ��SEE�����ذ�װ���û�����Ӧ���ԡ���������Ա�����˺ŵ�¼����ʼ����Ϊ�գ���ʵʩ������Ϊ��
-<LI>���á���ʼ���á��Ĳ������䶨��μ�<A href="#2">����ʼ���á�</A>һ�ڡ�
-<LI>�����Լ���Ҫ�����ӻ��޸ġ�ϵͳ��ɫ���͡�ϵͳ��ɫȨ�ޡ���
-<LI>�����Լ���Ҫ�����ӻ��޸���Ϣ�ṹ���塣���磬���ڡ����ⱨ�桱�������״̬���ֶε�ѡ��ֵ�������û�Ҫ����Ӧ�ڿ�ʼ��ʽ����SEE֮ǰ�������޸���ϡ���������Ա������Ȩĳ��ϵͳ��ɫ��ʵʩ���������
-<LI><FONT color=green>�޸ġ���������Ա���Ŀ���</FONT>���������ǣ�
+<A name="1.1"><H4>1.1 超级管理员</H4>    
+&nbsp&nbsp 超级管理员是系统的构建者，可以使用系统的所有功能。
+<P>&nbsp&nbsp 超级管理员是特殊的使用者：
+<LI>超级管理员个人信息的管理独立于其她/他用户，存放在不同的文件中
+<LI>超级管理员的显示设置和查询设置被所有用户共享。
+<LI>超级管理员的审计信息不会被其她/他用户查看到。
+<LI>当超级管理员的个人信息文件不慎被破坏，系统将自动恢复其初始状态。
+<P>&nbsp&nbsp 当SEE被下载安装后，用户首先应当以“超级管理员”的账号登录（初始口令为空），实施以下行为：
+<LI>设置“初始配置”的参数。其定义参见<A href="#2">“初始配置”</A>一节。
+<LI>根据自己的要求，添加或修改“系统角色”和“系统角色权限”。
+<LI>根据自己的要求，添加或修改信息结构定义。例如，对于“问题报告”，如果“状态”字段的选择值不符合用户要求，则应在开始正式启用SEE之前，将其修改完毕。超级管理员可以授权某个系统角色来实施这个工作。
+<LI><FONT color=green>修改“超级管理员”的口令</FONT>。不可忘记！
 
-<A name="1.2"><H4>1.2 �û�</H4>  
-&nbsp&nbsp ����ʹ���߶��ǡ��û�����ʹ���߼�ʹû�е�¼��ϵͳҲ����ȱʡ�ġ��ÿ͡��˺�Ϊʹ�����ṩ���ܡ�  
-<P>&nbsp&nbsp �û�ֻ��ʹ����Ȩ�޷�Χ�ڵĹ��ܡ��û���Ȩ��������ȷ���ģ�
-<BR>&nbsp&nbsp&nbsp&nbsp 1�����û�����ĳ����ϵͳ��ɫ�������Զ�ӵ�����ϵͳ��ɫ�ڡ�ϵͳ��ɫȨ�ޡ����ж����Ȩ�ޡ� 
-<BR>&nbsp&nbsp&nbsp&nbsp 2�����û�����ĳ�������ݽ�ɫ�������Զ�ӵ��������ݽ�ɫ�ڡ����ݽ�ɫȨ�ޡ����ж����Ȩ�ޡ� 
-<BR>&nbsp&nbsp&nbsp&nbsp 3���û���Ȩ�޻����Ա�ֱ�Ӳ��䶨���ڡ������û�Ȩ�ޡ����С� 
-<P>&nbsp&nbsp <FONT color=green>SEE���õ�Ȩ�޲����ǣ�ֻ�б���ȷ����ģ��ű�����</FONT>��
-<P>&nbsp&nbsp ���˶����͵ײ���ť���û�ֻ�ܿ����Լ���Ȩ��ʹ�õĹ��ܰ�ť����ʹ�û�ͨ����ķ�ʽ�����ʷ���Ȩ���棬ϵͳҲ��ܾ�������Ϊÿ��������ʾ֮ǰϵͳ��Ҫ�жϵ�ǰ�û���Ȩ�ޡ�     
+<A name="1.2"><H4>1.2 用户</H4>  
+&nbsp&nbsp 所有使用者都是“用户”，使用者即使没有登录，系统也是以缺省的“访客”账号为使用者提供功能。  
+<P>&nbsp&nbsp 用户只能使用其权限范围内的功能。用户的权限是如下确定的：
+<BR>&nbsp&nbsp&nbsp&nbsp 1）若用户属于某个“系统角色”，则自动拥有这个系统角色在“系统角色权限”表中定义的权限。 
+<BR>&nbsp&nbsp&nbsp&nbsp 2）若用户属于某个“数据角色”，则自动拥有这个数据角色在“数据角色权限”表中定义的权限。 
+<BR>&nbsp&nbsp&nbsp&nbsp 3）用户的权限还可以被直接补充定义在“数据用户权限”表中。 
+<P>&nbsp&nbsp <FONT color=green>SEE采用的权限策略是：只有被明确定义的，才被允许</FONT>。
+<P>&nbsp&nbsp 除了顶部和底部按钮，用户只能看到自己有权限使用的功能按钮。即使用户通过别的方式来访问非授权界面，系统也会拒绝服务，因为每个界面显示之前系统都要判断当前用户的权限。     
 
-<A name="1.3"><H4>1.3 ϵͳ��ɫ�����ݽ�ɫ</H4>      
-&nbsp&nbsp ϵͳ��ɫ�����ݽ�ɫ�Ĳ�����ڣ�
-<LI>ϵͳ��ɫ�ɳ�������Աֱ�Ӷ��岢��Ȩ�������ݽ�ɫ�ɶԡ����ݽ�ɫ����ӵ��ά��Ȩ�޵��û������塢�ԡ����ݽ�ɫȨ�ޡ���ӵ��ά��Ȩ�޵Ľ�ɫ���û�����Ȩ���������ݽ�ɫ����Ȩ�޵�ϵͳ��ɫ���û����������Ȩ��
-<LI>��ϵͳ��ɫ������ѡ��������Ϣ�ṹ����Ȩ���������ݽ�ɫ������ѡ��ϵͳ��ɫ������ϵͳ��ɫȨ�ޡ��������ݽ�ɫ���������ݽ�ɫȨ�ޡ������û������������û�Ȩ�ޡ�����������ơ�����Ȩ��������Щ������Ϣ������Ȩ�����ݽ�ɫ��������
-<LI>��ϵͳ��ɫ������ѡ�����в�����������Ȩ���������ݽ�ɫ������ѡ�����á�������ơ�����Ȩ������Щ�������Ͳ�����Ȩ�����ݽ�ɫ��ʵʩ��
-<P>&nbsp&nbsp ϵͳ��ɫ�����ݽ�ɫ����������ϵͳ���ڲ�ͬ�����ݱ����жϴ����ģ����Բ��������
-<P>&nbsp&nbsp ����ЩȨ�ޱ��У������ݡ��ֶεĶ�ѡֵ��ϵͳ�Զ��ж��г��ģ������û���ϵͳ�����ӻ�ɾ����Ϣ�ṹʱ����ѡ���б���֮�ı䡣
-<BR>&nbsp&nbsp ��Ȩ�ޱ��У����Զ���õ�Ȩ�޵�������Ŀǰ������ܻ�����ǿ��������ʵ�ֵ�ǰ��ȱʡȨ��ģ�͡�
-<P>&nbsp&nbsp SEEȱʡ��Ȩ��ģ���У�������һ�������¹���Ա�������ϵͳ��ɫר���������Ӻ�ά�����ݽ�ɫ��
+<A name="1.3"><H4>1.3 系统角色和数据角色</H4>      
+&nbsp&nbsp 系统角色与数据角色的差别在于：
+<LI>系统角色由超级管理员直接定义并授权，而数据角色由对“数据角色”表拥有维护权限的用户来定义、对“数据角色权限”表拥有维护权限的角色或用户来授权。即：数据角色由有权限的系统角色或用户来定义和授权。
+<LI>对系统角色，可以选择所有信息结构来授权，而对数据角色，不能选择“系统角色”、“系统角色权限”、“数据角色”、“数据角色权限”、“用户”、“数据用户权限”、“数据审计”来授权。即：这些特殊信息不能授权给数据角色来管理。
+<LI>对系统角色，可以选择所有操作类型来授权，而对数据角色，不能选择“配置”、“审计”来授权。即这些操作类型不能授权给数据角色来实施。
+<P>&nbsp&nbsp 系统角色和数据角色可以重名，系统是在不同的数据表中判断处理的，所以不会混淆。
+<P>&nbsp&nbsp 在这些权限表中，“数据”字段的多选值是系统自动判断列出的，即当用户在系统中添加或删除信息结构时，该选择列表随之改变。
+<BR>&nbsp&nbsp 在权限表中，可以定义得到权限的条件。目前这个功能还不够强，但足以实现当前的缺省权限模型。
+<P>&nbsp&nbsp SEE缺省的权限模型中，定义了一个“人事管理员”，这个系统角色专门用来添加和维护数据角色。
 
-<A name="1.4"><H4>1.4 SEEȱʡ��Ȩ��ģ��</H4>    
-&nbsp&nbsp ��װ��ϵͳ�м���ȱʡ��Ȩ�����ݡ�
-<P>&nbsp&nbsp ȱʡ��Ȩ��ģ�ͻ���������˼·������޶ȵؿ�����Ŀ��Ϣ�Ĺ���������ʹ��Ŀ��Ϣ����Ŀ���Ա��ȫ͸����
-<BR>&nbsp&nbsp �ڹ����ϣ�ÿ����Ա����Ŀ�Ĵ�������ݶ������������ӡ��޸ġ���ѯ����ơ�ɾ��Ȩ��ֻ���Ÿ����ݹ���Ա���ϵͳ��ɫ�����ص������ˡ����ҡ�����Ϊ���в�����Ϊ���������ݺ�ִ�н�������Ա�ϵͳ�Զ���¼��
-<BR>&nbsp&nbsp ӵ�г�ֵ���Ϣ���κ��˶����Լල�κ��ˣ���������Ա���⣩��
-<P>&nbsp&nbsp ����˵��SEEȱʡ��Ȩ��ģ���ǣ�
-<LI>��������Ա����������ϵͳ��ɫ��
-<BR>&nbsp&nbsp �����¹���Ա�����������Ŀ���ݷ���Ȩ�ޡ�����ά�������ݽ�ɫ���������ݽ�ɫȨ�ޡ������û������������û�Ȩ�ޡ���
-<BR>&nbsp&nbsp ����ƹ���Ա��������ά��ϵͳ������ݡ�
-<BR>&nbsp&nbsp ��һ���û����������޸��Լ��ĸ�����Ϣ����ѯ��Ŀ���ݵ���Ƽ�¼�������û������ڡ�һ���û��������ÿ͡����⡣
-<LI>���¹���Ա�������������ݽ�ɫ��
-<BR>&nbsp&nbsp �����ݹ���Ա�������������޸ġ�ɾ����������Ŀ���ݡ�
-<BR>&nbsp&nbsp ��һ���Ա�������Զ���Ŀ����ִ�У����ӡ����롢���ơ��޸ġ���ѯ��ѡ�������û������ڡ�һ���Ա�������ÿ͡����⡣
-<P>&nbsp&nbsp ���������ˡ��ÿ͡��������û�����Ȩ�ޣ��޸��Լ��ĸ�����Ϣ����ѯ��Ŀ���ݵ���Ƽ�¼������Ŀ����ִ�����ӡ����롢���ơ��޸ġ���ѯ��ѡ��
-<P>&nbsp&nbsp ����û���Ҫ��������Ȩ��ģ�ͣ�����ɾ��ȱʡ��Ȩ�����ݡ��Լ����塣
+<A name="1.4"><H4>1.4 SEE缺省的权限模型</H4>    
+&nbsp&nbsp 安装后，系统中即有缺省的权限数据。
+<P>&nbsp&nbsp 缺省的权限模型基于这样的思路：最大限度地开放项目信息的管理能力，使项目信息对项目组成员完全透明。
+<BR>&nbsp&nbsp 在功能上，每个成员对项目的大多数数据都可以任意添加、修改、查询、审计。删除权限只开放给数据管理员这个系统角色。不必担心有人“捣乱”，因为所有操作行为、数据内容和执行结果都可以被系统自动记录。
+<BR>&nbsp&nbsp 拥有充分的信息，任何人都可以监督任何人（超级管理员除外）。
+<P>&nbsp&nbsp 具体说，SEE缺省的权限模型是：
+<LI>超级管理员定义了三个系统角色：
+<BR>&nbsp&nbsp “人事管理员”：负责对项目数据分派权限。可以维护“数据角色”、“数据角色权限”、“用户”、“数据用户权限”。
+<BR>&nbsp&nbsp “审计管理员”：负责维护系统审计数据。
+<BR>&nbsp&nbsp “一般用户”：可以修改自己的个人信息、查询项目数据的审计记录。所有用户都属于“一般用户”，“访客”除外。
+<LI>人事管理员定义了两个数据角色：
+<BR>&nbsp&nbsp “数据管理员”：可以批量修改、删除、导入项目数据。
+<BR>&nbsp&nbsp “一般成员”：可以对项目数据执行：添加、插入、复制、修改、查询、选择。所有用户都属于“一般成员”，“访客”除外。
+<P>&nbsp&nbsp 这样，除了“访客”，所有用户都有权限：修改自己的个人信息、查询项目数据的审计记录、对项目数据执行添加、插入、复制、修改、查询、选择。
+<P>&nbsp&nbsp 如果用户需要采用其它权限模型，可以删除缺省的权限数据、自己定义。
 
-<A name="1.5"><H4>1.5 SEE��ȱʡ�˺�</H4>    
-&nbsp&nbsp ��װSEE��������ȱʡ�˺ţ������Ϊ�գ��û�������һ�ԣ�
-<LI>����������Ա��������ʹ�����й���
-<LI>�����𡱣����ڡ���ƹ���Ա�������Թ���������ݣ���Ϊ��һ���û���������ʹ�ô�������ݴ������ܡ��������������Լ�ѽ����
-<LI>�����ࡱ�����ڡ����¹���Ա�������Թ������ݽ�ɫ���û�����Ϊ��һ���û���������ʹ�ô�������ݴ������ܡ������������ŵĵڶ���èè���Ǹ�С��������
-<LI>�������������ڡ����ݹ���Ա�������������޸ġ�ɾ�����������ݣ���Ϊ��һ���û���������ʹ�ô�������ݴ������ܡ������������ŵĵ�һ��èè���Ǹ��ԹԵĺ��ӡ���
-<LI>����桱�����ڡ�һ���û���������ʹ�ô�������ݴ������ܡ�
-<LI>���ÿ͡���������һ�������Ǳ���û�������ʹ�õĹ��ܷǳ����ޡ��û�δ��¼���˳�ʱ���õ�������˺š�
+<A name="1.5"><H4>1.5 SEE的缺省账号</H4>    
+&nbsp&nbsp 安装SEE后，有以下缺省账号，口令均为空，用户可以试一试：
+<LI>“超级管理员”：可以使用所有功能
+<LI>“玛瑞”：属于“审计管理员”，可以管理审计数据；作为“一般用户”，可以使用大多数数据处理功能。（就是老婆婆自己呀。）
+<LI>“噜噜”：属于“人事管理员”，可以管理数据角色和用户；作为“一般用户”，可以使用大多数数据处理功能。（它是老婆婆的第二个猫猫，是个小无赖。）
+<LI>“美美”：属于“数据管理员”，可以批量修改、删除、导入数据；作为“一般用户”，可以使用大多数数据处理功能。（它是老婆婆的第一个猫猫，是个乖乖的孩子。）
+<LI>“虫虫”：属于“一般用户”，可以使用大多数数据处理功能。
+<LI>“访客”：假设是一个善意的潜在用户，可以使用的功能非常有限。用户未登录或退出时，用的是这个账号。
 
-<A name="1.6"><H4>1.6 SEE����������</H4>    
-&nbsp&nbsp SEE�а������������������ݣ�
-<LI>"Ԥ��������"���������κ��û���������������Ա���޸����ǵĶ��塣����������ϲ�����֡����á���ť��
-<BR>&nbsp&nbsp ��������ʼ���á����淽����ϵͳ��ɫ�����ݽ�ɫ��ϵͳ��ɫȨ�ޡ����ݽ�ɫȨ�ޡ������û�Ȩ�ޡ��û���������ơ���ʾ���á��������á�ͳ�����á��ϴ��������ٶȲ��ԡ����Է��롢������Ϣ��
-<LI>"ϵͳ����"��ֻ������������Ա�޸����ǵ����ݡ�ϵͳ��ɫȨ�ޱ������ݽ�ɫȨ�ޱ��������û�Ȩ�ޱ��ж��������ṩ�����ǵ�ѡ��
-<BR>&nbsp&nbsp �����������û���ϵͳ��ɫ��ϵͳ��ɫȨ�ޡ����淽������ʼ���á���ʾ���á��������á�ͳ�����á��ٶȲ��ԡ�
-<LI>"��������"��ֻ�г�������Ա�����޸Ļ�����Ȩ�޸����ǵ����ݡ����ݽ�ɫȨ�ޱ��������û�Ȩ�ޱ��ж��������ṩ�����ǵ�ѡ��
-<BR>&nbsp&nbsp �������û������ݽ�ɫ�����ݽ�ɫȨ�ޡ������û�Ȩ�ޡ��ϴ����������Է��롢������ơ�
+<A name="1.6"><H4>1.6 SEE的特殊数据</H4>    
+&nbsp&nbsp SEE中包含以下三类特殊数据：
+<LI>"预定义数据"：不允许任何用户（包括超级管理员）修改它们的定义。其管理界面上不会出现“配置”按钮。
+<BR>&nbsp&nbsp 包括：初始配置、界面方案、系统角色、数据角色、系统角色权限、数据角色权限、数据用户权限、用户、数据审计、显示设置、条件设置、统计设置、上传管理、速度测试、语言翻译、个人消息。
+<LI>"系统数据"：只允许超级管理员修改它们的内容。系统角色权限表、数据角色权限表和数据用户权限表中都将不会提供对它们的选择。
+<BR>&nbsp&nbsp 包括：超级用户、系统角色、系统角色权限、界面方案、初始配置、显示设置、条件设置、统计设置、速度测试。
+<LI>"超级数据"：只有超级管理员才能修改或者授权修改它们的内容。数据角色权限表和数据用户权限表中都将不会提供对它们的选择。
+<BR>&nbsp&nbsp 包括：用户、数据角色、数据角色权限、数据用户权限、上传管理、语言翻译、数据审计。
 
-<A name="2"><H3>2 ��������ϵͳ�Ĳ���</H3>    
-&nbsp&nbsp ��������Ա��������������ϵͳ�йص����в�����
-<BR>&nbsp&nbsp �����ǣ�������涥���ġ�ϵͳ����ť����ѡ���������ġ���ʼ���á���ť,�������漴�ǳ�ʼ���õĹ���ҳ�棺
-<P class=title align=center title="">��ʼ���� - �޸�</P>
+<A name="2"><H3>2 设置整个系统的参数</H3>    
+&nbsp&nbsp 超级管理员可以设置与整个系统有关的运行参数。
+<BR>&nbsp&nbsp 方法是：点击界面顶部的“系统”按钮，再选择界面左面的“初始配置”按钮,界面右面即是初始配置的管理页面：
+<P class=title align=center title="">初始配置 - 修改</P>
 <HR>
 	<TABLE align=center class=data>
-		<TR title="��ʶ" class=tableline>
-			<TD class=datakey  align=right >��ʶ : </TD><TD align=left >
+		<TR title="标识" class=tableline>
+			<TD class=datakey  align=right >标识 : </TD><TD align=left >
 			init
 			<INPUT type=hidden name=input_id value="init" >
 		</TD></TR>
-		<TR title="ȱʡ�û�" class=tableline>
-			<TD  align=right >ȱʡ�û� : </TD><TD align=left >
-			<INPUT type=text name="input_default_user" value="�ÿ�"  size=60>
+		<TR title="缺省用户" class=tableline>
+			<TD  align=right >缺省用户 : </TD><TD align=left >
+			<INPUT type=text name="input_default_user" value="访客"  size=60>
 		</TD></TR>
-		<TR title="ȱʡ������" class=tableline>
-			<TD  align=right >ȱʡ������ : </TD><TD align=left >
-			<INPUT type=radio name=input_default_interface_style value="style_default"  checked>ȱʡ���
+		<TR title="缺省界面风格" class=tableline>
+			<TD  align=right >缺省界面风格 : </TD><TD align=left >
+			<INPUT type=radio name=input_default_interface_style value="style_default"  checked>缺省风格
 		</TD></TR>
-		<TR title="ȱʡ���淽��" class=tableline>
-			<TD  align=right >ȱʡ���淽�� : </TD><TD align=left >
-			<INPUT type=radio name=input_default_interface_theme value="theme_default"  checked>ȱʡ����
+		<TR title="缺省界面方案" class=tableline>
+			<TD  align=right >缺省界面方案 : </TD><TD align=left >
+			<INPUT type=radio name=input_default_interface_theme value="theme_default"  checked>缺省方案
 		</TD></TR>
-		<TR title="ȱʡҳ���С" class=tableline>
-			<TD  align=right >ȱʡҳ���С : </TD><TD align=left >
+		<TR title="缺省页面大小" class=tableline>
+			<TD  align=right >缺省页面大小 : </TD><TD align=left >
 			<INPUT type=text name="input_default_page_size" value="8"  size=60>
 		</TD></TR>
-		<TR title="�����������" class=tableline>
-			<TD  align=right >����������� : </TD><TD align=left >
-			<INPUT type=checkbox name=input_data_audit_types value="����"  checked>����
-			<INPUT type=checkbox name=input_data_audit_types value="����"  checked>����
-			<INPUT type=checkbox name=input_data_audit_types value="����"  checked>����
-			<INPUT type=checkbox name=input_data_audit_types value="����"  checked>����
-			<INPUT type=checkbox name=input_data_audit_types value="����"  checked>����
-			<INPUT type=checkbox name=input_data_audit_types value="ɾ��"  checked>ɾ��
-			<INPUT type=checkbox name=input_data_audit_types value="�޸�"  checked>�޸�
-			<INPUT type=checkbox name=input_data_audit_types value="�����޸�"  checked>�����޸�
-			<INPUT type=checkbox name=input_data_audit_types value="��ѯ" >��ѯ
-			<INPUT type=checkbox name=input_data_audit_types value="���" >���
-			<INPUT type=checkbox name=input_data_audit_types value="�����б�" >�����б�
-			<INPUT type=checkbox name=input_data_audit_types value="��ʾ����" >��ʾ����
-			<INPUT type=checkbox name=input_data_audit_types value="����" >����
-			<INPUT type=checkbox name=input_data_audit_types value="��¼"  checked>��¼
+		<TR title="数据审计类型" class=tableline>
+			<TD  align=right >数据审计类型 : </TD><TD align=left >
+			<INPUT type=checkbox name=input_data_audit_types value="配置"  checked>配置
+			<INPUT type=checkbox name=input_data_audit_types value="添加"  checked>添加
+			<INPUT type=checkbox name=input_data_audit_types value="插入"  checked>插入
+			<INPUT type=checkbox name=input_data_audit_types value="复制"  checked>复制
+			<INPUT type=checkbox name=input_data_audit_types value="导入"  checked>导入
+			<INPUT type=checkbox name=input_data_audit_types value="删除"  checked>删除
+			<INPUT type=checkbox name=input_data_audit_types value="修改"  checked>修改
+			<INPUT type=checkbox name=input_data_audit_types value="批量修改"  checked>批量修改
+			<INPUT type=checkbox name=input_data_audit_types value="查询" >查询
+			<INPUT type=checkbox name=input_data_audit_types value="审计" >审计
+			<INPUT type=checkbox name=input_data_audit_types value="数据列表" >数据列表
+			<INPUT type=checkbox name=input_data_audit_types value="显示数据" >显示数据
+			<INPUT type=checkbox name=input_data_audit_types value="导出" >导出
+			<INPUT type=checkbox name=input_data_audit_types value="登录"  checked>登录
 		</TD></TR>
-		<TR title="ȱʡ�ϴ��ļ���С��KB��" class=tableline>
-			<TD  align=right >ȱʡ�ϴ��ļ���С��KB�� : </TD><TD align=left >
+		<TR title="缺省上传文件大小（KB）" class=tableline>
+			<TD  align=right >缺省上传文件大小（KB） : </TD><TD align=left >
 			<INPUT type=text name="input_default_upload_size" value="1000"  size=60>
 		</TD></TR>
-		<TR title="ȱʡ���ϴ��ܺϣ�KB��" class=tableline>
-			<TD  align=right >ȱʡ���ϴ��ܺϣ�KB�� : </TD><TD align=left >
+		<TR title="缺省可上传总合（KB）" class=tableline>
+			<TD  align=right >缺省可上传总合（KB） : </TD><TD align=left >
 			<INPUT type=text name="input_default_upload_total" value="10000"  size=60>
 		</TD></TR>
 	</TABLE><BR>
 <HR>
-<P>&nbsp&nbsp ��Ȼ�С���ʼ���á���ʵ�ʿ�����ʱ�޸ġ���ʱ��Ч�� 
+<P>&nbsp&nbsp 虽然叫“初始配置”，实际可以随时修改、即时生效。 
 
-<BR><A name="3"><H3>3 SEE�����</H3>       
+<BR><A name="3"><H3>3 SEE的审计</H3>       
  
-<A name="3.1"><H4>3.1 ���ʲô��</H4>    
-&nbsp&nbsp ��������Ա������ʱ�ƶ�SEE���ʲô����ʱ��Ч��
-<BR>&nbsp&nbsp �����ǣ�������涥���ġ�ϵͳ����ť����ѡ���������ġ���ʼ���á���ť,�������漴�ǳ�ʼ���õĹ���ҳ�档
-<P>&nbsp&nbsp �μ�<A href="#2">��������ϵͳ�Ĳ���</A>��˵����
-<P>&nbsp&nbsp ���飺һ��ֻ��ƿ��ܸı���Ϣ�ṹ������ֵ�Ĳ���������/����/����/����/ɾ��/�޸ģ���
+<A name="3.1"><H4>3.1 审计什么？</H4>    
+&nbsp&nbsp 超级管理员可以随时制定SEE审计什么，即时生效。
+<BR>&nbsp&nbsp 方法是：点击界面顶部的“系统”按钮，再选择界面左面的“初始配置”按钮,界面右面即是初始配置的管理页面。
+<P>&nbsp&nbsp 参见<A href="#2">设置整个系统的参数</A>的说明。
+<P>&nbsp&nbsp 建议：一般只审计可能改变信息结构和数据值的操作（配置/添加/插入/复制/删除/修改）。
 
-<A name="3.2"><H4>3.2 ��ô��ƣ�</H4>    
-&nbsp&nbsp ����������Ա�ƶ�����Ʋ������ͺ�ϵͳ���Զ���¼������Ϣ����Щ�������͵�ִ�����ݡ�
-<BR>&nbsp&nbsp ÿ����Ƽ�¼��������ʶ���Զ����ɣ������ݡ��������ؼ��֡�ԭ����ֵ���¸ĵ�ֵ��˭����ʱ���δ��������
-<BR>&nbsp&nbsp ���ڡ����ӡ�������ϵͳ��������¼�����ݵ�������ֵ�ֶε�ֵ��
-<BR>&nbsp&nbsp ���ڡ��޸ġ�������ϵͳ����¼���ݵ����з����޸��ֶεľ�ֵ����ֵ��
-<BR>&nbsp&nbsp ��Щ��Ϣ���Ը������ݵı仯���������Իָ����ݡ�
+<A name="3.2"><H4>3.2 怎么审计？</H4>    
+&nbsp&nbsp 当超级管理员制定了审计操作类型后，系统即自动记录所有信息的这些操作类型的执行内容。
+<BR>&nbsp&nbsp 每个审计记录包括：标识（自动生成）、数据、操作、关键字、原来的值、新改的值、谁、何时、何处、结果。
+<BR>&nbsp&nbsp 对于“添加”操作，系统将完整记录新数据的所有有值字段的值。
+<BR>&nbsp&nbsp 对于“修改”操作，系统将记录数据的所有发生修改字段的旧值和新值。
+<BR>&nbsp&nbsp 这些信息足以跟踪数据的变化，并且足以恢复数据。
                                                            
-<A name="3.3"><H4>3.3 ������ݵ�ά��</H4>    
-&nbsp&nbsp ��������Ա������Ȩĳ����ɫ���û���ά��������ݡ�
-<BR>&nbsp&nbsp ��Ȩ�޵��û���������/ɾ��/�޸�/��ѯ������ݣ������ǣ�������涥���ġ�ϵͳ����ť����ѡ���������ġ�������ơ���ť,�������漴����Ƽ�¼�Ĺ���ҳ�档
-<P>&nbsp&nbsp ���ǣ��������ֹ�����������ݣ���Ӧ��ϵͳ�Զ������Ŀ͹۽����
-<P>&nbsp&nbsp �������Ӧ�����ڵ������ݡ�
+<A name="3.3"><H4>3.3 审计数据的维护</H4>    
+&nbsp&nbsp 超级管理员可以授权某个角色或用户来维护审计数据。
+<BR>&nbsp&nbsp 有权限的用户可以添加/删除/修改/查询审计数据，方法是：点击界面顶部的“系统”按钮，再选择界面左面的“数据审计”按钮,界面右面即是审计记录的管理页面。
+<P>&nbsp&nbsp 但是，不建议手工处理审计数据，它应是系统自动处理的客观结果。
+<P>&nbsp&nbsp 审计数据应被定期导出备份。
 
-<BR><A name="4"><H3>4 SEE�����ݵ���</H3>    
-<P>&nbsp&nbsp ���κ���Ϣ�Ĵ���ҳ�涥���ϣ���������롱��ť��ϵͳ��������ҳ�棺
-<P class=title align=center title="">���ⱨ�� - ����</P>
+<BR><A name="4"><H3>4 SEE的数据导入</H3>    
+<P>&nbsp&nbsp 在任何信息的处理页面顶部上，点击“导入”按钮，系统返回以下页面：
+<P class=title align=center title="">问题报告 - 导入</P>
 <HR>
-<P class=info>��ѡ���ʽ��ȷ�����ҷ�����Ϣ�ṹ�����xml�����ļ��������޷����롣</P>
+<P class=info>请选择格式正确、并且符合信息结构定义的xml数据文件，否则无法导入。</P>
 <TABLE  class=data >
 <TR class=tableline><TD>
-�ļ� : 
+文件 : 
 <INPUT type=file name=input_importfile  size=60>
-<BR><FONT class=info>�ļ���С���ܳ���1000KB��</FONT>
+<BR><FONT class=info>文件大小不能超过1000KB。</FONT>
 </TD></TR>
 <TR class=tableline><TD>
-���ڹؼ�����ͬ�����ݣ����и��� : 
-			<INPUT type=radio name=input_importoverride value="yes"  checked>��
-			<INPUT type=radio name=input_importoverride value="no" >��
+对于关键字相同的数据，进行覆盖 : 
+			<INPUT type=radio name=input_importoverride value="yes"  checked>是
+			<INPUT type=radio name=input_importoverride value="no" >否
 </TD></TR>
 </TD></TR>
 </TABLE><BR>
 <HR>
-<P>&nbsp&nbsp ����ǰ��Ϣ�Ǿ����ʱ�������ҳ���л�������ѡ��
+<P>&nbsp&nbsp 当当前信息是矩阵表时，上面的页面中还有如下选择：
 	 <TABLE  class=data >
 		<TR class=tableline><TD>
-			<INPUT type=radio name=input_importdata value="main_data"  checked>������
-			<INPUT type=radio name=input_importdata value="matrix_data" >��������
+			<INPUT type=radio name=input_importdata value="main_data"  checked>主数据
+			<INPUT type=radio name=input_importdata value="matrix_data" >矩阵数据
 		</TD></TR>
 	 </TABLE><BR>
-<P>&nbsp&nbsp �����ϵͳ�������½��棺
-<P class=title align=center title="">���ⱨ�� - ����</P>
+<P>&nbsp&nbsp 导入后，系统返回以下界面：
+<P class=title align=center title="">问题报告 - 导入</P>
 <HR>
 	<FORM name=seeform  method=post  action="/see/data-manager" enctype="multipart/form-data"  onSubmit='return false;'>
-	<P align=center>ִ�гɹ�</P>
+	<P align=center>执行成功</P>
 	<TABLE class=data cellPadding=2 align=center>
 		<TR>
-		<TD align=right>�Ϸ� : </TD>		<TD align=left>5</TD>		</TR>
+		<TD align=right>合法 : </TD>		<TD align=left>5</TD>		</TR>
 		<TR>
-		<TD align=right>���� : </TD>		<TD align=left>4</TD>		</TR>
+		<TD align=right>添加 : </TD>		<TD align=left>4</TD>		</TR>
 		<TR>
-		<TD align=right>���� : </TD>		<TD align=left>1</TD>		</TR>
+		<TD align=right>覆盖 : </TD>		<TD align=left>1</TD>		</TR>
 	 </TABLE>
 <HR>
-<P>&nbsp&nbsp ע�⣺���������ֻ����һ�����ڵ������������Ƽ�¼��û��׷�ٱ����Ӻ��޸ĵ��������ݣ�����Ӧ���ϸ����Ƶ��������Ȩ�ޡ�
+<P>&nbsp&nbsp 注意：导入操作将只产生一条关于导入操作本身审计记录，没有追踪被添加和修改的数据内容！所以应该严格限制导入操作的权限。
 
-<BR><A name="5"><H3>5 SEE���ٶȲ���</H3>    
-<P>&nbsp&nbsp ��������Ա������ʱ����SEE���ٶȲ��ԡ�
-<BR>&nbsp&nbsp �����ǣ�������涥���ġ�ϵͳ����ť����ѡ���������ġ��ٶȡ���ť,�������漴���ٶȲ��ԵĹ���ҳ�棺
-<P class=title align=center title="">�ٶȲ���</P>
+<BR><A name="5"><H3>5 SEE的速度测试</H3>    
+<P>&nbsp&nbsp 超级管理员可以随时进行SEE的速度测试。
+<BR>&nbsp&nbsp 方法是：点击界面顶部的“系统”按钮，再选择界面左面的“速度”按钮,界面右面即是速度测试的管理页面：
+<P class=title align=center title="">速度测试</P>
 <HR>
 	<TABLE align=center class=data >
 		<TR class=tableline>
-			<TD align=right>����</TD><TD>
+			<TD align=right>添加</TD><TD>
 			<INPUT type=radio name=input_add value="1000" >1000
 			<INPUT type=radio name=input_add value="500" >500
 			<INPUT type=radio name=input_add value="200" >200
@@ -232,32 +232,32 @@
 			<INPUT type=radio name=input_add value="50" >50
 </TD></TR>
 		<TR class=tableline>
-			<TD align=right>����</TD><TD>
-			<INPUT type=radio name=input_sort value="char" >�ַ�
-			<INPUT type=radio name=input_sort value="string" >�ַ���
-			<INPUT type=radio name=input_sort value="int" >����
-			<INPUT type=radio name=input_sort value="float" >������
-			<INPUT type=radio name=input_sort value="date" >����
-			<INPUT type=radio name=input_sort value="time" >ʱ��
-			<INPUT type=radio name=input_sort value="auto" >�Զ���ֵ
-			<INPUT type=radio name=input_sort value=  >��</TD></TR></TABLE>
+			<TD align=right>排序</TD><TD>
+			<INPUT type=radio name=input_sort value="char" >字符
+			<INPUT type=radio name=input_sort value="string" >字符串
+			<INPUT type=radio name=input_sort value="int" >整型
+			<INPUT type=radio name=input_sort value="float" >浮点数
+			<INPUT type=radio name=input_sort value="date" >日期
+			<INPUT type=radio name=input_sort value="time" >时间
+			<INPUT type=radio name=input_sort value="auto" >自动赋值
+			<INPUT type=radio name=input_sort value=  >空</TD></TR></TABLE>
 <P align=center>
-		<INPUT type=image src="image/add.jpg" alt="����"  >			
-		<INPUT type=image src="image/remove_all.jpg" alt="ȫ��ɾ��"  >			
+		<INPUT type=image src="image/add.jpg" alt="添加"  >			
+		<INPUT type=image src="image/remove_all.jpg" alt="全部删除"  >			
 </P>
 <P align=center class=outresult>
-�ܼ� : 0 &nbsp&nbsp&nbsp&nbsp ��Ӧ�ٶ� : 10 &nbsp ����
+总计 : 0 &nbsp&nbsp&nbsp&nbsp 响应速度 : 10 &nbsp 毫秒
 </P>
-<P align=center class=info>�������ֻ�ǹ��ڶ�ȡ�������д��XML���ݵ�ʱ�����ġ���ʹ��SEE�Ĺ���ʱ�������ʱ�佫�����ڹ���ҳ��Ԫ���ϡ�</P>
+<P align=center class=info>这个测试只是关于读取、排序和写入XML数据的时间消耗。当使用SEE的功能时，更多的时间将消耗在构建页面元素上。</P>
 <HR>
-<P>&nbsp&nbsp ��������Ա�����������������һ�����Բ������ݽ������ӡ�ɾ�����޸ġ���ѯ��ͳ�ơ�
-<P>&nbsp&nbsp ���κ����ݴ���ҳ������½ǻ���ʾ��ǰҳ�����Ӧ�ٶȡ�
+<P>&nbsp&nbsp 超级管理员可以象管理其它数据一样，对测试数据进行添加、删除、修改、查询、统计。
+<P>&nbsp&nbsp 在任何数据处理页面的右下角会显示当前页面的响应速度。
 
 <BR><BR>
 <P align=right><A href="https://sourceforge.net/projects/chong2see/" target=_blank>
 https://sourceforge.net/projects/chong2see/</A></P>
 <HR>
-<H5 class=footer align=center>�������̻���	 �汾 0.07/2004-12
+<H5 class=footer align=center>软件工程环境	 版本 0.07/2004-12
 </H5>
 </BODY>
 

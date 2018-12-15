@@ -1,230 +1,230 @@
-<!-- ܛ�w���̭h��	 �汾 0.07/2004-12	 ���� -->
+<!-- 軟體工程環境	 版本 0.07/2004-12	 瑪瑞 -->
 
 <HTML>
 
 <HEAD>
 <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
-<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=gb2312">
-<TITLE> ܛ�w���̭h�� - ʹ��ָ�� - ����</TITLE>
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=utf-8">
+<TITLE> 軟體工程環境 - 使用指南 - 管理</TITLE>
 <LINK rel="stylesheet" type="text/css"  href="../style/style_default.css"> 
 </HEAD>
 
 <BODY class=info>
 
-<P class=title align=center title="">ʹ��ָ��-����</P>   
+<P class=title align=center title="">使用指南-管理</P>   
 
 <HR>
-<A href="#1">1 SEE���S�ə����C��</A>
-<BR>&nbsp&nbsp<A href="#1.1">1.1 ��������T</A>
-<BR>&nbsp&nbsp<A href="#1.2">1.2 �Ñ�</A>
-<BR>&nbsp&nbsp<A href="#1.3">1.3 ϵ�y��ɫ���Y�Ͻ�ɫ</A>
-<BR>&nbsp&nbsp<A href="#1.4">1.4 SEEȱʡ���S�ə�ģ��</A>
-<BR>&nbsp&nbsp<A href="#1.5">1.5 SEE��ȱʡ�~̖</A>
-<BR>&nbsp&nbsp<A href="#1.6">1.6 SEE�������Y��</A>
-<BR><A href="#2">2 �O������ϵ�y�ą���</A>
-<BR><A href="#3">3 SEE�Č�Ӌ</A>
-<BR>&nbsp&nbsp<A href="#3.1">3.1 ��Ӌʲ�᣿</A>
-<BR>&nbsp&nbsp<A href="#3.2">3.2 ���ጏӋ��</A>
-<BR>&nbsp&nbsp<A href="#3.3">3.3 ��Ӌ�Y�ϵľS�o</A>
-<BR><A href="#4">4 SEE���Y�ό���</A>
-<BR><A href="#5">5 SEE���ٶȜyԇ</A>
+<A href="#1">1 SEE的許可權管理機制</A>
+<BR>&nbsp&nbsp<A href="#1.1">1.1 超級管理員</A>
+<BR>&nbsp&nbsp<A href="#1.2">1.2 用戶</A>
+<BR>&nbsp&nbsp<A href="#1.3">1.3 系統角色和資料角色</A>
+<BR>&nbsp&nbsp<A href="#1.4">1.4 SEE缺省的許可權模型</A>
+<BR>&nbsp&nbsp<A href="#1.5">1.5 SEE的缺省賬號</A>
+<BR>&nbsp&nbsp<A href="#1.6">1.6 SEE的特殊資料</A>
+<BR><A href="#2">2 設置整個系統的參數</A>
+<BR><A href="#3">3 SEE的審計</A>
+<BR>&nbsp&nbsp<A href="#3.1">3.1 審計什麽？</A>
+<BR>&nbsp&nbsp<A href="#3.2">3.2 怎麽審計？</A>
+<BR>&nbsp&nbsp<A href="#3.3">3.3 審計資料的維護</A>
+<BR><A href="#4">4 SEE的資料導入</A>
+<BR><A href="#5">5 SEE的速度測試</A>
 
-<BR><A name="1"><H3>1 SEE���S�ə����C��</H3>                
+<BR><A name="1"><H3>1 SEE的許可權管理機制</H3>                
 
-<A name="1.1"><H4>1.1 ��������T</H4>    
-&nbsp&nbsp ��������T��ϵ�y�Ę����ߣ�����ʹ��ϵ�y�����й��ܡ�
-<P>&nbsp&nbsp ��������T�������ʹ���ߣ�
-<LI>��������T�����YӍ�Ĺ������������/���Ñ�������ڲ�ͬ���ļ���
-<LI>��������T���@ʾ�O�úͲ�ԃ�O�ñ������Ñ����á�
-<LI>��������T�Č�Ӌ�YӍ����������/���Ñ��鿴����
-<LI>����������T�Ă����YӍ�ļ��������Ɖģ�ϵ�y���Ԅӻ֏����ʼ��B��
-<P>&nbsp&nbsp ��SEE�����d���b�ᣬ�Ñ����ȑ�����"��������T"���~̖��䛣���ʼ����գ�����ʩ�����Р���
-<LI>�O��"��ʼ����"�ą������䶨�x��Ҋ<A href="#2">"��ʼ����"</A>һ����
-<LI>�����Լ���Ҫ�����ӻ��޸�"ϵ�y��ɫ"��"ϵ�y��ɫ�S�ə�"��
-<LI>�����Լ���Ҫ�����ӻ��޸��YӍ�Y�����x�����磬���"���}���"�����"��B"��λ���x��ֵ�������Ñ�Ҫ�󣬄t�����_ʼ��ʽ����SEE֮ǰ�������޸��ꮅ����������T�����ڙ�ĳ��ϵ�y��ɫ�팍ʩ�@��������
-<LI><FONT color=green>�޸�"��������T"�Ŀ���</FONT>��������ӛ��
+<A name="1.1"><H4>1.1 超級管理員</H4>    
+&nbsp&nbsp 超級管理員是系統的構建者，可以使用系統的所有功能。
+<P>&nbsp&nbsp 超級管理員是特殊的使用者：
+<LI>超級管理員個人資訊的管理獨立於其她/他用戶，存放在不同的文件中
+<LI>超級管理員的顯示設置和查詢設置被所有用戶共用。
+<LI>超級管理員的審計資訊不會被其她/他用戶查看到。
+<LI>當超級管理員的個人資訊文件不慎被破壞，系統將自動恢復其初始狀態。
+<P>&nbsp&nbsp 當SEE被下載安裝後，用戶首先應當以"超級管理員"的賬號登錄（初始口令爲空），實施以下行爲：
+<LI>設置"初始配置"的參數。其定義參見<A href="#2">"初始配置"</A>一節。
+<LI>根據自己的要求，添加或修改"系統角色"和"系統角色許可權"。
+<LI>根據自己的要求，添加或修改資訊結構定義。例如，對於"問題報告"，如果"狀態"欄位的選擇值不符合用戶要求，則應在開始正式啓用SEE之前，將其修改完畢。超級管理員可以授權某個系統角色來實施這個工作。
+<LI><FONT color=green>修改"超級管理員"的口令</FONT>。不可忘記！
 
-<A name="1.2"><H4>1.2 �Ñ�</H4>  
-&nbsp&nbsp ����ʹ���߶���"�Ñ�"��ʹ���߼�ʹ�]�е�䛣�ϵ�yҲ����ȱʡ��"�L��"�~̖��ʹ�����ṩ���ܡ�  
-<P>&nbsp&nbsp �Ñ�ֻ��ʹ�����S�ə๠���ȵĹ��ܡ��Ñ����S�ə������´_���ģ�
-<BR>&nbsp&nbsp&nbsp&nbsp 1�����Ñ���ĳ��"ϵ�y��ɫ"���t�Ԅӓ����@��ϵ�y��ɫ��"ϵ�y��ɫ�S�ə�"���ж��x���S�əࡣ 
-<BR>&nbsp&nbsp&nbsp&nbsp 2�����Ñ���ĳ��"�Y�Ͻ�ɫ"���t�Ԅӓ����@���Y�Ͻ�ɫ��"�Y�Ͻ�ɫ�S�ə�"���ж��x���S�əࡣ 
-<BR>&nbsp&nbsp&nbsp&nbsp 3���Ñ����S�ə�߀���Ա�ֱ���a�䶨�x��"�Y���Ñ��S�ə�"���С� 
-<P>&nbsp&nbsp <FONT color=green>SEE���õ��S�ə�����ǣ�ֻ�б����_���x�ģ��ű����S</FONT>��
-<P>&nbsp&nbsp ����픲��͵ײ����o���Ñ�ֻ�ܿ����Լ����S�ə�ʹ�õĹ��ܰ��o����ʹ�Ñ�ͨ�^�e�ķ�ʽ���L�����ڙ���棬ϵ�yҲ���ܽ^���գ���ÿ�������@ʾ֮ǰϵ�y��Ҫ�Дஔǰ�Ñ����S�əࡣ     
+<A name="1.2"><H4>1.2 用戶</H4>  
+&nbsp&nbsp 所有使用者都是"用戶"，使用者即使沒有登錄，系統也是以缺省的"訪客"賬號爲使用者提供功能。  
+<P>&nbsp&nbsp 用戶只能使用其許可權範圍內的功能。用戶的許可權是如下確定的：
+<BR>&nbsp&nbsp&nbsp&nbsp 1）若用戶屬於某個"系統角色"，則自動擁有這個系統角色在"系統角色許可權"表中定義的許可權。 
+<BR>&nbsp&nbsp&nbsp&nbsp 2）若用戶屬於某個"資料角色"，則自動擁有這個資料角色在"資料角色許可權"表中定義的許可權。 
+<BR>&nbsp&nbsp&nbsp&nbsp 3）用戶的許可權還可以被直接補充定義在"資料用戶許可權"表中。 
+<P>&nbsp&nbsp <FONT color=green>SEE採用的許可權策略是：只有被明確定義的，才被允許</FONT>。
+<P>&nbsp&nbsp 除了頂部和底部按鈕，用戶只能看到自己有許可權使用的功能按鈕。即使用戶通過別的方式來訪問非授權介面，系統也會拒絕服務，因爲每個介面顯示之前系統都要判斷當前用戶的許可權。     
 
-<A name="1.3"><H4>1.3 ϵ�y��ɫ���Y�Ͻ�ɫ</H4>      
-&nbsp&nbsp ϵ�y��ɫ�c�Y�Ͻ�ɫ�Ĳ�e��춣�
-<LI>ϵ�y��ɫ�ɳ�������Tֱ�Ӷ��x�K�ڙ࣬���Y�Ͻ�ɫ�Ɍ�"�Y�Ͻ�ɫ"����оS�o�S�ə���Ñ�����x����"�Y�Ͻ�ɫ�S�ə�"����оS�o�S�ə�Ľ�ɫ���Ñ���ڙࡣ�����Y�Ͻ�ɫ�����S�ə��ϵ�y��ɫ���Ñ�����x���ڙࡣ
-<LI>��ϵ�y��ɫ�������x�������YӍ�Y�����ڙ࣬�����Y�Ͻ�ɫ�������x��"ϵ�y��ɫ"��"ϵ�y��ɫ�S�ə�"��"�Y�Ͻ�ɫ"��"�Y�Ͻ�ɫ�S�ə�"��"�Ñ�"��"�Y���Ñ��S�ə�"��"�Y�ό�Ӌ"���ڙࡣ�����@Щ�����YӍ�����ڙ�o�Y�Ͻ�ɫ��������
-<LI>��ϵ�y��ɫ�������x�����в�����́��ڙ࣬�����Y�Ͻ�ɫ�������x��"����"��"��Ӌ"���ڙࡣ���@Щ������Ͳ����ڙ�o�Y�Ͻ�ɫ�팍ʩ��
-<P>&nbsp&nbsp ϵ�y��ɫ���Y�Ͻ�ɫ����������ϵ�y���ڲ�ͬ���Y�ϱ����Д�̎���ģ����Բ���������
-<P>&nbsp&nbsp ���@Щ�S�ə���У�"�Y��"��λ�Ķ��xֵ��ϵ�y�Ԅ��Д��г��ģ������Ñ���ϵ�y�����ӻ�h���YӍ�Y���r��ԓ�x���б��S֮��׃��
-<BR>&nbsp&nbsp ���S�ə���У����Զ��x�õ��S�ə�ėl����Ŀǰ�@������߀���򏊣������Ԍ��F��ǰ��ȱʡ�S�ə�ģ�͡�
-<P>&nbsp&nbsp SEEȱʡ���S�ə�ģ���У����x��һ��"���¹���T"���@��ϵ�y��ɫ���T�Á����Ӻ;S�o�Y�Ͻ�ɫ��
+<A name="1.3"><H4>1.3 系統角色和資料角色</H4>      
+&nbsp&nbsp 系統角色與資料角色的差別在於：
+<LI>系統角色由超級管理員直接定義並授權，而資料角色由對"資料角色"表擁有維護許可權的用戶來定義、對"資料角色許可權"表擁有維護許可權的角色或用戶來授權。即：資料角色由有許可權的系統角色或用戶來定義和授權。
+<LI>對系統角色，可以選擇所有資訊結構來授權，而對資料角色，不能選擇"系統角色"、"系統角色許可權"、"資料角色"、"資料角色許可權"、"用戶"、"資料用戶許可權"、"資料審計"來授權。即：這些特殊資訊不能授權給資料角色來管理。
+<LI>對系統角色，可以選擇所有操作類型來授權，而對資料角色，不能選擇"配置"、"審計"來授權。即這些操作類型不能授權給資料角色來實施。
+<P>&nbsp&nbsp 系統角色和資料角色可以重名，系統是在不同的資料表中判斷處理的，所以不會混淆。
+<P>&nbsp&nbsp 在這些許可權表中，"資料"欄位的多選值是系統自動判斷列出的，即當用戶在系統中添加或刪除資訊結構時，該選擇列表隨之改變。
+<BR>&nbsp&nbsp 在許可權表中，可以定義得到許可權的條件。目前這個功能還不夠強，但足以實現當前的缺省許可權模型。
+<P>&nbsp&nbsp SEE缺省的許可權模型中，定義了一個"人事管理員"，這個系統角色專門用來添加和維護資料角色。
 
-<A name="1.4"><H4>1.4 SEEȱʡ���S�ə�ģ��</H4>    
-&nbsp&nbsp ���b�ᣬϵ�y�м���ȱʡ���S�ə��Y�ϡ�
-<P>&nbsp&nbsp ȱʡ���S�ə�ģ�ͻ���@�ӵ�˼·������޶ȵ��_�Ō����YӍ�Ĺ���������ʹ�����YӍ�������M�ɆT��ȫ͸����
-<BR>&nbsp&nbsp �ڹ����ϣ�ÿ���ɆT�������Ĵ�����Y�϶������������ӡ��޸ġ���ԃ����Ӌ���h���S�ə�ֻ�_�Žo�Y�Ϲ���T�@��ϵ�y��ɫ�����ؓ�������"�v�y"�������в����Р����Y�σ��ݺ͈��нY�������Ա�ϵ�y�Ԅ�ӛ䛡�
-<BR>&nbsp&nbsp ���г�ֵ��YӍ���κ��˶����ԱO���κ��ˣ���������T���⣩��
-<P>&nbsp&nbsp ���w�f��SEEȱʡ���S�ə�ģ���ǣ�
-<LI>��������T���x������ϵ�y��ɫ��
-<BR>&nbsp&nbsp "���¹���T"��ؓ؟�������Y�Ϸ����S�əࡣ���ԾS�o"�Y�Ͻ�ɫ"��"�Y�Ͻ�ɫ�S�ə�"��"�Ñ�"��"�Y���Ñ��S�ə�"��
-<BR>&nbsp&nbsp "��Ӌ����T"��ؓ؟�S�oϵ�y��Ӌ�Y�ϡ�
-<BR>&nbsp&nbsp "һ���Ñ�"�������޸��Լ��Ă����YӍ����ԃ�����Y�ϵČ�Ӌӛ䛡������Ñ������"һ���Ñ�"��"�L��"���⡣
-<LI>���¹���T���x�˃ɂ��Y�Ͻ�ɫ��
-<BR>&nbsp&nbsp "�Y�Ϲ���T"�����������޸ġ��h�������댣���Y�ϡ�
-<BR>&nbsp&nbsp "һ��ɆT"�����Ԍ������Y�ψ��У����ӡ����롢�}�u���޸ġ���ԃ���x�������Ñ������"һ��ɆT"��"�L��"���⡣
-<P>&nbsp&nbsp �@�ӣ�����"�L��"�������Ñ������S�əࣺ�޸��Լ��Ă����YӍ����ԃ�����Y�ϵČ�Ӌӛ䛡��������Y�ψ������ӡ����롢�}�u���޸ġ���ԃ���x��
-<P>&nbsp&nbsp ����Ñ���Ҫ���������S�ə�ģ�ͣ����Ԅh��ȱʡ���S�ə��Y�ϡ��Լ����x��
+<A name="1.4"><H4>1.4 SEE缺省的許可權模型</H4>    
+&nbsp&nbsp 安裝後，系統中即有缺省的許可權資料。
+<P>&nbsp&nbsp 缺省的許可權模型基於這樣的思路：最大限度地開放專案資訊的管理能力，使專案資訊對專案組成員完全透明。
+<BR>&nbsp&nbsp 在功能上，每個成員對專案的大多數資料都可以任意添加、修改、查詢、審計。刪除許可權只開放給資料管理員這個系統角色。不必擔心有人"搗亂"，因爲所有操作行爲、資料內容和執行結果都可以被系統自動記錄。
+<BR>&nbsp&nbsp 擁有充分的資訊，任何人都可以監督任何人（超級管理員除外）。
+<P>&nbsp&nbsp 具體說，SEE缺省的許可權模型是：
+<LI>超級管理員定義了三個系統角色：
+<BR>&nbsp&nbsp "人事管理員"：負責對專案資料分派許可權。可以維護"資料角色"、"資料角色許可權"、"用戶"、"資料用戶許可權"。
+<BR>&nbsp&nbsp "審計管理員"：負責維護系統審計資料。
+<BR>&nbsp&nbsp "一般用戶"：可以修改自己的個人資訊、查詢專案資料的審計記錄。所有用戶都屬於"一般用戶"，"訪客"除外。
+<LI>人事管理員定義了兩個資料角色：
+<BR>&nbsp&nbsp "資料管理員"：可以批量修改、刪除、導入專案資料。
+<BR>&nbsp&nbsp "一般成員"：可以對專案資料執行：添加、插入、複製、修改、查詢、選擇。所有用戶都屬於"一般成員"，"訪客"除外。
+<P>&nbsp&nbsp 這樣，除了"訪客"，所有用戶都有許可權：修改自己的個人資訊、查詢專案資料的審計記錄、對專案資料執行添加、插入、複製、修改、查詢、選擇。
+<P>&nbsp&nbsp 如果用戶需要採用其他許可權模型，可以刪除缺省的許可權資料、自己定義。
 
-<A name="1.5"><H4>1.5 SEE��ȱʡ�~̖</H4>    
-&nbsp&nbsp ���bSEE�ᣬ������ȱʡ�~̖����������գ��Ñ�����ԇһԇ��
-<LI>"��������T"������ʹ�����й���
-<LI>"����"�����"��Ӌ����T"�����Թ��팏Ӌ�Y�ϣ�����"һ���Ñ�"������ʹ�ô�����Y��̎�����ܡ��������������Լ�ѽ����
-<LI>"����"�����"���¹���T"�����Թ����Y�Ͻ�ɫ���Ñ�������"һ���Ñ�"������ʹ�ô�����Y��̎�����ܡ������������ŵĵڶ���؈؈���ǂ�С�oه����
-<LI>"����"�����"�Y�Ϲ���T"�����������޸ġ��h���������Y�ϣ�����"һ���Ñ�"������ʹ�ô�����Y��̎�����ܡ������������ŵĵ�һ��؈؈���ǂ��ԹԵĺ��ӡ���
-<LI>"�x�x"�����"һ���Ñ�"������ʹ�ô�����Y��̎�����ܡ�
-<LI>"�L��"�����O��һ������ĝ����Ñ�������ʹ�õĹ��ܷǳ����ޡ��Ñ�δ��䛻��˳��r���õ����@���~̖��
+<A name="1.5"><H4>1.5 SEE的缺省賬號</H4>    
+&nbsp&nbsp 安裝SEE後，有以下缺省賬號，口令均爲空，用戶可以試一試：
+<LI>"超級管理員"：可以使用所有功能
+<LI>"瑪瑞"：屬於"審計管理員"，可以管理審計資料；作爲"一般用戶"，可以使用大多數資料處理功能。（就是老婆婆自己呀。）
+<LI>"嚕嚕"：屬於"人事管理員"，可以管理資料角色和用戶；作爲"一般用戶"，可以使用大多數資料處理功能。（它是老婆婆的第二個貓貓，是個小無賴。）
+<LI>"美美"：屬於"資料管理員"，可以批量修改、刪除、導入資料；作爲"一般用戶"，可以使用大多數資料處理功能。（它是老婆婆的第一個貓貓，是個乖乖的孩子。）
+<LI>"蟲蟲"：屬於"一般用戶"，可以使用大多數資料處理功能。
+<LI>"訪客"：假設是一個善意的潛在用戶，可以使用的功能非常有限。用戶未登錄或退出時，用的是這個賬號。
 
-<A name="1.6"><H4>1.6 SEE�������Y��</H4>    
-&nbsp&nbsp SEE�а���������������Y�ϣ�
-<LI>"�A���x�Y��"�������S�κ��Ñ���������������T���޸������Ķ��x������������ϲ������F"����"���o��
-<BR>&nbsp&nbsp ��������ʼ���á����淽����ϵ�y��ɫ���Y�Ͻ�ɫ��ϵ�y��ɫ�S�əࡢ�Y�Ͻ�ɫ�S�əࡢ�Y���Ñ��S�əࡢ�Ñ����Y�ό�Ӌ���@ʾ�O�á��l���O�á��yӋ�O�á��ς��������ٶȜyԇ���Z�Է��g��������Ϣ��
-<LI>"ϵ�y�Y��"��ֻ���S��������T�޸������ă��ݡ�ϵ�y��ɫ�S�ə�����Y�Ͻ�ɫ�S�ə�����Y���Ñ��S�ə���ж��������ṩ���������x��
-<BR>&nbsp&nbsp �����������Ñ���ϵ�y��ɫ��ϵ�y��ɫ�S�əࡢ���淽������ʼ���á��@ʾ�O�á��l���O�á��yӋ�O�á��ٶȜyԇ��
-<LI>"�����Y��"��ֻ�г�������T�����޸Ļ����ڙ��޸������ă��ݡ��Y�Ͻ�ɫ�S�ə�����Y���Ñ��S�ə���ж��������ṩ���������x��
-<BR>&nbsp&nbsp �������Ñ����Y�Ͻ�ɫ���Y�Ͻ�ɫ�S�əࡢ�Y���Ñ��S�əࡢ�ς��������Z�Է��g���Y�ό�Ӌ��
+<A name="1.6"><H4>1.6 SEE的特殊資料</H4>    
+&nbsp&nbsp SEE中包含以下三類特殊資料：
+<LI>"預定義資料"：不允許任何用戶（包括超級管理員）修改它們的定義。其管理介面上不會出現"配置"按鈕。
+<BR>&nbsp&nbsp 包括：初始配置、介面方案、系統角色、資料角色、系統角色許可權、資料角色許可權、資料用戶許可權、用戶、資料審計、顯示設置、條件設置、統計設置、上傳管理、速度測試、語言翻譯、個人消息。
+<LI>"系統資料"：只允許超級管理員修改它們的內容。系統角色許可權表、資料角色許可權表和資料用戶許可權表中都將不會提供對它們的選擇。
+<BR>&nbsp&nbsp 包括：超級用戶、系統角色、系統角色許可權、介面方案、初始配置、顯示設置、條件設置、統計設置、速度測試。
+<LI>"超級資料"：只有超級管理員才能修改或者授權修改它們的內容。資料角色許可權表和資料用戶許可權表中都將不會提供對它們的選擇。
+<BR>&nbsp&nbsp 包括：用戶、資料角色、資料角色許可權、資料用戶許可權、上傳管理、語言翻譯、資料審計。
 
-<A name="2"><H3>2 �O������ϵ�y�ą���</H3>    
-&nbsp&nbsp ��������T�����O���c����ϵ�y���P���\�Ѕ�����
-<BR>&nbsp&nbsp �����ǣ��c������픲���"ϵ�y"���o�����x����������"��ʼ����"���o,�������漴�ǳ�ʼ���õĹ�����棺
-<P class=title align=center title="">��ʼ���� - �޸�</P>
+<A name="2"><H3>2 設置整個系統的參數</H3>    
+&nbsp&nbsp 超級管理員可以設置與整個系統有關的運行參數。
+<BR>&nbsp&nbsp 方法是：點擊介面頂部的"系統"按鈕，再選擇介面左面的"初始配置"按鈕,介面右面即是初始配置的管理頁面：
+<P class=title align=center title="">初始配置 - 修改</P>
 <HR>
 	<TABLE align=center class=data>
-		<TR title="���R" class=tableline>
-			<TD class=datakey  align=right >���R : </TD><TD align=left >
+		<TR title="標識" class=tableline>
+			<TD class=datakey  align=right >標識 : </TD><TD align=left >
 			init
 			<INPUT type=hidden name=input_id value="init" >
 		</TD></TR>
-		<TR title="ȱʡ�Ñ�" class=tableline>
-			<TD  align=right >ȱʡ�Ñ� : </TD><TD align=left >
-			<INPUT type=text name="input_default_user" value="�L��"  size=60>
+		<TR title="缺省用戶" class=tableline>
+			<TD  align=right >缺省用戶 : </TD><TD align=left >
+			<INPUT type=text name="input_default_user" value="訪客"  size=60>
 		</TD></TR>
-		<TR title="ȱʡ�����L��" class=tableline>
-			<TD  align=right >ȱʡ�����L�� : </TD><TD align=left >
-			<INPUT type=radio name=input_default_interface_style value="style_default"  checked>ȱʡ�L��
+		<TR title="缺省介面風格" class=tableline>
+			<TD  align=right >缺省介面風格 : </TD><TD align=left >
+			<INPUT type=radio name=input_default_interface_style value="style_default"  checked>缺省風格
 		</TD></TR>
-		<TR title="ȱʡ���淽��" class=tableline>
-			<TD  align=right >ȱʡ���淽�� : </TD><TD align=left >
-			<INPUT type=radio name=input_default_interface_theme value="theme_default"  checked>ȱʡ����
+		<TR title="缺省介面方案" class=tableline>
+			<TD  align=right >缺省介面方案 : </TD><TD align=left >
+			<INPUT type=radio name=input_default_interface_theme value="theme_default"  checked>缺省方案
 		</TD></TR>
-		<TR title="ȱʡ����С" class=tableline>
-			<TD  align=right >ȱʡ����С : </TD><TD align=left >
+		<TR title="缺省頁面大小" class=tableline>
+			<TD  align=right >缺省頁面大小 : </TD><TD align=left >
 			<INPUT type=text name="input_default_page_size" value="8"  size=60>
 		</TD></TR>
-		<TR title="�Y�ό�Ӌ���" class=tableline>
-			<TD  align=right >�Y�ό�Ӌ��� : </TD><TD align=left >
-			<INPUT type=checkbox name=input_data_audit_types value="����"  checked>����
-			<INPUT type=checkbox name=input_data_audit_types value="����"  checked>����
-			<INPUT type=checkbox name=input_data_audit_types value="����"  checked>����
-			<INPUT type=checkbox name=input_data_audit_types value="�}�u"  checked>�}�u
-			<INPUT type=checkbox name=input_data_audit_types value="����"  checked>����
-			<INPUT type=checkbox name=input_data_audit_types value="�h��"  checked>�h��
-			<INPUT type=checkbox name=input_data_audit_types value="�޸�"  checked>�޸�
-			<INPUT type=checkbox name=input_data_audit_types value="�����޸�"  checked>�����޸�
-			<INPUT type=checkbox name=input_data_audit_types value="��ԃ" >��ԃ
-			<INPUT type=checkbox name=input_data_audit_types value="��Ӌ" >��Ӌ
-			<INPUT type=checkbox name=input_data_audit_types value="�Y���б�" >�Y���б�
-			<INPUT type=checkbox name=input_data_audit_types value="�@ʾ�Y��" >�@ʾ�Y��
-			<INPUT type=checkbox name=input_data_audit_types value="����" >����
-			<INPUT type=checkbox name=input_data_audit_types value="���"  checked>���
+		<TR title="資料審計類型" class=tableline>
+			<TD  align=right >資料審計類型 : </TD><TD align=left >
+			<INPUT type=checkbox name=input_data_audit_types value="配置"  checked>配置
+			<INPUT type=checkbox name=input_data_audit_types value="添加"  checked>添加
+			<INPUT type=checkbox name=input_data_audit_types value="插入"  checked>插入
+			<INPUT type=checkbox name=input_data_audit_types value="複製"  checked>複製
+			<INPUT type=checkbox name=input_data_audit_types value="導入"  checked>導入
+			<INPUT type=checkbox name=input_data_audit_types value="刪除"  checked>刪除
+			<INPUT type=checkbox name=input_data_audit_types value="修改"  checked>修改
+			<INPUT type=checkbox name=input_data_audit_types value="批量修改"  checked>批量修改
+			<INPUT type=checkbox name=input_data_audit_types value="查詢" >查詢
+			<INPUT type=checkbox name=input_data_audit_types value="審計" >審計
+			<INPUT type=checkbox name=input_data_audit_types value="資料列表" >資料列表
+			<INPUT type=checkbox name=input_data_audit_types value="顯示資料" >顯示資料
+			<INPUT type=checkbox name=input_data_audit_types value="導出" >導出
+			<INPUT type=checkbox name=input_data_audit_types value="登錄"  checked>登錄
 		</TD></TR>
-		<TR title="ȱʡ�ς��ļ���С��KB��" class=tableline>
-			<TD  align=right >ȱʡ�ς��ļ���С��KB�� : </TD><TD align=left >
+		<TR title="缺省上傳文件大小（KB）" class=tableline>
+			<TD  align=right >缺省上傳文件大小（KB） : </TD><TD align=left >
 			<INPUT type=text name="input_default_upload_size" value="1000"  size=60>
 		</TD></TR>
-		<TR title="ȱʡ���ς����ϣ�KB��" class=tableline>
-			<TD  align=right >ȱʡ���ς����ϣ�KB�� : </TD><TD align=left >
+		<TR title="缺省可上傳總合（KB）" class=tableline>
+			<TD  align=right >缺省可上傳總合（KB） : </TD><TD align=left >
 			<INPUT type=text name="input_default_upload_total" value="10000"  size=60>
 		</TD></TR>
 	</TABLE><BR>
 <HR>
-<P>&nbsp&nbsp �mȻ��"��ʼ����"�����H�����S�r�޸ġ����r��Ч�� 
+<P>&nbsp&nbsp 雖然叫"初始配置"，實際可以隨時修改、即時生效。 
 
-<BR><A name="3"><H3>3 SEE�Č�Ӌ</H3>       
+<BR><A name="3"><H3>3 SEE的審計</H3>       
  
-<A name="3.1"><H4>3.1 ��Ӌʲ�᣿</H4>    
-&nbsp&nbsp ��������T�����S�r�ƶ�SEE��Ӌʲ�ᣬ���r��Ч��
-<BR>&nbsp&nbsp �����ǣ��c������픲���"ϵ�y"���o�����x����������"��ʼ����"���o,�������漴�ǳ�ʼ���õĹ�����档
-<P>&nbsp&nbsp ��Ҋ<A href="#2">�O������ϵ�y�ą���</A>���f����
-<P>&nbsp&nbsp ���h��һ��ֻ��Ӌ���ܸ�׃�YӍ�Y�����Y��ֵ�Ĳ���������/����/����/�}�u/�h��/�޸ģ���
+<A name="3.1"><H4>3.1 審計什麽？</H4>    
+&nbsp&nbsp 超級管理員可以隨時制定SEE審計什麽，即時生效。
+<BR>&nbsp&nbsp 方法是：點擊介面頂部的"系統"按鈕，再選擇介面左面的"初始配置"按鈕,介面右面即是初始配置的管理頁面。
+<P>&nbsp&nbsp 參見<A href="#2">設置整個系統的參數</A>的說明。
+<P>&nbsp&nbsp 建議：一般只審計可能改變資訊結構和資料值的操作（配置/添加/插入/複製/刪除/修改）。
 
-<A name="3.2"><H4>3.2 ���ጏӋ��</H4>    
-&nbsp&nbsp ����������T�ƶ��ˌ�Ӌ��������ᣬϵ�y���Ԅ�ӛ������YӍ���@Щ������͵Ĉ��Ѓ��ݡ�
-<BR>&nbsp&nbsp ÿ����Ӌӛ䛰��������R���Ԅ����ɣ����Y�ϡ��������P�I�֡�ԭ����ֵ���¸ĵ�ֵ���l���Εr����̎���Y����
-<BR>&nbsp&nbsp ���"����"������ϵ�y������ӛ����Y�ϵ�������ֵ��λ��ֵ��
-<BR>&nbsp&nbsp ���"�޸�"������ϵ�y��ӛ��Y�ϵ����аl���޸ę�λ���fֵ����ֵ��
-<BR>&nbsp&nbsp �@Щ�YӍ���Ը�ۙ�Y�ϵ�׃�����K�����Ի֏��Y�ϡ�
+<A name="3.2"><H4>3.2 怎麽審計？</H4>    
+&nbsp&nbsp 當超級管理員制定了審計操作類型後，系統即自動記錄所有資訊的這些操作類型的執行內容。
+<BR>&nbsp&nbsp 每個審計記錄包括：標識（自動生成）、資料、操作、關鍵字、原來的值、新改的值、誰、何時、何處、結果。
+<BR>&nbsp&nbsp 對於"添加"操作，系統將完整記錄新資料的所有有值欄位的值。
+<BR>&nbsp&nbsp 對於"修改"操作，系統將記錄資料的所有發生修改欄位的舊值和新值。
+<BR>&nbsp&nbsp 這些資訊足以跟蹤資料的變化，並且足以恢復資料。
                                                            
-<A name="3.3"><H4>3.3 ��Ӌ�Y�ϵľS�o</H4>    
-&nbsp&nbsp ��������T�����ڙ�ĳ����ɫ���Ñ���S�o��Ӌ�Y�ϡ�
-<BR>&nbsp&nbsp ���S�ə���Ñ���������/�h��/�޸�/��ԃ��Ӌ�Y�ϣ������ǣ��c������픲���"ϵ�y"���o�����x����������"�Y�ό�Ӌ"���o,�������漴�ǌ�Ӌӛ䛵Ĺ�����档
-<P>&nbsp&nbsp ���ǣ������h�ֹ�̎�팏Ӌ�Y�ϣ�������ϵ�y�Ԅ�̎���Ŀ��^�Y����
-<P>&nbsp&nbsp ��Ӌ�Y�ϑ������ڌ�����ݡ�
+<A name="3.3"><H4>3.3 審計資料的維護</H4>    
+&nbsp&nbsp 超級管理員可以授權某個角色或用戶來維護審計資料。
+<BR>&nbsp&nbsp 有許可權的用戶可以添加/刪除/修改/查詢審計資料，方法是：點擊介面頂部的"系統"按鈕，再選擇介面左面的"資料審計"按鈕,介面右面即是審計記錄的管理頁面。
+<P>&nbsp&nbsp 但是，不建議手工處理審計資料，它應是系統自動處理的客觀結果。
+<P>&nbsp&nbsp 審計資料應被定期導出備份。
 
-<BR><A name="4"><H3>4 SEE���Y�ό���</H3>    
-<P>&nbsp&nbsp ���κ��YӍ��̎�����픲��ϣ��c��"����"���o��ϵ�y����������棺
-<P class=title align=center title="">���}��� - ����</P>
+<BR><A name="4"><H3>4 SEE的資料導入</H3>    
+<P>&nbsp&nbsp 在任何資訊的處理頁面頂部上，點擊"導入"按鈕，系統返回以下頁面：
+<P class=title align=center title="">問題報告 - 導入</P>
 <HR>
-<P class=info>Ո�x���ʽ���_���K�ҷ����YӍ�Y�����x��xml�Y�ϙn������t�o�����롣</P>
+<P class=info>請選擇格式正確、並且符合資訊結構定義的xml資料檔案，否則無法導入。</P>
 <TABLE  class=data >
 <TR class=tableline><TD>
-�ļ� : 
+文件 : 
 <INPUT type=file name=input_importfile  size=60>
-<BR><FONT class=info>�ļ���С���ܳ��^1000KB��</FONT>
+<BR><FONT class=info>文件大小不能超過1000KB。</FONT>
 </TD></TR>
 <TR class=tableline><TD>
-����P�I����ͬ���Y�ϣ��M�и��w : 
-			<INPUT type=radio name=input_importoverride value="yes"  checked>��
-			<INPUT type=radio name=input_importoverride value="no" >��
+對於關鍵字相同的資料，進行覆蓋 : 
+			<INPUT type=radio name=input_importoverride value="yes"  checked>是
+			<INPUT type=radio name=input_importoverride value="no" >否
 </TD></TR>
 </TD></TR>
 </TABLE><BR>
 <HR>
-<P>&nbsp&nbsp ����ǰ�YӍ�Ǿ�ꇱ�r������������߀�������x��
+<P>&nbsp&nbsp 當當前資訊是矩陣表時，上面的頁面中還有如下選擇：
 	 <TABLE  class=data >
 		<TR class=tableline><TD>
-			<INPUT type=radio name=input_importdata value="main_data"  checked>���Y��
-			<INPUT type=radio name=input_importdata value="matrix_data" >����Y��
+			<INPUT type=radio name=input_importdata value="main_data"  checked>主資料
+			<INPUT type=radio name=input_importdata value="matrix_data" >矩陣資料
 		</TD></TR>
 	 </TABLE><BR>
-<P>&nbsp&nbsp �����ᣬϵ�y�������½��棺
-<P class=title align=center title="">���}��� - ����</P>
+<P>&nbsp&nbsp 導入後，系統返回以下介面：
+<P class=title align=center title="">問題報告 - 導入</P>
 <HR>
 	<FORM name=seeform  method=post  action="/see/data-manager" enctype="multipart/form-data"  onSubmit='return false;'>
-	<P align=center>���гɹ�</P>
+	<P align=center>執行成功</P>
 	<TABLE class=data cellPadding=2 align=center>
 		<TR>
-		<TD align=right>�Ϸ� : </TD>		<TD align=left>5</TD>		</TR>
+		<TD align=right>合法 : </TD>		<TD align=left>5</TD>		</TR>
 		<TR>
-		<TD align=right>���� : </TD>		<TD align=left>4</TD>		</TR>
+		<TD align=right>添加 : </TD>		<TD align=left>4</TD>		</TR>
 		<TR>
-		<TD align=right>���w : </TD>		<TD align=left>1</TD>		</TR>
+		<TD align=right>覆蓋 : </TD>		<TD align=left>1</TD>		</TR>
 	 </TABLE>
 <HR>
-<P>&nbsp&nbsp ע�⣺���������ֻ�b��һ�l�P춌���������팏Ӌӛ䛣��]��׷ۙ�����Ӻ��޸ĵ��Y�σ��ݣ����ԑ�ԓ�������ƌ���������S�əࡣ
+<P>&nbsp&nbsp 注意：導入操作將只産生一條關於導入操作本身審計記錄，沒有追蹤被添加和修改的資料內容！所以應該嚴格限制導入操作的許可權。
 
-<BR><A name="5"><H3>5 SEE���ٶȜyԇ</H3>    
-<P>&nbsp&nbsp ��������T�����S�r�M��SEE���ٶȜyԇ��
-<BR>&nbsp&nbsp �����ǣ��c������픲���"ϵ�y"���o�����x����������"�ٶ�"���o,�������漴���ٶȜyԇ�Ĺ�����棺
-<P class=title align=center title="">�ٶȜyԇ</P>
+<BR><A name="5"><H3>5 SEE的速度測試</H3>    
+<P>&nbsp&nbsp 超級管理員可以隨時進行SEE的速度測試。
+<BR>&nbsp&nbsp 方法是：點擊介面頂部的"系統"按鈕，再選擇介面左面的"速度"按鈕,介面右面即是速度測試的管理頁面：
+<P class=title align=center title="">速度測試</P>
 <HR>
 	<TABLE align=center class=data >
 		<TR class=tableline>
-			<TD align=right>����</TD><TD>
+			<TD align=right>添加</TD><TD>
 			<INPUT type=radio name=input_add value="1000" >1000
 			<INPUT type=radio name=input_add value="500" >500
 			<INPUT type=radio name=input_add value="200" >200
@@ -232,32 +232,32 @@
 			<INPUT type=radio name=input_add value="50" >50
 </TD></TR>
 		<TR class=tableline>
-			<TD align=right>����</TD><TD>
-			<INPUT type=radio name=input_sort value="char" >��Ԫ
-			<INPUT type=radio name=input_sort value="string" >�ִ�
-			<INPUT type=radio name=input_sort value="int" >����
-			<INPUT type=radio name=input_sort value="float" >���c��
-			<INPUT type=radio name=input_sort value="date" >����
-			<INPUT type=radio name=input_sort value="time" >�r�g
-			<INPUT type=radio name=input_sort value="auto" >�Ԅ��xֵ
-			<INPUT type=radio name=input_sort value=  >��</TD></TR></TABLE>
+			<TD align=right>排序</TD><TD>
+			<INPUT type=radio name=input_sort value="char" >字元
+			<INPUT type=radio name=input_sort value="string" >字串
+			<INPUT type=radio name=input_sort value="int" >整型
+			<INPUT type=radio name=input_sort value="float" >浮點數
+			<INPUT type=radio name=input_sort value="date" >日期
+			<INPUT type=radio name=input_sort value="time" >時間
+			<INPUT type=radio name=input_sort value="auto" >自動賦值
+			<INPUT type=radio name=input_sort value=  >空</TD></TR></TABLE>
 <P align=center>
-		<INPUT type=image src="image/add.jpg" alt="����"  >			
-		<INPUT type=image src="image/remove_all.jpg" alt="ȫ���h��"  >			
+		<INPUT type=image src="image/add.jpg" alt="添加"  >			
+		<INPUT type=image src="image/remove_all.jpg" alt="全部刪除"  >			
 </P>
 <P align=center class=outresult>
-��Ӌ : 0 &nbsp&nbsp&nbsp&nbsp �ؑ��ٶ� : 10 &nbsp ����
+總計 : 0 &nbsp&nbsp&nbsp&nbsp 回應速度 : 10 &nbsp 毫秒
 </P>
-<P align=center class=info>�@���yԇֻ���P��xȡ������͌���XML�Y�ϵĕr�g���ġ���ʹ��SEE�Ĺ��ܕr������ĕr�g�������ژ������Ԫ���ϡ�</P>
+<P align=center class=info>這個測試只是關於讀取、排序和寫入XML資料的時間消耗。當使用SEE的功能時，更多的時間將消耗在構建頁面元素上。</P>
 <HR>
-<P>&nbsp&nbsp ��������T��������������Y��һ�ӣ����yԇ�Y���M�����ӡ��h�����޸ġ���ԃ���yӋ��
-<P>&nbsp&nbsp ���κ��Y��̎���������½Ǖ��@ʾ��ǰ���Ļؑ��ٶȡ�
+<P>&nbsp&nbsp 超級管理員可以象管理其他資料一樣，對測試資料進行添加、刪除、修改、查詢、統計。
+<P>&nbsp&nbsp 在任何資料處理頁面的右下角會顯示當前頁面的回應速度。
 
 <BR><BR>
 <P align=right><A href="https://sourceforge.net/projects/chong2see/" target=_blank>
 https://sourceforge.net/projects/chong2see/</A></P>
 <HR>
-<H5 class=footer align=center>ܛ�w���̭h��	 �汾 0.07/2004-12
+<H5 class=footer align=center>軟體工程環境	 版本 0.07/2004-12
 </H5>
 </BODY>
 

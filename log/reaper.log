@@ -1,0 +1,55 @@
+2018-12-15 19:31:12 ERROR Properties::load open file failed .\reaper.cfg
+2018-12-15 19:31:12 INFO Configuration::parseApplicationInfo IE setting will be initialized in async
+2018-12-15 19:31:12 INFO System::getMacAddressNew adapter: name=Realtek Gaming GbE Family Controller, mac=98eecb72562b, ifType=6
+2018-12-15 19:31:12 ERROR Failed to initialize COM libraray. Error code = 0x80010106
+2018-12-15 19:31:12 ERROR Failed to initialize COM libraray. Error code = 0x80010106
+2018-12-15 19:31:12 INFO TaskExecutor::init thread 1 threadId=[19604]
+2018-12-15 19:31:12 INFO TaskExecutor::init succeed. size=1
+2018-12-15 19:31:12 DEBUG TaskExecutor::_threadFunc[19604] enter
+2018-12-15 19:31:12 INFO TaskExecutor::init thread 1 threadId=[9552]
+2018-12-15 19:31:12 DEBUG TaskExecutor::_threadFunc[9552] enter
+2018-12-15 19:31:12 INFO TaskExecutor::init succeed. size=1
+2018-12-15 19:31:12 INFO Configuration::asyncIESetting null proxy url
+2018-12-15 19:31:12 DEBUG await [19604] 2
+2018-12-15 19:31:12 INFO AnalyticsTracker::trackInitial sdkVersion=10.1.34, isInit2=0
+2018-12-15 19:31:12 WARN ConfigurationUpdateTask::check server post url is null.
+2018-12-15 19:31:12 INFO FileStorage::open file .\log\lenovo_reaper.db7 created
+2018-12-15 19:31:12 INFO FileStorage::open file .\log\lenovo_reaper.db7 open succeed
+2018-12-15 19:31:12 DEBUG FileStorage::readRecord read 0 characters
+2018-12-15 19:31:12 INFO FileEventDaoImpl::activeSession DB init
+2018-12-15 19:31:12 DEBUG FileStorage::position failed offset=0, tellg=-1, tellp=-1
+2018-12-15 19:31:12 DEBUG FileStorage::position again offset=0, tellg=0, tellp=0
+2018-12-15 19:31:12 DEBUG FileStorage::writeRecord write 70 characters
+2018-12-15 19:31:12 DEBUG FileStorage::writeRecord write 107 characters
+2018-12-15 19:31:12 DEBUG await [9552] 3
+2018-12-15 19:31:12 WARN ConfigurationUpdateTask::check server post url is null.
+2018-12-15 19:31:12 DEBUG FileStorage::writeRecord write 70 characters
+2018-12-15 19:31:12 DEBUG await [9552] 1
+2018-12-15 19:31:12 DEBUG FileStorage::writeRecord write 210 characters
+2018-12-15 19:31:12 DEBUG FileStorage::writeRecord write 70 characters
+2018-12-15 19:31:12 DEBUG await [19604] 0
+2018-12-15 19:31:12 DEBUG FileStorage::readRecord read 4096 characters
+2018-12-15 19:31:12 DEBUG FileStorage::readRecord read 209 characters
+2018-12-15 19:31:12 DEBUG HttpRequestHandler::postEvents enter listSize=2
+2018-12-15 19:31:12 INFO AnalyticsTracker::sendEvents no reported event.
+2018-12-15 19:31:12 WARN ConfigurationUpdateTask::check server post url is null.
+2018-12-15 19:31:12 DEBUG FileStorage::position failed offset=4096, tellg=-1, tellp=-1
+2018-12-15 19:31:12 DEBUG FileStorage::position again offset=4096, tellg=4096, tellp=4096
+2018-12-15 19:31:12 DEBUG FileStorage::readRecord read 4096 characters
+2018-12-15 19:31:12 DEBUG FileStorage::readRecord read 209 characters
+2018-12-15 19:31:12 DEBUG HttpRequestHandler::postEvents enter listSize=2
+2018-12-15 19:31:12 INFO AnalyticsTracker::sendEvents no reported event.
+2018-12-15 19:31:12 DEBUG await [9552] 0
+2018-12-15 19:31:22 INFO AnalyticsTracker::syncExit enter
+2018-12-15 19:31:22 DEBUG FileStorage::position failed offset=12288, tellg=-1, tellp=-1
+2018-12-15 19:31:22 DEBUG FileStorage::position again offset=12288, tellg=12288, tellp=12288
+2018-12-15 19:31:22 DEBUG FileStorage::writeRecord write 172 characters
+2018-12-15 19:31:22 DEBUG FileStorage::writeRecord write 70 characters
+2018-12-15 19:31:22 INFO AnalyticsTracker::syncExit returned after 0 ms
+2018-12-15 19:31:22 DEBUG TaskExecutor::notifyAllAndWait WaitForMultipleObjects returned
+2018-12-15 19:31:22 INFO TaskExecutor::notifyAllAndWait finished
+2018-12-15 19:31:22 DEBUG TaskExecutor::notifyAllAndWait WaitForMultipleObjects returned
+2018-12-15 19:31:22 INFO TaskExecutor::notifyAllAndWait finished
+2018-12-15 19:31:22 INFO AnalyticsTracker::~AnalyticsTracker finished
+2018-12-15 19:31:22 INFO TaskExecutor::~TaskExecutor finished
+2018-12-15 19:31:22 INFO TaskExecutor::~TaskExecutor finished

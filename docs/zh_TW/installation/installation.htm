@@ -1,179 +1,179 @@
-<!-- ܛ�w���̭h��	 �汾 0.07/2004-12	 ���� -->
+<!-- 軟體工程環境	 版本 0.07/2004-12	 瑪瑞 -->
 
 <HTML>
 
 <HEAD>
 <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 <META HTTP-EQUIV="Cache-Control" CONTENT="no-store">
-<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=gb2312">
-<TITLE> ܛ�w���̭h�� - �փ� - ���b����</TITLE>
+<META HTTP-EQUIV="content-type" CONTENT="text/html;charset=utf-8">
+<TITLE> 軟體工程環境 - 手冊 - 安裝配置</TITLE>
 <LINK rel="stylesheet" type="text/css"  href="../../manual/style/style_default.css"> 
 </HEAD>
 
 <BODY class=info>
 
-<P class=title align=center title="">���b����</P>   
+<P class=title align=center title="">安裝配置</P>   
 <HR>
 
-<A href="#1">1 SEE���\�Эh��</A>   
-<BR><A href="#2">2 ����SEE���\�Эh��</A>
-<BR>&nbsp&nbsp<A href="#2.1">2.1 ���d</A>
-<BR>&nbsp&nbsp<A href="#2.2">2.2 ��winƽ�_��</A>
-<BR>&nbsp&nbsp<A href="#2.3">2.3 ��unix/linuxƽ�_��</A>
-<BR>&nbsp&nbsp<A href="#2.4">2.4 ʹ��tomcat����</A>
-<BR>&nbsp&nbsp<A href="#2.5">2.5 ����tomcat����</A>
-<BR><A href="#3">3 ���bSEE֮ǰ</A>
-<BR><A href="#4">4 ���bSEE</A>
-<BR><A href="#5">5 ���bSEE֮��</A>
-<BR><A href="#6">6 �L��SEE</A>
-<BR><A href="#7">7 ͬ�r�\�ж���SEE</A>
-<BR><A href="#8">8 ���ߵē���</A>
+<A href="#1">1 SEE的運行環境</A>   
+<BR><A href="#2">2 建立SEE的運行環境</A>
+<BR>&nbsp&nbsp<A href="#2.1">2.1 下載</A>
+<BR>&nbsp&nbsp<A href="#2.2">2.2 在win平臺上</A>
+<BR>&nbsp&nbsp<A href="#2.3">2.3 在unix/linux平臺上</A>
+<BR>&nbsp&nbsp<A href="#2.4">2.4 使用tomcat服務</A>
+<BR>&nbsp&nbsp<A href="#2.5">2.5 管理tomcat服務</A>
+<BR><A href="#3">3 安裝SEE之前</A>
+<BR><A href="#4">4 安裝SEE</A>
+<BR><A href="#5">5 安裝SEE之後</A>
+<BR><A href="#6">6 訪問SEE</A>
+<BR><A href="#7">7 同時運行多個SEE</A>
+<BR><A href="#8">8 作者的擔心</A>
 
-<A name="1"><H3>1 SEE���\�Эh��</H3>
-&nbsp&nbsp SEE���\�Эh��Ҫ�󠑣�֧Ԯ��Servlet 2.3Ҏ���f�����ĭh����jdk�汾����1.4.1���ϣ���
-<BR>&nbsp&nbsp ��:SEE�\�����κ�֧Ԯservlet 2.3+jdk1.4.1�ĭh���£�����ֻ��C��win��linux�h�������]�Ò����κ��ض��Č��F���g��Ҳ����Ҫ�κ��o����ʽ��
-<P>&nbsp&nbsp �Ñ������x���������Mƽ�_�� 
-<LI>jdk���汾����1.4.1���ϡ�
-<LI>tomcat���汾����4.0���ϡ�
-<P>&nbsp&nbsp ���Ӳ�w��SEEҲ�]���ض�Ҫ��
-<BR>&nbsp&nbsp ��Ȼ���C����CPU�ٶȺ�ӛ���w����Խ�ã�Խ�����SEE���ٻؑ���
-<BR>&nbsp&nbsp �������b��SEE�����������փԺ����ЈDƬ��������õ�Ӳ�����g�������^10M��
-<P>&nbsp&nbsp ʹ��SEE������Ҫ��
-<LI>���L�������bSEE���ŷ���λַ
-<LI>�κ�֧Ԯjavscript 1.0��cookie 1.0����css 1.0�Ğg�[��
-<LI>�@ʾSEE����������@ʾ�����Ƞ���1024 * 768��   
+<A name="1"><H3>1 SEE的運行環境</H3>
+&nbsp&nbsp SEE的運行環境要求爲：支援《Servlet 2.3規格說明》的環境（jdk版本至少1.4.1以上）。
+<BR>&nbsp&nbsp 即:SEE運行在任何支援servlet 2.3+jdk1.4.1的環境下（作者只驗證了win和linux環境），沒用採用任何特定的實現技術，也不需要任何輔助程式。
+<P>&nbsp&nbsp 用戶可以選擇如下免費平臺： 
+<LI>jdk。版本至少1.4.1以上。
+<LI>tomcat。版本至少4.0以上。
+<P>&nbsp&nbsp 對於硬體，SEE也沒有特定要求。
+<BR>&nbsp&nbsp 當然，機器的CPU速度和記憶體容量越好，越有利於SEE快速回應。
+<BR>&nbsp&nbsp 完整安裝的SEE（包含所有手冊和所有圖片）本身佔用的硬碟空間不會超過10M。
+<P>&nbsp&nbsp 使用SEE功能需要：
+<LI>能訪問到安裝SEE的伺服器位址
+<LI>任何支援javscript 1.0、cookie 1.0、和css 1.0的瀏覽器
+<LI>顯示SEE介面的理想顯示解析度爲：1024 * 768。   
 
-<A name="2"><H3>2 ����SEE���\�Эh��</H3>
-&nbsp&nbsp <FONT color=green>����Ñ�����servlet�h��������һЩ�̘I�����M��J2EEƽ�_�����������^�@һ�����f����</FONT>
-<BR>&nbsp&nbsp <FONT color=red>���^�Ñ���Ҫ�z��ƽ�_��jdk�汾��sevlet�汾��</FONT>
+<A name="2"><H3>2 建立SEE的運行環境</H3>
+&nbsp&nbsp <FONT color=green>如果用戶已有servlet環境（例如一些商業或免費的J2EE平臺），可以跳過這一節的說明。</FONT>
+<BR>&nbsp&nbsp <FONT color=red>不過用戶需要檢查平臺的jdk版本和sevlet版本。</FONT>
 
-<A name="2.1"><H4>2.1 ���d</H4>       
-&nbsp&nbsp �Ñ�����������sun�Wַ���ҵ��^�°汾��j2sdk���d��
+<A name="2.1"><H4>2.1 下載</H4>       
+&nbsp&nbsp 用戶可以在以下sun網址上找到較新版本的j2sdk下載：
 <BR>&nbsp&nbsp <A href="http://java.sun.com/" target=_blank>http://java.sun.com/</A></P>
-<P>&nbsp&nbsp �Ñ����������¾Wַ���ҵ��^�°汾��tomcat���d��
+<P>&nbsp&nbsp 用戶可以在以下網址上找到較新版本的tomcat下載：
 <BR>&nbsp&nbsp <A href="http://jakarta.apache.org/site/binindex.cgi" target=_blank>http://jakarta.apache.org/site/binindex.cgi</A></P>
-<P>&nbsp&nbsp ���������ľWַ���d�������Ԓ��ʹ��google�����������������Ĵ������d��ַ��
-<P>&nbsp&nbsp ���߽��h�Ñ����dtomcat5.0.25�������ٶȺ͹�����ʽ�����˺ܺõĸ��M��
+<P>&nbsp&nbsp 如果在上面的網址下載不方便的話，使用google很容易搜索到它們的大量下載地址。
+<P>&nbsp&nbsp 作者建議用戶下載tomcat5.0.25，它的速度和管理方式都有了很好的改進。
 
-<A name="2.2"><H4>2.2 ��winƽ�_��</H4>       
-&nbsp&nbsp ���b����j2sdk��
-<LI>���d��winƽ�_�ϵ�j2sdk����jdk����j2se����һ����zip����
-<LI>���_���b����ֱ���\��exe���b�ļ���
-<LI>�O�íh��׃��JAVA_HOME����j2sdk�İ��bĿ䛡����@�Y�Ͳ��f������O��win�ĭh��׃���ˣ�              
-<P>&nbsp&nbsp ���b����tomcat��
-<LI>���d��winƽ�_�ϵ�tomcat��һ����zip����
-<LI>���_���b����ֱ���\��exe���b�ļ������Լ������ҵ�j2sdk�İ��bĿ䛡�
-<P>&nbsp&nbsp ������µ�tomcat5.0.25�����b�ꮅ�ᣬ�����������½��ṩһ������Dʾ���Á�����/�Oҕ/����/�Kֹtomcat�ķ��ա�
-<BR>&nbsp&nbsp �^�f�İ汾Ҳ���Ñ��ṩ�ˆ���/�Kֹ�Ŀ�݈Dʾ������Ҳ������t��ֱ���M��tomcat��binĿ䛈���startup��shutdown��bat�ļ���
+<A name="2.2"><H4>2.2 在win平臺上</H4>       
+&nbsp&nbsp 安裝配置j2sdk：
+<LI>下載的win平臺上的j2sdk（或jdk、或j2se）。一般是zip包。
+<LI>解開安裝包，直接運行exe安裝文件。
+<LI>設置環境變數JAVA_HOME爲：j2sdk的安裝目錄。（這裏就不說明如何設置win的環境變數了）              
+<P>&nbsp&nbsp 安裝配置tomcat：
+<LI>下載的win平臺上的tomcat。一般是zip包。
+<LI>解開安裝包，直接運行exe安裝文件。它自己可以找到j2sdk的安裝目錄。
+<P>&nbsp&nbsp 對於最新的tomcat5.0.25，安裝完畢後，它會桌面右下角提供一個管理圖示，用來配置/監視/啓動/終止tomcat的服務。
+<BR>&nbsp&nbsp 較舊的版本也爲用戶提供了啓動/終止的快捷圖示。如果找不著，則可直接進入tomcat的bin目錄執行startup和shutdown的bat文件。
 
-<A name="2.3"><H4>2.3 ��unix/linuxƽ�_��</H4>       
-<P>&nbsp&nbsp ��root�~̖��ʩ���²��E��
-<P>&nbsp&nbsp ���b����j2sdk��
-<LI>���d��linuxƽ�_�ϵ�j2sdk����jdk����j2se�������h���drpm����
-<LI>���O�Ñ����d����j2sdk-1_4_1_07-linux-i586-rpm.bin���t����������ݔ�룺
+<A name="2.3"><H4>2.3 在unix/linux平臺上</H4>       
+<P>&nbsp&nbsp 以root賬號實施以下步驟。
+<P>&nbsp&nbsp 安裝配置j2sdk：
+<LI>下載的linux平臺上的j2sdk（或jdk、或j2se）。建議下載rpm包。
+<LI>假設用戶下載的是j2sdk-1_4_1_07-linux-i586-rpm.bin，則在命令行上輸入：
 <BR>&nbsp&nbsp ./j2sdk-1_4_1_07-linux-i586-rpm.bin
-<BR>���@ʾ����YӍ֮�ᣬ�ش�"yes"�����ԄӮb��rpm�ļ���j2sdk-1_4_1_07-fcs-linux-i586.rpm
-<LI>���b�@��rpm��������������ݔ�룺
+<BR>在顯示版權資訊之後，回答"yes"，它自動産生rpm文件：j2sdk-1_4_1_07-fcs-linux-i586.rpm
+<LI>安裝這個rpm包。在命令行上輸入：
 <BR>&nbsp&nbsp rpm -ihv j2sdk-1_4_1_07-fcs-linux-i586.rpm
-<BR>�ļ������ԄӰ��b��/usr/javaĿ��¡�
-<LI>�O��JAVA_HOME�h��׃��������������ݔ�룺
+<BR>文件將被自動安裝在/usr/java目錄下。
+<LI>設置JAVA_HOME環境變數。在命令行上輸入：
 <BR>&nbsp&nbsp JAVA_HOME=/usr/java/j2sdk1.4.1_07
 <BR>&nbsp&nbsp export JAVA_HOME
-<P>&nbsp&nbsp ���b����tomcat��
-<LI>���d��linuxƽ�_�ϵ�tomcat��
-<LI>���O�Ñ����d����jakarta-tomcat-5.0.18.tar.gz���t�M��Ҫ���b��Ŀ䛣�����������ݔ�룺
+<P>&nbsp&nbsp 安裝配置tomcat：
+<LI>下載的linux平臺上的tomcat。
+<LI>假設用戶下載的是jakarta-tomcat-5.0.18.tar.gz，則進入要安裝的目錄，在命令行上輸入：
 <BR>&nbsp&nbsp tar zvfz jakarta-tomcat-5.0.18.tar.gz
-<BR>�ļ������_����Ŀ�jakarta-tomcat-5.0.18Ŀ��¡�
-<LI>�M��ԓĿ䛵���Ŀ�bin�£�����"startup.sh"�Ԇ���tomcat���գ�����"shutdown.sh"�ԽKֹtomcat����
-<P>&nbsp&nbsp <Font color=green>������linux�]�І���Xҕ�������˱��CSEE�ĈDƬ�܉����_���ɣ�Ո�ڈ�����������</Font>��
-<BR>tomcatĿ�/bin/shutdown.sh���Kֹtomcat���գ�
+<BR>文件被解開到子目錄jakarta-tomcat-5.0.18目錄下。
+<LI>進入該目錄的子目錄bin下，執行"startup.sh"以啓動tomcat服務，執行"shutdown.sh"以終止tomcat服務
+<P>&nbsp&nbsp <Font color=green>如果你的linux沒有啓動X視窗，爲了保證SEE的圖片能夠正確生成，請在執行以下命令</Font>：
+<BR>tomcat目錄/bin/shutdown.sh（終止tomcat服務）
 <BR>CATALINA_OPTS="-Djava.awt.headless=true"
 <BR>export CATALINA_OPTS
-<BR>tomcatĿ�/bin/startup.sh������tomcat���գ�
-<BR>&nbsp&nbsp �����Ҫÿ�Ά��әC���r�Ԅ��O���@��������Ո���O��CATALINA_OPTS���@�ɾ���뵽�ļ�/etc/profile�С�
-<P>&nbsp&nbsp <Font color=green>������linux���ص�SEE�DƬ�ϣ��h�ֶ��@ʾ���հ׷���r��Ոԇ���@��</Font>��
-<LI>�z�����linux�������w�İ��b��r��
-<BR>&nbsp&nbsp ���磬��redhat8���w���İ��ϣ����_�ļ�"/usr/share/fonts/zh_CN/TrueType/font.dir"���鿴���е����w���x��
-<BR>&nbsp&nbsp �������"-misc-ZYSong18030-medium-r-normal--0-%d-0-0-c-0-iso10646-1"���t����ֱ��ʹ��SEE���b���Y�ṩ�������ļ�����t��Ҫ��Q��
-<LI>�z�����java���w������r��
-<BR>&nbsp&nbsp ��jdk���bĿ��£��鿴Ŀ�"jre/lib"��������"font.properties.zh"�_�^�ęn�������������⣬Ո���������h����
-<LI>����java���w��
-<BR>&nbsp&nbsp �Ѱ��b���Y���ļ�"font.properties.zh"���}�u�����jdk���bĿ�����Ŀ�"jre/lib"�С�
-<LI><B>ʹ��"su -"��ʹ��root�~̖��</B>
-<LI>�O��ϵ�y������ݔ������������ߌ���/etc/profile����
+<BR>tomcat目錄/bin/startup.sh（啓動tomcat服務）
+<BR>&nbsp&nbsp 如果想要每次啓動機器時自動設置這個參數，請將設置CATALINA_OPTS的這兩句加入到文件/etc/profile中。
+<P>&nbsp&nbsp <Font color=green>如果你的linux返回的SEE圖片上，漢字都顯示爲空白方框時，請試著這樣</Font>：
+<LI>檢查你的linux中文字體的安裝情況。
+<BR>&nbsp&nbsp 例如，在redhat8簡體中文版上，打開文件"/usr/share/fonts/zh_CN/TrueType/font.dir"，查看其中的字體定義。
+<BR>&nbsp&nbsp 如果看到"-misc-ZYSong18030-medium-r-normal--0-%d-0-0-c-0-iso10646-1"，則可以直接使用SEE安裝包裏提供的配置文件。否則需要替換。
+<LI>檢查你的java字體配置情況。
+<BR>&nbsp&nbsp 在jdk安裝目錄下，查看目錄"jre/lib"中所有以"font.properties.zh"開頭的檔案名，如果你願意，請把它們都刪除。
+<LI>配置java字體。
+<BR>&nbsp&nbsp 把安裝包裏的文件"font.properties.zh"，複製到你的jdk安裝目錄下子目錄"jre/lib"中。
+<LI><B>使用"su -"來使用root賬號。</B>
+<LI>設置系統參數。輸入以下命令（或者寫入/etc/profile）：
 <BR>JAVA_FONTS="/usr/share/fonts/zh_CN/TrueType/"
 <BR>export JAVA_FONTS
-<BR>JAVA_HOME="/usr/java/j2sdk1.4.1_07" ���Ġ����jdk���bĿ䛣�
+<BR>JAVA_HOME="/usr/java/j2sdk1.4.1_07" （改爲你的jdk安裝目錄）
 <BR>export JAVA_HOME
 <BR>LANG=zh_CN
 <BR>LC_ALL=zh_CN.GB18030
-<LI>����tomcat
-<BR>&nbsp&nbsp <Font color=green>18030֧Ԯ���w���ġ�</FONT>
+<LI>重起tomcat
+<BR>&nbsp&nbsp <Font color=green>18030支援繁體中文。</FONT>
 
-<A name="2.4"><H4>2.4 ʹ��tomcat����</H4>       
-&nbsp&nbsp ��ɰ��b���ò��E�ᣬ���_һ���g�[������λַ����ݔ�룺
+<A name="2.4"><H4>2.4 使用tomcat服務</H4>       
+&nbsp&nbsp 完成安裝配置步驟後，打開一個瀏覽器，在位址欄上輸入：
 <BR>&nbsp&nbsp http://localhost:8080
-<BR>&nbsp&nbsp ������ܿ�����ֻ������؈�����tomcat�Ͱ��b�ɹ��ˡ� 
+<BR>&nbsp&nbsp 如果你能看到那只著名的貓，你的tomcat就安裝成功了。 
 
-<A name="2.5"><H4>2.5 ����tomcat����</H4>       
-&nbsp&nbsp ����tomcat���հ������鿴���Б����\����r������һ�����á��Kֹһ�����á������d��һ�����á�
-<BR>&nbsp&nbsp ���ˣ�Tomcat�������փԌ��ú����ס�
-<BR>&nbsp&nbsp �Ñ������ڡ�Դ�a�f�����Y�ҵ����ߌ�tomcat�������ܵĺ�Ҫ��B��
+<A name="2.5"><H4>2.5 管理tomcat服務</H4>       
+&nbsp&nbsp 管理tomcat服務包括：查看所有應用運行情況、啓動一個應用、終止一個應用、重新載入一個應用。
+<BR>&nbsp&nbsp 對此，Tomcat自身的手冊寫得很明白。
+<BR>&nbsp&nbsp 用戶可以在《源碼說明》裏找到作者對tomcat管理功能的簡要介紹。
 
-<A name="3"><H3>3 ���bSEE֮ǰ</H3>
-<P>&nbsp&nbsp <FONT color=green>��������״ΰ��bSEE���t�����^�@һ����</FONT>
-<P>&nbsp&nbsp ����Ѱ��b���f�汾��SEE������Ҫж�d����<FONT color=green>��Ҳ����<A href=#7>ͬ�r�\�в�ͬ�汾��SEE</A></FONT>��
-<BR>&nbsp&nbsp ��<FONT color=red>��ж�dSEE֮ǰ����ԓ�������Y�ϣ��������㲻��Ҫ��</FONT>
-<P>&nbsp&nbsp SEE���Y�϶�������Ŀ�"see\WEB-INF\data"�£������YӍ�Y���Ķ��x��structure��Ŀ䛣����Y��ӛ䛣�value��Ŀ䛣������ς��ļ���upload��Ŀ䛣���
-<BR>&nbsp&nbsp ���SEE�Y�Ͼ��ǰ�Ŀ�see\WEB-INF\data�}�u���e̎���Թ����°��bSEE���}�u�؁���
-<P>&nbsp&nbsp �Ñ���������tomcat�Ĺ������܁�ж�dSEE�������dȤ�t��tomcat�������ܣ��Ñ����ԅ�����Դ�a�f������
-<BR>&nbsp&nbsp ����еÌW���������@�ӣ�
-<LI>�Kֹtomcat����
-<LI>�h��tomcat��webapps/�µ�seeĿ䛺�ԭ����see.war�������߀�]�Єh����
-<LI>����tomcat����
+<A name="3"><H3>3 安裝SEE之前</H3>
+<P>&nbsp&nbsp <FONT color=green>如果你是首次安裝SEE，則可跳過這一節。</FONT>
+<P>&nbsp&nbsp 如果已安裝了舊版本的SEE，首先要卸載它。<FONT color=green>你也可以<A href=#7>同時運行不同版本的SEE</A></FONT>。
+<BR>&nbsp&nbsp 而<FONT color=red>在卸載SEE之前，應該備份你的資料！（除非你不需要）</FONT>
+<P>&nbsp&nbsp SEE的資料都保存在目錄"see\WEB-INF\data"下，包括資訊結構的定義（structure子目錄）、資料記錄（value子目錄）、已上傳文件（upload子目錄）。
+<BR>&nbsp&nbsp 備份SEE資料就是把目錄see\WEB-INF\data複製到別處，以供重新安裝SEE後複製回來。
+<P>&nbsp&nbsp 用戶可以利用tomcat的管理功能來卸載SEE。若有興趣瞭解tomcat管理功能，用戶可以參考《源碼說明》。
+<BR>&nbsp&nbsp 如果懶得學習，可以這樣：
+<LI>終止tomcat服務
+<LI>刪除tomcat的webapps/下的see目錄和原來的see.war（如果你還沒有刪除）
+<LI>啓動tomcat服務
 
-<A name="4"><H3>4 ���bSEE</H3>
-<P>&nbsp&nbsp ���bSEE�����ǰl��servlet���ã�
-<LI>���dSEE�Ɉ��а������_���õ�һ��"see.war"�ļ���
-<LI>�_�JTomcat�ц��ӡ�
-<LI>����"see.war"���}�u��servlet���ðl��Ŀ��£����tomcat����������webapps/��Ŀ��£���
-<LI>Tomcat���Ԅӣ��l�Fsee������see�����_������see��
-<LI>Tomcat�����Ԅӽ���seeĿ��ᣬ�@��see���Ϳ��Ԅh���ˡ�
+<A name="4"><H3>4 安裝SEE</H3>
+<P>&nbsp&nbsp 安裝SEE，就是發佈servlet應用：
+<LI>下載SEE可執行包，解開，得到一個"see.war"文件。
+<LI>確認Tomcat已啓動。
+<LI>將此"see.war"包複製到servlet應用發佈目錄下（對於tomcat，就是它的webapps/子目錄下）。
+<LI>Tomcat會自動：發現see包、將see包解開、啓動see。
+<LI>Tomcat爲你自動建立see目錄後，這個see包就可以刪除了。
 
-<A name="5"><H3>5 ���bSEE֮��</H3>
-<P>&nbsp&nbsp <FONT color=green>��������״ΰ��bSEE�����߲���Ҫԭ�����Y�ϣ��t�����^�@һ����</FONT>
-<P>&nbsp&nbsp �������Ҫ���°��b��SEE��ʹ��ԭ�����Y�ϣ��t��Ҫ�Ѱ��bǰ�т�ݵ��Y���}�u�؁���
-<BR>&nbsp&nbsp ��ԭ���Y���}�u�؁��ĕr����Ҫ���]�����}��
-<LI>������޸���ĳ��ȱʡ���YӍ�Y�����t�}�u�؁�֮ǰ����һ�£����°��У��@���YӍ�Y���Ƿ�Ҳ�����ˡ����е��YӍ�Y�����x�ڡ�ʹ��ָ�ϡ��нo�����Y�ϵ�׃���ڡ�����ӛ䛡��нo���������°���A������ԭ���ă��ݣ�߀����ԭ���ļ��Ļ��A�������°�ă��ݣ��͵����Ñ��x���ˡ����߽��h�Ñ�ֱ���޸��YӍ�Y����xml�ļ����@�Ӹ�ֱ�^�� 
-<LI>������������YӍ�Y���������{���˽��淽����һ����Ҫֱ������ԭ���Ľ��淽���Y�ϙn��ֱ�Ӹ��w�°档���°�Ľ��淽���϶���׃�����������µĹ��ܰ��o���@�r������µĽ��淽���ϼ�������޸ă��ݡ�
+<A name="5"><H3>5 安裝SEE之後</H3>
+<P>&nbsp&nbsp <FONT color=green>如果你是首次安裝SEE，或者不需要原來的資料，則可跳過這一節。</FONT>
+<P>&nbsp&nbsp 如果你需要在新安裝的SEE中使用原來的資料，則需要把安裝前已備份的資料複製回來。
+<BR>&nbsp&nbsp 將原來資料複製回來的時候，需要考慮以下問題：
+<LI>如果你修改了某個缺省的資訊結構，則複製回來之前對比一下：在新版中，這個資訊結構是否也更新了。所有的資訊結構定義在《使用指南》中給出。資料的變化在《更新記錄》中給出。是在新版基礎上添加原來的內容，還是在原來文件的基礎上添加新版的內容，就得由用戶選擇了。作者建議用戶直接修改資訊結構的xml文件，這樣更直觀。 
+<LI>如果你添加了資訊結構、或者調整了介面方案，一定不要直接用你原來的介面方案資料檔案直接覆蓋新版。因爲新版的介面方案肯定有變化，包含了新的功能按鈕。這時最好在新的介面方案上加上你的修改內容。
 
-<A name="6"><H3>6 �L��SEE</H3>
-&nbsp&nbsp ���_һ���g�[�����ڵ�ַ����ݔ�룺�����Otomcat���b����ęC���ϣ�
+<A name="6"><H3>6 訪問SEE</H3>
+&nbsp&nbsp 打開一個瀏覽器，在地址欄上輸入：（假設tomcat安裝在你的機器上）
 <BR>&nbsp&nbsp http://localhost:8080/see
-<BR>&nbsp&nbsp �㑪ԓ����SEE�ĵ�䛽��档   
-<P>&nbsp&nbsp ���SEE���b����ęC�����L��������һ̨�C���ϣ���ݔ�룺
-<BR>&nbsp&nbsp http://���bSEE�ęC��IP��ַ����׃�����Q:8080/see
-<P>&nbsp&nbsp ��ξ��wʹ��SEE�Ĺ��ܣ�Ո��Ҋ��ʹ��ָ�ϡ��� 
+<BR>&nbsp&nbsp 你應該看到SEE的登錄介面。   
+<P>&nbsp&nbsp 如果SEE安裝在你的機器能訪問到的另一台機器上，就輸入：
+<BR>&nbsp&nbsp http://安裝SEE的機器IP地址或功能變數名稱:8080/see
+<P>&nbsp&nbsp 如何具體使用SEE的功能，請參見《使用指南》。 
 
-<A name="7"><H3>7 ͬ�r�\�ж���SEE</H3>
-<P>&nbsp&nbsp �������ͬ�r�\�ж���SEE�������°汾���f�汾ͬ�r�\�У��������댢SEE���Ƴɲ�ͬ�I��đ��Á�ͬ�r�\�У����߲�ͬ�Z�Ե�SEEͬ�r�\�У��@�NҪ������׌��F��
-<P>&nbsp&nbsp ��@��see.war���ᣬ�����������������b�ᣬ�tSEE���������ց��\�С�
-<BR>&nbsp&nbsp ���磬�㌢"see.war"������"mysee.war"�����b�ᣬ��Ϳ�����"mysee"���L�����ˣ����ڞg�[����ݔ��ĵ�ַ�ǣ�
-<BR>&nbsp&nbsp http://���bSEE�ęC��IP��ַ����׃�����Q:8080/mysee
-<P>&nbsp&nbsp ����Ԍ�ͬһ��see����������ͬ�İ��b�������քe���Ơ��Լ��đ��á�
-<BR>&nbsp&nbsp Ҳ���Ԍ���ͬ�汾��ͬ�Z�Ե�see������������ͬ�r�\�С�
+<A name="7"><H3>7 同時運行多個SEE</H3>
+<P>&nbsp&nbsp 如果你想同時運行多個SEE，例如新版本和舊版本同時運行，或者你想將SEE定制成不同領域的應用來同時運行，或者不同語言的SEE同時運行，這種要求很容易實現。
+<P>&nbsp&nbsp 你獲得see.war包後，將它重新命名，安裝後，則SEE就以新名字來運行。
+<BR>&nbsp&nbsp 例如，你將"see.war"改名爲"mysee.war"，安裝後，你就可以以"mysee"來訪問它了，即在瀏覽器上輸入的地址是：
+<BR>&nbsp&nbsp http://安裝SEE的機器IP地址或功能變數名稱:8080/mysee
+<P>&nbsp&nbsp 你可以將同一個see包命名爲不同的安裝包，來分別定制爲自己的應用。
+<BR>&nbsp&nbsp 也可以將不同版本或不同語言的see包重新命名來同時運行。
 
-<A name="8"><H3>8 ���ߵē���</H3>
-&nbsp&nbsp �������ں��w����ƽ�_�Ͼ��gwar���ģ��]�������O�����g�ľ��a��������Ŀǰ�J���]�б�Ҫ��
-<BR>&nbsp&nbsp ������߀�Ǔ��ģ����Ñ�������Ӣ��ƽ�_���Ƿ��w����ƽ�_�ϣ�����������@�����}���F�e�`��
-<P>&nbsp&nbsp ������redhat8��Ӣ�ĭh���£�ԇ�b��SEE���]���e�`��
-<BR>&nbsp&nbsp ����Ñ��l�F���F�@�����}��Ո������V���ߣ��ǳ����x��
+<A name="8"><H3>8 作者的擔心</H3>
+&nbsp&nbsp 作者是在簡體中文平臺上編譯war包的，沒有特意設定編譯的編碼。因爲作者目前認爲沒有必要。
+<BR>&nbsp&nbsp 而作者還是擔心：在用戶真正的英文平臺或是繁體中文平臺上，會不會由於這個問題出現錯誤？
+<P>&nbsp&nbsp 作者在redhat8的英文環境下，試裝了SEE，沒有錯誤。
+<BR>&nbsp&nbsp 如果用戶發現出現這個問題，請儘快告訴作者！非常感謝！
 
 <BR><BR>
 <P align=right><A href="https://sourceforge.net/projects/chong2see/" target=_blank>
 https://sourceforge.net/projects/chong2see/</A></P>
 <HR>
-<H5 class=footer align=center>ܛ�w���̭h��	 �汾 0.07/2004-12
+<H5 class=footer align=center>軟體工程環境	 版本 0.07/2004-12
 </H5>
 </BODY>
 
