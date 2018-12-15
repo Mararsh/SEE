@@ -8,7 +8,7 @@ I wrote it to implement the idea that all data, including interface styles, can 
 
 I copied the last version on GitHub now: https://github.com/Mararsh/SEE .
 
-And its documents: https://mararsh.github.io/SEE/docs. 
+And its documents: https://mararsh.github.io/SEE/index.html. 
 For Chinese readers, you have to set your browser's encoding as "Simplified Chinese" if the document pages are messed since they were written with GB2312. 
 
 Following are some snapshots of the interface.
